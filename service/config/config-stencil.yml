@@ -1,0 +1,3 @@
+GITHUB:
+  REPOSITORY: /cms-component-library/
+  SECRET: # The secret that was used while making the webhook
