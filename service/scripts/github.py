@@ -31,7 +31,7 @@ def server():
         
         if payload["ref"] == f"refs/heads/{staging}":
             if payload["repository"]["git_url"] == git_url:
-                pull = subprocess.Popen(["git", "pull", "origin", staging], cwd="repo")
+                pull = subprocess.Popen(["git", "pull", "origin", staging], cwd=repository)
                 output, error = pull.communicate()
                 print(output, error)
 
