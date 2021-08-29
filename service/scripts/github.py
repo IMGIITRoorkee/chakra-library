@@ -16,7 +16,7 @@ with io.open('../config/config.yml', 'r') as stream:
 repository = CONFIG['GITHUB']['REPOSITORY']
 secret = CONFIG['GITHUB']['SECRET']
 staging = CONFIG['GITHUB']['STAGING_BRANCH']
-git_url = CONFIG['GITHUB']['GIT_URL']
+ssh_url = CONFIG['GITHUB']['SSH_URL']
 
 app = Flask(__name__)
 
@@ -30,7 +30,7 @@ def server():
         payload = json.loads(payload)
         
         if payload["ref"] == f"refs/heads/{staging}":
-            if payload["repository"]["git_url"] == git_url:
+            if payload["repository"]["ssh_url"] == ssh_url:
                 pull = subprocess.Popen(["git", "pull", "origin", staging], cwd=repository)
                 output, error = pull.communicate()
                 print(output, error)
