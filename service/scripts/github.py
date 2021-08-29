@@ -34,5 +34,11 @@ def server():
                 pull = subprocess.Popen(["git", "pull", "origin", staging], cwd=repository)
                 output, error = pull.communicate()
                 print(output, error)
+                return "OK", 200
+            else:
+                return "Request from non-root repository", 400
+        else:
+            return "Non-staging branch", 200
+    else:
+        return "Invalid Signature", 400
 
-    return "OK"
