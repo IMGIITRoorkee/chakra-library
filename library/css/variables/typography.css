@@ -1,0 +1,8 @@
+:root {
+  --card-width: 564px;
+  --card-height: 223px;
+  --card-padding: 1rem;
+  --card-border-radius: 2px;
+  --image-card-width: 364px;
+  --card-border-width: 1px;
+}
