@@ -1,9 +1,16 @@
 .light {
- --breadcrumb-background: #12121266;
- --breadcrumb-background-inverted: linear-gradient(180deg, rgba(0, 103, 179, 0.8) 1.04%, #5183B8 30.21%, #5183B8 76.56%);;
- --breadcrumb-color: white;
+  --breadcrumb-background: #12121266;
+  --breadcrumb-background-inverted: linear-gradient(
+    180deg,
+    rgba(0, 103, 179, 0.8) 1.04%,
+    #5183b8 30.21%,
+    #5183b8 76.56%
+  );
+  --breadcrumb-color: white;
+  --faculty-card-border: #c4c4c480;
+  --faculty-card-background: #fff;
+  --faculty-card-border-color: #c4c4c480;
 }
 
 .dark {
-
 }
