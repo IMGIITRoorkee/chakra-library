@@ -1,0 +1,37 @@
+/* @import url(../variables/colors.css); */
+
+.ui.breadcrumb {
+  background-color: var(--breadcrumb-background);
+  width: fit-content;
+}
+
+.ui.breadcrumb.inverted {
+  background:var(--breadcrumb-background-inverted) !important;
+}
+
+.ui.breadcrumb > .section {
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1rem;
+  color: var(--breadcrumb-color) !important;
+  padding: 0.5rem;
+  display: inline;
+  text-decoration: none;
+}
+
+.ui.breadcrumb > .divider {
+  height: 2.5rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ui.breadcrumb > .divider.arrow {
+}
+.ui.breadcrumb > .divider.slash {
+  color: var(--breadcrumb-color);
+}
+
+.ui.breadcrumb > .active {
+  font-weight: lighter !important;
+}
