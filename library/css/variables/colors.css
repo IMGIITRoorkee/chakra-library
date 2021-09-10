@@ -10,6 +10,9 @@
   --faculty-card-border: #c4c4c480;
   --faculty-card-background: #fff;
   --faculty-card-border-color: #c4c4c480;
+  --description-card-background: #f7f7f799;
+  --description-card-background-inverted: #5183b8;
+  --description-card-color-inverted: white;
 }
 
 .dark {

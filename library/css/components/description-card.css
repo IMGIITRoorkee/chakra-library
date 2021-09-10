@@ -1,0 +1,49 @@
+.ui.description-card {
+  width: var(--description-card-width);
+  height: var(--description-card-height);
+  background-color: var(--description-card-background);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: var(--description-card-color) !important;
+}
+
+.ui.description-card.inverted {
+  background: var(--description-card-background-inverted) !important;
+  color: var(--description-card-color-inverted) !important;
+}
+
+.ui.description-card .title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 8rem;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.ui.description-card .description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  margin: 0 3rem;
+}
+
+.ui.description-card .text-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 3rem;
+  margin-right: 10rem;
+  margin-left: 10rem;
+  text-transform: uppercase;
+  color: var(--description-card-color) !important;
+  text-decoration: none;
+}
+
+.ui.description-card .text-link .right.arrow {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
