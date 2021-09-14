@@ -9,6 +9,7 @@
 
 .ui.accordion > .category > .title {
   font-size: var(--accordion-title-font-size);
+  font-family: var(--font-lato);
   padding: 30px 10px 30px 10px;
   text-transform: uppercase;
 }

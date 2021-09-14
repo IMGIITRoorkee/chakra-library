@@ -4,6 +4,7 @@
 
 .ui.image-accordion > .title {
     font-size: var(--image-accordion-title-font-size);
+    font-family: var(--font-lato);
     text-transform: uppercase;
     margin: 50px 10px 100px 10px;
 }
