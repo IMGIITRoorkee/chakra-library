@@ -1,0 +1,70 @@
+.ui.image-accordion {
+    width: 100%;
+}
+
+.ui.image-accordion > .title {
+    font-size: var(--image-accordion-title-font-size);
+    text-transform: uppercase;
+    margin: 50px 10px 100px 10px;
+}
+
+.ui.image-accordion > .item {
+    width: calc(100% - 20px);
+    margin: 70px 10px 70px 10px;
+}
+
+.ui.image-accordion > .item > .image {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.ui.image-accordion > .item > .image > img {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.ui.image-accordion > .item > .content {
+    padding: 20px;
+    width: 100%;
+    background-color: var(--image-accordion-background-color);
+    border: var(--image-accordion-border);
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.ui.image-accordion > .item > .content > .title {
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: var(--image-accordion-content-title-font-size);
+}
+
+.ui.image-accordion > .item > .content > .title:hover {
+    cursor: pointer;
+}
+
+.ui.image-accordion > .item > .content > .title > .arrow {
+    float: right;
+    height: var(--image-accordion-arrow-size);
+    vertical-align: middle;
+}
+
+.ui.image-accordion > .item > .content > .divider {
+    background-color: var(--image-accordion-divider-color);
+    height: 2px;
+    width: 100%;
+    margin: 10px 0 10px 0;
+    display: none;
+}
+
+.ui.image-accordion > .item > .content > .description {
+    width: calc(100% - 20px);
+    padding: 10px;
+    display: none;
+}
+
+.ui.image-accordion > .item > .content > .description > .point {
+    padding: 10px 0 10px 0;
+}
