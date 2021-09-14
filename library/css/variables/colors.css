@@ -18,6 +18,12 @@
   --image-accordion-background-color: rgba(9, 91, 151, 0.04);
   --image-accordion-border: solid rgba(4, 47, 120, 0.1) 1px;
   --image-accordion-divider-color: #EAE8E4;
+
+  --tabs-primary-active-font-color: #ffffff;
+  --tabs-primary-active-background-color: #5183B8;
+  --tabs-primary-container-base-color: #5183B8;
+  --tabs-secondary-active-color: #0067B3;
+  --tabs-secondary-container-base-color: #B8C9D9;
 }
 
 .dark {
