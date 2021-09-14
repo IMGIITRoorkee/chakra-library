@@ -10,6 +10,10 @@
   --faculty-card-border: #c4c4c480;
   --faculty-card-background: #fff;
   --faculty-card-border-color: #c4c4c480;
+
+  --accordion-gray-background: #F7F7F7;
+  --accordion-divider-color: #5183B8;
+  --accordion-description-color: #666666;
 }
 
 .dark {

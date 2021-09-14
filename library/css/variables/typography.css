@@ -5,4 +5,9 @@
   --card-border-radius: 2px;
   --image-card-width: 364px;
   --card-border-width: 1px;
+
+  --accordion-arrow-size: 8px;
+  --accordion-title-font-size: 1.2rem;
+  --accordion-description-font-size: 1rem;
+  --accordion-description-line-height: 1.5rem;
 }
