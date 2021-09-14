@@ -14,6 +14,10 @@
   --accordion-gray-background: #F7F7F7;
   --accordion-divider-color: #5183B8;
   --accordion-description-color: #666666;
+
+  --image-accordion-background-color: rgba(9, 91, 151, 0.04);
+  --image-accordion-border: solid rgba(4, 47, 120, 0.1) 1px;
+  --image-accordion-divider-color: #EAE8E4;
 }
 
 .dark {
