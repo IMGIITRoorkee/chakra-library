@@ -24,6 +24,9 @@
   --tabs-primary-container-base-color: #5183B8;
   --tabs-secondary-active-color: #0067B3;
   --tabs-secondary-container-base-color: #B8C9D9;
+
+  --flexbox-background: #F0F1F6;
+  --flexbox-background-inverted: linear-gradient(180deg, rgba(0, 103, 179, 0.8) 2.6%, #5183B8 19.79%, #5183B8 61.98%);
 }
 
 .dark {
