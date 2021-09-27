@@ -1,0 +1,32 @@
+.ui.contact-card {
+    width: var(--contact-card-width);
+    height: var(--contact-card-height);
+    line-height: 24px;
+    border: 1px solid black;
+    padding: 82px 159px 16px 76px;
+    box-sizing: border-box;
+}
+
+.ui.contact-card .heading{
+    font-size: 1.75rem;
+    line-height: 1.5rem;
+    color: #4C4C4C;
+    font-family: var(--font-lato);
+    margin-bottom: 48px;
+}
+
+.ui.contact-card .description{
+    line-height: 2rem;
+    font-size: 1.125rem;
+}
+
+.ui.contact-card .social{
+    display:flex;
+    gap: 14px;
+}
+
+.ui.contact-card .phone,
+.ui.contact-card .mail {
+    display: flex;
+    gap: 10px;
+}
