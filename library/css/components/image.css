@@ -1,0 +1,17 @@
+.ui.image {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  background-color: transparent;
+}
+
+.ui.fluid.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.ui.fluid.image > img {
+  width: 100%;
+}
