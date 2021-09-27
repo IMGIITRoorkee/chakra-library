@@ -1,0 +1,25 @@
+.ui.link a:link {
+  text-decoration: none;
+}
+.ui.link a:hover {
+  text-decoration: underline;
+}
+.ui.link a:visited {
+  text-decoration: none;
+}
+.ui.link button {
+  padding: 0.4em 0.4em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.8em;
+  margin: 0.25em 0.25em;
+  cursor: pointer;
+  background-color: white; 
+  color: black; 
+  border: 0.125em solid black;
+  border-radius: 0.125em;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+}
