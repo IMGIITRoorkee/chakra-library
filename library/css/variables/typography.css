@@ -5,10 +5,12 @@
     --card-border-radius: 0.125rem;
     --image-card-width: 22.625rem;
     --card-border-width: 0.063rem;
+    --complete-info-card-width: 337px;
     --description-card-width: 30rem;
     --description-card-height: 28.125rem;
     --description-card-mobile-width: 22.5rem;
     --description-card-mobile-height: 18.125rem;
+    --stats-card-height: 20rem;
     --card-border-radius: 2px;
     --image-card-width: 364px;
     --card-border-width: 1px;
