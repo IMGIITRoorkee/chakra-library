@@ -1,0 +1,14 @@
+.ui.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: var(--flexbox-background);
+}
+
+.ui.flexbox.inverted {
+    background:var(--flexbox-background-inverted) !important;
+}
+
+.ui.flexbox > div {
+    margin: 20px;
+}
