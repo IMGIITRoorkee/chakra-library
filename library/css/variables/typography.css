@@ -5,18 +5,4 @@
   --card-border-radius: 2px;
   --image-card-width: 364px;
   --card-border-width: 1px;
-  --complete-info-card-width: 337px;
-
-  --accordion-arrow-size: 8px;
-  --accordion-title-font-size: 1.2rem;
-  --accordion-description-font-size: 1rem;
-  --accordion-description-line-height: 1.5rem;
-
-  --image-accordion-title-font-size: 2rem;
-  --image-accordion-content-title-font-size: 1.5rem;
-  --image-accordion-arrow-size: 0.8rem;
-
-  --tabs-font-size: 1.1rem;
-  --tabs-secondary-font-weight: 300;
-  --tabs-secondary-active-font-weight: 400;
 }

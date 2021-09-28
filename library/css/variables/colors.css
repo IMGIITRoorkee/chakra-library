@@ -10,24 +10,6 @@
   --faculty-card-border: #c4c4c480;
   --faculty-card-background: #fff;
   --faculty-card-border-color: #c4c4c480;
-  --stats-card-background-color: #5183B8;
-
-  --accordion-gray-background: #F7F7F7;
-  --accordion-divider-color: #5183B8;
-  --accordion-description-color: #666666;
-
-  --image-accordion-background-color: rgba(9, 91, 151, 0.04);
-  --image-accordion-border: solid rgba(4, 47, 120, 0.1) 1px;
-  --image-accordion-divider-color: #EAE8E4;
-
-  --tabs-primary-active-font-color: #ffffff;
-  --tabs-primary-active-background-color: #5183B8;
-  --tabs-primary-container-base-color: #5183B8;
-  --tabs-secondary-active-color: #0067B3;
-  --tabs-secondary-container-base-color: #B8C9D9;
-
-  --flexbox-background: #F0F1F6;
-  --flexbox-background-inverted: linear-gradient(180deg, rgba(0, 103, 179, 0.8) 2.6%, #5183B8 19.79%, #5183B8 61.98%);
 }
 
 .dark {
