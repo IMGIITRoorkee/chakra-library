@@ -1,0 +1,53 @@
+  .ui.complete-info-card .individual-card {
+    flex-basis: 33%;
+  }
+
+  .ui.complete-info-card > .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .ui.complete-info-card .flex-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .ui.complete-info-card .info {
+    padding-left: 1rem;
+  }
+  .ui.complete-info-card .name {
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2rem;
+    color: var(--complete-info-card-name-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .ui.complete-info-card .subtitle {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.8rem;
+    padding-bottom: 0.8rem;
+    padding-top: 0.1rem;
+    color: var(--complete-info-card-subtitle-color);
+  }
+  .ui.complete-info-card .description {
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.8rem;
+    color: var(--complete-info-card-description-color);
+    max-width: var(--complete-info-card-width);
+  }
+
+  @media only screen and (max-width: 500px) {
+    .ui.complete-info-card .individual-card {
+      flex-basis: 70%;
+    }
+  }
+  
