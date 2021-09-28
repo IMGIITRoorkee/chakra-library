@@ -1,0 +1,43 @@
+.ui.stats-card {
+    background-color: var(--stats-card-background-color);
+  }
+  
+  .ui.stats-card > .flex {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .ui.stats-card .flex-container {
+    display: flex;
+    align-items: center;
+    flex-basis: 30%;
+  }
+  
+  .ui.stats-card .info {
+    padding-left: 1rem;
+  }
+  .ui.stats-card .name {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.4rem;
+    color: #FFFFFF;
+  }
+  .ui.stats-card .subtitle {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    color: var(--stats-card-subtitle);      
+  }
+
+  @media only screen and (max-width: 500px) {
+    .ui.stats-card .flex-container {
+      display: flex;
+      align-items: center;
+      flex-basis: 70%;
+    }
+  }
+  
