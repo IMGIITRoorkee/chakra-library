@@ -29,7 +29,7 @@
   text-transform: uppercase;
 }
 
-.ui.description-card .description {
+.ui.description-card .description-content {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
