@@ -1,0 +1,9 @@
+.description-container {
+    margin: 0 3rem;
+}
+
+.ui.description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
