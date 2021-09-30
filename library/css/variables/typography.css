@@ -1,7 +1,12 @@
 :root {
-  --card-width: 564px;
-  --card-height: 223px;
+  --card-width: 35.25rem;
+  --card-height: 13.938rem;
   --card-padding: 1rem;
+  --card-border-radius: 0.125rem;
+  --image-card-width: 22.625rem;
+  --card-border-width: 0.063rem;
+  --description-card-width: 30rem;
+  --description-card-height: 28.125rem;
   --card-border-radius: 2px;
   --image-card-width: 364px;
   --card-border-width: 1px;
