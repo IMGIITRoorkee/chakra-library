@@ -26,4 +26,7 @@
     --tabs-secondary-font-weight: 300;
     --tabs-secondary-active-font-weight: 400;
     --quote-card-width: 45.4375rem;
+    --numbered-card-width: 335px;
+    --numbered-card-number-font-size: 3.75rem;
+    --numbered-card-title-font-size: 1.25rem;
 }
