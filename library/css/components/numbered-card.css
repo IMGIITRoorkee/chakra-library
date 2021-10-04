@@ -1,8 +1,7 @@
 .flex{
-    width: 1440px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 68px;
     padding: 42px 158px 18px;
 }
