@@ -2,10 +2,12 @@ var downArrow = "../../library/assets/images/accordion/down-arrow.svg"
 var upArrow = "../../library/assets/images/accordion/up-arrow.svg"
 
 var accordions = document.querySelectorAll('.ui.accordion')
-for (var i = 0; (accordions !== null) && (i < accordions.length); i++) {
+for (var i = 0;
+    (accordions !== null) && (i < accordions.length); i++) {
 
     var categories = accordions[i].getElementsByClassName('category');
-    for (var j = 0; (categories !== null) && (j < categories.length); j++) {
+    for (var j = 0;
+        (categories !== null) && (j < categories.length); j++) {
 
         // Add alternate gray effect
         if (j % 2 === 1) {
@@ -13,7 +15,8 @@ for (var i = 0; (accordions !== null) && (i < accordions.length); i++) {
         }
 
         var items = categories[j].getElementsByClassName('item')
-        for (var k = 0; (items !== null) && (k < items.length); k++) {
+        for (var k = 0;
+            (items !== null) && (k < items.length); k++) {
 
             // Add dividers
             const divider = document.createElement('div')
@@ -31,21 +34,37 @@ for (var i = 0; (accordions !== null) && (i < accordions.length); i++) {
                 title.appendChild(arrow)
 
                 // Manage click
-                title.addEventListener('click', function (e) {
+                title.addEventListener('click', function(e) {
                     e.stopPropagation()
                     e.preventDefault()
 
                     if (e.target) {
-                        const description = e.target.nextElementSibling
-                        const arrow = e.target.childNodes[1]
+                        if (e.target === arrow) {
 
-                        if (description !== null) {
-                            if (description.style.display === 'block') {
-                                description.style.display = 'none'
-                                arrow.setAttribute('src', downArrow)
-                            } else {
-                                description.style.display = 'block'
-                                arrow.setAttribute('src', upArrow)
+                            const description = e.target.parentNode.nextElementSibling
+
+                            if (description !== null) {
+                                if (description.style.display === 'block') {
+                                    description.style.display = 'none'
+                                    arrow.setAttribute('src', downArrow)
+                                } else {
+                                    description.style.display = 'block'
+                                    arrow.setAttribute('src', upArrow)
+                                }
+                            }
+
+                        } else {
+                            const description = e.target.nextElementSibling
+                            const arrow = e.target.childNodes[1]
+
+                            if (description !== null) {
+                                if (description.style.display === 'block') {
+                                    description.style.display = 'none'
+                                    arrow.setAttribute('src', downArrow)
+                                } else {
+                                    description.style.display = 'block'
+                                    arrow.setAttribute('src', upArrow)
+                                }
                             }
                         }
                     }
@@ -60,10 +79,12 @@ for (var i = 0; (accordions !== null) && (i < accordions.length); i++) {
 
 
 var imageAccordions = document.querySelectorAll('.ui.image-accordion')
-for (var i = 0; (imageAccordions !== null) && (i < imageAccordions.length); i++) {
+for (var i = 0;
+    (imageAccordions !== null) && (i < imageAccordions.length); i++) {
 
     const items = imageAccordions[i].getElementsByClassName('item')
-    for (var j = 0; (items !== null) && (j < items.length); j++) {
+    for (var j = 0;
+        (items !== null) && (j < items.length); j++) {
 
         const contents = items[j].getElementsByClassName('content')
         if (contents !== null) {
@@ -85,26 +106,47 @@ for (var i = 0; (imageAccordions !== null) && (i < imageAccordions.length); i++)
                 title.parentNode.insertBefore(divider, title.nextSibling)
 
                 // Manage click
-                title.addEventListener('click', function (e) {
+                title.addEventListener('click', function(e) {
                     e.stopPropagation()
                     e.preventDefault()
 
                     if (e.target) {
-                        const divider = e.target.nextElementSibling
-                        const description = divider.nextElementSibling
-                        const arrow = e.target.childNodes[1]
 
-                        if (description !== null) {
-                            if (description.style.display === 'block') {
-                                divider.style.display = 'none'
-                                description.style.display = 'none'
-                                arrow.setAttribute('src', downArrow)
-                            } else {
-                                divider.style.display = 'block'
-                                description.style.display = 'block'
-                                arrow.setAttribute('src', upArrow)
+                        if (e.target === arrow) {
+
+                            const divider = e.target.parentNode.nextElementSibling
+                            const description = divider.nextElementSibling
+
+                            if (description !== null) {
+                                if (description.style.display === 'block') {
+                                    divider.style.display = 'none'
+                                    description.style.display = 'none'
+                                    arrow.setAttribute('src', downArrow)
+                                } else {
+                                    divider.style.display = 'block'
+                                    description.style.display = 'block'
+                                    arrow.setAttribute('src', upArrow)
+                                }
+                            }
+
+                        } else {
+                            const divider = e.target.nextElementSibling
+                            const description = divider.nextElementSibling
+                            const arrow = e.target.childNodes[1]
+
+                            if (description !== null) {
+                                if (description.style.display === 'block') {
+                                    divider.style.display = 'none'
+                                    description.style.display = 'none'
+                                    arrow.setAttribute('src', downArrow)
+                                } else {
+                                    divider.style.display = 'block'
+                                    description.style.display = 'block'
+                                    arrow.setAttribute('src', upArrow)
+                                }
                             }
                         }
+
                     }
                 })
             }
