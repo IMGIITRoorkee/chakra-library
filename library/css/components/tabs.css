@@ -3,7 +3,7 @@
     padding: 30px;
 }
 
-.ui.tabs-container.primary > .tabs {
+.ui.tabs-container.primary>.tabs {
     width: 100%;
     border-bottom: 2px solid var(--tabs-primary-container-base-color);
     display: flex;
@@ -15,7 +15,7 @@
     overflow-x: scroll;
 }
 
-.ui.tabs-container.secondary > .tabs {
+.ui.tabs-container.secondary>.tabs {
     width: 100%;
     border-bottom: 2px solid var(--tabs-secondary-container-base-color);
     display: flex;
@@ -27,7 +27,7 @@
     overflow-x: scroll;
 }
 
-.ui.tabs-container.primary > .tabs > .tab {
+.ui.tabs-container.primary>.tabs>.tab {
     padding: 1rem 2rem 1rem 2rem;
     text-transform: uppercase;
     font-family: var(--font-lato);
@@ -39,7 +39,7 @@
     border-top-right-radius: 4px;
 }
 
-.ui.tabs-container.secondary > .tabs > .tab {
+.ui.tabs-container.secondary>.tabs>.tab {
     padding: 1rem 2rem 1rem 2rem;
     font-family: var(--font-lato);
     margin-right: 10px;
@@ -47,30 +47,47 @@
     font-weight: var(--tabs-secondary-font-weight);
 }
 
-.ui.tabs-container > .tabs::-webkit-scrollbar {
+.ui.tabs-container>.tabs::-webkit-scrollbar {
     display: none;
     background: transparent;
 }
 
-.ui.tabs-container > .tabs > .tab:hover {
+.ui.tabs-container>.tabs>.tab:hover {
     cursor: pointer;
 }
 
-.ui.tabs-container.primary > .tabs > .tab.active {
+.ui.tabs-container.primary>.tabs>.tab.active {
     color: var(--tabs-primary-active-font-color);
     background-color: var(--tabs-primary-active-background-color);
 }
 
-.ui.tabs-container.secondary > .tabs > .tab.active {
+.ui.tabs-container.secondary>.tabs>.tab.active {
     color: var(--tabs-secondary-active-color);
     font-weight: var(--tabs-secondary-active-font-weight);
     border-bottom: 2px solid var(--tabs-secondary-active-color);
 }
 
-.ui.tabs-container > .contents {
+.ui.tabs-container>.contents {
     width: 100%;
 }
 
-.ui.tabs-container > .contents > .content {
+.ui.tabs-container>.contents>.content {
     display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .ui.tabs-container {
+        padding: 10px;
+        width: calc(100% - 20px);
+    }
+    .ui.tabs-container.primary>.tabs>.tab {
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        font-size: var(--tabs-mobile-font-size);
+        margin-right: 5px;
+    }
+    .ui.tabs-container.secondary>.tabs>.tab {
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        font-size: var(--tabs-mobile-font-size);
+        margin-right: 5px;
+    }
 }
