@@ -13,22 +13,29 @@
   --description-card-background: #f7f7f799;
   --description-card-background-inverted: #5183b8;
   --description-card-color-inverted: white;
-  --accordion-gray-background: #F7F7F7;
-  --accordion-divider-color: #5183B8;
+  --accordion-gray-background: #f7f7f7;
+  --accordion-divider-color: #5183b8;
   --accordion-description-color: #666666;
 
   --image-accordion-background-color: rgba(9, 91, 151, 0.04);
   --image-accordion-border: solid rgba(4, 47, 120, 0.1) 1px;
-  --image-accordion-divider-color: #EAE8E4;
+  --image-accordion-divider-color: #eae8e4;
 
   --tabs-primary-active-font-color: #ffffff;
-  --tabs-primary-active-background-color: #5183B8;
-  --tabs-primary-container-base-color: #5183B8;
-  --tabs-secondary-active-color: #0067B3;
-  --tabs-secondary-container-base-color: #B8C9D9;
+  --tabs-primary-active-background-color: #5183b8;
+  --tabs-primary-container-base-color: #5183b8;
+  --tabs-secondary-active-color: #0067b3;
+  --tabs-secondary-container-base-color: #b8c9d9;
 
-  --flexbox-background: #F0F1F6;
-  --flexbox-background-inverted: linear-gradient(180deg, rgba(0, 103, 179, 0.8) 2.6%, #5183B8 19.79%, #5183B8 61.98%);
+  --table-primary-color: #5183b8;
+
+  --flexbox-background: #f0f1f6;
+  --flexbox-background-inverted: linear-gradient(
+    180deg,
+    rgba(0, 103, 179, 0.8) 2.6%,
+    #5183b8 19.79%,
+    #5183b8 61.98%
+  );
 }
 
 .dark {
