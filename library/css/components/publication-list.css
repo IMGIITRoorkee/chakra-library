@@ -1,0 +1,28 @@
+.ui.publication-list > .list-item {
+  width: 100%;
+  padding: 1.5rem;
+  line-height: 1.5rem;
+  box-sizing: border-box;
+  padding-bottom: 0;
+  /* font-family: 'Nunito Sans'; */
+}
+.ui.publication-list > .list-item .head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ui.publication-list > .list-item .title {
+  color: var(--publication-list-title-color);
+}
+
+.ui.publication-list > .list-item .info {
+  color: var(--publication-list-info-color);
+}
+
+.ui.publication-list > .list-item .description {
+  color: var(--publication-list-description-color);
+}
+.ui.publication-list > .list-item hr {
+  color: var(--publication-list-hr-color);
+  border-width: 0.125rem;
+}

@@ -1,0 +1,11 @@
+.ui.button {
+  color: #0067b3;
+  border: 1px solid #0067b3;
+  box-sizing: border-box;
+  border-radius: 2px;
+  background-color: white;
+  box-shadow: none;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-decoration: none;
+}
