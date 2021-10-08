@@ -79,6 +79,16 @@
   --quote-card-read-more-color: #0067B3;
   --quote-card-designation-color: #333333;
 
+
+  --table-primary-color: #5183b8;
+
+  --flexbox-background: #f0f1f6;
+  --flexbox-background-inverted: linear-gradient(
+    180deg,
+    rgba(0, 103, 179, 0.8) 2.6%,
+    #5183b8 19.79%,
+    #5183b8 61.98%
+  );
 }
 
 .dark {
