@@ -77,13 +77,11 @@ function Pager(tableName, itemsPerPage) {
       Math.max(pageNumber - 1, 1),
       Math.min(pageNumber + 1, this.pages)
     );
-
     this.showPage(pageNumber);
   };
   this.prev = function () {
     if (this.currentPage > 1) {
       this.createPager(Math.max(this.currentPage - 2, 1), this.currentPage); // it  used to move the cursor to privious index.
-
       this.showPage(this.currentPage - 1);
     }
   };
@@ -94,7 +92,6 @@ function Pager(tableName, itemsPerPage) {
         this.currentPage,
         Math.min(this.pages, this.currentPage + 2)
       );
-
       this.showPage(this.currentPage + 1);
     }
   };
@@ -194,7 +191,6 @@ function Pager(tableName, itemsPerPage) {
         pgg +
         " </span> &nbsp; ";
     }
-
     pagerHtml +=
       ' <span id="' +
       pagerName +
@@ -268,14 +264,12 @@ function Pager(tableName, itemsPerPage) {
         this.pages +
         "  </span> &nbsp;";
     }
-
     pagerHtml +=
       ' <span id="   ' +
       pagerName +
       'pgNext" onclick="' +
       pagerName +
       '.next();" class="ui pg-normal"> Next &#187;</span> ';
-
     element.innerHTML = pagerHtml;
   };
 }
