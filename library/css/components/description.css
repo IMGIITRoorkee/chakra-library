@@ -1,9 +1,25 @@
 .description-container {
-    margin: 0 2rem;
+  margin: 0 2rem;
 }
 
 .ui.description {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.justify {
+  text-align: justify;
 }
