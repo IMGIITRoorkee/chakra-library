@@ -1,6 +1,6 @@
 .ui.numbered-list {
     max-width: 100%;
-    padding: 20px;
+    padding: 1.25rem;
     background-color: var(--numbered-list-background);
 }
 
@@ -10,7 +10,7 @@
 
 .ui.numbered-list > .list {
     display: flex;
-    margin: 20px;
+    margin: 1.25rem;
     line-height: 1.3;
 }
 
@@ -20,9 +20,9 @@
 }
 
 .ui.numbered-list > .list > .item-no {
-    color: var(--numbered-list-title-color);;
+    color: var(--numbered-list-title-color);
     font-size: 2rem;
-    margin-right: 10px;
+    margin-right: 0.625rem;
 }
 
 .ui.numbered-list.inverted > .list > .item-no {
@@ -33,7 +33,7 @@
     color: var(--numbered-list-title-color);
     text-transform: uppercase;
     font-size: 1.4rem;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
 }
 
 .ui.numbered-list.inverted > .list > .content-flex > .title {

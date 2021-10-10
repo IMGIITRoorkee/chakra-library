@@ -1,10 +1,20 @@
-var numberedLists = document.querySelectorAll('.ui.numbered-list')
+const numberedLists = document.querySelectorAll('.ui.numbered-list')
 
-for (var i=0; (numberedLists !== null) && (i < numberedLists.length); i++){
-    var currNo = 1;
-    var lists = numberedLists[i].getElementsByClassName('list');
-    for (var j=0; (lists !== null) && (j < lists.length); j++) {
-        var itemNo = document.createElement("div");
+for (let i=0; (numberedLists !== null) && (i < numberedLists.length); i++){
+    let currNo = 1;
+    let lists = numberedLists[i].getElementsByClassName('list');
+    for (let j=0; (lists !== null) && (j < lists.length); j++) {
+        let title = lists[j].getElementsByClassName('title');
+        let desc = lists[j].getElementsByClassName('description');
+        if (title.length === 0){
+            lists[j].style.alignItems = "center";
+        } else if (desc.length === 0){
+            lists[j].style.alignItems = "center";
+            title[0].style.marginBottom = 0;
+            let contents = lists[j].getElementsByClassName('content-flex')[0];
+            contents.style.justifyContent = "center";
+        }
+        const itemNo = document.createElement("div");
         if (currNo <= 9){
             itemNo.innerHTML = "0" + currNo
         } else {
