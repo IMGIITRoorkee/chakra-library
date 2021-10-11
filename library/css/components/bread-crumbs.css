@@ -3,6 +3,7 @@
 .ui.breadcrumb {
   background-color: var(--breadcrumb-background);
   width: fit-content;
+  padding: 0.5rem;
 }
 
 .ui.breadcrumb.inverted {
@@ -20,7 +21,6 @@
 }
 
 .ui.breadcrumb > .divider {
-  height: 2.5rem;
   display: inline-flex;
   justify-content: center;
   align-items: center;
