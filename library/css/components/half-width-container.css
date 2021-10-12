@@ -1,0 +1,19 @@
+.ui.half-width-container {
+    width: 100%;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+}
+
+.ui.half-width-container > .first {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.ui.half-width-container > .second {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+@media only screen and (max-width: 600px) {
+    .ui.half-width-container {
+        display: block;
+    }
+}
