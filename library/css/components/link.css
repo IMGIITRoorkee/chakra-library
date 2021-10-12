@@ -1,26 +1,38 @@
-.ui.link a:link {
-    text-decoration: none;
-  }
-  .ui.link a:hover {
-    text-decoration: underline;
-  }
-  .ui.link a:visited {
-    text-decoration: none;
-  }
-  .ui.link button {
-    padding: 0.4rem 0.4rem;
+.ui.link p:link {
+    text-decoration: none !important;
+    cursor: pointer;
+    color: #000;
+}
+
+.ui.link p:hover {
+    text-decoration: underline !important;
+    color: #000;
+    cursor: pointer;
+}
+
+.ui.link button {
     text-align: center;
-    text-decoration: none;
     display: inline-block;
     font-size: 0.8rem;
-    margin: 0.25rem 0.25rem;
     cursor: pointer;
-    background-color: white; 
-    color: black; 
-    border: 0.125rem solid black;
+    margin: 0.25rem 0.25rem;
+    background-color: white;
+    color: #1a76bb;
     border-radius: 0.125rem;
     font-family: Lato;
     font-style: normal;
-    font-weight: normal;
-  }
-  
+    border: 0.08rem solid #1a76bb;
+    box-sizing: border-box;
+    border-radius: 0.08rem;
+    padding: 0.4rem;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    font-size: 0.64rem;
+    font-weight: 400;
+    line-height: 0.96rem;
+}
+
+.ui.link button:hover {
+    background-color: #1a76bb !important;
+    color: #fff;
+}
