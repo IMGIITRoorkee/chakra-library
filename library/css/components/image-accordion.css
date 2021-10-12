@@ -14,17 +14,6 @@
     margin: 70px 10px 70px 10px;
 }
 
-.ui.image-accordion > .item > .image {
-    height: 200px;
-    width: 100%;
-    overflow: hidden;
-}
-
-.ui.image-accordion > .item > .image > img {
-    min-width: 100%;
-    min-height: 100%;
-}
-
 .ui.image-accordion > .item > .content {
     padding: 20px;
     width: 100%;
