@@ -12,8 +12,26 @@
     grid-area: 1 / 2 / 2 / 3;
 }
 
+.ui.forty-sixty-container {
+    width: 100%;
+    display: grid;
+    grid-template: 1fr / 4fr 6fr;
+}
+
+.ui.forty-sixty-container > .first {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.ui.forty-sixty-container > .second {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
 @media only screen and (max-width: 600px) {
     .ui.sixty-forty-container {
+        display: block;
+    }
+
+    .ui.forty-sixty-container {
         display: block;
     }
 }
