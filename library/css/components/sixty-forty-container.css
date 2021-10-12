@@ -1,0 +1,19 @@
+.ui.sixty-forty-container {
+    width: 100%;
+    display: grid;
+    grid-template: 1fr / 6fr 4fr;
+}
+
+.ui.sixty-forty-container > .first {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.ui.sixty-forty-container > .second {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+@media only screen and (max-width: 600px) {
+    .ui.sixty-forty-container {
+        display: block;
+    }
+}
