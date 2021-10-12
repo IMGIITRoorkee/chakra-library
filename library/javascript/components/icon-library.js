@@ -42,9 +42,7 @@ let paths = {
 let documentIcons = document.querySelectorAll(".ui.icon");
 
 for (let icon of documentIcons) {
-    let image = document.createElement("img");
     var key = icon.getAttribute("data-icon");
-    image.setAttribute("src", paths[key]);
-    image.className = "icon_image"
-    document.getElementById('icons').appendChild(image);
+    icon.setAttribute("src", paths[key]);
+    icon.className = "icon_image"
 }
