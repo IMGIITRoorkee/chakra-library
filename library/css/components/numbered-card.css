@@ -2,8 +2,9 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    gap: 68px;
-    padding: 42px 158px 18px;
+    flex-wrap: wrap;
+    gap: 4.25rem;
+    padding: 2.625rem 9.875rem 1.125rem;
 }
 
 .ui.numbered-card{
@@ -12,8 +13,8 @@
 
 .ui.numbered-card .heading{
     display: flex;
-    gap: 6px;
-    margin-bottom: 18px;
+    gap: .375rem;
+    margin-bottom: 1.125rem;
     font-family: var(--font-roboto);
 }
 
@@ -34,3 +35,10 @@
     text-align: justify;
     font-family: var(--font-roboto);
 }
+
+@media only screen and (max-width: 600px) {
+    .flex{
+        gap: 2.5rem;
+        padding: 1.25rem 4rem .5rem;
+    }
+  }
