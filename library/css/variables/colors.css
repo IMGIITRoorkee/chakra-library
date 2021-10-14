@@ -64,6 +64,16 @@
   --publication-list-info-color: #666666;
   --publication-list-description-color: #333333;
   --publication-list-hr-color: #b8c9d9;
+
+  --bulleted-list-background: #ffffff;
+  --bulleted-list-description-color: #00000099;
+  --bulleted-list-background-inverted: linear-gradient(
+    180deg,
+    rgba(0, 103, 179, 0.8) 11.46%,
+    #5183b8 32.29%,
+    #5183b8 90.1%
+  );
+  --bulleted-list-description-color-inverted: #ffffff99;
 }
 
 .dark {
