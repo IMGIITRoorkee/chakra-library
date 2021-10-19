@@ -81,6 +81,9 @@
 
 
   --table-primary-color: #5183b8;
+  --table-pagination-tab-color: #0067b3;
+  --table-pagination-font-color: white;
+  --table-pagination-border-color: #ddd;
 
   --flexbox-background: #f0f1f6;
   --flexbox-background-inverted: linear-gradient(
