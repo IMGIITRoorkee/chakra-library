@@ -1,12 +1,24 @@
 reportsPerPage = listDisplayPerPg.options[listDisplayPerPg.selectedIndex].value;
 
-var pager = new Pager("tadminViewReport", reportsPerPage);
+let pager = new Pager("tadminViewReport", reportsPerPage);
 pager.init();
 pager.showPageNav("pager", "pageNavPosition");
 pager.showPage(1);
 
+//Picked from tabs.js
+function makeid(length) {
+  var result = "";
+  var characters =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  var charactersLength = characters.length;
+  for (var i = 0; i < length; i++) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  return result;
+}
+
 function changeNumberOfPages() {
-  var x = document.getElementById("listDisplayPerPg");
+  let x = document.getElementById("listDisplayPerPg");
   pager.showPage(1);
   pager.num_pages = x.value;
   pager.init();
@@ -20,9 +32,10 @@ function Pager(tableName, itemsPerPage) {
   this.pages = 0;
   this.inited = false;
   this.num_pages = itemsPerPage;
+  this.secretHash = makeid(24) + "-" + makeid(6);
 
   this.showRecords = function (from, to) {
-    var rows = document.getElementById(tableName).rows;
+    let rows = document.getElementById(tableName).rows;
     for (var i = 1; i < rows.length; i++) {
       if (i < from || i > to) rows[i].style.display = "none";
       else rows[i].style.display = "";
@@ -36,16 +49,19 @@ function Pager(tableName, itemsPerPage) {
     }
 
     this.currentPage = pageNumber;
-    var newPageAnchor = document.getElementById("pg" + this.currentPage);
+    let newPageAnchor = document.getElementById(
+      "pg" + this.secretHash + this.currentPage
+    );
     newPageAnchor.className = "ui pg-selected";
 
-    var from = (pageNumber - 1) * Number(this.num_pages) + 1;
-    var to = from + Number(this.num_pages) - 1;
+    let from = (pageNumber - 1) * Number(this.num_pages) + 1;
+    let to = from + Number(this.num_pages) - 1;
+
     this.showRecords(from, to);
 
-    var pgNext = document.getElementById(this.pagerName + "pgNext");
+    let pgNext = document.getElementById(this.pagerName + "pgNext");
 
-    var pgPrev = document.getElementById(this.pagerName + "pgPrev");
+    let pgPrev = document.getElementById(this.pagerName + "pgPrev");
 
     if (pgNext != null) {
       if (this.currentPage == this.pages) pgNext.style.display = "none";
@@ -61,11 +77,13 @@ function Pager(tableName, itemsPerPage) {
       Math.max(pageNumber - 1, 1),
       Math.min(pageNumber + 1, this.pages)
     );
+
     this.showPage(pageNumber);
   };
   this.prev = function () {
     if (this.currentPage > 1) {
       this.createPager(Math.max(this.currentPage - 2, 1), this.currentPage); // it  used to move the cursor to privious index.
+
       this.showPage(this.currentPage - 1);
     }
   };
@@ -76,33 +94,34 @@ function Pager(tableName, itemsPerPage) {
         this.currentPage,
         Math.min(this.pages, this.currentPage + 2)
       );
+
       this.showPage(this.currentPage + 1);
     }
   };
 
   this.init = function () {
-    var rows = document.getElementById(tableName).rows;
+    let rows = document.getElementById(tableName).rows;
 
-    var records = rows.length - 1;
+    let records = rows.length - 1;
     this.pages = Math.ceil(records / this.num_pages);
 
     this.inited = true;
   };
 
-  //it is used to  move the cursor upto 5 records.
   this.createPager = function (startEle, EndEle) {
-    var pagerName = "pager";
-
-    var pagerHtml =
+    let pagerName = "pager";
+    let pagerHtml =
       ' <span id="' +
       pagerName +
       'pgPrev" onclick="' +
       pagerName +
       '.prev();" class="ui pg-normal">   &#171 Prev  </span> &nbsp; ';
+
     if (startEle == 2) {
-      var pgg = 1;
+      let pgg = 1;
       pagerHtml +=
         ' <span id="pg' +
+        this.secretHash +
         pgg +
         '" class="ui pg-normal" onclick="' +
         pagerName +
@@ -112,10 +131,12 @@ function Pager(tableName, itemsPerPage) {
         pgg +
         " </span> &nbsp; ";
     }
+
     if (startEle > 2) {
-      var pgg = 1;
+      let pgg = 1;
       pagerHtml +=
         ' <span id="pg' +
+        this.secretHash +
         pgg +
         '" class="ui pg-normal" onclick="' +
         pagerName +
@@ -125,12 +146,16 @@ function Pager(tableName, itemsPerPage) {
         pgg +
         " </span> &nbsp; ";
       pagerHtml +=
-        ' <span id="pgbuffer" class="ui pg-normal">...</span> &nbsp;';
+        ' <span id="pgbuffer' +
+        this.secretHash +
+        '" class="ui pg-normal">...</span> &nbsp;';
     }
-    var element = document.getElementById("pageNavPosition");
+
+    let element = document.getElementById("pageNavPosition");
     for (var page = startEle; page <= EndEle; page++)
       pagerHtml +=
         ' <span id="pg' +
+        this.secretHash +
         page +
         '" class="ui pg-normal" onclick="' +
         pagerName +
@@ -139,10 +164,12 @@ function Pager(tableName, itemsPerPage) {
         ');">' +
         page +
         " </span> &nbsp; ";
+
     if (EndEle == this.pages - 1) {
-      var pgg = this.pages;
+      let pgg = this.pages;
       pagerHtml +=
         ' <span id="pg' +
+        this.secretHash +
         pgg +
         '" class="ui pg-normal" onclick="' +
         pagerName +
@@ -153,7 +180,7 @@ function Pager(tableName, itemsPerPage) {
         " </span> &nbsp; ";
     }
     if (EndEle < this.pages - 1) {
-      var pgg = this.pages;
+      let pgg = this.pages;
       pagerHtml +=
         ' <span id="pgbuffer" class="ui pg-normal">...</span> &nbsp;';
       pagerHtml +=
@@ -167,6 +194,7 @@ function Pager(tableName, itemsPerPage) {
         pgg +
         " </span> &nbsp; ";
     }
+
     pagerHtml +=
       ' <span id="' +
       pagerName +
@@ -183,24 +211,26 @@ function Pager(tableName, itemsPerPage) {
       return;
     }
 
-    var element = document.getElementById(positionId);
-    var pagerHtml =
+    let element = document.getElementById(positionId);
+    let pagerHtml =
       ' <span id="' +
       pagerName +
       'pgPrev" onclick="' +
       pagerName +
       '.prev();" class="ui pg-normal"> &#171 Prev </span> &nbsp;  ';
 
-    var totPages;
+    let totPages;
     totPages = this.pages;
     if (this.pages > 3) {
       totPages = 3;
     } else {
       totPages = this.pages;
     }
-    for (var page = 1; page <= totPages; page++) {
+
+    for (let page = 1; page <= totPages; page++) {
       pagerHtml +=
         ' <span id="pg' +
+        this.secretHash +
         page +
         '" class="ui pg-normal" onclick="' +
         pagerName +
@@ -210,9 +240,11 @@ function Pager(tableName, itemsPerPage) {
         page +
         "  </span> &nbsp;";
     }
+
     if (this.pages == 4) {
       pagerHtml +=
         ' <span id="pg' +
+        this.secretHash +
         4 +
         '" class="ui pg-normal" onclick="' +
         pagerName +
@@ -236,12 +268,14 @@ function Pager(tableName, itemsPerPage) {
         this.pages +
         "  </span> &nbsp;";
     }
+
     pagerHtml +=
       ' <span id="   ' +
       pagerName +
       'pgNext" onclick="' +
       pagerName +
       '.next();" class="ui pg-normal"> Next &#187;</span> ';
+
     element.innerHTML = pagerHtml;
   };
 }
