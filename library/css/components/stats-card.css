@@ -28,7 +28,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 1.4rem;
-    color: #FFFFFF;
+    color: var(--stats-card-font-color);
 }
 
 .ui.stats-card .subtitle {

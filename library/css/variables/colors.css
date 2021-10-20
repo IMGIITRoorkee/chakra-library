@@ -18,6 +18,7 @@
   --faculty-card-description-color: #232323;
   --stats-card-background-color: #5183b8;
   --stats-card-subtitle: rgba(255, 255, 255, 0.6);
+  --stats-card-font-color: #FFFFFF;
 
   --description-card-background: #f7f7f799;
   --description-card-background-inverted: #5183b8;
@@ -85,8 +86,7 @@
   --table-pagination-border-color: #ddd;
 }
 
-.dark {
-}
+.dark {}
 
 @font-face {
   font-family: "Segoe UI";
