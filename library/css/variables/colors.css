@@ -74,6 +74,11 @@
     #5183b8 90.1%
   );
   --bulleted-list-description-color-inverted: #ffffff99;
+
+  --quote-card-border-color: #B8C9D9;
+  --quote-card-read-more-color: #0067B3;
+  --quote-card-designation-color: #333333;
+
 }
 
 .dark {
