@@ -7,14 +7,14 @@
     padding: 3.75rem 2.5625rem 3.125rem;
     font-size: 1.125rem;
     line-height: 1.75rem;
-    border: 2px solid #B8C9D9;
+    border: 2px solid var(--quote-card-border-color);
     border-radius: 4px;
     position: relative;
     text-align: justify;
 }
 
 .ui.quote-card .quote .read-more{
-    color: #0067B3;
+    color: var(--quote-card-read-more-color);
 }
 
 .ui.quote-card .triangle{
@@ -38,6 +38,14 @@
 }
 
 .ui.quote-card .quote .profile .designation{
-    color: #666;
+    color: var(--quote-card-designation-color);
     font-family: var(--font-lato);
+}
+
+.ui.quote-card .quote .profile .picture .photo{
+    width: 111px;
+    height: 111px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
