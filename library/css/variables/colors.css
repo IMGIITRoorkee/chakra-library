@@ -16,7 +16,7 @@
   --faculty-card-designation-color: #868686;
   --faculti-card-info-color: #333333;
   --faculty-card-description-color: #232323;
-  --stats-card-background-color: #5183B8;
+  --stats-card-background-color: #5183b8;
   --stats-card-subtitle: rgba(255, 255, 255, 0.6);
 
   --description-card-background: #f7f7f799;
@@ -75,23 +75,25 @@
   );
   --bulleted-list-description-color-inverted: #ffffff99;
 
-  --quote-card-border-color: #B8C9D9;
-  --quote-card-read-more-color: #0067B3;
+  --quote-card-border-color: #b8c9d9;
+  --quote-card-read-more-color: #0067b3;
   --quote-card-designation-color: #333333;
 
+  --table-primary-color: #5183b8;
+  --table-pagination-tab-color: #0067b3;
+  --table-pagination-font-color: white;
+  --table-pagination-border-color: #ddd;
 }
 
 .dark {
 }
 
 @font-face {
-  font-family: 'Segoe UI';
-  src: url('./ui/segoeui.eot');
-  src: local("Segoe UI"),
-       local("Segoe"),
-       local("Segoe WP"),
-       url('./ui/segoeui.eot?#iefix') format('embedded-opentype'),
-       url('./ui/segoeui.woff') format('woff');
+  font-family: "Segoe UI";
+  src: url("./ui/segoeui.eot");
+  src: local("Segoe UI"), local("Segoe"), local("Segoe WP"),
+    url("./ui/segoeui.eot?#iefix") format("embedded-opentype"),
+    url("./ui/segoeui.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }

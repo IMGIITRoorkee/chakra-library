@@ -1,0 +1,91 @@
+.ui.table-container {
+  width: calc(100% - 3.75rem);
+  padding: 1.875rem;
+}
+
+.ui.table {
+  width: 100%;
+}
+
+.ui.table-row {
+  width: 100%;
+  border-bottom: 0.125rem solid var(--table-primary-color);
+  margin-right: 1rem;
+}
+
+.ui.table-head {
+  padding: 1rem 0;
+  font-weight: 400;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  font-family: var(--font-lato);
+}
+
+.ui.table-value {
+  padding: 1rem 0;
+  padding-right: 0.5rem;
+}
+
+#pageNavPosition {
+  margin: 0.5rem;
+}
+
+.ui.pg-normal,
+.ui.pg-selected {
+  cursor: pointer;
+  color: var(--table-pagination-tab-color);
+  float: left;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border: 1px solid var(--table-pagination-border-color);
+}
+.ui.pg-selected {
+  color: var(--table-pagination-font-color);
+  background-color: var(--table-pagination-tab-color);
+  text-align: center;
+}
+.select {
+  position: relative;
+  display: flex;
+  width: 16rem;
+  height: 2rem;
+  line-height: 3;
+  overflow: hidden;
+  border-radius: 0.25em;
+  margin: 0.5rem;
+  border: 1px solid var(--table-pagination-tab-color);
+}
+
+.ui.pagination-select {
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
+  padding: 0 0 0 0.5em;
+  cursor: pointer;
+  border: none;
+  background: var(--table-pagination-font-color);
+}
+.select::after {
+  content: "\25BC";
+  font-size: 0.7rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 0 0.75rem;
+  background: var(--table-pagination-tab-color);
+  color: var(--table-pagination-font-color);
+  pointer-events: none;
+}
+
+.ui.pagination-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.select::after {
+  -webkit-transition: 0.25s all ease;
+  -o-transition: 0.25s all ease;
+  transition: 0.25s all ease;
+}
