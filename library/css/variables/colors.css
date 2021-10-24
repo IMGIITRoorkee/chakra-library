@@ -84,6 +84,10 @@
   --table-pagination-tab-color: #0067b3;
   --table-pagination-font-color: white;
   --table-pagination-border-color: #ddd;
+
+  --contact-card-heading-color: #4C4C4C;
+  --contact-card-icon-hover-color: #181818;
+  --contact-card-icon-background-color: #CFDBE6;
 }
 
 .dark {}
