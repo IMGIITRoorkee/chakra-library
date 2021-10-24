@@ -1,59 +1,71 @@
 let paths = {
-  mail: "../../library/assets/icons/mail_contact.png",
-  phone: "../../library/assets/icons/phone_contact.png",
+  mail: "../../library/assets/icons/mail_contact.svg",
+  phone: "../../library/assets/icons/phone_contact.svg",
 };
 
 let contact_card = document.querySelector(".ui.contact-card");
 
-let flex = contact_card.querySelector(".flex");
+let flex = contact_card.querySelector(".contact-flex");
 
 for (let key of Object.keys(paths)) {
   let keyNode = flex.querySelector(`.${key}`);
   let imageContainer = keyNode.querySelector(".icon");
-  let circle = document.createElement("div");
-  circle.style.width="26px";
-  circle.style.height="26px";
-  circle.style.borderRadius="50%";
-  circle.style.backgroundColor="#CFDBE6";
-  circle.style.backgroundRepeat="no-repeat";
-  circle.style.backgroundPosition="center";
-  circle.style.backgroundImage=`url(${paths[key]})`;
-  imageContainer.append(circle);
+  imageContainer.style.backgroundImage=`url(${paths[key]})`;
 }
 
 let social = new Map();
 
 social.set("Facebook", {
   link: "https://www.facebook.com/",
-  addr: "../../library/assets/icons/fb.png",
+  addr: "../../library/assets/icons/fb_logo_cms.svg",
+  bgcolor: "#3b5998",
 });
-social.set("Facebook1", {
+social.set("Youtube", {
   link: "https://www.facebook.com/",
-  addr: "../../library/assets/icons/fb.png",
+  addr: "../../library/assets/icons/youtube_logo.svg",
+  bgcolor: "#bb0000",
 });
-social.set("Facebook2", {
+social.set("Instagram", {
   link: "https://www.facebook.com/",
-  addr: "../../library/assets/icons/fb.png",
+  addr: "../../library/assets/icons/insta_logo_cms.svg",
+  bgcolor: "#FE1F49",
 });
-social.set("Facebook3", {
+social.set("Linkedin", {
   link: "https://www.facebook.com/",
-  addr: "../../library/assets/icons/fb.png",
+  addr: "../../library/assets/icons/linkedin_logo.svg",
+  bgcolor: "#007bb6",
 });
-social.set("Facebook4", {
+social.set("Twitter", {
+  link: "https://www.facebook.com/",
+  addr: "../../library/assets/icons/twitter_logo.svg",
+  bgcolor: "#00aced",
+});
+social.set("Website", {
     link: "https://www.facebook.com/",
-    addr: "../../library/assets/icons/fb.png",
+    addr: "../../library/assets/icons/web_logo.svg",
+    bgcolor: "#181818",
   });
 
 let socialContainer = document.querySelector(".social");
 
+
 for (let [key, value] of social) {
   let link = document.createElement("a");
   link.setAttribute("href", value.link);
-  let icon = document.createElement("img");
-  icon.setAttribute("src", value.addr);
-  icon.style.width = "25px";
-  icon.style.height = "25px";
+  let icon = document.createElement("div")
+  icon.style.width = "26px";
+  icon.style.height = "26px";
   icon.style.borderRadius = "50%";
+  icon.style.backgroundColor = "#CFDBE6";
+  icon.style.backgroundRepeat="no-repeat";
+  icon.style.backgroundPosition="center";
+  icon.style.backgroundImage=`url(${value.addr})`;
+  icon.addEventListener("mouseover", function(event){
+    event.target.style.backgroundColor = value.bgcolor;
+  })
+  icon.addEventListener("mouseout", function(event){
+    event.target.style.backgroundColor = "#CFDBE6";
+  })
   socialContainer.append(link);
   link.append(icon);
 }
