@@ -6,7 +6,7 @@
     padding-bottom: 5rem;
 }
 
-.ui.stats-card>.flex {
+.ui.stats-card > .flex {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -39,7 +39,7 @@
     color: var(--stats-card-subtitle);
 }
 
-.icon_image {
+.ui.ui.stats-card .icon_image {
     height: 7rem !important;
     width: 7rem !important;
 }
