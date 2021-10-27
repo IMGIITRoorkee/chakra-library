@@ -88,6 +88,12 @@
   --contact-card-heading-color: #4C4C4C;
   --contact-card-icon-hover-color: #181818;
   --contact-card-icon-background-color: #CFDBE6;
+
+  --link-inactive-color: rgba(26, 118, 187, 0.87);
+  --link-active-color: #1A76BB;
+  --link-button-color: #0067B3;
+  --link-background-color: white;
+  --link-light-group-button: #5183B8;
 }
 
 .dark {}
