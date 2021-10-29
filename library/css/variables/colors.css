@@ -94,6 +94,21 @@
   --link-button-color: #0067B3;
   --link-background-color: white;
   --link-light-group-button: #5183B8;
+  
+  --list-background: #ffffff;
+  --list-title-color: #000000de;
+  --list-description-color: #00000099;
+  --list-divider-color: #5183B8;
+  --list-title-color-inverted: #ffffff;
+  --list-background-inverted: linear-gradient(
+    180deg,
+    rgba(0, 103, 179, 0.8) 11.46%,
+    #5183b8 32.29%,
+    #5183b8 90.1%
+  );
+  --list-description-color-inverted: #ffffff99;
+  --list-divider-color-inverted: #ffffff99;
+  --list-background-2: rgba(229, 238, 244, 0.49);
 }
 
 .dark {}
