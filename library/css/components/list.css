@@ -1,0 +1,48 @@
+.ui.list {
+    max-width: 100%;
+    padding: 1.25rem;
+    background-color: var(--list-background);
+}
+
+.ui.list.inverted {
+    background-image: var(--list-background-inverted)
+}
+
+.ui.list.list-bluebg {
+    background-color: var(--list-background-2);
+}
+
+.ui.list > .listItem {
+    margin-bottom:0.625rem;
+    line-height: 1.3;
+}
+
+.ui.list > .listItem > .title {
+    color: var(--list-title-color);
+    font-size: 1rem;
+    padding: 0.625rem;
+}
+
+.ui.list.inverted > .listItem > .title {
+    color: var(--list-title-color-inverted);
+}
+
+.ui.list > .listItem > .description {
+    color: var(--numbered-list-description-color);
+    padding: 0 0.625rem 0.625rem 0.625rem;    
+    font-size: 0.875rem;
+}
+
+.ui.list.inverted > .listItem > .description {
+    color: var(--list-description-color-inverted);
+}
+
+.ui.list > .listItem > .divider{
+    width: 100%;
+    height: 2px;
+    background-color: var(--list-divider-color);
+}
+
+.ui.list.inverted > .listItem > .divider{
+    background-color: var(--list-divider-color-inverted);
+}
