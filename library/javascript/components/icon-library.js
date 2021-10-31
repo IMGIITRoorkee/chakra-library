@@ -37,7 +37,15 @@ let paths = {
     floating_button_hover: "../../library/assets/icons/floating_button_hover-icon.svg",
     committee: "../../library/assets/icons/committee-icon.svg",
     google_icon_1: "../../library/assets/icons/google_icon_1-icon.svg",
-    location: "../../library/assets/icons/location.svg"
+    location: "../../library/assets/icons/location.svg",
+    facebook_logo: "../../library/assets/icons/fb_logo_cms.svg",
+    twitter_logo: "../../library/assets/icons/twitter_logo_cms.svg",
+    linkedin_logo: "../../library/assets/icons/linkedin_logo_cms.svg",
+    youtube_logo: "../../library/assets/icons/youtube_logo_cms.svg",
+    instagram_logo: "../../library/assets/icons/instagram_logo_cms.svg",
+    web_logo: "../../library/assets/icons/web_logo_cms.svg",
+    mail_contact: "../../library/assets/icons/mail_contact.svg",
+    phone_contact: "../../library/assets/icons/phone_contact.svg",
 };
 
 let documentIcons = document.querySelectorAll(".ui.icon");
