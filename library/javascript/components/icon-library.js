@@ -36,7 +36,8 @@ let paths = {
     floating_button: "../../library/assets/icons/floating_button-icon.svg",
     floating_button_hover: "../../library/assets/icons/floating_button_hover-icon.svg",
     committee: "../../library/assets/icons/committee-icon.svg",
-    google_icon_1: "../../library/assets/icons/google_icon_1-icon.svg"
+    google_icon_1: "../../library/assets/icons/google_icon_1-icon.svg",
+    location: "../../library/assets/icons/location.svg"
 };
 
 let documentIcons = document.querySelectorAll(".ui.icon");
