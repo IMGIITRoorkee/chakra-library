@@ -24,8 +24,8 @@
     gap: .875rem;
 }
 
-.ui.contact-card .phone,
-.ui.contact-card .mail {
+.ui.contact-card .phone_contact,
+.ui.contact-card .mail_contact {
     display: flex;
     gap: .625rem;
     align-items: center;
@@ -40,5 +40,37 @@
     background-position: center;
 }
 .ui.contact-card .icon:hover{
+    background-color: var(--contact-card-icon-hover-color);
+}
+
+.ui.contact-card .social .social-icon{
+    width : 26px;
+    height : 26px;
+    border-radius : 50%;
+    background-color : var(--contact-card-icon-background-color);
+    background-repeat:no-repeat;
+    background-position:center;
+}
+.ui.contact-card .social .facebook_icon .social-icon:hover{
+    background-color: var(--contact-card-facebook-color);
+}
+
+.ui.contact-card .social .twitter_icon .social-icon:hover{
+    background-color: var(--contact-card-twitter-color);
+}
+
+.ui.contact-card .social .linkedin_icon .social-icon:hover{
+    background-color: var(--contact-card-linkedin-color);
+}
+
+.ui.contact-card .social .instagram_icon .social-icon:hover{
+    background-color: var(--contact-card-instagram-color);
+}
+
+.ui.contact-card .social .youtube_icon .social-icon:hover{
+    background-color: var(--contact-card-youtube-color);
+}
+
+.ui.contact-card .social .web_icon .social-icon:hover{
     background-color: var(--contact-card-icon-hover-color);
 }
