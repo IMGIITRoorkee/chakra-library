@@ -23,6 +23,6 @@
 @import url(./numbered-card.css);
 @import url(./contact-card.css);
 @import url(./social-icon.css);
-@import url('./list.css');
-@import url('./full-width-container.css');
-@import url('./typography.css');
+@import url(./full-width-container.css);
+@import url(./typography.css);
+@import url(./list.css);
