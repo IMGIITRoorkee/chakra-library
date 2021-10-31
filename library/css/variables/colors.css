@@ -88,6 +88,11 @@
   --contact-card-heading-color: #4C4C4C;
   --contact-card-icon-hover-color: #181818;
   --contact-card-icon-background-color: #CFDBE6;
+  --contact-card-facebook-color: #3b5998;
+  --contact-card-twitter-color: #00aced;
+  --contact-card-linkedin-color: #0077b5;
+  --contact-card-instagram-color: #e1306c;
+  --contact-card-youtube-color: #bb0000;
 
   --link-inactive-color: rgba(26, 118, 187, 0.87);
   --link-active-color: #1A76BB;
