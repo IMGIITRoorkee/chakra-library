@@ -1,0 +1,36 @@
+
+.ui.social-icon {
+    width : 26px;
+    height : 26px;
+    border-radius : 50%;
+    background-color : var(--social-icon-background-color);
+    background-repeat:no-repeat;
+    background-position:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ui.social-icon.facebook_icon:hover{
+    background-color: var(--social-icon-facebook-hover-color);
+}
+
+.ui.social-icon.twitter_icon:hover{
+    background-color: var(--social-icon-twitter-hover-color);
+}
+
+.ui.social-icon.linkedin_icon:hover{
+    background-color: var(--social-icon-linkedin-hover-color);
+}
+
+.ui.social-icon.instagram_icon:hover{
+    background-color: var(--social-icon-instagram-hover-color);
+}
+
+.ui.social-icon.youtube_icon:hover{
+    background-color: var(--social-icon-youtube-hover-color);
+}
+
+.ui.social-icon.web_icon:hover{
+    background-color: var(--social-icon-web-hover-color);
+}
