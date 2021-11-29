@@ -44,8 +44,8 @@ let paths = {
     youtube_logo: "../../library/assets/icons/youtube_logo_cms.svg",
     instagram_logo: "../../library/assets/icons/instagram_logo_cms.svg",
     web_logo: "../../library/assets/icons/web_logo_cms.svg",
-    mail_contact: "../../library/assets/icons/mail_contact.svg",
-    phone_contact: "../../library/assets/icons/phone_contact.svg",
+    mail_contact: "../../library/assets/icons/mail.svg",
+    phone_contact: "../../library/assets/icons/phone.svg",
 };
 
 let documentIcons = document.querySelectorAll(".ui.icon");
