@@ -26,7 +26,10 @@
   border: 0.08rem solid var(--link-button-color);
   box-sizing: border-box;
   border-radius: 0.08rem;
-  padding: 0.4rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   text-transform: uppercase;
   text-decoration: none !important;
   font-size: 0.64rem;
@@ -74,7 +77,10 @@
   border: 0.08rem solid var(--link-light-group-button);
   box-sizing: border-box;
   border-radius: 0.08rem;
-  padding: 0.4rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   text-transform: uppercase;
   text-decoration: none !important;
   font-size: 0.64rem;
@@ -101,7 +107,10 @@
   border: 0.08rem solid var(--link-light-group-button);
   box-sizing: border-box;
   border-radius: 0.08rem;
-  padding: 0.4rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   text-transform: uppercase;
   text-decoration: none !important;
   font-size: 0.64rem;
