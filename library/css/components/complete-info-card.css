@@ -1,6 +1,5 @@
   .ui.complete-info-card .individual-card {
-      flex-basis: 33%;
-      padding-bottom: 3rem;
+      flex-basis: 25%;
   }
   
   .ui.complete-info-card>.flex {
