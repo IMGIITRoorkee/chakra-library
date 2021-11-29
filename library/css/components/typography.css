@@ -1,0 +1,50 @@
+.ui.section-heading {
+    color: var(--section-heading-color);
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin: 1.25rem 0;
+    letter-spacing: 0.0625rem;
+    line-height: 1.5rem;
+}
+
+.ui.inactive-section-link{
+    pointer-events: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--section-link-color);
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin: 1.25rem 0;
+    line-height: 1.5rem;
+}
+
+.ui.active-section-link {
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: 2px solid var(--section-link-color);
+    color: var(--section-link-color);
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.9rem;
+    margin: 1.25rem 0;
+}
+
+.ui.sub-heading {
+    line-height: 1.3rem;
+    color: var(--sub-heading-color);
+    font-size: 1.25rem;
+    margin: 1.25rem 0;
+}
+
+.ui.one-liner-captions {
+    color: var(--one-liner-captions);
+    line-height: 1.2rem;
+    margin: 1rem 0;
+}
+
+.ui.intro-text {
+    color: var(--intro-text-color);
+    margin: 1rem 0;
+    line-height: 1.2rem;
+}
