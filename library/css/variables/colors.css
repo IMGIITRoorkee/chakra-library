@@ -109,6 +109,13 @@
   --list-description-color-inverted: #ffffff99;
   --list-divider-color-inverted: #ffffff99;
   --list-background-2: rgba(229, 238, 244, 0.49);
+
+  --section-heading-color: #4C4C4C;
+  --section-link-color: #1A76BB;
+  --sub-heading-color: #232323;
+  --one-liner-captions: #999999;
+  --intro-text-color: #666666;
+
 }
 
 .dark {}
