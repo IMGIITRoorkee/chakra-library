@@ -1,44 +1,57 @@
-.flex{
+.ui.numbered-card-container {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 4.25rem;
-    padding: 2.625rem 9.875rem 1.125rem;
+    gap: 2rem;
+    padding: 5rem;
 }
 
-.ui.numbered-card{
+.ui.numbered-card-container > .numbered-card {
     width: var(--numbered-card-width);
 }
 
-.ui.numbered-card .heading{
+.ui.numbered-card-container > .numbered-card > .heading {
     display: flex;
     gap: .375rem;
     margin-bottom: 1.125rem;
     font-family: var(--font-roboto);
 }
 
-.ui.numbered-card .number{
+.ui.numbered-card-container > .numbered-card > .heading > .number {
     vertical-align: top;
     font-size: var(--numbered-card-number-font-size);
     line-height: 3rem;
 }
 
-.ui.numbered-card .title{
+.ui.numbered-card-container > .numbered-card > .heading > .title {
     vertical-align: top;
     font-size: var(--numbered-card-title-font-size);
     line-height: 1.5rem;
 }
 
-.ui.numbered-card .description{
+.ui.numbered-card-container > .numbered-card > .description {
     line-height: 1.5rem;
     text-align: justify;
     font-family: var(--font-roboto);
 }
 
-@media only screen and (max-width: 600px) {
-    .flex{
+@media only screen and (max-width: 1300px) {
+    .ui.numbered-card-container {
+        display: block;
         gap: 2.5rem;
-        padding: 1.25rem 4rem .5rem;
+        padding: 1.25rem 1rem .5rem;
     }
-  }
+
+    .ui.numbered-card-container > .numbered-card {
+        width: calc(100% - 3rem);
+        padding: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .ui.numbered-card-container > .numbered-card {
+        padding: 1rem 0.5rem 1rem 0.5rem;
+        width: calc(100% - 1rem);
+    }
+}
