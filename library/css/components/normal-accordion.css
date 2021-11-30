@@ -8,10 +8,7 @@
 }
 
 .ui.accordion>.category>.title {
-    font-size: var(--accordion-title-font-size);
-    font-family: var(--font-lato);
     padding: 30px 10px 30px 10px;
-    text-transform: uppercase;
 }
 
 .ui.accordion>.category>.item>.title {
@@ -30,9 +27,6 @@
 }
 
 .ui.accordion>.category>.item>.description {
-    color: var(--accordion-description-color);
-    font-size: var(--accordion-description-font-size);
-    line-height: var(--accordion-description-line-height);
     padding: 20px 10px 20px 10px;
     display: none;
 }

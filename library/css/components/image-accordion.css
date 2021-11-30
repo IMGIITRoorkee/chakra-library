@@ -3,10 +3,7 @@
 }
 
 .ui.image-accordion > .title {
-    font-size: var(--image-accordion-title-font-size);
-    font-family: var(--font-lato);
-    text-transform: uppercase;
-    margin: 50px 10px 100px 10px;
+    margin: 40px 10px 40px 10px;
 }
 
 .ui.image-accordion > .item {
@@ -15,7 +12,6 @@
 }
 
 .ui.image-accordion > .item > .content {
-    padding: 20px;
     width: 100%;
     background-color: var(--image-accordion-background-color);
     border: var(--image-accordion-border);
@@ -26,9 +22,9 @@
 }
 
 .ui.image-accordion > .item > .content > .title {
-    width: calc(100% - 20px);
-    padding: 10px;
-    font-size: var(--image-accordion-content-title-font-size);
+    width: calc(100% - 40px);
+    padding: 20px;
+    margin: 0;
 }
 
 .ui.image-accordion > .item > .content > .title:hover {
