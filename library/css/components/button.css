@@ -9,3 +9,14 @@
   padding-right: 1rem;
   text-decoration: none;
 }
+
+.ui.button-emphasis {
+  color: #0067b3;
+  border: 1px solid #0067b3;
+  box-sizing: border-box;
+  border-radius: 2px;
+  background-color: white;
+  box-shadow: none;
+  padding: 1rem;
+  text-transform: uppercase;
+}
