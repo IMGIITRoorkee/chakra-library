@@ -1,24 +1,31 @@
 .footer {
   display: grid;
-  grid-template: 1fr / 1fr 2fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 10px 20px 10px 20px;
+  box-sizing: border-box;
 }
 
 .footer > .contact-info {
-  grid-area: 1 / 1 / 2 / 2;
   text-align: center;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  padding: 10px 40px 10px 40px;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-contact-link-icons {
+  width: max-content;
+}
+.footer-map {
+  width: 100%;
 }
 
 .footer > .weather {
-  border-left: 1px solid #000;
-  padding-left: 10px;
+  width: 100%;
 }
 
 .footer .info-logo {
-  width: 100%;
+  width: 90%;
+  max-width: 15rem;
   margin: 10px;
 }
 
@@ -37,20 +44,17 @@
 }
 
 .footer .links {
-  grid-area: 1 / 2 / 2 / 3;
-  display: grid;
-  grid-template: 1fr / 1fr 1fr;
-  padding: 10px 20px 10px 20px;
+  display: flex;
+  justify-content: space-around;
+  /* padding: 10px 20px 10px 20px; */
 }
 
 .footer-links-left {
-  grid-area: 1 / 1 / 2 / 2;
-  padding: 0 20px 0 20px;
+  /* padding: 0 20px 0 20px; */
 }
 
 .footer-links-right {
-  grid-area: 1 / 2 / 2 / 3;
-  padding: 0 20px 0 20px;
+  /* padding: 0 20px 0 20px; */
 }
 
 .footer-links-header {
@@ -112,9 +116,10 @@
 
 .footer-favicons {
   display: flex;
-  justify-content: center;
+  gap: 1rem;
   align-items: center;
-  width: 150px;
+  width: 100%;
+  margin: 10px 0 10px 0;
 }
 
 .footer-favicons > a {
@@ -125,8 +130,30 @@
   height: 24px;
 }
 
-@media only screen and (max-width: 900px) {
-  .footer-container {
+@media only screen and (max-width: 720px) {
+  .footer {
     display: block;
+    font-size: 0.75rem;
+  }
+  .footer .links, .weather{
+    margin-top: 1.5rem;
+  }
+  .footer .info-logo {
+    width: 90%;
+  }
+  .footer-favicons {
+    gap: 0.5rem;
+  }
+  .footer > .contact-info {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .footer-contact-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .footer > .weather {
+    width: 90%;
   }
 }
