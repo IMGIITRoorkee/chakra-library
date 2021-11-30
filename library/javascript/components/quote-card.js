@@ -1,12 +1,11 @@
-let imageConatiner = document.querySelectorAll(".ui.quote-card .picture")[0];
+const profileImages = document.querySelectorAll(".ui.quote-card .picture");
+const default_icon = "../../library/assets/icons/default_faculty.png";
 
-let default_faculty = "../../library/assets/icons/default_faculty.png";
-
-let path=imageConatiner.getAttribute("src");
-
-if(path==""){
-    path=default_faculty;
+for(let i=0; (profileImages !== null) && (i < profileImages.length); i++){
+    let imageSrc = profileImages[i].getAttribute("src");
+    if (imageSrc=="" || imageSrc==null){
+        imageSrc = default_icon;
+    }
+    profileImages[i].style.backgroundImage=`url(${imageSrc})`;
 }
 
-let circle = imageConatiner.querySelector(".photo")
-circle.style.backgroundImage=`url(${path})`;

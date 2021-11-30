@@ -1,51 +1,79 @@
-
 .ui.quote-card{
-    width: var(--quote-card-width);
-}
-.ui.quote-card .quote{
-    margin:2.625rem 6rem ;
-    padding: 3.75rem 2.5625rem 3.125rem;
+    max-width: 100%;
+    margin:2.625rem 6rem 10rem 6rem;
+    padding: 3.125rem 2.5625rem 2rem;
     font-size: 1.125rem;
     line-height: 1.75rem;
     border: 2px solid var(--quote-card-border-color);
     border-radius: 4px;
     position: relative;
-    text-align: justify;
 }
 
-.ui.quote-card .quote .read-more{
-    color: var(--quote-card-read-more-color);
-}
-
-.ui.quote-card .triangle{
-    position: absolute;
-    bottom: -1.125rem;
+.ui.quote-card .quote-card-icon {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 20px;
+    position: relative;
+    top: 3.1rem;
 }
 
 .ui.quote-card .profile{
     position: absolute;
-    bottom: -9.5rem;
-    left: .5rem;
     display: flex;
-    gap: 2.5rem;
+    bottom: -9rem;
+    left: 1.8rem;
 }
 
 .ui.quote-card .text{
     display: flex;
     flex-direction: column;
     justify-content: center ;
+    text-transform: uppercase;
     font-family: var(--font-lato);
 }
 
-.ui.quote-card .quote .profile .designation{
+.ui.quote-card .profile .designation{
     color: var(--quote-card-designation-color);
     font-family: var(--font-lato);
 }
 
-.ui.quote-card .quote .profile .picture .photo{
+.ui.quote-card .profile .picture{
     width: 111px;
     height: 111px;
     border-radius: 50%;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+@media screen and (max-width: 500px) {
+    .ui.quote-card {
+        margin:2rem 3rem 12rem 3rem;
+    }
+    .ui.quote-card .quote-card-icon {
+        justify-content: center;
+        padding-left: 0;
+    }
+    .ui.quote-card .profile {
+        width: 100%;    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        bottom: -12rem;
+        left: 0rem;
+    }
+    .ui.quote-card .text {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .ui.quote-card {
+        margin:2rem 3rem 14rem 3rem;
+    }
+    .ui.quote-card .profile{
+        position: absolute;
+        display: flex;
+        bottom: -13rem;
+    }
 }
