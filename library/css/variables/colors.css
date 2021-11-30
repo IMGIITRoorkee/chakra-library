@@ -18,7 +18,7 @@
   --faculty-card-description-color: #232323;
   --stats-card-background-color: #5183b8;
   --stats-card-subtitle: rgba(255, 255, 255, 0.6);
-  --stats-card-font-color: #FFFFFF;
+  --stats-card-font-color: #ffffff;
 
   --description-card-background: #f7f7f799;
   --description-card-background-inverted: #5183b8;
@@ -84,20 +84,20 @@
   --table-pagination-font-color: white;
   --table-pagination-border-color: #ddd;
 
-  --contact-card-heading-color: #4C4C4C;
+  --contact-card-heading-color: #4c4c4c;
   --contact-card-icon-hover-color: #181818;
-  --contact-card-icon-background-color: #CFDBE6;
+  --contact-card-icon-background-color: #cfdbe6;
 
   --link-inactive-color: rgba(26, 118, 187, 0.87);
-  --link-active-color: #1A76BB;
-  --link-button-color: #0067B3;
+  --link-active-color: #1a76bb;
+  --link-button-color: #0067b3;
   --link-background-color: white;
-  --link-light-group-button: #5183B8;
-  
+  --link-light-group-button: #5183b8;
+
   --list-background: #ffffff;
   --list-title-color: #000000de;
   --list-description-color: #00000099;
-  --list-divider-color: #5183B8;
+  --list-divider-color: #5183b8;
   --list-title-color-inverted: #ffffff;
   --list-background-inverted: linear-gradient(
     180deg,
@@ -109,22 +109,26 @@
   --list-divider-color-inverted: #ffffff99;
   --list-background-2: rgba(229, 238, 244, 0.49);
 
-  --section-heading-color: #4C4C4C;
-  --section-link-color: #1A76BB;
+  --section-heading-color: #4c4c4c;
+  --section-link-color: #1a76bb;
   --sub-heading-color: #232323;
   --one-liner-captions: #999999;
   --intro-text-color: #666666;
 
-  --social-icon-background-color: #CFDBE6;
+  --social-icon-background-color: #cfdbe6;
   --social-icon-facebook-hover-color: #3b5998;
   --social-icon-twitter-hover-color: #00aced;
   --social-icon-linkedin-hover-color: #0077b5;
   --social-icon-instagram-hover-color: #e1306c;
   --social-icon-youtube-hover-color: #bb0000;
   --social-icon-web-hover-color: #181818;
+
+  --image-card-border: #c4c4c480;
+  --image-card-content: #666;
 }
 
-.dark {}
+.dark {
+}
 
 @font-face {
   font-family: "Segoe UI";
