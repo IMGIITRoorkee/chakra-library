@@ -11,6 +11,7 @@
 .ui.faculty-card > .flex {
   display: flex;
   gap: 4rem;
+  align-items: center;
 }
 
 .ui.faculty-card .name {
@@ -58,17 +59,23 @@
 
 @media only screen and (max-width: 600px) {
   .ui.faculty-card {
-    padding: 1rem;
+    padding: 0.5rem;
   }
   .ui.faculty-card > .flex {
-    display: block;
+    gap: 0.5rem;
   }
-  .ui.faculty-card > .flex > div {
+  .ui.faculty-card .ui.image img {
+    width: 100%;
+  }
+  /* .ui.faculty-card > .flex > div {
     width: max-content;
     margin-left: auto;
     margin-right: auto;
+  } */
+  .ui.faculty-card .body {
+    display: none;
   }
-  .ui.faculty-card .info {
+  /* .ui.faculty-card .info {
     margin-top: 2rem;
-  }
+  } */
 }
