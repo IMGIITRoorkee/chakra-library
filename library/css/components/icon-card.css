@@ -27,3 +27,13 @@
     font-size: 1rem;
     line-height: 1.2rem;
 }
+
+@media only screen and (max-width: 900px) {
+    .ui.icon-card .individual-card {
+        flex-basis: 70%;
+    }
+    .ui.icon-card>.flex {
+        padding-bottom: 0.5rem;
+        gap: 2rem;
+    }
+}
