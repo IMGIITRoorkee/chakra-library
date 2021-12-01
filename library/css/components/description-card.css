@@ -50,12 +50,32 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  margin-left: 0.5rem;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1500px) {
+  .ui.description-card-container {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
   .ui.description-card {
-    width: var(--description-card-mobile-width);
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 15%;
     height: var(--description-card-mobile-height);
+  }
+  .ui.description-card .title {
+    margin-top: 4rem;
+  }
+  .ui.description-card .text-link {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .ui.description-card {
+    height: var(--description-card-height);
   }
   .ui.description-card .title {
     margin-top: 2.75rem;
