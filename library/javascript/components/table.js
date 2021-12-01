@@ -1,11 +1,3 @@
-reportsPerPage = listDisplayPerPg.options[listDisplayPerPg.selectedIndex].value;
-
-let pager = new Pager("tadminViewReport", reportsPerPage);
-pager.init();
-pager.showPageNav("pager", "pageNavPosition");
-pager.showPage(1);
-
-//Picked from tabs.js
 function makeid(length) {
   var result = "";
   var characters =
@@ -17,25 +9,19 @@ function makeid(length) {
   return result;
 }
 
-function changeNumberOfPages() {
-  let x = document.getElementById("listDisplayPerPg");
-  pager.showPage(1);
-  pager.num_pages = x.value;
-  pager.init();
-  pager.showPageNav("pager", "pageNavPosition");
-  pager.showPage(1);
-}
+const tableMap = new Map()
 
-function Pager(tableName, itemsPerPage) {
+function Pager(tableName, itemsPerPage, container) {
   this.tableName = tableName;
   this.currentPage = 1;
   this.pages = 0;
   this.inited = false;
   this.num_pages = itemsPerPage;
   this.secretHash = makeid(24) + "-" + makeid(6);
+  this.container = container;
 
   this.showRecords = function (from, to) {
-    let rows = document.getElementById(tableName).rows;
+    let rows = this.container.querySelector(`#${tableName}`).rows;
     for (var i = 1; i < rows.length; i++) {
       if (i < from || i > to) rows[i].style.display = "none";
       else rows[i].style.display = "";
@@ -49,8 +35,8 @@ function Pager(tableName, itemsPerPage) {
     }
 
     this.currentPage = pageNumber;
-    let newPageAnchor = document.getElementById(
-      "pg" + this.secretHash + this.currentPage
+    let newPageAnchor = this.container.querySelector(
+      "#pg" + this.secretHash + this.currentPage
     );
     newPageAnchor.className = "ui pg-selected";
 
@@ -58,10 +44,9 @@ function Pager(tableName, itemsPerPage) {
     let to = from + Number(this.num_pages) - 1;
 
     this.showRecords(from, to);
+    let pgNext = this.container.querySelector(`#${this.pagerName}pgNext`);
 
-    let pgNext = document.getElementById(this.pagerName + "pgNext");
-
-    let pgPrev = document.getElementById(this.pagerName + "pgPrev");
+    let pgPrev = this.container.querySelector(`#${this.pagerName}pgPrev`);
 
     if (pgNext != null) {
       if (this.currentPage == this.pages) pgNext.style.display = "none";
@@ -97,7 +82,7 @@ function Pager(tableName, itemsPerPage) {
   };
 
   this.init = function () {
-    let rows = document.getElementById(tableName).rows;
+    let rows = document.querySelector(`#${tableName}`).rows;
 
     let records = rows.length - 1;
     this.pages = Math.ceil(records / this.num_pages);
@@ -147,8 +132,7 @@ function Pager(tableName, itemsPerPage) {
         this.secretHash +
         '" class="ui pg-normal">...</span> &nbsp;';
     }
-
-    let element = document.getElementById("pageNavPosition");
+    let element = this.container.querySelector("#pageNavPosition");
     for (var page = startEle; page <= EndEle; page++)
       pagerHtml +=
         ' <span id="pg' +
@@ -206,8 +190,7 @@ function Pager(tableName, itemsPerPage) {
       alert("not inited");
       return;
     }
-
-    let element = document.getElementById(positionId);
+    let element = this.container.querySelector('#'+positionId);
     let pagerHtml =
       ' <span id="' +
       pagerName +
@@ -272,4 +255,27 @@ function Pager(tableName, itemsPerPage) {
       '.next();" class="ui pg-normal"> Next &#187;</span> ';
     element.innerHTML = pagerHtml;
   };
+}
+
+let tables = document.querySelectorAll(".ui.table-container");
+
+for (let table of tables) {
+  let mango = table.querySelector("#listDisplayPerPg");
+  let reportsPerPage = mango.options[listDisplayPerPg.selectedIndex].value;
+  let pager = new Pager("tadminViewReport", reportsPerPage, table);
+  tableMap.set(table,pager)
+  pager.init();
+  pager.showPageNav("pager", "pageNavPosition");
+  pager.showPage(1);
+}
+
+function changeNumberOfPages(container) {
+  let mango = container.parentNode.parentNode.parentNode.parentNode
+  let x = mango.querySelector("#listDisplayPerPg");
+  let pager = tableMap.get(mango);
+  pager.showPage(1);
+  pager.num_pages = x.value;
+  pager.init();
+  pager.showPageNav("pager", "pageNavPosition");
+  pager.showPage(1);
 }
