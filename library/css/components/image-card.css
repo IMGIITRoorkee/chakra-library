@@ -8,23 +8,25 @@
 
 .ui.image-card > .ui.image {
   height: 15rem;
+  object-fit: cover;
+  overflow: hidden;
 }
 
-.ui.image-card > .ui.content {
+.ui.image-card > .content {
   padding: 1.25rem;
 }
 
-.ui.image-card > .ui.content > .ui.heading-1 {
+.ui.image-card > .content > .heading-1 {
   font-size: 1rem;
   font-weight: 600;
 }
 
-.ui.image-card > .ui.content > .ui.heading-2 {
+.ui.image-card > .content > .heading-2 {
   font-size: 1.5rem;
   font-weight: 400;
 }
 
-.ui.image-card > .ui.content > .ui.content-details {
+.ui.image-card > .content > .content-details {
   font-size: 0.875rem;
   font-weight: 400;
   padding: 0.625rem 0;
@@ -49,7 +51,7 @@
   filter: brightness(75%);
 }
 
-.ui.caption {
+.caption {
   position: absolute;
   top: 2rem;
   left: 1rem;
@@ -58,6 +60,17 @@
   padding-right: 1rem;
 }
 
-@media only screen and (max-width: 400px) {
-  
+@media only screen and (max-width: 414px) {
+  .ui.image-card {
+    width: 20.75rem;
+    box-shadow: inset 0.125rem 0rem 0.125rem var(--faculty-card-shadow-color);
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+    border: 0.0625rem solid var(--image-card-border);
+  }
+  .ui.image-card > .ui.image {
+    height: 13rem;
+    object-fit: cover;
+    overflow: hidden;
+  }
 }
