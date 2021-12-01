@@ -7,7 +7,6 @@ socialIconToNormalIcon.set('linkedin_icon', 'linkedin_logo');
 socialIconToNormalIcon.set('web_icon', 'web_logo');
 
 let links = document.querySelectorAll(".ui.social-icon");
-console.log(links); 
 for (let link of links) {
     let a = link.classList[2];
     
