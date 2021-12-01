@@ -58,11 +58,20 @@
       padding-left: 1rem;
   }
   
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 1500px) {
+    .ui.complete-info-card .individual-card {
+        flex-basis: 40% !important;
+    }
+    .ui.complete-info-card .flex {
+        padding-left: 5rem;
+    }
+}
+
+  @media only screen and (max-width: 768px) {
       .ui.complete-info-card .individual-card {
-          flex-basis: 70%;
+          flex-basis: 70% !important;
       }
       .ui.complete-info-card .flex {
-          padding-left: 0.5rem;
+          padding-left: 5rem;
       }
   }
