@@ -51,7 +51,7 @@
   filter: brightness(75%);
 }
 
-.caption {
+.ui.mini-image-card .caption {
   position: absolute;
   top: 2rem;
   left: 1rem;
