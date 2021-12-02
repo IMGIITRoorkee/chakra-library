@@ -9,7 +9,7 @@ function makeid(length) {
   return result;
 }
 
-const tableMap = new Map()
+const tableMap = new Map();
 
 function Pager(tableName, itemsPerPage, container) {
   this.tableName = tableName;
@@ -92,41 +92,15 @@ function Pager(tableName, itemsPerPage, container) {
 
   this.createPager = function (startEle, EndEle) {
     let pagerName = "pager";
-    let pagerHtml =
-      ' <span id="' +
-      pagerName +
-      'pgPrev" onclick="' +
-      pagerName +
-      '.prev();" class="ui pg-normal">   &#171 Prev  </span> &nbsp; ';
-
+    let pagerHtml = `<span id="${pagerName}pgPrev" class="ui pg-normal" onclick="call(this, 'prev')"> &#171 Prev</span>&nbsp;`;
     if (startEle == 2) {
       let pgg = 1;
-      pagerHtml +=
-        ' <span id="pg' +
-        this.secretHash +
-        pgg +
-        '" class="ui pg-normal" onclick="' +
-        pagerName +
-        ".pressPage(" +
-        pgg +
-        ');">' +
-        pgg +
-        " </span> &nbsp; ";
+      pagerHtml += `<span id="pg${this.secretHash}${pgg}" class="ui pg-normal" onclick="call(this,'pressPage', '${pgg}')">${pgg}</span>&nbsp;`;
     }
 
     if (startEle > 2) {
       let pgg = 1;
-      pagerHtml +=
-        ' <span id="pg' +
-        this.secretHash +
-        pgg +
-        '" class="ui pg-normal" onclick="' +
-        pagerName +
-        ".pressPage(" +
-        pgg +
-        ');">' +
-        pgg +
-        " </span> &nbsp; ";
+      pagerHtml += `<span id="pg${this.secretHash}${pgg}" class="ui pg-normal" onclick="call(this,'pressPage', '${pgg}')">${pgg}</span>&nbsp;`;
       pagerHtml +=
         ' <span id="pgbuffer' +
         this.secretHash +
@@ -134,54 +108,19 @@ function Pager(tableName, itemsPerPage, container) {
     }
     let element = this.container.querySelector("#pageNavPosition");
     for (var page = startEle; page <= EndEle; page++)
-      pagerHtml +=
-        ' <span id="pg' +
-        this.secretHash +
-        page +
-        '" class="ui pg-normal" onclick="' +
-        pagerName +
-        ".pressPage(" +
-        page +
-        ');">' +
-        page +
-        " </span> &nbsp; ";
+      pagerHtml += `<span id="pg${this.secretHash}${page}" class="ui pg-normal" onclick="call(this,'pressPage', '${page}')">${page}</span>&nbsp;`;
 
     if (EndEle == this.pages - 1) {
       let pgg = this.pages;
-      pagerHtml +=
-        ' <span id="pg' +
-        this.secretHash +
-        pgg +
-        '" class="ui pg-normal" onclick="' +
-        pagerName +
-        ".pressPage(" +
-        pgg +
-        ');">' +
-        pgg +
-        " </span> &nbsp; ";
+      pagerHtml += `<span id="pg${this.secretHash}${pgg}" class="ui pg-normal" onclick="call(this,'pressPage', '${pgg}')">${pgg}</span>&nbsp;`;
     }
     if (EndEle < this.pages - 1) {
       let pgg = this.pages;
       pagerHtml +=
         ' <span id="pgbuffer" class="ui pg-normal">...</span> &nbsp;';
-      pagerHtml +=
-        ' <span id="pg' +
-        pgg +
-        '" class="ui pg-normal" onclick="' +
-        pagerName +
-        ".pressPage(" +
-        pgg +
-        ');">' +
-        pgg +
-        " </span> &nbsp; ";
+      pagerHtml += `<span id="pg${this.secretHash}${pgg}" class="ui pg-normal" onclick="call(this,'pressPage', '${pgg}')">${pgg}</span>&nbsp;`;
     }
-    pagerHtml +=
-      ' <span id="' +
-      pagerName +
-      'pgNext" onclick="' +
-      pagerName +
-      '.next();" class="ui pg-normal"> Next &#187;</span> ';
-
+    pagerHtml += `<span id="${pagerName}pgNext" class="ui pg-normal" onclick="call(this, 'next')"> Next &#187;</span>`;
     element.innerHTML = pagerHtml;
   };
 
@@ -190,13 +129,8 @@ function Pager(tableName, itemsPerPage, container) {
       alert("not inited");
       return;
     }
-    let element = this.container.querySelector('#'+positionId);
-    let pagerHtml =
-      ' <span id="' +
-      pagerName +
-      'pgPrev" onclick="' +
-      pagerName +
-      '.prev();" class="ui pg-normal"> &#171 Prev </span> &nbsp;  ';
+    let element = this.container.querySelector("#" + positionId);
+    let pagerHtml = `<span id="${pagerName}pgPrev" class="ui pg-normal" onclick="call(this, 'prev')"> &#171 Prev</span>&nbsp;`;
 
     let totPages;
     totPages = this.pages;
@@ -207,52 +141,20 @@ function Pager(tableName, itemsPerPage, container) {
     }
 
     for (let page = 1; page <= totPages; page++) {
-      pagerHtml +=
-        ' <span id="pg' +
-        this.secretHash +
-        page +
-        '" class="ui pg-normal" onclick="' +
-        pagerName +
-        ".pressPage(" +
-        page +
-        ');">' +
-        page +
-        "  </span> &nbsp;";
+      pagerHtml += `<span id="pg${this.secretHash}${page}" class="ui pg-normal" onclick="call(this,'pressPage', '${page}')">${page}</span>&nbsp;`;
     }
 
     if (this.pages == 4) {
-      pagerHtml +=
-        ' <span id="pg' +
-        this.secretHash +
-        4 +
-        '" class="ui pg-normal" onclick="' +
-        pagerName +
-        ".pressPage(" +
-        4 +
-        ');">' +
-        4 +
-        "  </span> &nbsp;";
+      pagerHtml += `<span id="pg${
+        this.secretHash
+      }4" class="ui pg-normal" onclick="call(this,'pressPage', '${4}')">${4}</span>&nbsp;`;
     }
     if (this.pages > 4) {
       pagerHtml +=
         ' <span id="pgbuffer" class="ui pg-normal">...</span> &nbsp;';
-      pagerHtml +=
-        ' <span id="pg' +
-        this.pages +
-        '" class="ui pg-normal" onclick="' +
-        pagerName +
-        ".pressPage(" +
-        this.pages +
-        ');">' +
-        this.pages +
-        "  </span> &nbsp;";
+      pagerHtml += `<span id="pg${this.pages}" class="ui pg-normal" onclick="call(this,'pressPage', '${this.pages}')">${this.pages}</span>&nbsp;`;
     }
-    pagerHtml +=
-      ' <span id="   ' +
-      pagerName +
-      'pgNext" onclick="' +
-      pagerName +
-      '.next();" class="ui pg-normal"> Next &#187;</span> ';
+    pagerHtml += `<span id="${pagerName}pgNext" class="ui pg-normal" onclick="call(this, 'next')"> Next &#187;</span>`;
     element.innerHTML = pagerHtml;
   };
 }
@@ -263,19 +165,31 @@ for (let table of tables) {
   let mango = table.querySelector("#listDisplayPerPg");
   let reportsPerPage = mango.options[listDisplayPerPg.selectedIndex].value;
   let pager = new Pager("tadminViewReport", reportsPerPage, table);
-  tableMap.set(table,pager)
+  tableMap.set(table, pager);
   pager.init();
   pager.showPageNav("pager", "pageNavPosition");
   pager.showPage(1);
 }
 
 function changeNumberOfPages(container) {
-  let mango = container.parentNode.parentNode.parentNode.parentNode
-  let x = mango.querySelector("#listDisplayPerPg");
-  let pager = tableMap.get(mango);
+  let table = container.parentNode.parentNode.parentNode.parentNode;
+  let x = table.querySelector("#listDisplayPerPg");
+  let pager = tableMap.get(table);
   pager.showPage(1);
   pager.num_pages = x.value;
   pager.init();
   pager.showPageNav("pager", "pageNavPosition");
   pager.showPage(1);
+}
+
+function call(container, action, page) {
+  let table = container.parentNode.parentNode.parentNode.parentNode;
+  let pager = tableMap.get(table);
+  if (action == "prev") {
+    pager.prev();
+  } else if (action == "next") {
+    pager.next();
+  } else if (action == "pressPage") {
+    pager.pressPage(parseInt(page));
+  }
 }
