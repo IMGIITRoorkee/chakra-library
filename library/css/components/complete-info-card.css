@@ -60,7 +60,7 @@
   
   @media only screen and (max-width: 1500px) {
     .ui.complete-info-card .individual-card {
-        flex-basis: 40% !important;
+        flex-basis: 40%;
     }
     .ui.complete-info-card .flex {
         padding-left: 5rem;
@@ -69,7 +69,7 @@
 
   @media only screen and (max-width: 768px) {
       .ui.complete-info-card .individual-card {
-          flex-basis: 70% !important;
+          flex-basis: 70%;
       }
       .ui.complete-info-card .flex {
           padding-left: 5rem;
