@@ -1,0 +1,144 @@
+.menuWrapper {
+  margin: 5px 0 5px 0;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.menuContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.clear:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+html[xmlns] .clear {
+  display: block;
+}
+* html .clear {
+  height: 1%;
+}
+
+nav.blue a {
+  color: #232323;
+  font-family: var(--font-family-lato);
+  font-size: 14px;
+  line-height: 16.8px;
+  text-transform: uppercase !important;
+  text-decoration: none;
+}
+nav.blue ul {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  margin: 0 auto;
+}
+nav.blue li {
+  list-style: none;
+  float: left;
+  position: relative;
+  width: 11.11%;
+  text-align: center;
+}
+nav.blue li a {
+  display: flex;
+  padding: 5px;
+  justify-content: center;
+  gap: 3px;
+  padding-bottom: 6px;
+  background-position: 0px 0px;
+}
+nav.blue li a:hover,
+nav li.active a {
+  background-position: 0px -36px;
+  background-color: #f0f1f6;
+}
+nav.blue li a:active {
+  background-position: 0px -72px;
+}
+nav.blue .dropdown {
+  display: block;
+  float: right;
+  width: 7px;
+  height: 5px;
+  margin: -20px 15px 0px 12px;
+}
+nav.blue li ul {
+  /* opacity: 0; */
+  position: absolute;
+  box-shadow: 0 1px 2px 0px rgba(50, 50, 50, 0.2);
+  left: 0;
+  padding: 0 15px;
+  width: auto;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  background-color: #f0f1f6;
+  max-height: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  /* display: none; */
+  transition: padding 0.1s ease-in-out, opacity 0.5s ease-in-out,
+    height 0.1s ease-in-out;
+  z-index: 999999;
+}
+
+nav.blue li:hover ul {
+  /* display: block; */
+  max-height: unset;
+  opacity: 1;
+  padding: 12px 15px;
+}
+
+nav.blue li ul li {
+  border-right: 0px;
+  float: none !important;
+  width: 180px;
+}
+nav.blue li ul li:last-child {
+  border-bottom: 0px;
+}
+nav.blue li ul li a {
+  background: none !important;
+  border-left: 0px;
+  border-top: 0px;
+  text-align: left;
+  color: #404040;
+  padding: 6px;
+  justify-content: unset;
+}
+nav.blue li ul li a:hover {
+  font-weight: bold;
+}
+nav.blue li ul li.arrow {
+  background: url(../images/arrowtop.png) top left no-repeat;
+  border-bottom: 0px;
+  height: 10px;
+  margin-top: -22px;
+  margin-bottom: 10px;
+}
+
+nav.blue .dropdown-icon {
+  width: unset;
+  height: unset;
+}
+
+@media only screen and (max-width: 1100px) {
+  .menuContainer {
+    display: none;
+  }
+
+  nav.blue li {
+    width: 100%;
+    display: block;
+    float: none;
+  }
+
+  nav.blue li ul {
+    display: none !important;
+  }
+}
