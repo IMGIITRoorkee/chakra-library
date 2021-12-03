@@ -6,6 +6,7 @@
   border: 0.0625rem solid var(--image-card-border);
 }
 
+
 .ui.image-card > .ui.image {
   height: 15rem;
   object-fit: cover;
