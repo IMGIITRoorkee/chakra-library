@@ -33,7 +33,7 @@
         flex-basis: 70%;
     }
     .ui.icon-card>.flex {
-        padding-bottom: 0.5rem;
+        padding: 0.5rem;
         gap: 2rem;
     }
 }
