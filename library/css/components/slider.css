@@ -1,0 +1,33 @@
+.ui.slider {
+    display: grid;
+    grid-template: 1fr / 5vw 1fr 5vw;
+}
+
+.ui.slider > .left-arrow-container {
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ui.slider > .container {
+    grid-area: 1 / 2 / 2 / 3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.ui.slider > .right-arrow-container {
+    grid-area: 1 / 3 / 2 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ui.slider > .left-arrow-container > .arrow:hover {
+    cursor: pointer;
+}
+
+.ui.slider > .right-arrow-container > .arrow:hover {
+    cursor: pointer;
+}
