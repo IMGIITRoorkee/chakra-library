@@ -53,5 +53,5 @@ let documentIcons = document.querySelectorAll(".ui.icon");
 for (let icon of documentIcons) {
     var key = icon.getAttribute("data-icon");
     icon.setAttribute("src", paths[key]);
-    icon.className = "icon_image"
+    icon.className += " icon_image"
 }
