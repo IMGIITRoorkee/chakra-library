@@ -14,9 +14,9 @@
     padding: 2.625rem 9.875rem 1.125rem;
 }
 
-.ui.icon-card .icon-card-image {
-    height: 4rem !important;
-    width: 4rem !important;
+.ui.icon-card .icon_image {
+    height: 4rem;
+    width: 4rem;
 }
 
 .ui.icon-card .text {
