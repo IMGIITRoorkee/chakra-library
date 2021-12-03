@@ -1,0 +1,39 @@
+.ui.icon-card .individual-card {
+    flex-basis: 25%;
+    padding-bottom: 3rem;
+}
+
+.ui.icon-card>.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-left: 10rem;
+    text-align: center;
+    gap: 4.25rem;
+    padding: 2.625rem 9.875rem 1.125rem;
+}
+
+.ui.icon-card .icon_image {
+    height: 4rem;
+    width: 4rem;
+}
+
+.ui.icon-card .text {
+    padding-top: 0.8rem;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.2rem;
+}
+
+@media only screen and (max-width: 900px) {
+    .ui.icon-card .individual-card {
+        flex-basis: 70%;
+    }
+    .ui.icon-card>.flex {
+        padding-bottom: 0.5rem;
+        gap: 2rem;
+    }
+}
