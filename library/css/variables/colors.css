@@ -110,10 +110,38 @@
   --list-background-2: rgba(229, 238, 244, 0.49);
 
   --section-heading-color: #4c4c4c;
+  --section-heading-color-inverted: #ffffff;
+  --section-heading-background-inverted: linear-gradient(
+    180deg,
+    rgba(0, 103, 179, 0.8) 0.52%,
+    #5183b8 18.75%,
+    #5183b8 62.5%
+  );  
   --section-link-color: #1a76bb;
   --sub-heading-color: #232323;
+  --sub-heading-color-inverted: #ffffff;
+  --sub-heading-background-inverted: linear-gradient(
+    180deg,
+    rgba(0, 103, 179, 0.8) 0.52%,
+    #5183b8 18.75%,
+    #5183b8 62.5%
+  ); 
   --one-liner-captions: #999999;
+  --one-liner-captions-inverted: #ffffff;
+  --one-liner-captions-background-inverted: linear-gradient(
+    180deg,
+    rgba(0, 103, 179, 0.8) 0.52%,
+    #5183b8 18.75%,
+    #5183b8 62.5%
+  ); 
   --intro-text-color: #666666;
+  --intro-text-color-inverted: #ffffff99;
+  --intro-text-background-inverted: linear-gradient(
+    180deg,
+    rgba(0, 103, 179, 0.8) 0.52%,
+    #5183b8 18.75%,
+    #5183b8 62.5%
+  ); 
 
   --social-icon-background-color: #cfdbe6;
   --social-icon-facebook-hover-color: #3b5998;
