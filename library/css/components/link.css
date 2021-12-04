@@ -7,14 +7,13 @@
   text-decoration: none !important;
   cursor: pointer;
   color: var(--link-inactive-color) !important;
-  font-size: 1.5em;
+  font-size: 1rem;
 }
 
 .ui.link .text-link:hover {
   text-decoration: underline !important;
   color: var(--link-active-color);
   cursor: pointer;
-  font-size: 1.5em;
 }
 
 .ui.link .button-link {
