@@ -93,6 +93,7 @@
   --link-button-color: #0067b3;
   --link-background-color: white;
   --link-light-group-button: #5183b8;
+  --link-inverted-background: linear-gradient(180deg, rgba(0, 103, 179, 0.8) 0.52%, #5183B8 18.75%, #5183B8 62.5%);
 
   --list-background: #ffffff;
   --list-title-color: #000000de;
