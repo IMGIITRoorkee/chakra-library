@@ -193,3 +193,78 @@ function call(container, action, page) {
     pager.pressPage(parseInt(page));
   }
 }
+
+function sortTable(container) {
+  var table,
+    rows,
+    switching,
+    i,
+    x,
+    y,
+    shouldSwitch,
+    dir,
+    switchcount = 0,
+    n;
+  for (i = 0; i < container.parentNode.children.length; i++) {
+    if (container.parentNode.children[i] == container) {
+      n = i;
+      break;
+    }
+  }
+  table = container.parentNode.parentNode;
+  switching = true;
+  dir = "asc";
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+    for (i = 1; i < rows.length - 1; i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          shouldSwitch = true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      switchcount++;
+    } else {
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+  rows = table.rows[0];
+  if (dir == "asc") {
+    for (var i = 0; i < rows.getElementsByTagName("TD").length; i++) {
+      x = rows.getElementsByTagName("TD")[i].innerHTML;
+      rows.getElementsByTagName("TD")[i].innerHTML = x.slice(0, -1);
+      if (i == n) {
+        rows.getElementsByTagName("TD")[i].innerHTML += "&#9650;";
+      } else {
+        rows.getElementsByTagName("TD")[i].innerHTML += " ";
+      }
+    }
+  }
+  if (dir == "desc") {
+    for (var i = 0; i < rows.getElementsByTagName("TD").length; i++) {
+      x = rows.getElementsByTagName("TD")[i].innerHTML;
+      rows.getElementsByTagName("TD")[i].innerHTML = x.slice(0, -1);
+      if (i == n) {
+        rows.getElementsByTagName("TD")[i].innerHTML += "&#9660;";
+      } else {
+        rows.getElementsByTagName("TD")[i].innerHTML += " ";
+      }
+    }
+  }
+}
