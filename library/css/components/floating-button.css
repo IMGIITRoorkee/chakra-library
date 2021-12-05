@@ -1,0 +1,18 @@
+.ui.floating-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    cursor: pointer;
+}
+
+.ui.floating-btn > .ui.icon {
+    height: 52px;
+    width: 52px;
+}
+
+@media screen and (max-width: 768px) {
+    .ui.floating-btn {
+        display: none;
+    }
+}
