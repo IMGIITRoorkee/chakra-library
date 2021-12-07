@@ -29,11 +29,6 @@ const reorderSlides = (sliderHash, numberOfCardsRendered, isLeft) => {
 
     const numberOfCards = cards.length
 
-    if (numberOfCardsRendered > numberOfCards) {
-        // Do not reorder
-        return
-    }
-
     if (numberOfCardsRendered < 1) {
         return
     }
