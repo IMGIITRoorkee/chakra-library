@@ -195,7 +195,7 @@ function call(container, action, page) {
 }
 
 function sortTable(container) {
-  var table,
+  let table,
     rows,
     switching,
     i,
@@ -205,8 +205,9 @@ function sortTable(container) {
     dir,
     switchcount = 0,
     n;
-  for (i = 0; i < container.parentNode.children.length; i++) {
-    if (container.parentNode.children[i] == container) {
+  let parentContainer = container.parentNode.children;
+  for (i = 0; i < parentContainer.length; i++) {
+    if (parentContainer[i] == container) {
       n = i;
       break;
     }
@@ -246,7 +247,7 @@ function sortTable(container) {
   }
   rows = table.rows[0];
   if (dir == "asc") {
-    for (var i = 0; i < rows.getElementsByTagName("TD").length; i++) {
+    for (let i = 0; i < rows.getElementsByTagName("TD").length; i++) {
       x = rows.getElementsByTagName("TD")[i].innerHTML;
       rows.getElementsByTagName("TD")[i].innerHTML = x.slice(0, -1);
       if (i == n) {
@@ -257,7 +258,7 @@ function sortTable(container) {
     }
   }
   if (dir == "desc") {
-    for (var i = 0; i < rows.getElementsByTagName("TD").length; i++) {
+    for (let i = 0; i < rows.getElementsByTagName("TD").length; i++) {
       x = rows.getElementsByTagName("TD")[i].innerHTML;
       rows.getElementsByTagName("TD")[i].innerHTML = x.slice(0, -1);
       if (i == n) {
