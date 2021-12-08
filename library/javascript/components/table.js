@@ -193,3 +193,79 @@ function call(container, action, page) {
     pager.pressPage(parseInt(page));
   }
 }
+
+function sortTable(container) {
+  let table,
+    rows,
+    switching,
+    i,
+    x,
+    y,
+    shouldSwitch,
+    dir,
+    switchcount = 0,
+    n;
+  let parentContainer = container.parentNode.children;
+  for (i = 0; i < parentContainer.length; i++) {
+    if (parentContainer[i] == container) {
+      n = i;
+      break;
+    }
+  }
+  table = container.parentNode.parentNode;
+  switching = true;
+  dir = "asc";
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+    for (i = 1; i < rows.length - 1; i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          shouldSwitch = true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      switchcount++;
+    } else {
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+  rows = table.rows[0];
+  if (dir == "asc") {
+    for (let i = 0; i < rows.getElementsByTagName("TD").length; i++) {
+      x = rows.getElementsByTagName("TD")[i].innerHTML;
+      rows.getElementsByTagName("TD")[i].innerHTML = x.slice(0, -1);
+      if (i == n) {
+        rows.getElementsByTagName("TD")[i].innerHTML += "&#9650;";
+      } else {
+        rows.getElementsByTagName("TD")[i].innerHTML += " ";
+      }
+    }
+  }
+  if (dir == "desc") {
+    for (let i = 0; i < rows.getElementsByTagName("TD").length; i++) {
+      x = rows.getElementsByTagName("TD")[i].innerHTML;
+      rows.getElementsByTagName("TD")[i].innerHTML = x.slice(0, -1);
+      if (i == n) {
+        rows.getElementsByTagName("TD")[i].innerHTML += "&#9660;";
+      } else {
+        rows.getElementsByTagName("TD")[i].innerHTML += " ";
+      }
+    }
+  }
+}
