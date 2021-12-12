@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  line-height: 1.5rem;
 }
 
 .left {
@@ -22,4 +23,16 @@
 
 .justify {
   text-align: justify;
+}
+
+.nunito-sans {
+  font-family: var(--font-nunito-sans);
+}
+
+.roboto {
+  font-family: var(--font-roboto);
+}
+
+.lato {
+  font-family: var(--font-lato);
 }

@@ -24,18 +24,6 @@
     line-height: 3rem;
 }
 
-.ui.numbered-card-container > .numbered-card > .heading > .title {
-    vertical-align: top;
-    font-size: var(--numbered-card-title-font-size);
-    line-height: 1.5rem;
-}
-
-.ui.numbered-card-container > .numbered-card > .description {
-    line-height: 1.5rem;
-    text-align: justify;
-    font-family: var(--font-roboto);
-}
-
 @media only screen and (max-width: 1300px) {
     .ui.numbered-card-container {
         display: block;

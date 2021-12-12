@@ -81,3 +81,9 @@
     padding: 1rem 0;
     line-height: 1.2rem;
 }
+
+.ui.numbered-card-title {
+    vertical-align: top;
+    font-size: var(--numbered-card-title-font-size);
+    line-height: 1.5rem;
+}
