@@ -21,20 +21,26 @@
     padding-left: 1rem;
 }
 
-.ui.stats-card .name {
+.ui.stats-card .ui.section-heading {
     font-family: Lato;
     font-style: normal;
     font-weight: normal;
     font-size: 1.4rem;
     color: var(--stats-card-font-color);
+    padding: 0rem;
+    line-height: normal;
+    letter-spacing: normal;
 }
 
-.ui.stats-card .subtitle {
+.ui.stats-card .ui.one-liner-captions {
     font-family: Lato;
     font-style: normal;
     font-weight: normal;
     font-size: 1rem;
     color: var(--stats-card-subtitle);
+    padding: 0rem;
+    line-height: normal;
+    letter-spacing: normal;
 }
 
 .ui.stats-card .icon_image {
