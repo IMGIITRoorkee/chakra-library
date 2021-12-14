@@ -16,7 +16,11 @@
       display: flex;
       align-items: center;
   }
-  
+  .ui.complete-info-card .ui.icon {
+      height: 3rem;
+      width: 3rem;
+  }
+
   .ui.complete-info-card .info {
       padding-left: 1rem;
   }
@@ -30,8 +34,20 @@
       display: flex;
       align-items: center;
   }
+
+  .ui.complete-info-card .heading .ui.section-heading {
+    text-transform: none;
+    padding: 0rem;
+    letter-spacing: normal;
+    line-height: normal;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2rem;
+    color: var(--complete-info-card-name-color);
+  }
   
-  .ui.complete-info-card .subtitle {
+  .ui.complete-info-card .subtitle .ui.section-heading{
       font-family: Lato;
       font-style: normal;
       font-weight: normal;
@@ -39,24 +55,37 @@
       padding-bottom: 0.5rem;
       padding-top: 0.5rem;
       color: var(--complete-info-card-subtitle-color);
+      text-transform: none;
+      padding: 0rem;
+      letter-spacing: normal;
+      line-height: normal;
   }
   
-  .ui.complete-info-card .description {
+  .ui.complete-info-card .description .ui.section-heading{
       font-family: Segoe UI;
       font-style: normal;
       font-weight: normal;
       font-size: 0.8rem;
       color: var(--complete-info-card-description-color);
       max-width: var(--complete-info-card-width);
+      text-transform: none;
+      padding: 0rem;
+      letter-spacing: normal;
+      line-height: normal;
   }
   
-  .ui.complete-info-card .arrow-link:hover {
+  .ui.complete-info-card .ui:hover {
       cursor: pointer;
   }
   
   .ui.complete-info-card .arrow-link {
       padding-left: 1rem;
   }
+
+  .ui.ui.complete-info-card .info .ui.icon {
+      height: 1rem;
+      width: 1rem;
+  } 
   
   @media only screen and (max-width: 1500px) {
     .ui.complete-info-card .individual-card {
