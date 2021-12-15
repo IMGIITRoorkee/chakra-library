@@ -1,77 +1,59 @@
-  .ui.complete-info-card .individual-card {
-      flex-basis: 25%;
+  
+  .ui.complete-info-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding-left: 5rem;
+      padding-right: 5rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
   }
   
   .ui.complete-info-card .flex {
       display: flex;
-      align-items: center;
-      justify-content: space-evenly;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-around;
       flex-wrap: wrap;
-      padding-left: 10rem;
-      gap: 4.25rem;
-      padding: 2.625rem 9.875rem 1.125rem;
+      padding-bottom: 0.3rem;
+      /* gap: 4.25rem; */
+      /* padding: 2.625rem 9.875rem 1.125rem; */
   }
-  
-  .ui.complete-info-card .flex-container {
-      display: flex;
-      align-items: center;
+  .ui.complete-info-card > .flex > .info {
+      padding-top: 0.3rem;
   }
-  
-  .ui.complete-info-card .info {
-      padding-left: 1rem;
-  }
-  
-  .ui.complete-info-card .name {
-      font-family: Segoe UI;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 1.2rem;
-      color: var(--complete-info-card-name-color);
-      display: flex;
-      align-items: center;
-  }
-  
-  .ui.complete-info-card .subtitle {
-      font-family: Lato;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 0.8rem;
-      padding-bottom: 0.5rem;
-      padding-top: 0.5rem;
-      color: var(--complete-info-card-subtitle-color);
-  }
-  
-  .ui.complete-info-card .description {
-      font-family: Segoe UI;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 0.8rem;
-      color: var(--complete-info-card-description-color);
-      max-width: var(--complete-info-card-width);
-  }
-  
-  .ui.complete-info-card .arrow-link:hover {
-      cursor: pointer;
-  }
-  
-  .ui.complete-info-card .arrow-link {
-      padding-left: 1rem;
-  }
-  
-  @media only screen and (max-width: 1500px) {
-    .ui.complete-info-card .individual-card {
-        flex-basis: 40%;
-    }
-    .ui.complete-info-card .flex {
-        padding-left: 5rem;
-    }
+
+  .ui.complete-info-card > .flex > .info > .ui.link.arrow-link {
+    text-align: left;
+    padding-bottom: 0;
+    margin: 0;
+    color: var(--stats-card-font-color);
+}
+.ui.complete-info-card > .flex > .info > .ui.one-liner-captions {
+    padding-left: 0.35rem;
+    /* color: #000000; */
+    padding-top: 0rem;
+    font-size: 0.8rem;
 }
 
-  @media only screen and (max-width: 768px) {
-      .ui.complete-info-card .individual-card {
-          flex-basis: 70%;
-      }
-      .ui.complete-info-card .flex {
-          padding-left: 5rem;
-      }
-  }
+.ui.complete-info-card > .ui.intro-text {
+    font-size: 0.8rem;
+    width: 20rem;
+    padding-top: 0rem;
+}
+
+@media only screen and (max-width: 900px) {
+    .ui.complete-info-card {
+        padding: 0.5rem;
+        max-width: 80%;
+        -ms-overflow-style: hidden;
+    }
+    .ui.complete-info-card > .ui.intro-text {
+        max-width: 90%;
+    }
+
+    .ui.complete-info-card::-webkit-scrollbar {
+        display: none;
+    }
+}
