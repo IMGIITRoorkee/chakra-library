@@ -8,6 +8,8 @@
   cursor: pointer;
   color: var(--link-inactive-color) !important;
   font-size: 1rem;
+  font-family: Lato;
+  text-transform: uppercase;
 }
 
 .ui.link .text-link:hover {
@@ -49,6 +51,7 @@
   background-color: var(--link-active-color);
   width: 100%;
 }
+
 .ui.link .inverted-button-link {
   text-align: center;
   display: inline-block;
@@ -80,20 +83,20 @@
 
 .ui.link .arrow-link {
   display: inline-block;
+  font-size: 1rem;
+  font-family: Lato;
+  text-decoration: none !important;
+  cursor: pointer;
+  color: var(--link-inactive-color) !important
 }
 
 .ui.link .icon_image {
+  margin-left: 0.25em;
   height: 0.75em;
   width: 0.75em;
 }
 
-.ui.link .arrowlink-text {
-  text-decoration: none !important;
-  cursor: pointer;
-  color: var(--link-inactive-color) !important;
-}
-
-.ui.link .arrowlink-text:hover {
+.ui.link .arrow-link:hover {
   text-decoration: underline !important;
   color: var(--link-active-color);
   cursor: pointer;
