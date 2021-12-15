@@ -47,8 +47,9 @@ let paths = {
     mail_contact: "../../library/assets/icons/mail.svg",
     phone_contact: "../../library/assets/icons/phone.svg",
     research: "../../library/assets/icons/research.svg",
-    right_arrow: "../../library/assets/images/description-card/right-arrow.svg",
-    right_arrow_inverted: "../../library/assets/images/description-card/right-arrow-inverted.svg"
+    right_arrow: "../../library/assets/icons/right-arrow.svg",
+    right_arrow_inverted: "../../library/assets/icons/right-arrow-inverted.svg",
+    downward_polygon: "../../library/assets/icons/downward_polygon.svg"
 };
 
 let documentIcons = document.querySelectorAll(".ui.icon");
