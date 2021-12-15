@@ -1,29 +1,18 @@
 .ui.icon-card {
-    flex-basis: 25%;
     padding-bottom: 3rem;
     text-align: center;
     width: 20rem;
+    margin: auto;
+    padding: 3%;
 }
-
 
 .ui.icon-card .icon_image {
     height: 4rem;
     width: 4rem;
 }
 
-.ui.icon-card .ui.one-liner-captions {
-    padding: 0.8rem 0 0 0;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1rem;
-    line-height: 1.2rem;
-    text-align: center;
-    color: var(--icon-card-font-color);
-}
-
 @media only screen and (max-width: 900px) {
     .ui.icon-card {
-        flex-basis: 70%;
+        padding: 0.5rem;
     }
 }
