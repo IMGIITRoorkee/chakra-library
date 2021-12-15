@@ -38,7 +38,6 @@
     font-weight: 600;
     font-size: 1.25rem;
     line-height: 1.9rem;
-    padding: 1.25rem 0;
 }
 
 .ui.sub-heading {
@@ -71,6 +70,12 @@
 
 .ui.intro-text {
     color: var(--intro-text-color);
+    padding: 1rem 0;
+    line-height: 1.2rem;
+}
+
+.ui.intro-text-light {
+    color: var(--intro-text--light-color);
     padding: 1rem 0;
     line-height: 1.2rem;
 }
