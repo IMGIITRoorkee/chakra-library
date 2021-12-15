@@ -46,7 +46,9 @@ let paths = {
     web_logo: "../../library/assets/icons/web_logo_cms.svg",
     mail_contact: "../../library/assets/icons/mail.svg",
     phone_contact: "../../library/assets/icons/phone.svg",
-    research: "../../library/assets/icons/research.svg"
+    research: "../../library/assets/icons/research.svg",
+    right_arrow: "../../library/assets/images/description-card/right-arrow.svg",
+    right_arrow_inverted: "../../library/assets/images/description-card/right-arrow-inverted.svg"
 };
 
 let documentIcons = document.querySelectorAll(".ui.icon");

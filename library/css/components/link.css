@@ -1,171 +1,90 @@
 .ui.link {
   text-decoration: none;
-  cursor: pointer;
-  color: inherit;
-}
-.ui.link .text-link {
-  text-decoration: none !important;
-  cursor: pointer;
-  color: var(--link-inactive-color) !important;
-  font-size: 1rem;
-}
-
-.ui.link .text-link:hover {
-  text-decoration: underline !important;
-  color: var(--link-active-color);
-  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 10rem 3rem 10rem;
+  flex-flow: wrap;
+  width: 10rem;
+  color: #4C4C4C;
+  font-size: 16px;
+  line-height: 24px;
 }
 
-.ui.link .button-link {
-  text-align: center;
-  display: inline-block;
-  font-size: 1rem;
-  cursor: pointer;
-  margin: 0.25rem 0.25rem;
-  background-color: var(--link-background-color);
-  color: var(--link-button-color);
-  border-radius: 0.125rem;
-  font-family: Lato;
-  font-style: normal;
-  border: 0.08rem solid var(--link-button-color);
-  box-sizing: border-box;
-  border-radius: 0.08rem;
-  padding-top: 0.4rem;
-  padding-bottom: 0.4rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  text-transform: uppercase;
-  text-decoration: none !important;
-  font-weight: 400;
-  line-height: 0.96rem;
+.ui.link.inverted{
+  color: #FFFFFF;
 }
 
-.ui.link .button-link:hover {
-  background-color: var(--link-button-color) !important;
-  color: var(--link-background-color);
+
+.ui.link.inverted > .link-content{
+  color: #FFFFFF;
 }
 
-.ui.link .dark {
-  background-color: var(--link-active-color);
-  width: 100%;
-}
-.ui.link .inverted-button-link {
-  text-align: center;
-  display: inline-block;
-  font-size: 1rem;
-  cursor: pointer;
-  margin: 0.25rem 0.25rem;
-  background-color: var(--link-active-color);
-  color: var(--link-background-color);
-  border-radius: 0.125rem;
-  font-family: Lato;
-  font-style: normal;
-  border: 0.08rem solid var(--link-background-color);
-  box-sizing: border-box;
-  border-radius: 0.08rem;
-  padding-top: 0.4rem;
-  padding-bottom: 0.4rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  text-transform: uppercase;
-  text-decoration: none !important;
-  font-weight: 400;
-  line-height: 0.96rem;
-}
-
-.ui.link .inverted-button-link:hover {
-  color:var(--link-active-color);
-  background-color: var(--link-background-color);
-}
-
-.ui.link .arrow-link {
-  display: inline-block;
-}
-
-.ui.link .icon_image {
-  height: 0.75em;
-  width: 0.75em;
-}
-
-.ui.link .arrowlink-text {
-  text-decoration: none !important;
-  cursor: pointer;
-  color: var(--link-inactive-color) !important;
-}
-
-.ui.link .arrowlink-text:hover {
-  text-decoration: underline !important;
-  color: var(--link-active-color);
-  cursor: pointer;
-}
-
-.ui.link .light-group-button-link {
-  text-align: center;
-  display: inline-block;
-  font-size: 0.8rem;
-  cursor: pointer;
-  margin: 0.25rem 0.25rem;
-  background-color: var(--link-background-color);
-  color: var(--link-light-group-button);
-  border-radius: 0.125rem;
-  font-family: Lato;
-  font-style: normal;
-  border: 0.08rem solid var(--link-light-group-button);
-  box-sizing: border-box;
-  border-radius: 0.08rem;
-  padding-top: 0.4rem;
-  padding-bottom: 0.4rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  text-transform: uppercase;
-  text-decoration: none !important;
-  font-size: 0.64rem;
-  font-weight: 400;
-  line-height: 0.96rem;
-}
-
-.ui.link .light-group-button-link:hover {
-  color: var(--link-button-color) !important;
-  background-color: var(--link-background-color) !important;
-}
-
-.ui.link .dark-group-button-link {
-  text-align: center;
-  display: inline-block;
-  font-size: 0.8rem;
-  cursor: pointer;
-  margin: 0.25rem 0.25rem;
-  background-color: var(--link-light-group-button);
-  color: var(--link-background-color);
-  border-radius: 0.125rem;
-  font-family: Lato;
-  font-style: normal;
-  border: 0.08rem solid var(--link-light-group-button);
-  box-sizing: border-box;
-  border-radius: 0.08rem;
-  padding-top: 0.4rem;
-  padding-bottom: 0.4rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  text-transform: uppercase;
-  text-decoration: none !important;
-  font-size: 0.64rem;
-  font-weight: 400;
-  line-height: 0.96rem;
-}
-
-.ui.link .dark-group-button-link:hover {
-  color: var(--link-background-color) !important;
-  background-color: var(--link-button-color) !important;
-  border: 0.08rem solid var(--link-background-color) !important;
-}
-
-.ui.link .group-button {
-  display: inline;
-}
-
-.ui.link.basic {
+.link-content {
+  color: #4C4C4C;
   text-decoration: none;
+}
+
+
+.ui.link:hover {
+  text-decoration: underline !important;
+  color: var(--link-active-color);
   cursor: pointer;
-  color: inherit;
+}
+
+.ui.button {
+  color: #0067b3;
+  border: 2px solid #0067b3;
+  box-sizing: border-box;
+  border-radius: 2px;
+  background-color: white;
+  box-shadow: none;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  text-decoration: none;
+   align-content: center;
+}
+
+.ui.button:hover{
+  background-color:#0067b3;
+  color: white;
+}
+
+.ui.button.inverted {
+  background-color:#0067b3;
+  color: white;
+}
+
+.ui.button.inverted:hover {
+  background-color:white;
+  color: #0067b3;
+}
+.group-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 26rem;
+}
+
+.group-button > .ui.button {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border: 2px solid #5183b8;
+  background-color:white;
+  color: #5183b8;
+}
+
+.group-button > .ui.button.inverted:hover {
+  background-color:#0067b3;
+  color: white;
+}
+.group-button > .ui.button:hover {
+  color:#0067b3;
+  background-color: white;
+}
+.group-button > .ui.button.inverted {
+  color:white;
+  background-color: #5183b8;
 }
