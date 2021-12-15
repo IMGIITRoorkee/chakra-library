@@ -87,16 +87,16 @@
   width: 0.75em;
 }
 
-.ui.link .arrowlink-text {
+.ui.link .arrowlink {
   text-decoration: none !important;
   cursor: pointer;
-  color: var(--link-inactive-color) !important;
+  color: var(--arrow-link-color);
 }
 
-.ui.link .arrowlink-text:hover {
+.ui.link .arrowlink:hover {
   text-decoration: underline !important;
-  color: var(--link-active-color);
   cursor: pointer;
+  color: var(--arrow-link-color);
 }
 
 .ui.link .light-group-button-link {

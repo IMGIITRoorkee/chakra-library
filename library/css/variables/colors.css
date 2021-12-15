@@ -119,6 +119,7 @@
     #5183b8 62.5%
   );  
   --section-link-color: #1a76bb;
+  --arrow-link-color: #000000;
   --sub-heading-color: #232323;
   --sub-heading-color-inverted: #ffffff;
   --sub-heading-background-inverted: linear-gradient(
