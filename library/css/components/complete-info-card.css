@@ -50,11 +50,11 @@
       max-width: var(--complete-info-card-width);
   }
   
-  .ui.complete-info-card .arrow-link:hover {
+  .ui.complete-info-card .info-link:hover {
       cursor: pointer;
   }
   
-  .ui.complete-info-card .arrow-link {
+  .ui.complete-info-card .info-link {
       padding-left: 1rem;
   }
   
