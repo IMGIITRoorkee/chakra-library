@@ -21,7 +21,6 @@
     position: absolute;
     display: flex;
     bottom: -9rem;
-    left: 1.8rem;
 }
 
 .ui.quote-card .text{
@@ -45,6 +44,10 @@
     background-position: center;
 }
 
+.ui.quote-card .profile .picture img{
+    width: 80%;
+    height: 80%;
+}
 @media screen and (max-width: 500px) {
     .ui.quote-card {
         margin:2rem 3rem 12rem 3rem;
