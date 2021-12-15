@@ -27,9 +27,7 @@
   color: var(--faculty-card-designation-color);
   margin-bottom: 1.0625rem;
 }
-.ui.faculty-card .mail,
-.ui.faculty-card .address,
-.ui.faculty-card .phone {
+.ui.faculty-card .info-content{
   font-size: 1rem;
   line-height: 1rem;
   letter-spacing: 0.02rem;
