@@ -11,14 +11,15 @@
     width: 4rem;
 }
 
-.ui.icon-card .text {
-    padding-top: 0.8rem;
+.ui.icon-card .ui.one-liner-captions {
+    padding: 0.8rem 0 0 0;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 1rem;
     line-height: 1.2rem;
     text-align: center;
+    color: var(--icon-card-font-color);
 }
 
 @media only screen and (max-width: 900px) {
