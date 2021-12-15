@@ -137,6 +137,7 @@
     #5183b8 62.5%
   ); 
   --intro-text-color: #666666;
+  --intro-text-light-color: rgba(0,0,0,0.6)
   --intro-text-color-inverted: #ffffff99;
   --intro-text-background-inverted: linear-gradient(
     180deg,
