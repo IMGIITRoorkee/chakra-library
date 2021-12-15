@@ -1,8 +1,14 @@
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 10px 20px 10px 20px;
   grid-gap: 10px;
+  margin-bottom: 50px;
   box-sizing: border-box;
 }
 
@@ -164,7 +170,36 @@
   text-decoration: none;
   margin-left: 50px;
   padding-bottom: 13px;
-  color: #5183B8;
+  color: #5183b8;
+}
+
+.footer-bottom-flex {
+  display: flex;
+  background-color: #e7e7e7;
+  padding: 10px 0px;
+  justify-content: space-evenly;
+  gap: 25%;
+}
+
+.footer-accessibility-flex {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer-accessibility-flex > .ui.link {
+  text-decoration: none !important;
+  color: #232323;
+  justify-content: flex-start;
+  margin: 0rem 0.5rem;
+}
+
+.footer-copyright {
+  color: #eeeeee;
+  display: flex;
+  background-color: #232323;
+  padding: 10px 0px;
+  justify-content: space-evenly;
+  gap: 32%;
 }
 
 @media only screen and (max-width: 720px) {
@@ -172,7 +207,8 @@
     display: block;
     font-size: 0.75rem;
   }
-  .footer .links, .weather{
+  .footer .links,
+  .weather {
     margin-top: 1.5rem;
   }
   .footer .ui.link {
@@ -200,5 +236,26 @@
   }
   .weather > .madebylabel {
     margin-top: 20px;
+  }
+  .weather > .ui.link {
+    width: 80%;
+  }
+  .footer-bottom-flex {
+    justify-content: flex-start;
+    padding-left: 0.5rem;
+  }
+  .footer-bottom-flex > .totalviews {
+    display: none;
+  }
+  .footer-copyright > .totalviews {
+    display: none;
+  }
+  .footer-copyright {
+    justify-content: flex-start;
+    padding-left: 0.5rem;
+  }
+  .footer-accessibility-flex > .ui.link {
+    margin: 0rem 0rem;
+    width: 7rem;
   }
 }
