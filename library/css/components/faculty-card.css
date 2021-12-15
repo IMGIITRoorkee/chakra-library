@@ -27,14 +27,13 @@
   color: var(--faculty-card-designation-color);
   margin-bottom: 1.0625rem;
 }
-.ui.faculty-card .mail,
-.ui.faculty-card .address,
-.ui.faculty-card .phone {
+.ui.faculty-card .info-content{
   font-size: 1rem;
   line-height: 1rem;
   letter-spacing: 0.02rem;
   margin-bottom: 1.125rem;
   color: var(--faculty-card-info-color);
+  align-items: center;
   display: flex;
   gap: 0.5rem;
 }
@@ -52,9 +51,10 @@
   margin-top: 1.5rem;
 }
 
-.ui.faculty-card > .body > .read-more {
-  text-align: right;
+.ui.faculty-card > .body > .ui.link {
+  align-self: right !important; 
   margin-top: 1.625rem;
+  margin-left: 24.2rem;
 }
 
 @media only screen and (max-width: 600px) {
