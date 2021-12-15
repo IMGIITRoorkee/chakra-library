@@ -14,7 +14,7 @@
     margin-bottom: 3rem;
 }
 
-.ui.contact-card .description{
+.ui.contact-card .intro-text{
     line-height: 2rem;
     font-size: 1.125rem;
 }
@@ -30,7 +30,7 @@
     align-items: center;
 }
 
-.ui.contact-card .contact-icon{
+.ui.contact-card .icon_image{
     width: 26px;
     height: 26px;
     border-radius: 50%;
