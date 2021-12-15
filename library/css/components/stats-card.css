@@ -2,6 +2,8 @@
     background-color: var(--stats-card-background-color);
     padding-top: 3.7rem;
     padding-bottom: 3.7rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
