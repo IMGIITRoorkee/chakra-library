@@ -18,7 +18,7 @@
   color: var(--publication-list-title-color);
 }
 
-.ui.publication-list > .list-item .info {
+.ui.publication-list > .list-item .intro-text {
   color: var(--publication-list-info-color);
 }
 
