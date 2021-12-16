@@ -20,7 +20,14 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 1rem;
+}
+
+.ui.image-card > .content > .ui.sub-heading {
+  padding: 0.5rem 0rem;
+}
+
+.ui.image-card > .content > .ui.intro-text {
+  margin-bottom: 0.5rem;
 }
 
 .ui.mini-image-card {
