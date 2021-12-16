@@ -2,15 +2,16 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  flex-direction: row;
 }
 
 .ui.description-card {
   width: var(--description-card-width);
   height: var(--description-card-height);
-  background-color: var(--description-card-background);
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: space-evenly;
   color: var(--description-card-color) !important;
 }
 
@@ -19,71 +20,35 @@
   color: var(--description-card-color-inverted) !important;
 }
 
-.ui.description-card .title {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+.ui.description-card > .ui.description {
+
+  margin: 3rem;
+  
+
+}
+
+.ui.description-card > .ui.section-heading {
   margin-top: 8rem;
   font-size: 1.125rem;
-  text-transform: uppercase;
+  font-weight: 500;
 }
 
-.ui.description-card .description-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  text-align: center;
-  margin: 0 3rem;
+.ui.description-card > .ui.link {
+  margin-bottom: 4rem;
 }
 
-.ui.description-card .text-link {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin: 0 10rem 3rem 10rem;
-  text-transform: uppercase;
-  color: var(--description-card-color) !important;
-  text-decoration: none;
-}
-
-.ui.description-card .text-link .right.arrow {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 0.5rem;
-}
-
-@media only screen and (max-width: 1500px) {
-  .ui.description-card-container {
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  .ui.description-card {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 0 15%;
-    height: var(--description-card-mobile-height);
-  }
-  .ui.description-card .title {
-    margin-top: 4rem;
-  }
-  .ui.description-card .text-link {
-    justify-content: center;
-  }
-}
 
 @media only screen and (max-width: 700px) {
   .ui.description-card {
     height: var(--description-card-height);
   }
-  .ui.description-card .title {
-    margin-top: 2.75rem;
+  .ui.description-card > .ui.section-heading {
+    margin-top: 2.25rem;
   }
-  .ui.description-card .description-content {
+  .ui.description-card > .ui.description {
     margin: 0 1.25rem;
   }
-  .ui.description-card .text-link {
+  .ui.description-card .ui.link {
     margin: 0 6.625rem 2.25rem 6.625rem;
   }
 }
