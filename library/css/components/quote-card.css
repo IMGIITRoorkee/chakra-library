@@ -22,9 +22,13 @@
     margin: 0px, 0px, 0px, 0px;
 }
 
+.ui.quote-card > .quote > .link:hover{
+    text-decoration: underline;
+}
+
 .ui.quote-card > .ui.icon.icon_image {
     margin-top: 0px;
-    padding-left: 7rem;
+    padding-left: 5.5rem;
     width: 46px;
     height: 26px;
 }
@@ -32,6 +36,8 @@
 .ui.quote-card > .profile > .ui.image > img {
     border-radius: 50%;
     padding-right: 1rem;
+    height: 111px;
+    width: 111px;
 }
 
 .ui.quote-card > .profile {
@@ -44,23 +50,22 @@
     background-repeat: no-repeat;
     background-position: center;
 }
-.ui.quote-card > .info > .ui.sub-heading {
-    padding-bottom: 0px;
-    color: var(--stats-card-font-color);
+.ui.quote-card > .profile > .info > .ui.sub-heading {
+    padding-bottom: 2px;
 }
-.ui.quote-card > .info > .ui.one-liner-captions {
-    padding-top: 0px;
-    color: var(--stats-card-subtitle);
+.ui.quote-card > .profile > .info > .ui.one-liner-captions {
+    padding-top: 2px;
 }
-
+ 
 @media screen and (max-width: 500px) {
     .ui.quote-card {
         margin:2rem 3rem 12rem 3rem;
         font-size: 1rem;
         line-height: 1.25rem;
+        align-items: center;
     }
     .ui.quote-card .ui.icon.icon_image {
-        justify-content: center;
+        padding-right: 6rem;
     }
     .ui.quote-card .profile {
         width: 100%;    
@@ -81,6 +86,10 @@
         margin:2rem 3rem 14rem 3rem;
         font-size: 1rem;
         line-height: 1.25rem;
+        align-items: center;
+    }
+    .ui.quote-card > .ui.icon.icon_image {
+        padding-right: 6rem;
     }
     .ui.quote-card .profile{
         display: flex;
