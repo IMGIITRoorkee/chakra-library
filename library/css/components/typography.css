@@ -10,7 +10,7 @@
 
 .ui.inverted.section-heading {
     color: var(--section-heading-color-inverted);
-    background-image: var(--section-heading-background-inverted);
+    /* background-image: var(--section-heading-background-inverted); */
     font-weight: 600;
     font-size: 1.5rem;
     text-transform: uppercase;
@@ -50,7 +50,7 @@
 .ui.inverted.sub-heading {
     line-height: 1.3rem;
     color: var(--sub-heading-color-inverted);
-    background-image: var(--sub-heading-background-inverted);
+    /* background-image: var(--sub-heading-background-inverted); */
     font-size: 1.25rem;
     padding: 1.25rem 0;
 }
@@ -63,7 +63,7 @@
 
 .ui.inverted.one-liner-captions {
     color: var(--one-liner-captions-inverted);
-    background-image: var(--one-liner-captions-background-inverted);
+    /* background-image: var(--one-liner-captions-background-inverted); */
     line-height: 1.2rem;
     padding: 1rem 0;
 }
@@ -82,7 +82,7 @@
 
 .ui.inverted.intro-text {
     color: var(--intro-text-color-inverted);
-    background-image: var(--intro-text-background-inverted);
+    /* background-image: var(--intro-text-background-inverted); */
     padding: 1rem 0;
     line-height: 1.2rem;
 }
