@@ -1,0 +1,12 @@
+.title-bar{
+    display: flex;
+    flex-direction: row;
+    margin: 0vh 10vw;
+    justify-content: space-between;
+}
+
+.title-bar > .ui.link.blue {
+    margin: 0;
+    padding: 1.6rem 0;
+    width:auto;
+}

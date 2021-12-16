@@ -25,6 +25,9 @@
   text-decoration: none;
 }
 
+.ui.link.blue > .link-content {
+  color:#1A76BB;
+}
 
 .ui.link:hover {
   text-decoration: underline !important;
