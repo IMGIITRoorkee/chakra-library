@@ -29,19 +29,22 @@
     color: var(--numbered-list-title-color-inverted);
 }
 
-.ui.numbered-list > .list > .content-flex > .title {
+.ui.numbered-list > .list > .content-flex > .sub-heading {
     color: var(--numbered-list-title-color);
     text-transform: uppercase;
     font-size: 1.4rem;
-    margin-bottom: 0.625rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.8rem;
+    padding: 0.08rem 0rem;
 }
 
-.ui.numbered-list.inverted > .list > .content-flex > .title {
+.ui.numbered-list.inverted > .list > .content-flex > .sub-heading {
     color: var(--numbered-list-title-color-inverted);
 }
 
 .ui.numbered-list > .list > .content-flex > .description{
     color: var(--numbered-list-description-color);
+    padding: 0.125rem 0rem;
 }
 
 .ui.numbered-list.inverted > .list > .content-flex > .description{

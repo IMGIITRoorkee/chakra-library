@@ -4,12 +4,9 @@ for (let i=0; (numberedLists !== null) && (i < numberedLists.length); i++){
     let currNo = 1;
     let lists = numberedLists[i].getElementsByClassName('list');
     for (let j=0; (lists !== null) && (j < lists.length); j++) {
-        let title = lists[j].getElementsByClassName('title');
+        let title = lists[j].getElementsByClassName('sub-heading');
         let desc = lists[j].getElementsByClassName('description');
-        if (title.length === 0){
-            lists[j].style.alignItems = "center";
-        } else if (desc.length === 0){
-            lists[j].style.alignItems = "center";
+        if (desc.length === 0){
             title[0].style.marginBottom = 0;
             let contents = lists[j].getElementsByClassName('content-flex')[0];
             contents.style.justifyContent = "center";
