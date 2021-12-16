@@ -27,7 +27,16 @@
 }
 
 .ui.image-card > .content > .ui.intro-text {
-  margin-bottom: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 0rem;
+}
+
+.ui.image-card > .content > .ui.button {
+  margin-top: 1.5rem;
+}
+
+.ui.image-card > .content > .ui.section-heading{
+  padding: 0rem;
 }
 
 .ui.mini-image-card {
