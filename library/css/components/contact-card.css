@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-.ui.contact-card .heading{
+.ui.contact-card .section-heading{
     font-size: 1.75rem;
     line-height: 1.5rem;
     color: var(--contact-card-heading-color);
