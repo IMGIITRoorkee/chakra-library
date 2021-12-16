@@ -39,12 +39,10 @@
   border-radius: 2px;
   background-color: white;
   box-shadow: none;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: 10px;
   text-decoration: none;
    align-content: center;
+   width: fit-content;
 }
 
 .ui.button:hover{
@@ -69,8 +67,7 @@
 }
 
 .group-button > .ui.button {
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding: 12px;
   border: 2px solid #5183b8;
   background-color:white;
   color: #5183b8;
