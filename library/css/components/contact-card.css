@@ -34,12 +34,14 @@
     width: 26px;
     height: 26px;
     border-radius: 50%;
-    background-color: var(--contact-card-icon-background-color);
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;    
+}
+.ui.contact-card .contact-info .icon_image {
+    background-color: var(--contact-card-icon-background-color);
 }
 .ui.contact-card .contact-icon:hover{
     background-color: var(--contact-card-icon-hover-color);
