@@ -23,7 +23,7 @@ for (var i = 0;
             divider.className = 'divider'
             items[k].parentNode.insertBefore(divider, items[k].nextSibling)
 
-            var titles = items[k].getElementsByClassName('title')
+            var titles = items[k].getElementsByClassName('ui sub-heading')
             if (titles !== null) {
                 var title = titles[0]
 
@@ -90,7 +90,7 @@ for (var i = 0;
         if (contents !== null) {
             const content = contents[0]
 
-            const titles = content.getElementsByClassName('title')
+            const titles = content.getElementsByClassName('ui sub-heading')
             if (titles !== null) {
                 const title = titles[0]
 
