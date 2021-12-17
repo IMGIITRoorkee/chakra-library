@@ -17,23 +17,23 @@
     line-height: 1.3;
 }
 
-.ui.list > .listItem > .title {
+.ui.list > .listItem > .ui.sub-heading {
     color: var(--list-title-color);
     font-size: 1rem;
     padding: 0.625rem;
 }
 
-.ui.list.inverted > .listItem > .title {
+.ui.list.inverted > .listItem > .ui.sub-heading {
     color: var(--list-title-color-inverted);
 }
 
-.ui.list > .listItem > .description {
+.ui.list > .listItem > .ui.intro-text {
     color: var(--numbered-list-description-color);
     padding: 0 0.625rem 0.625rem 0.625rem;    
     font-size: 0.875rem;
 }
 
-.ui.list.inverted > .listItem > .description {
+.ui.list.inverted > .listItem > .ui.intro-text {
     color: var(--list-description-color-inverted);
 }
 
