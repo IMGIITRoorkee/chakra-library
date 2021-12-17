@@ -11,7 +11,7 @@ for (let i=0; (bulletedLists !== null) && (i < bulletedLists.length); i++){
             icon = "arrow";
         }
     }
-    let bulletedItems = bulletedLists[i].getElementsByClassName('bulletedItem');
+    let bulletedItems = bulletedLists[i].getElementsByClassName('listItem');
     for (let j=0; (bulletedItems !== null) && (j < bulletedItems.length); j++) {
         const image = document.createElement("img");
         image.setAttribute("src", paths[icon]);
