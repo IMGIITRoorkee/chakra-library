@@ -1,7 +1,7 @@
 .ui.publication-list {
   padding-top: 1.5rem;
 }
-.ui.publication-list > .list-item {
+.ui.publication-list > .listItem {
   width: 100%;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -9,23 +9,19 @@
   box-sizing: border-box;
   /* font-family: 'Nunito Sans'; */
 }
-.ui.publication-list > .list-item .head {
+.ui.publication-list > .listItem .content {
   display: flex;
   justify-content: space-between;
 }
 
-.ui.publication-list > .list-item .title {
-  color: var(--publication-list-title-color);
+.ui.publication-list > .listItem .ui.intro-text {
+  padding: 0.25rem 0 0.25rem 0;
 }
 
-.ui.publication-list > .list-item .intro-text {
-  color: var(--publication-list-info-color);
+.ui.publication-list > .listItem .ui.intro-text-light {
+  padding: 0;
 }
-
-.ui.publication-list > .list-item .description {
-  color: var(--publication-list-description-color);
-}
-.ui.publication-list > .list-item hr {
+.ui.publication-list > .listItem hr {
   color: var(--publication-list-hr-color);
   border-width: 0.125rem;
 }
