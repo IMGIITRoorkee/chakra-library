@@ -10,12 +10,12 @@
 }
 
 .ui.inverted.section-heading {
-    color: var(--section-heading-color-inverted);
+    color: #FFFFFF;
     /* background-image: var(--section-heading-background-inverted); */
-    font-weight: 600;
-    font-size: 1.5rem;
+    font-weight: 500;
+    font-size: 24px;
     text-transform: uppercase;
-    padding: 1.25rem 0;
+    padding: 1.20rem 0;
     letter-spacing: 0.0625rem;
     line-height: 1.5rem;
 }
@@ -63,9 +63,9 @@
 }
 
 .ui.inverted.one-liner-captions {
-    color: var(--one-liner-captions-inverted);
+    color: rgb(255,255,255,0.8);
     /* background-image: var(--one-liner-captions-background-inverted); */
-    line-height: 1.2rem;
+    line-height: 1.25rem;
     padding: 1rem 0;
 }
 

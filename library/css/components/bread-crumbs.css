@@ -11,8 +11,8 @@
 }
 
 .ui.breadcrumb > .section {
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 14px;
+  font-weight: 400;
   line-height: 1rem;
   color: var(--breadcrumb-color) !important;
   padding: 0.5rem;
@@ -33,5 +33,5 @@
 }
 
 .ui.breadcrumb > .active {
-  font-weight: lighter !important;
+  font-weight: 300;
 }
