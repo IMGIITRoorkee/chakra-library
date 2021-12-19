@@ -1,0 +1,107 @@
+.ui.carousel {
+  position: relative;
+}
+
+.ui.carousel > .carousel-image {
+  display: none;
+}
+.ui.carousel > .carousel-image > .ui.image > .numbertext {
+  color: #f2f2f2;
+  font-size: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  position: absolute;
+  top: 0.5rem;
+}
+
+.ui.carousel > .carousel-image > .image.fluid > img {
+  width: 100%;
+  height: 40vw;
+}
+
+.ui.carousel > .flexbox {
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.ui.carousel > .flexbox > .prev,
+.ui.carousel > .flexbox > .next {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.ui.carousel > .flexbox > .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.ui.carousel > .flexbox > .prev:hover,
+.ui.carousel > .flexbox > .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.ui.carousel > .dot-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  position: absolute;
+  bottom: 1rem;
+}
+
+.ui.carousel > .dot-container > .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.ui.carousel > .dot-container > .active,.ui.carousel .dot:hover {
+  background-color: #fff;
+}
+
+/* Fading animation */
+.ui.carousel > .carousel-image > .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
