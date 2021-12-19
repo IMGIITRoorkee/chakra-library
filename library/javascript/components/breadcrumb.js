@@ -37,4 +37,13 @@ for (let i = 0; breadcrumbs !== null && i < breadcrumbs.length; i++) {
   for (let j = 0; slashDividers !== null && j < slashDividers.length; j++) {
     slashDividers[j].innerHTML = "/";
   }
+
+  const sections = breadcrumbs[i].getElementsByClassName("section");
+  const pageUrl = window.location.pathname
+  const urlParents = pageUrl.split('/').filter(Boolean)
+  for(let section of sections){
+    if(urlParents.includes(section.dataset.url)){
+      section.className+=' active'
+    }
+  }
 }
