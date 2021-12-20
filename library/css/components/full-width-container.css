@@ -1,3 +1,7 @@
 .ui.full-width-container {
     width: 100%;
 }
+
+.ui.full-width-container > .full-section{
+    padding: 5% 10%;
+}
