@@ -5,18 +5,9 @@ var accordions = document.querySelectorAll('.ui.accordion')
 for (var i = 0;
     (accordions !== null) && (i < accordions.length); i++) {
 
-    var categories = accordions[i].getElementsByClassName('category');
-    for (var j = 0;
-        (categories !== null) && (j < categories.length); j++) {
-
-        // Add alternate gray effect
-        if (j % 2 === 1) {
-            categories[j].classList += ' gray'
-        }
-
-        var items = categories[j].getElementsByClassName('item')
-        for (var k = 0;
-            (items !== null) && (k < items.length); k++) {
+    var items = accordions[i].getElementsByClassName('item');
+    for (var k = 0;
+        (items !== null) && (k < items.length); k++) {
 
             // Add dividers
             const divider = document.createElement('div')
@@ -71,7 +62,6 @@ for (var i = 0;
                 })
             }
 
-        }
 
     }
 
