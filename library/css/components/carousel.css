@@ -2,10 +2,11 @@
   position: relative;
 }
 
-.ui.carousel > .carousel-image {
+.ui.carousel > .ui.image {
   display: none;
 }
-.ui.carousel > .carousel-image > .ui.image > .numbertext {
+
+.ui.carousel > .ui.image > .numbertext {
   color: #f2f2f2;
   font-size: 0.75rem;
   padding: 0.5rem 0.75rem;
@@ -13,7 +14,7 @@
   top: 0.5rem;
 }
 
-.ui.carousel > .carousel-image > .image.fluid > img {
+.ui.carousel > .image.fluid > img {
   width: 100%;
   height: 40vw;
 }
@@ -73,7 +74,7 @@
 }
 
 /* Fading animation */
-.ui.carousel > .carousel-image > .fade {
+.ui.carousel > .ui.image.fluid {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
