@@ -1,0 +1,14 @@
+.ui.textBox {
+  width: 33.625rem;
+}
+
+.ui.textBoxLink {
+  text-decoration: none;
+  color: var(--description-card-background-inverted);
+}
+
+.ui.textBoxIcon {
+  height: 1rem;
+  width: auto;
+  margin-left: 0.5rem;
+}
