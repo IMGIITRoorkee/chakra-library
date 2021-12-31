@@ -1,11 +1,34 @@
 var slideIndex = 1;
-var slides = document.querySelectorAll(".carousel-image");
+var slides = document.querySelectorAll(".ui.image");
+generateNavigator()
 generateDots(slides.length);
 showSlides(slideIndex);
 generateNumber(slides.length);
 
+// This function adds the navigator arrows to the carousel
+function generateNavigator() {
+    var carousel = document.querySelector('.ui.carousel')
+    var flexbox = document.createElement('div')
+    flexbox.classList.add('ui')
+    flexbox.classList.add('flexbox')
+    var prevArrow = document.createElement('a')
+    prevArrow.classList.add('prev')
+    prevArrow.onclick = function() { plusSlides(-1) }
+    prevArrow.innerHTML='&#10094;'
+    flexbox.appendChild(prevArrow)
+    var nextArrow = document.createElement('a')
+    nextArrow.classList.add('next')
+    nextArrow.onclick = function() { plusSlides(1) }
+    nextArrow.innerHTML='&#10095;'
+    flexbox.appendChild(nextArrow)
+    carousel.appendChild(flexbox)
+}
+
 function generateDots(count){
-    var dotContainer = document.querySelector('.dot-container');
+    var carousel = document.querySelector('.ui.carousel')
+    dotContainer = document.createElement('div')
+    dotContainer.classList.add('dot-container')
+    carousel.appendChild(dotContainer)
     for (var i=1; i<=count; i++){
         var ele = document.createElement('span');
         ele.classList.add('dot');
