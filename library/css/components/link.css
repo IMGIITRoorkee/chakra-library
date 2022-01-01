@@ -3,9 +3,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin: 0 10rem 3rem 10rem;
   flex-flow: wrap;
-  width: 10rem;
+  width: max-content;
   color: #4C4C4C;
   font-size: 16px;
   line-height: 24px;
@@ -21,6 +20,7 @@
 }
 
 .link-content {
+  padding-right: 1rem;
   color: #4C4C4C;
   text-decoration: none;
 }

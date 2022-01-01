@@ -1,0 +1,4 @@
+.ui.text-card {
+  display: flex;
+  flex-direction: column;
+}
