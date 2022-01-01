@@ -1,22 +1,7 @@
-.ui.noticeItem {
-  width: 36rem;
-  border-radius: 0.5rem;
+.notice-item {
+  text-decoration: none;
 }
 
-.ui.itemLeft {
-  display: inline-block;
-}
-
-.ui.itemRight {
-  display: inline-block;
-  float: right;
-}
-
-.listItem {
-  display: flexbox;
-  flex-direction: column;
-}
-
-.ui.noticeContent {
-  margin-bottom: 0.2rem;
+.notice-item >.one-liner-captions {
+  color: var(--sub-heading-color);
 }
