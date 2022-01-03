@@ -1,6 +1,6 @@
 var src = "https://cmsredesign.channeli.in/"
 
-const imagePath = src + "library/assets/icons/right-arrow.svg";
+const imagePath = src + "library/assets/images/breadcrumbs/right-arrow.svg";
 
 const breadcrumbs = document.querySelectorAll(".ui.breadcrumb");
 for (let i = 0; breadcrumbs !== null && i < breadcrumbs.length; i++) {
