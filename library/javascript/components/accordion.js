@@ -1,5 +1,6 @@
-var downArrow = "../../library/assets/images/accordion/down-arrow.svg"
-var upArrow = "../../library/assets/images/accordion/up-arrow.svg"
+import getIcon from './icon-library';
+var downArrow = getIcon('down_arrow');
+var upArrow = getIcon('up_arrow');
 
 var accordions = document.querySelectorAll('.ui.accordion')
 for (var i = 0;

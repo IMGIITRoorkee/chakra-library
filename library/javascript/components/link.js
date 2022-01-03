@@ -1,7 +1,9 @@
+import getIcon from './icon-library'
+
 let arrowLinkTags = document.querySelectorAll('.ui.link.arrow-link')
-let imagePath = '../../library/assets/icons/right-arrow.svg'
-let imagePathInverse = '../../library/assets/icons/right-arrow-inverted.svg'
-let imagePathBlue = '../../library/assets/icons/arrow-icon.svg'
+let imagePath = getIcon('right_arrow')
+let imagePathInverse = getIcon('right_arrow_inverted')
+let imagePathBlue = getIcon('arrow')
 for (arrowLinkTag of arrowLinkTags) {
   let image = document.createElement('img')
 

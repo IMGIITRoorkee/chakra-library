@@ -1,4 +1,6 @@
-const imagePath = "../../library/assets/images/breadcrumbs/right-arrow.svg";
+import getIcon from './icon-library';
+
+const imagePath = getIcon('right_arrow');
 
 const breadcrumbs = document.querySelectorAll(".ui.breadcrumb");
 for (let i = 0; breadcrumbs !== null && i < breadcrumbs.length; i++) {

@@ -1,5 +1,6 @@
-var leftArrow = "../../library/assets/images/slider/leftArrow.svg"
-var rightArrow = "../../library/assets/images/slider/rightArrow.svg"
+import getIcon from './icon-library'
+var leftArrow = getIcon('slider_left_arrow')
+var rightArrow = getIcon('slider_right_arrow')
 
 // Hash function
 function makeHash(length) {
