@@ -1,6 +1,6 @@
-import getIcon from './icon-library'
-var leftArrow = getIcon('slider_left_arrow')
-var rightArrow = getIcon('slider_right_arrow')
+var src = "https://cmsredesign.channeli.in/"
+var leftArrow = src+"library/assets/images/accordion/slider-right-arrow.svg"
+var rightArrow = src+"library/assets/images/accordion/slider-left-arrow.svg"
 
 // Hash function
 function makeHash(length) {

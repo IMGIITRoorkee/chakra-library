@@ -1,6 +1,6 @@
-import getIcon from './icon-library';
-var downArrow = getIcon('down_arrow');
-var upArrow = getIcon('up_arrow');
+var src = "https://cmsredesign.channeli.in/"
+var downArrow = src+"library/assets/images/accordion/down-arrow.svg";
+var upArrow = src + "library/assets/images/accordion/up-arrow.svg",;
 
 var accordions = document.querySelectorAll('.ui.accordion')
 for (var i = 0;
