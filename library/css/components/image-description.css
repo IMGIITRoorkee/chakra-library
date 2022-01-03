@@ -1,0 +1,19 @@
+.imageDescription {
+  display: inline-block;
+  margin-left: 4rem;
+  width: 70%;
+  height: 55vh;
+}
+
+.imgArrow {
+  margin-left: -3rem;
+  margin-right: -3rem;
+}
+
+.imgDot {
+  display: none !important;
+}
+
+.imgContainer {
+  height: 55vh;
+}
