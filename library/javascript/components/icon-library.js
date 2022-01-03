@@ -64,8 +64,3 @@ for (let icon of documentIcons) {
     icon.setAttribute("src", src+paths[key]);
     icon.className += " icon_image"
 }
-
-export const getIcon = (key) => {
-    var src = "https://cmsredesign.channeli.in/";
-    return  (src+path[key]);
-}
