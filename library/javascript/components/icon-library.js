@@ -52,8 +52,8 @@ let paths = {
     downward_polygon: "library/assets/icons/downward_polygon.svg",
     down_arrow: "library/assets/images/accordion/down-arrow.svg",
     up_arrow: "library/assets/images/accordion/up-arrow.svg",
-    slider_right_arrow: "library/assets/images/accordion/slider-right-arrow.svg",
-    slider_left_arrow: "library/assets/images/accordion/slider-left-arrow.svg"
+    slider_right_arrow: "library/assets/icons/accordion/slider-right-arrow.svg",
+    slider_left_arrow: "library/assets/icons/accordion/slider-left-arrow.svg"
 };
 
 let documentIcons = document.querySelectorAll(".ui.icon");

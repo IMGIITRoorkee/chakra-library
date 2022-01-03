@@ -1,6 +1,6 @@
 var src = "https://cmsredesign.channeli.in/"
-var leftArrow = src+"library/assets/images/accordion/slider-right-arrow.svg"
-var rightArrow = src+"library/assets/images/accordion/slider-left-arrow.svg"
+var rightArrow = src+"library/assets/icons/slider-right-arrow.svg"
+var leftArrow = src+"library/assets/icons/slider-left-arrow.svg"
 
 // Hash function
 function makeHash(length) {
