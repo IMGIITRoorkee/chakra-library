@@ -6,11 +6,6 @@
     padding: 3%;
 }
 
-.ui.icon-card .icon_image {
-    height: 4rem;
-    width: 4rem;
-}
-
 @media only screen and (max-width: 900px) {
     .ui.icon-card {
         padding: 0.5rem;

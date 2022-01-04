@@ -6,11 +6,6 @@
     cursor: pointer;
 }
 
-.ui.floating-btn > .ui.icon {
-    height: 52px;
-    width: 52px;
-}
-
 @media screen and (max-width: 768px) {
     .ui.floating-btn {
         display: none;
