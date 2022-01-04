@@ -3,6 +3,7 @@
     flex-direction: row;
     /* Margin should come from container*/
     /* margin: 0vh 10vw; */
+    align-items: center;
     justify-content: space-between;
 }
 
@@ -10,4 +11,10 @@
     margin: 0;
     padding: 1.6rem 0;
     width:auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .title-bar > * {
+        font-size: 1rem;
+    }
 }

@@ -158,3 +158,11 @@ for (var i = 0; (sliders !== null) && (i < sliders.length); i++) {
         }
     })
 }
+
+
+for (var i = 0; (sliders !== null) && (i < sliders.length); i++) {
+    const hash = sliders[i].id
+    numberOfCardsRendered = numberOfCardsDisplayed(hash)
+    flushSlides(hash)
+    renderSlides(hash, numberOfCardsRendered)
+}

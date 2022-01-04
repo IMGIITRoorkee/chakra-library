@@ -1,8 +1,12 @@
 .ui.slider {
     display: grid;
     grid-template: 1fr / 5vw 1fr 5vw;
+    max-width: 100%;
 }
 
+.ui.slider > * > *{
+    margin: 10px;
+}
 .ui.slider > .left-arrow-container {
     grid-area: 1 / 1 / 2 / 2;
     display: flex;
