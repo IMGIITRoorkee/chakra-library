@@ -9,7 +9,6 @@
 @import url(./image.css);
 @import url(./numbered-list.css);
 @import url(./publication-list.css);
-@import url(./icon-library.css);
 @import url(./complete-info-card.css);
 @import url(./link.css);
 @import url(./stats-card.css);
@@ -35,5 +34,5 @@
 @import url(./carousel.css);
 @import url(./notice-item.css);
 @import url(./text-card.css);
-@import url(./students-placeholder.css);
+@import url(./profile-placeholder.css);
 @import url(./image-description.css);
