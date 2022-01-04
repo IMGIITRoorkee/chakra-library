@@ -1,0 +1,29 @@
+.event-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.event-item:hover{
+    cursor: pointer;
+}
+.event-item > .date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 72px;
+    width: 72px;
+    border: 2px solid var(--grey-blue);
+    justify-content: center;
+}
+
+.event-item > .info {
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    justify-content: space-evenly;
+    gap: 0.5rem;
+}

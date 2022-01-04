@@ -3,7 +3,7 @@
     font-weight: 500;
     font-size: 1.5rem;
     text-transform: uppercase;
-    padding: 1.25rem 0;
+    /* padding: 1.25rem 0; */
     letter-spacing: 0.0625rem;
     line-height: 1.5rem;
     font-family: var(--font-lato);
@@ -15,7 +15,7 @@
     font-weight: 500;
     font-size: 1.5rem;
     text-transform: uppercase;
-    padding: 1.25rem 0;
+    /* padding: 1.25rem 0; */
     letter-spacing: 0.0625rem;
     line-height: 1.5rem;
 }
@@ -27,7 +27,7 @@
     color: var(--section-blue);
     font-weight: 600;
     font-size: 1.25rem;
-    padding: 1.25rem 0;
+    /* padding: 1.25rem 0; */
     line-height: 1.5rem;
 }
 
@@ -45,7 +45,7 @@
     line-height: 1.3rem;
     color: var(--black);
     font-size: 1.25rem;
-    padding: 1.25rem 0;
+    /* padding: 1.25rem 0; */
 }
 
 .ui.inverted.sub-heading {
@@ -53,31 +53,31 @@
     color: var(--white);
     /* background-image: var(--gradient-blue); */
     font-size: 1.25rem;
-    padding: 1.25rem 0;
+    /* padding: 1.25rem 0; */
 }
 
 .ui.one-liner-captions {
     color: var(--caption-grey);
     line-height: 1.2rem;
-    padding: 1rem 0;
+    /* padding: 1rem 0; */
 }
 
 .ui.inverted.one-liner-captions {
     color: var(--white);
     /* background-image: var(--gradient-blue); */
     line-height: 1.2rem;
-    padding: 1rem 0;
+    /* padding: 1rem 0; */
 }
 
 .ui.intro-text {
     color: var(--grey);
-    padding: 1rem 0;
+    /* padding: 1rem 0; */
     line-height: 1.2rem;
 }
 
 .ui.inverted.intro-text {
     color: var(--caption-grey);
     /* background-image: var(--gradient-blue); */
-    padding: 1rem 0;
+    /* padding: 1rem 0; */
     line-height: 1.2rem;
 }
