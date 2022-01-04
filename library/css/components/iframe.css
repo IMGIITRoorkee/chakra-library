@@ -1,0 +1,5 @@
+.ui.iframe {
+  min-height: 400px;
+  min-width: 80%;
+  max-height: 600px;
+}

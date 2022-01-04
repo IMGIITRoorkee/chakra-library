@@ -3,6 +3,7 @@
 }
 
 .ui.description {
+  color: var(--black);
   display: flex;
   flex-direction: row;
   justify-content: space-around;
