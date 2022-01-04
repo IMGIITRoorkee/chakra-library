@@ -2,7 +2,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: inherit;
 }
 
 .ui.flexbox > div {
