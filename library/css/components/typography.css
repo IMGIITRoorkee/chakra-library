@@ -75,12 +75,6 @@
     line-height: 1.2rem;
 }
 
-.ui.intro-text-light {
-    color: var(--intro-text--light-color);
-    padding: 1rem 0;
-    line-height: 1.2rem;
-}
-
 .ui.inverted.intro-text {
     color: var(--caption-grey);
     /* background-image: var(--gradient-blue); */

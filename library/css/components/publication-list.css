@@ -18,7 +18,7 @@
   padding: 0.25rem 0 0.25rem 0;
 }
 
-.ui.publication-list > .listItem .ui.intro-text-light {
+.ui.publication-list > .listItem .ui.intro-text {
   padding: 0;
 }
 .ui.publication-list > .listItem hr {
