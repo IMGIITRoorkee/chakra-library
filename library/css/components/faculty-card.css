@@ -5,6 +5,7 @@
   box-sizing: border-box;
   border: 0.0625rem solid var(--caption-grey);
   max-width: 100%;
+  background-color: var(--white);
 }
 
 .ui.faculty-card > .flex {

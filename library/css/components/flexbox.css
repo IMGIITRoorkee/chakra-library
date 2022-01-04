@@ -2,11 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: var(--grey-blue);
-}
-
-.ui.flexbox.inverted {
-    background:var(--light-blue) !important;
+    background-color: inherit;
 }
 
 .ui.flexbox > div {
