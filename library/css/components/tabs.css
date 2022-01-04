@@ -73,6 +73,7 @@
 
 .ui.tabs-container>.contents>.content {
     display: none;
+    background-color: inherit;
 }
 
 @media only screen and (max-width: 600px) {
