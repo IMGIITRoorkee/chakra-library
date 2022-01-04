@@ -29,8 +29,8 @@
 .ui.quote-card > .ui.icon.icon_image {
     margin-top: 0px;
     padding-left: 5.5rem;
-    /* width: 46px;
-    height: 26px; */
+    width: 46px;
+    height: 26px;
 }
 
 .ui.quote-card > .profile > .ui.image > img {
