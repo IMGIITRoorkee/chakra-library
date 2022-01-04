@@ -1,5 +1,6 @@
 .notice-item {
   text-decoration: none;
+  margin: 15px;
 }
 
 .notice-item >.one-liner-captions {

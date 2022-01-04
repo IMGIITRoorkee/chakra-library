@@ -1,9 +1,9 @@
 function hover(element) {
-  element.setAttribute("src", paths.floating_button_hover);
+  element.setAttribute("src", "https://cmsredesign.channeli.in/"+paths.floating_button_hover);
 }
 
 function unhover(element) {
-  element.setAttribute("src", paths.floating_button);
+  element.setAttribute("src", "https://cmsredesign.channeli.in/"+paths.floating_button);
 }
 
 function goToTop(){
