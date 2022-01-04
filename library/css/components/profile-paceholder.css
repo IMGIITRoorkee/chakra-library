@@ -1,0 +1,11 @@
+.ui.profile-placeholder {
+    padding: 1.5rem 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 264px;
+    gap: 1rem;
+    align-items: center;
+    border-radius: 4px;
+    box-shadow: 0px 0px 4px var(--grey);
+}
