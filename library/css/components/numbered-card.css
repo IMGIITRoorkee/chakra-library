@@ -4,7 +4,7 @@
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 2rem;
-    padding: 5rem;
+    /* padding: 5rem; */
 }
 
 .ui.numbered-card-container > .numbered-card {

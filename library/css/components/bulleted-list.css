@@ -26,6 +26,6 @@
 }
 
 .ui.bulleted-list.inverted > .listItem >.ui.one-liner-captions{
-    color: var(--caption-grey);
+    color: var(--white);
     padding: 0;
 }
