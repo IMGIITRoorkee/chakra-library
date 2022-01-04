@@ -16,8 +16,8 @@
 }
 
 .ui.description-card.inverted {
-  background: var(--description-card-background-inverted) !important;
-  color: var(--description-card-color-inverted) !important;
+  background: var(--formal-blue) !important;
+  color: var(--white) !important;
 }
 
 .ui.description-card > .ui.description {

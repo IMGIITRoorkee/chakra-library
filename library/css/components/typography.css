@@ -1,5 +1,5 @@
 .ui.section-heading {
-    color: var(--section-heading-color);
+    color: var(--heading-black);
     font-weight: 500;
     font-size: 1.5rem;
     text-transform: uppercase;
@@ -10,8 +10,8 @@
 }
 
 .ui.inverted.section-heading {
-    color: var(--section-heading-color-inverted);
-    /* background-image: var(--section-heading-background-inverted); */
+    color: var(--white);
+    /* background-image: var(--gradient-blue); */
     font-weight: 600;
     font-size: 1.5rem;
     text-transform: uppercase;
@@ -24,7 +24,7 @@
     pointer-events: none;
     text-decoration: none;
     text-transform: uppercase;
-    color: var(--section-link-color);
+    color: var(--section-blue);
     font-weight: 600;
     font-size: 1.25rem;
     padding: 1.25rem 0;
@@ -34,8 +34,8 @@
 .ui.active-section-link {
     text-transform: uppercase;
     text-decoration: none;
-    border-bottom: 2px solid var(--section-link-color);
-    color: var(--section-link-color);
+    border-bottom: 2px solid var(--section-blue);
+    color: var(--section-blue);
     font-weight: 600;
     font-size: 1.25rem;
     line-height: 1.9rem;
@@ -43,34 +43,34 @@
 
 .ui.sub-heading {
     line-height: 1.3rem;
-    color: var(--sub-heading-color);
+    color: var(--black);
     font-size: 1.25rem;
     padding: 1.25rem 0;
 }
 
 .ui.inverted.sub-heading {
     line-height: 1.3rem;
-    color: var(--sub-heading-color-inverted);
-    /* background-image: var(--sub-heading-background-inverted); */
+    color: var(--white);
+    /* background-image: var(--gradient-blue); */
     font-size: 1.25rem;
     padding: 1.25rem 0;
 }
 
 .ui.one-liner-captions {
-    color: var(--one-liner-captions);
+    color: var(--caption-grey);
     line-height: 1.2rem;
     padding: 1rem 0;
 }
 
 .ui.inverted.one-liner-captions {
-    color: var(--one-liner-captions-inverted);
-    /* background-image: var(--one-liner-captions-background-inverted); */
+    color: var(--white);
+    /* background-image: var(--gradient-blue); */
     line-height: 1.2rem;
     padding: 1rem 0;
 }
 
 .ui.intro-text {
-    color: var(--intro-text-color);
+    color: var(--grey);
     padding: 1rem 0;
     line-height: 1.2rem;
 }
@@ -82,8 +82,8 @@
 }
 
 .ui.inverted.intro-text {
-    color: var(--intro-text-color-inverted);
-    /* background-image: var(--intro-text-background-inverted); */
+    color: var(--caption-grey);
+    /* background-image: var(--gradient-blue); */
     padding: 1rem 0;
     line-height: 1.2rem;
 }

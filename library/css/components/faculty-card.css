@@ -1,10 +1,10 @@
 .ui.faculty-card {
-  width: var(--card-width);
-  box-shadow: inset 0.125rem 0rem 0.125rem var(--faculty-card-shadow-color);
+  width: var(--faculty-card-width);
+  box-shadow: inset 0.125rem 0rem 0.125rem var(--hover-black);
   border-radius: 0.25rem;
   padding: 1.5rem;
   box-sizing: border-box;
-  border: 0.0625rem solid var(--faculty-card-border-color);
+  border: 0.0625rem solid var(--caption-grey);
   max-width: 100%;
 }
 
@@ -17,14 +17,14 @@
 .ui.faculty-card .name {
   font-size: 1.25rem;
   line-height: 1.5rem;
-  color: var(--faculty-card-name-color);
+  color: var(--black);
   margin-bottom: 0.3125rem;
 }
 .ui.faculty-card .designation {
   font-size: 1rem;
   line-height: 1.25rem;
   letter-spacing: 0.02em;
-  color: var(--faculty-card-designation-color);
+  color: var(--caption-grey);
   margin-bottom: 1.0625rem;
 }
 .ui.faculty-card .info-content{
@@ -47,7 +47,7 @@
   font-weight: 300;
   font-size: 0.875rem;
   line-height: 1.375rem;
-  color: var(--faculty-card-description-color);
+  color: var(--black);
   margin-top: 1.5rem;
 }
 

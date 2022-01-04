@@ -22,6 +22,6 @@
   padding: 0;
 }
 .ui.publication-list > .listItem hr {
-  color: var(--publication-list-hr-color);
+  color: var(--light-grey);
   border-width: 0.125rem;
 }

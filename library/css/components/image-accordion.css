@@ -13,8 +13,8 @@
 
 .ui.image-accordion > .item > .content {
     width: 100%;
-    background-color: var(--image-accordion-background-color);
-    border: var(--image-accordion-border);
+    background-color: var(--grey-blue);
+    border: var(--light-blue);
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -38,7 +38,7 @@
 }
 
 .ui.image-accordion > .item > .content > .divider {
-    background-color: var(--image-accordion-divider-color);
+    background-color: var(--light-blue);
     height: 2px;
     width: 100%;
     margin: 10px 0 10px 0;

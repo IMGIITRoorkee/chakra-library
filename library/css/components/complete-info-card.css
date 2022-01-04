@@ -28,7 +28,7 @@
     text-align: left;
     padding-bottom: 0;
     margin: 0;
-    color: var(--stats-card-font-color);
+    color: var(--white);
 }
 .ui.complete-info-card > .flex > .info > .ui.one-liner-captions {
     padding-left: 0.35rem;

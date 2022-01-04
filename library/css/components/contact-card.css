@@ -9,7 +9,7 @@
 .ui.contact-card .section-heading{
     font-size: 1.75rem;
     line-height: 1.5rem;
-    color: var(--contact-card-heading-color);
+    color: var(--heading-black);
     font-family: var(--font-lato);
     margin-bottom: 3rem;
 }
@@ -44,5 +44,5 @@
     background-color: var(--contact-card-icon-background-color);
 }
 .ui.contact-card .contact-icon:hover{
-    background-color: var(--contact-card-icon-hover-color);
+    background-color: var(--hover-black);
 }

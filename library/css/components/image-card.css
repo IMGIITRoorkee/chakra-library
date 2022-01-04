@@ -1,9 +1,10 @@
 .ui.image-card {
   width: var(--image-card-width);
-  box-shadow: inset 0.125rem 0rem 0.125rem var(--faculty-card-shadow-color);
+  box-shadow: inset 0.125rem 0rem 0.125rem var(--hover-black);
   border-radius: 0.25rem;
   box-sizing: border-box;
-  border: 0.0625rem solid var(--image-card-border);
+  border: 0.0625rem solid var(--caption-grey);
+  background-color: white;
 }
 
 .ui.image-card > .ui.image {
@@ -68,10 +69,10 @@
 @media only screen and (max-width: 414px) {
   .ui.image-card {
     width: 19.75rem;
-    box-shadow: inset 0.125rem 0rem 0.125rem var(--faculty-card-shadow-color);
+    box-shadow: inset 0.125rem 0rem 0.125rem var(--hover-black);
     border-radius: 0.25rem;
     box-sizing: border-box;
-    border: 0.0625rem solid var(--image-card-border);
+    border: 0.0625rem solid var(--caption-grey);
   }
   .ui.image-card > .ui.image {
     height: 13rem;

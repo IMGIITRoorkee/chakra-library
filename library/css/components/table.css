@@ -9,7 +9,7 @@
 
 .ui.table-row {
   width: 100%;
-  border-bottom: 0.125rem solid var(--table-primary-color);
+  border-bottom: 0.125rem solid var(--formal-blue);
   margin-right: 1rem;
 }
 
@@ -34,15 +34,15 @@
 .ui.pg-normal,
 .ui.pg-selected {
   cursor: pointer;
-  color: var(--table-pagination-tab-color);
+  color: var(--bright-blue);
   float: left;
   padding: 0.5rem 1rem;
   text-decoration: none;
-  border: 1px solid var(--table-pagination-border-color);
+  border: 1px solid var(--light-grey);
 }
 .ui.pg-selected {
-  color: var(--table-pagination-font-color);
-  background-color: var(--table-pagination-tab-color);
+  color: var(--white);
+  background-color: var(--bright-blue);
   text-align: center;
 }
 .select {
@@ -54,7 +54,7 @@
   overflow: hidden;
   border-radius: 0.25em;
   margin: 0.5rem;
-  border: 1px solid var(--table-pagination-tab-color);
+  border: 1px solid var(--bright-blue);
 }
 
 .ui.pagination-select {
@@ -64,7 +64,7 @@
   padding: 0 0 0 0.5em;
   cursor: pointer;
   border: none;
-  background: var(--table-pagination-font-color);
+  background: var(--white);
 }
 .select::after {
   content: "\25BC";
@@ -74,8 +74,8 @@
   top: 0;
   bottom: 0;
   padding: 0 0.75rem;
-  background: var(--table-pagination-tab-color);
-  color: var(--table-pagination-font-color);
+  background: var(--bright-blue);
+  color: var(--white);
   pointer-events: none;
 }
 

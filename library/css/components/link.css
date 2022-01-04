@@ -31,7 +31,7 @@
 
 .ui.link:hover {
   text-decoration: underline !important;
-  color: var(--link-active-color);
+  color: var(--section-blue);
   cursor: pointer;
 }
 

@@ -1,15 +1,15 @@
 .ui.list {
     max-width: 100%;
     padding: 1.25rem;
-    background-color: var(--list-background);
+    background-color: var(--white);
 }
 
 .ui.list.inverted {
-    background-image: var(--list-background-inverted)
+    background-image: var(--gradient-blue)
 }
 
 .ui.list.list-bluebg {
-    background-color: var(--list-background-2);
+    background-color: var(--light-blue);
 }
 
 .ui.list > .listItem {
@@ -18,31 +18,31 @@
 }
 
 .ui.list > .listItem > .ui.sub-heading {
-    color: var(--list-title-color);
+    color: var(--black);
     font-size: 1rem;
     padding: 0.625rem;
 }
 
 .ui.list.inverted > .listItem > .ui.sub-heading {
-    color: var(--list-title-color-inverted);
+    color: var(--white);
 }
 
 .ui.list > .listItem > .ui.intro-text {
-    color: var(--numbered-list-description-color);
+    color: var(--black);
     padding: 0 0.625rem 0.625rem 0.625rem;    
     font-size: 0.875rem;
 }
 
 .ui.list.inverted > .listItem > .ui.intro-text {
-    color: var(--list-description-color-inverted);
+    color: var(--caption-grey);
 }
 
 .ui.list > .listItem > .divider{
     width: 100%;
     height: 2px;
-    background-color: var(--list-divider-color);
+    background-color: var(--formal-blue);
 }
 
 .ui.list.inverted > .listItem > .divider{
-    background-color: var(--list-divider-color-inverted);
+    background-color: var(--caption-grey);
 }

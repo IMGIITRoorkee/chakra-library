@@ -1,20 +1,20 @@
 /* @import url(../variables/colors.css); */
 
 .ui.breadcrumb {
-  background-color: var(--breadcrumb-background);
+  background-color: var(--black-background);
   width: fit-content;
   padding: 0.5rem;
 }
 
 .ui.breadcrumb.inverted {
-  background:var(--breadcrumb-background-inverted) !important;
+  background:var(--gradient-blue) !important;
 }
 
 .ui.breadcrumb > .section {
   font-size: 1rem;
   font-weight: bold;
   line-height: 1rem;
-  color: var(--breadcrumb-color) !important;
+  color: var(--white) !important;
   padding: 0.5rem;
   display: inline;
   text-decoration: none;
@@ -29,7 +29,7 @@
 .ui.breadcrumb > .divider.arrow {
 }
 .ui.breadcrumb > .divider.slash {
-  color: var(--breadcrumb-color);
+  color: var(--white);
 }
 
 .ui.breadcrumb > .active {

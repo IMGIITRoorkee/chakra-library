@@ -5,7 +5,7 @@
 
 .ui.tabs-container.primary>.tabs {
     width: 100%;
-    border-bottom: 2px solid var(--tabs-primary-container-base-color);
+    border-bottom: 2px solid var(--formal-blue);
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -17,7 +17,7 @@
 
 .ui.tabs-container.secondary>.tabs {
     width: 100%;
-    border-bottom: 2px solid var(--tabs-secondary-container-base-color);
+    border-bottom: 2px solid var(--light-grey);
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -32,7 +32,7 @@
     text-transform: uppercase;
     font-family: var(--font-lato);
     margin-right: 10px;
-    border: 2px solid var(--tabs-primary-active-background-color);
+    border: 2px solid var(--formal-blue);
     border-bottom: hidden;
     font-size: var(--tabs-font-size);
     border-top-left-radius: 4px;
@@ -57,14 +57,14 @@
 }
 
 .ui.tabs-container.primary>.tabs>.tab.active {
-    color: var(--tabs-primary-active-font-color);
-    background-color: var(--tabs-primary-active-background-color);
+    color: var(--white);
+    background-color: var(--formal-blue);
 }
 
 .ui.tabs-container.secondary>.tabs>.tab.active {
-    color: var(--tabs-secondary-active-color);
+    color: var(--bright-blue);
     font-weight: var(--tabs-secondary-active-font-weight);
-    border-bottom: 2px solid var(--tabs-secondary-active-color);
+    border-bottom: 2px solid var(--bright-blue);
 }
 
 .ui.tabs-container>.contents {

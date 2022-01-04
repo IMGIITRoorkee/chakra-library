@@ -38,10 +38,10 @@
 .ui.accordion>.divider {
     width: 100%;
     height: 2px;
-    background-color: var(--accordion-divider-color);
+    background-color: var(--formal-blue);
     margin: 10px 0 10px 0;
 }
 
 .ui.accordion>.category.gray {
-    background-color: var(--accordion-gray-background);
+    background-color: var(--light-grey);
 }

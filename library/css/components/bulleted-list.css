@@ -1,11 +1,11 @@
 .ui.bulleted-list {
-    background-color: var(--bulleted-list-background);
+    background-color: var(--white);
     max-width: 100%;
     padding: 1.25rem;
 }
 
 .ui.bulleted-list.inverted {
-    background:var(--bulleted-list-background-inverted);
+    background:var(--gradient-blue);
 }
 
 .ui.bulleted-list > .listItem {
@@ -21,11 +21,11 @@
 }
 
 .ui.bulleted-list > .listItem > .ui.one-liner-captions{
-    color: var(--bulleted-list-description-color);
+    color: var(--black);
     padding: 0;
 }
 
 .ui.bulleted-list.inverted > .listItem >.ui.one-liner-captions{
-    color: var(--bulleted-list-description-color-inverted);
+    color: var(--caption-grey);
     padding: 0;
 }

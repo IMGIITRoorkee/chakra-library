@@ -1,11 +1,11 @@
 .ui.numbered-list {
     max-width: 100%;
     padding: 1.25rem;
-    background-color: var(--numbered-list-background);
+    background-color: var(--white);
 }
 
 .ui.numbered-list.inverted {
-    background:var(--numbered-list-background-inverted);
+    background:var(--light-blue);
 }
 
 .ui.numbered-list > .listItem {
@@ -20,17 +20,17 @@
 }
 
 .ui.numbered-list > .listItem > .item-no {
-    color: var(--numbered-list-title-color);
+    color: var(--black);
     font-size: 1.4rem;
     margin-right: 0.625rem;
 }
 
 .ui.numbered-list.inverted > .listItem > .item-no {
-    color: var(--numbered-list-title-color-inverted);
+    color: var(--white);
 }
 
 .ui.numbered-list > .listItem > .content > .sub-heading {
-    color: var(--numbered-list-title-color);
+    color: var(--black);
     text-transform: uppercase;
     font-size: 1.4rem;
     margin-bottom: 0.5rem;
@@ -39,14 +39,14 @@
 }
 
 .ui.numbered-list.inverted > .listItem > .content > .sub-heading {
-    color: var(--numbered-list-title-color-inverted);
+    color: var(--white);
 }
 
 .ui.numbered-list > .listItem > .content > .ui.one-liner-captions{
-    color: var(--numbered-list-description-color);
+    color: var(--black);
     padding: 0.125rem 0rem;
 }
 
 .ui.numbered-list.inverted > .listItem > .content > .ui.one-liner-captions{
-    color: var(--numbered-list-description-color-inverted);
+    color: var(--grey);
 }
