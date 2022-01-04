@@ -1,16 +1,16 @@
 .ui.list {
     max-width: 100%;
     padding: 1.25rem;
-    background-color: var(--white);
+    background-color: inherit;
 }
 
-.ui.list.inverted {
+/* .ui.list.inverted {
     background-image: var(--gradient-blue)
 }
 
 .ui.list.list-bluebg {
     background-color: var(--light-blue);
-}
+} */
 
 .ui.list > .listItem {
     margin-bottom:0.625rem;
