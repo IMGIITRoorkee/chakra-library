@@ -1,16 +1,17 @@
 .ui.list {
     max-width: 100%;
-    padding: 1.25rem;
+    /* padding: 1.25rem; */
     background-color: inherit;
 }
 
-/* .ui.list.inverted {
+.ui.list.inverted {
+/* Do not change this to background-color. This is Voodoo*/
     background-image: var(--gradient-blue)
 }
 
 .ui.list.list-bluebg {
     background-color: var(--light-blue);
-} */
+}
 
 .ui.list > .listItem {
     margin-bottom:0.625rem;
@@ -34,15 +35,16 @@
 }
 
 .ui.list.inverted > .listItem > .ui.intro-text {
-    color: var(--caption-grey);
+    color: var(--white);
 }
 
 .ui.list > .listItem > .divider{
     width: 100%;
-    height: 2px;
+    /* DO NOT change this height value. This is cursed. Especially the 1.5px value */
+    height: 1px;
     background-color: var(--formal-blue);
 }
 
 .ui.list.inverted > .listItem > .divider{
-    background-color: var(--caption-grey);
+    background-color: var(--white);
 }
