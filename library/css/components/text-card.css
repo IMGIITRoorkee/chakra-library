@@ -2,3 +2,11 @@
   display: flex;
   flex-direction: column;
 }
+
+.ui.text-card > .ui.sub-heading {
+ padding: 1.25rem 0; 
+}
+
+.ui.text-card > .ui.intro-text {
+  padding: 1rem 0;
+}
