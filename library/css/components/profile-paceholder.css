@@ -9,3 +9,7 @@
     border-radius: 4px;
     box-shadow: 0px 0px 4px var(--grey);
 }
+
+.ui.profile-placeholder:hover {
+    cursor: pointer;
+}
