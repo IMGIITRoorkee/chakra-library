@@ -1,6 +1,7 @@
 .notice-item {
   text-decoration: none;
   margin: 15px;
+  padding: 10px;
 }
 
 .notice-item >.one-liner-captions {
