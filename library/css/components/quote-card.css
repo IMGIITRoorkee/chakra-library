@@ -6,6 +6,7 @@
     flex-direction: column;
     justify-content: center;
     max-width: 600px;
+    /* background-color: var(--white); */
 }
 
 .ui.quote-card > .quote {
@@ -27,7 +28,7 @@
     text-decoration: underline;
 }
 
-.ui.quote-card > .ui.icon.icon_image {
+.ui.quote-card > .icon_image {
     margin-top: 0px;
     padding-left: 5.5rem;
     width: 46px;

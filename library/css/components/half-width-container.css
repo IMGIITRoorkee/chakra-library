@@ -1,18 +1,21 @@
 .ui.half-width-container {
   max-width: 100vw;
-  padding: 5vw 10vw;
   display: grid;
   grid-template: 1fr / 1fr 1fr;
 }
 
 .ui.half-width-container > .first {
   grid-area: 1 / 1 / 2 / 2;
-  margin-right: 32px;
+  /* margin-right: 32px; */
+  margin: 0px;
+  padding: 5vw 2vw 5vw 10vw;
 }
 
 .ui.half-width-container > .second {
   grid-area: 1 / 2 / 2 / 3;
-  margin-left: 32px;
+  margin: 0px;
+  /* margin-left: 32px; */
+  padding: 5vw 10vw 5vw 2vw;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -21,12 +24,36 @@
   }
 
   .ui.half-width-container > .first {
-    margin-right: 0px;
-    margin-bottom: 32px;
+    /* margin-right: 0px;
+    margin-bottom: 32px; */
+    /* padding: 0vw 0vw 0vw 2vw; */
+    /* margin: 0px; */
+    padding: 32px 0px;
   }
 
   .ui.half-width-container > .second {
-    margin-left: 0px;
-    margin-top: 32px;
+    /* margin-left: 0px;
+    margin-top: 32px; */
+    /* margin: 0px;/0vw 0vw; */
+
+    padding: 32px 0px;
   }
+}
+
+.ui.half-width-container > .white {
+  background-color: var(--white);
+}
+
+.ui.half-width-container > .gradient-blue {
+  background-image: var(--gradient-blue);
+}
+
+.ui.half-width-container > .light-blue {
+  background-color: var(--light-blue);
+}
+.ui.half-width-container > .light-grey {
+  background-color: var(--light-grey);
+}
+.ui.half-width-container > .blue-grey {
+  background-color: var(--blue-grey);
 }

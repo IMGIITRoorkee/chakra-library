@@ -40,6 +40,10 @@
   text-decoration: none;
   border: 1px solid var(--light-grey);
 }
+
+.ui.pg-normal.inverted{
+  color: var(--white);
+}
 .ui.pg-selected {
   color: var(--white);
   background-color: var(--bright-blue);

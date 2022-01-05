@@ -63,7 +63,7 @@
 }
 
 .ui.inverted.one-liner-captions {
-    color: var(--white);
+    color: var(--very-gery-blue);
     /* background-image: var(--gradient-blue); */
     line-height: 1.2rem;
     /* padding: 1rem 0; */
@@ -76,7 +76,7 @@
 }
 
 .ui.inverted.intro-text {
-    color: var(--caption-grey);
+    color: var(--light-grey);
     /* background-image: var(--gradient-blue); */
     /* padding: 1rem 0; */
     line-height: 1.2rem;

@@ -1,16 +1,9 @@
 .ui.list {
     max-width: 100%;
-    /* padding: 1.25rem; */
     background-color: inherit;
 }
-
-.ui.list.inverted {
-/* Do not change this to background-color. This is Voodoo*/
-    background-image: var(--gradient-blue)
-}
-
 .ui.list.list-bluebg {
-    background-color: var(--light-blue);
+    background-color: var(--grey-blue);
 }
 
 .ui.list > .listItem {
@@ -19,23 +12,13 @@
 }
 
 .ui.list > .listItem > .ui.sub-heading {
-    color: var(--black);
     font-size: 1rem;
     padding: 0.625rem;
 }
 
-.ui.list.inverted > .listItem > .ui.sub-heading {
-    color: var(--white);
-}
-
 .ui.list > .listItem > .ui.intro-text {
-    color: var(--black);
     padding: 0 0.625rem 0.625rem 0.625rem;    
     font-size: 0.875rem;
-}
-
-.ui.list.inverted > .listItem > .ui.intro-text {
-    color: var(--white);
 }
 
 .ui.list > .listItem > .divider{
@@ -45,6 +28,10 @@
     background-color: var(--formal-blue);
 }
 
-.ui.list.inverted > .listItem > .divider{
+
+.ui.list > .listItem > .divider.inverted{
+    width: 100%;
+    /* DO NOT change this height value. This is cursed. Especially the 1.5px value */
+    height: 1px;
     background-color: var(--white);
 }

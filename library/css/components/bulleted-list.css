@@ -1,12 +1,11 @@
 .ui.bulleted-list {
-    background-color: var(--white);
     max-width: 100%;
-    padding: 1.25rem;
+    /* padding: 1.25rem; */
 }
 
-.ui.bulleted-list.inverted {
+/* .ui.bulleted-list.inverted {
     background:var(--gradient-blue);
-}
+} */
 
 .ui.bulleted-list > .listItem {
     display: flex;
@@ -21,11 +20,10 @@
 }
 
 .ui.bulleted-list > .listItem > .ui.one-liner-captions{
-    color: var(--black);
     padding: 0;
 }
 
-.ui.bulleted-list.inverted > .listItem >.ui.one-liner-captions{
+/* .ui.bulleted-list.inverted > .listItem >.ui.one-liner-captions{
     color: var(--white);
     padding: 0;
-}
+} */

@@ -29,6 +29,10 @@
   color:#1A76BB;
 }
 
+.ui.link.blue.inverted > .link-content {
+  color:var(--white);
+}
+
 .ui.link:hover {
   text-decoration: underline !important;
   color: var(--section-blue);

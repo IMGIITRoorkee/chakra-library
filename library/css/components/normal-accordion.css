@@ -42,6 +42,10 @@
     margin: 10px 0 10px 0;
 }
 
+.ui.accordion > .divider {
+    background-color: var(--white);
+}
+/* 
 .ui.accordion>.category.gray {
     background-color: var(--light-grey);
-}
+} */

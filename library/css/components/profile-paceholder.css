@@ -8,6 +8,7 @@
     align-items: center;
     border-radius: 4px;
     box-shadow: 0px 0px 4px var(--grey);
+    background-color: var(--white);
 }
 
 .ui.profile-placeholder:hover {

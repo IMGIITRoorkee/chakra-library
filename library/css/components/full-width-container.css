@@ -2,3 +2,26 @@
     max-width: 100vw;
     padding: 5vw 10vw;
 }
+
+.ui.full-width-container.white{
+    background-color: var(--white);
+}
+
+.ui.full-width-container.gradient-blue{
+    background-image: var(--gradient-blue);
+}
+
+.ui.full-width-container.light-blue{
+    background-color: var(--light-blue);
+}
+.ui.full-width-container.light-grey{
+    background-color: var(--light-grey);
+}
+.ui.full-width-container.blue-grey{
+    background-color: var(--blue-grey);
+}
+
+/* For text color*/
+.inverted{
+    color: var(--white);
+}

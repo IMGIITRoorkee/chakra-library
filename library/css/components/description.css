@@ -8,7 +8,12 @@
   flex-direction: row;
   justify-content: space-around;
 }
-
+.ui.description.inverted{
+  color: var(--white)
+}
+.description.inverted{
+  color: var(--white)
+}
 .left {
   text-align: left;
 }
