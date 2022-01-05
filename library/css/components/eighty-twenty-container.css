@@ -1,66 +1,81 @@
 .ui.eighty-twenty-container {
   max-width: 100vw;
-  padding: 5vw 10vw;
+  /* padding: 5vw 10vw; */
   display: grid;
   grid-template: 1fr / 8fr 2fr;
 }
 
 .ui.eighty-twenty-container > .first {
   grid-area: 1 / 1 / 2 / 2;
-  margin-right: 32px;
+  /* margin-right: 32px; */
+  margin: 0px;
+  padding: 5vw 2vw 5vw 10vw;
 }
 
 .ui.eighty-twenty-container > .second {
   grid-area: 1 / 2 / 2 / 3;
-  margin-left: 32px;
+  margin: 0px;
+  /* margin-left: 32px; */
+  padding: 5vw 10vw 5vw 2vw;
 }
 
 .ui.twenty-eighty-container {
   max-width: 100vw;
-  padding: 5vw 10vw;
+  /* padding: 5vw 10vw; */
   display: grid;
   grid-template: 1fr / 2fr 8fr;
 }
 
 .ui.twenty-eighty-container > .first {
   grid-area: 1 / 1 / 2 / 2;
-  margin-right: 32px;
+  /* margin-right: 32px; */
+  margin: 0px;
+  padding: 5vw 2vw 5vw 10vw;
 }
 
 .ui.twenty-eighty-container > .second {
   grid-area: 1 / 2 / 2 / 3;
-  margin-left: 32px;
+  margin: 0px;
+  /* margin-left: 32px; */
+  padding: 5vw 10vw 5vw 2vw;
 }
 
 @media only screen and (max-width: 768px) {
   .ui.eighty-twenty-container {
     max-width: 100vw;
-    padding: 5vw 5vw;
+    /* padding: 5vw 5vw; */
     display: block;
   }
 
   .ui.eighty-twenty-container > .first {
-    margin-right: 0px;
-    margin-bottom: 32px;
+    /* margin-right: 0px;
+    margin-bottom: 32px; */
+    
+    padding: 32px 0px;
   }
 
   .ui.eighty-twenty-container > .second {
-    margin-left: 0px;
-    margin-bottom: 32px;
+    /* margin-left: 0px;
+    margin-bottom: 32px; */
+    padding: 32px 0px;
   }
 
   .ui.twenty-eighty-container {
     max-width: 100vw;
-    padding: 5vw 5vw;
+    /* padding: 5vw 5vw; */
+    padding: 32px 0px;
     display: block;
   }
   .ui.twenty-eigthy-container > .first {
-    margin-right: 0px;
-    margin-bottom: 32px;
+    /* margin-right: 0px;
+    padding: 32px 0px;
+    margin-bottom: 32px; */
+    padding: 32px 0px;
   }
 
   .ui.twenty-eighty-container > .second {
-    margin-left: 0px;
-    margin-bottom: 32px;
+    /* margin-left: 0px;
+    margin-bottom: 32px; */
+    padding: 32px 0px;
   }
 }
