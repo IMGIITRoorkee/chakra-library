@@ -1,23 +1,13 @@
 .ui.contact-card {
   width: var(--contact-card-width);
   height: var(--contact-card-height);
-  line-height: 1.5rem;
   padding: 1.6rem 0;
   box-sizing: border-box;
   max-width: 95vw;
 }
 
 .ui.contact-card .section-heading {
-  font-size: 1.75rem;
-  line-height: 1.5rem;
-  color: var(--heading-black);
-  font-family: var(--font-lato);
   margin-bottom: 3rem;
-}
-
-.ui.contact-card .intro-text {
-  line-height: 2rem;
-  font-size: 1.125rem;
 }
 
 .ui.contact-card .social {
