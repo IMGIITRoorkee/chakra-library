@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   justify-content: center;
   flex-direction: row;
+  /* color: var(--grey-blue); */
 }
 
 .ui.description-card {
@@ -12,14 +13,64 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  color: var(--description-card-color) !important;
+}
+
+.gradient-blue
+> .ui.description-card-container
+> .ui.description-card {
+background: var(--very-gery-blue);
+}
+
+.gradient-blue
+> .ui.description-card-container
+> .ui.description-card
+> .ui.section-heading {
+color: var(--heading-black);
+}
+.gradient-blue
+> .ui.description-card-container
+> .ui.description-card
+> .ui.description {
+color: var(--black);
+}
+
+.gradient-blue
+> .ui.description-card-container
+> .ui.description-card
+> .ui.link>.link-content {
+color: var(--black);
+}
+
+
+.gradient-blue
+> .ui.description-card-container
+> .ui.description-card.inverted {
+background: inherit;
+}
+
+.gradient-blue
+> .ui.description-card-container
+> .ui.description-card.inverted
+> .ui.section-heading {
+color: var(--white);
+}
+.gradient-blue
+> .ui.description-card-container
+> .ui.description-card.inverted
+> .ui.description {
+color: var(--white);
+}
+
+.gradient-blue
+> .ui.description-card-container
+> .ui.description-card.inverted
+> .ui.link>.link-content {
+color: var(--white);
 }
 
 .ui.description-card.inverted {
-  background: var(--formal-blue) !important;
-  color: var(--white) !important;
+  background: var(--formal-blue);
 }
-
 .ui.description-card > .ui.description {
   margin: 3rem;
 }
@@ -32,7 +83,6 @@
 .ui.description-card > .ui.link {
   margin-bottom: 4rem;
 }
-
 
 @media only screen and (max-width: 700px) {
   .ui.description-card {
