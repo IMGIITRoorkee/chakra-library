@@ -15,7 +15,7 @@ for (let i = 0; bulletedLists !== null && i < bulletedLists.length; i++) {
   // let bulletedItems = bulletedLists[i].getElementsByClassName('listItem');
   // for (let j=0; (bulletedItems !== null) && (j < bulletedItems.length); j++) {
   //     const image = document.createElement("img");
-  //     image.setAttribute("src", "https://cmsredesign.channeli.in/"+paths[icon]);
+  //     image.setAttribute("src", "../../"+paths[icon]);
   //     image.classList.add("icon_image");
   //     bulletedItems[j].prepend(image);
   // }
