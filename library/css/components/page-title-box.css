@@ -1,0 +1,12 @@
+.ui.title-box > .ui.breadcrumb.inverted {
+  margin-bottom: 3rem;
+}
+
+.ui.title-box > .ui.section-heading {
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.ui.title-box > .ui.one-liner-captions {
+  padding: 0.5rem;
+}

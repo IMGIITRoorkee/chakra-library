@@ -3,11 +3,10 @@
 .ui.breadcrumb {
   background-color: var(--black-background);
   width: fit-content;
-  padding: 0.5rem;
 }
 
 .ui.breadcrumb.inverted {
-  background:var(--gradient-blue) !important;
+  background-color: inherit;
 }
 
 .ui.breadcrumb > .section {
