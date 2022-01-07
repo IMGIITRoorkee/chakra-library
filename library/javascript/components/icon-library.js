@@ -53,6 +53,7 @@ let paths = {
   down_arrow: 'library/assets/images/accordion/down-arrow.svg',
   down_arrow_dark: 'library/assets/images/accordion/down-arrow-dark.svg',
   up_arrow: 'library/assets/images/accordion/up-arrow.svg',
+  up_arrow_dark: 'library/assets/images/accordion/up-arrow-dark.svg',
   slider_right_arrow: 'library/assets/icons/accordion/slider-right-arrow.svg',
   slider_left_arrow: 'library/assets/icons/accordion/slider-left-arrow.svg'
 }

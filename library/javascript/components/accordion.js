@@ -1,6 +1,8 @@
 var src = 'https://cmsredesign.channeli.in/'
 var downArrow = src + 'library/assets/images/accordion/down-arrow.svg'
 var upArrow = src + 'library/assets/images/accordion/up-arrow.svg'
+var downArrowDark = src + 'library/assets/images/accordion/down-arrow-dark.svg'
+var upArrowDark = src + 'library/assets/images/accordion/up-arrow-drak.svg'
 
 var accordions = document.querySelectorAll('.ui.accordion')
 for (var i = 0; accordions !== null && i < accordions.length; i++) {
@@ -17,10 +19,13 @@ for (var i = 0; accordions !== null && i < accordions.length; i++) {
 
       // Add Arrow
       const arrow = document.createElement('img')
-      arrow.setAttribute('src', downArrow)
-      arrow.className = 'arrow'
+      arrow.setAttribute('data-icon', 'down_arrow')
+      arrow.className = 'ui icon'
       title.appendChild(arrow)
 
+      for (let j = 1; j < items[k].childElementCount; ++j) {
+        items[k].children[j].style.display = 'none'
+      }
       // Manage click
       title.addEventListener('click', function (e) {
         e.stopPropagation()
@@ -33,10 +38,39 @@ for (var i = 0; accordions !== null && i < accordions.length; i++) {
             if (description !== null) {
               if (description.style.display === 'block') {
                 description.style.display = 'none'
-                arrow.setAttribute('src', downArrow)
+                if (arrow.getAttribute('data-icon') === 'up_arrow_dark') {
+                  arrow.setAttribute('src', downArrowDark)
+                  arrow.setAttribute('data-icon', 'down_arrow_dark')
+                } else if (arrow.getAttribute('data-icon') === 'up_arrow') {
+                  arrow.setAttribute('src', downArrow)
+                  arrow.setAttribute('data-icon', 'down_arrow')
+                } else if (
+                  arrow.getAttribute('data-icon') === 'down_arrow_dark'
+                ) {
+                  arrow.setAttribute('src', upArrowDark)
+                  arrow.setAttribute('data-icon', 'up_arrow_dark')
+                } else {
+                  arrow.setAttribute('src', upArrow)
+                  arrow.setAttribute('data-icon', 'up_arrow')
+                }
               } else {
                 description.style.display = 'block'
-                arrow.setAttribute('src', upArrow)
+
+                if (arrow.getAttribute('data-icon') === 'up_arrow_dark') {
+                  arrow.setAttribute('src', downArrowDark)
+                  arrow.setAttribute('data-icon', 'down_arrow_dark')
+                } else if (arrow.getAttribute('data-icon') === 'up_arrow') {
+                  arrow.setAttribute('src', downArrow)
+                  arrow.setAttribute('data-icon', 'down_arrow')
+                } else if (
+                  arrow.getAttribute('data-icon') === 'down_arrow_dark'
+                ) {
+                  arrow.setAttribute('src', upArrowDark)
+                  arrow.setAttribute('data-icon', 'up_arrow_dark')
+                } else {
+                  arrow.setAttribute('src', upArrow)
+                  arrow.setAttribute('data-icon', 'up_arrow')
+                }
               }
             }
           } else {
@@ -46,10 +80,22 @@ for (var i = 0; accordions !== null && i < accordions.length; i++) {
             if (description !== null) {
               if (description.style.display === 'block') {
                 description.style.display = 'none'
-                arrow.setAttribute('src', downArrow)
+
+                console.log('Arrow 3', arrow, arrow.getAttribute('data-icon'))
+                if (arrow.getAttribute('data-icon') === 'up_arrow_dark') {
+                  arrow.setAttribute('src', downArrowDark)
+                } else {
+                  arrow.setAttribute('src', downArrow)
+                }
               } else {
                 description.style.display = 'block'
-                arrow.setAttribute('src', upArrow)
+
+                console.log('Arrow 4', arrow, arrow.getAttribute('data-icon'))
+                if (arrow.getAttribute('data-icon') === 'down_arrow_dark') {
+                  arrow.setAttribute('src', upArrowDark)
+                } else {
+                  arrow.setAttribute('src', upArrow)
+                }
               }
             }
           }
@@ -81,6 +127,10 @@ for (var i = 0; imageAccordions !== null && i < imageAccordions.length; i++) {
         const divider = document.createElement('div')
         divider.className = 'divider'
         title.parentNode.insertBefore(divider, title.nextSibling)
+
+        for (let k = 1; k < content.childElementCount; ++k) {
+          content.children[k].style.display = 'none'
+        }
 
         // Manage click
         title.addEventListener('click', function (e) {
