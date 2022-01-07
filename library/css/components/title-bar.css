@@ -3,13 +3,13 @@
     flex-direction: row;
     /* Margin should come from container*/
     /* margin: 0vh 10vw; */
+    padding: 1.6rem 0;
     align-items: center;
     justify-content: space-between;
 }
 
 .title-bar > .ui.link.blue {
     margin: 0;
-    padding: 1.6rem 0;
     width:auto;
 }
 
