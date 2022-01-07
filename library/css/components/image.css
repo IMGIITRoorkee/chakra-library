@@ -10,10 +10,13 @@
   display: block;
   width: 100%;
   height: auto;
+  overflow: hidden;
 }
 
 .ui.fluid.image > img {
   width: 100%;
+  object-fit: cover;
+
 }
 
 .ui.image > img {
@@ -27,5 +30,8 @@
 
   .ui.image > img{
     max-width: 70vw;
+  }
+  .ui.fluid.image > img {
+    max-width: 100%;
   }
 }
