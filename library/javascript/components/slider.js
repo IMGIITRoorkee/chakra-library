@@ -54,7 +54,11 @@ const renderSlides = (sliderHash, numberOfCardsRendered) => {
   const numberOfCards = cards.length
 
   for (var i = 0; i < numberOfCards && i < numberOfCardsRendered; i++) {
-    cards[i].style.display = 'block'
+    if (cards[i].classList.contains('image-description-card')) {
+      cards[i].style.display = 'flex'
+    } else {
+      cards[i].style.display = 'block'
+    }
   }
 }
 
