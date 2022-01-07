@@ -1,5 +1,12 @@
 var slideIndex = 1;
-var slides = document.querySelectorAll(".ui.image");
+var carousel = document.querySelectorAll(".ui.carousel")
+var slides = carousel[0].querySelectorAll(".ui.image");
+var parentContainer = carousel[0].parentElement
+// GOT TO REMOVE PADDING AND MARGIN FROM FULL WIDTH CONTAINER MANUALLY 
+// HERE! Don't change
+
+parentContainer.className = ""
+
 generateNavigator()
 generateDots(slides.length);
 showSlides(slideIndex);
