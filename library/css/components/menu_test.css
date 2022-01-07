@@ -1,0 +1,129 @@
+.menuWrapper {
+    margin: 5px 0 5px 0;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.menuContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+div.menuSpecialNode {
+    display: flex;
+    width: 100%;
+}
+
+div.menuSpecialNode a {
+    display: block;
+    width: 100% !important;
+    min-width: max-content;
+    max-width: 200px;
+    transition: max-width 0.3s ease-out;
+}
+
+div.menuSpecialNode a:hover {
+    background-color: #f0f1f6;
+}
+
+.menuInnerContainer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menuInnerContainer {
+    display: flex;
+    transform: scaleY(0);
+    width: 0;
+    overflow: hidden;
+    transition: transform 0.16s ease-in-out;
+    position: relative;
+    border-radius: 2px;
+}
+
+.menuInnerContainer li a {
+    z-index: 1000;
+    display: block;
+}
+
+.menuInnerContainer li {
+    background-color: #f0f1f6;
+    min-width: 200px;
+}
+
+.visible {
+    transform: scaleY(1);
+    overflow: visible;
+    width: 100%;
+}
+
+nav.blue a {
+    color: #232323;
+    font-family: "Lato";
+    font-size: 14px;
+    line-height: 16.8px;
+    text-transform: uppercase !important;
+    text-decoration: none;
+    padding: 5px;
+}
+
+nav.blue ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+nav.blue li a {
+    display: block;
+    padding: 5px;
+    padding-bottom: 6px;
+    background-position: 0px 0px;
+}
+
+.menuParentNode {
+    display: flex;
+}
+
+li.menuParentNode a {
+    width: 100%;
+}
+
+ul.menuParentNodeUL {
+    overflow: hidden;
+    z-index: 100000;
+    position: absolute;
+    transform: scaleX(0);
+    left: 102%;
+    top: 0;
+    background-color: #f0f1f6;
+    transition: transform 0.1s ease-in-out 0s, z-index 0s linear 0.01s, left 0s linear 0.01s;
+    height: 100%;
+}
+
+ul.menuParentNodeUL.parentVisible {
+    transform: scaleX(1);
+    overflow: visible;
+}
+
+nav.blue li a:hover,
+nav li.active a {
+    background-position: 0px -36px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+nav.blue {
+    display: flex;
+    gap: 10px;
+    position: relative;
+}
+
+.menuInnerContainer.endInnerContainer {
+    position: static;
+}
+
+.menuParentNode.endHorizontal>.menuParentNodeUL {
+    left: -95%;
+}
