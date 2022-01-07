@@ -65,7 +65,7 @@ const x = documentIcons.length
 for (let i = 0; i < x; i++) {
   const icon = documentIcons[i]
   let key = icon.getAttribute('data-icon')
-  let src = '../../'
+  let src = 'https://cmsredesign.channeli.in/'
   console.log("ICON", icon, key)
   // icon
   // icon.className += " icon_image"
