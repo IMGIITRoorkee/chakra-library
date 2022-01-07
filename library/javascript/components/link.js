@@ -1,4 +1,4 @@
-var src = '../../'
+var src = 'https://cmsredesign.channeli.in/'
 
 let arrowLinkTags = document.querySelectorAll('.ui.link.arrow-link')
 let imagePath = src + 'library/assets/icons/right-arrow.svg'

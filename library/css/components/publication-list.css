@@ -14,6 +14,10 @@
   padding: 0.25rem 0 0.25rem 0;
 }
 
+.ui.publication-list > .publicationListItem > .title-bar {
+  padding: 0;
+}
+
 .ui.publication-list > .publicationListItem .ui.intro-text {
   padding: 0;
 }
