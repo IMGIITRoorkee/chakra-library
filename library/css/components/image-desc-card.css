@@ -15,6 +15,13 @@
     align-items: center;
 }
 
+.ui.image-description-card > .ui.image {
+    object-fit: contain;
+    overflow: hidden;
+    max-height: 30rem;
+    max-width: 50rem;
+}
+
 .image-description-card > .info > .ui.section-heading:hover {
     cursor: pointer;
 }
