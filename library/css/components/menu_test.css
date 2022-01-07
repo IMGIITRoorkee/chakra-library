@@ -94,12 +94,13 @@ ul.menuParentNodeUL {
     overflow: hidden;
     z-index: 100000;
     position: absolute;
+    width: 100%;
     transform: scaleX(0);
     left: 102%;
     top: 0;
     background-color: #f0f1f6;
     transition: transform 0.1s ease-in-out 0s, z-index 0s linear 0.01s, left 0s linear 0.01s;
-    height: 100%;
+    font-weight: normal !important;
 }
 
 ul.menuParentNodeUL.parentVisible {
@@ -120,10 +121,18 @@ nav.blue {
     position: relative;
 }
 
+nav.blue>ul {
+    height: fit-content;
+}
+
 .menuInnerContainer.endInnerContainer {
     position: static;
 }
 
 .menuParentNode.endHorizontal>.menuParentNodeUL {
-    left: -95%;
+    left: -102%;
+}
+
+.menuParentNode a.boldParentNode {
+    font-weight: bold;
 }
