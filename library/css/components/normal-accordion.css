@@ -42,7 +42,7 @@
     margin: 10px 0 10px 0;
 }
 
-.ui.accordion > .divider {
+.ui.accordion > .divider.inverted {
     background-color: var(--white);
 }
 /* 
