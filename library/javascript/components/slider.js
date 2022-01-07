@@ -1,4 +1,4 @@
-var src = '../../'
+var src = 'https://cmsredesign.channeli.in/'
 var rightArrow = src + 'library/assets/icons/slider-right-arrow.svg'
 var leftArrow = src + 'library/assets/icons/slider-left-arrow.svg'
 

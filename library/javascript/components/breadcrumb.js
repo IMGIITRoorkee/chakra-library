@@ -1,4 +1,4 @@
-var src = '../../'
+var src = 'https://cmsredesign.channeli.in/'
 
 const imagePath = src + 'library/assets/images/breadcrumbs/right-arrow.svg'
 
