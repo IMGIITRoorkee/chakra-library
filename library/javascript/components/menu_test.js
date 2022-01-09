@@ -1,4 +1,4 @@
-var mq = window.matchMedia("(max-width: 1000px)");
+var mq = window.matchMedia("(max-width: 1024px)");
 let special_node_list = document.querySelectorAll('div.menuSpecialNode');
 let menu_containers_list = document.querySelectorAll('.menuInnerContainer');
 let menu_container_items = document.querySelectorAll('.menuInnerContainer li');
@@ -7,8 +7,6 @@ let menu_parent_nodes_ul = document.querySelectorAll('.menuParentNode > .menuPar
 let nav = document.querySelector('nav');
 
 if (mq.matches === false) {
-
-
     for (let i = 0; i < special_node_list.length; i++) {
         special_node_list[i].addEventListener('mouseover', () => {
             if (active_sp_index !== null) {
@@ -64,7 +62,6 @@ if (mq.matches === false) {
     let active_sp_index = null;
 
     hamburger.addEventListener('click', (e) => {
-        console.log(navBar);
         if (open === false) {
             open = true;
             navBar.classList.add('navbarVisible');
