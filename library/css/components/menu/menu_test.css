@@ -1,3 +1,5 @@
+/* Formatting and Check on Conflicting Imports */
+
 @import url(./index.css);
 .menuWrapper {
     margin: 5px 0 5px 0;
@@ -7,22 +9,68 @@
     align-items: center;
 }
 
+.menuContainer {
+    justify-content: center;
+    width: 100%;
+}
+
 #hamBurger {
     display: none;
 }
 
+nav.blue ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
 nav.blue {
     display: flex;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
 }
 
 nav.blue div {
     max-width: 100% !important;
 }
 
-.menuContainer {
-    justify-content: center;
-    width: 100%;
+nav.blue a {
+    color: #232323;
+    font-family: "Lato";
+    font-size: 13px !important;
+    text-decoration: none;
+    padding: 5px;
 }
+
+nav.blue li a {
+    display: block;
+    padding: 5px;
+    padding-bottom: 6px;
+    background-position: 0px 0px;
+}
+
+
+/* Hover Effects (Could be Done with CSS, but JS is used) */
+
+nav.blue li a:hover,
+nav li.active a {
+    background-position: 0px -36px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+/* Vertical Menu */
+
+
+/* Horizontal Side-Menu */
+
+
+/* Individual Container */
+
+
+/* Special Node */
 
 div.menuSpecialNode {
     display: flex;
@@ -41,11 +89,8 @@ div.menuSpecialNode a:hover {
     background-color: #5183B826;
 }
 
-.menuInnerContainer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+
+/* Sub-Nodes and Leaf Nodes of Special Node (Vertical Menu) */
 
 .menuInnerContainer {
     display: flex;
@@ -56,55 +101,45 @@ div.menuSpecialNode a:hover {
     border-radius: 2px;
 }
 
-.menuInnerContainer li a {
-    z-index: 1000;
-    display: block;
-}
-
 .menuInnerContainer li {
     background-color: #5183B826;
     min-width: 200px;
 }
 
+.menuInnerContainer li a {
+    z-index: 1000;
+    display: block;
+}
+
+
+/* Utils for Vertical Menu */
+
 .visible {
     transform: scaleY(1);
     overflow: visible;
+    /* max-width: 100%;  Side-Menu is affected due to this :(*/
     width: 100%;
 }
 
-nav.blue a {
-    color: #232323;
-    font-family: "Lato";
-    font-size: 13px !important;
-    text-decoration: none;
-    padding: 5px;
+.menuInnerContainer.endInnerContainer {
+    position: static;
 }
 
-nav.blue ul {
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-}
 
-nav.blue li a {
-    display: block;
-    padding: 5px;
-    padding-bottom: 6px;
-    background-position: 0px 0px;
-}
+/* Parent Nodes inside Special Node (Side-Menu) */
 
-.menuParentNode {
+li.menuParentNode {
     display: flex;
 }
 
-li.menuParentNode a {
+li.menuParentNode>a {
     max-width: 100%;
     min-width: 80%;
     align-items: end;
     position: relative;
 }
 
-ul.menuParentNodeUL {
+.menuParentNodeUL {
     z-index: 1000;
     position: absolute;
     width: 100%;
@@ -116,44 +151,7 @@ ul.menuParentNodeUL {
     font-weight: normal !important;
 }
 
-ul.menuParentNodeUL.parentVisible {
-    transform: scaleX(1);
-    overflow: visible;
-}
-
-nav.blue li a:hover,
-nav li.active a {
-    background-position: 0px -36px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-nav.blue {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    position: relative;
-}
-
-nav.blue>ul {
-    display: flex;
-    flex-direction: column;
-    height: fit-content;
-}
-
-.menuInnerContainer.endInnerContainer {
-    position: static;
-}
-
-.menuParentNode.endHorizontal>.menuParentNodeUL {
-    left: -102%;
-}
-
-.menuParentNode.activeParentNode {
-    text-decoration: underline;
-}
-
-.menuParentNode>a>img {
+li.menuParentNode>a>img {
     display: none;
     transform: rotate(-90deg);
     position: absolute;
@@ -162,9 +160,31 @@ nav.blue>ul {
     margin-left: auto;
 }
 
+
+/* Side Menu Utils */
+
+ul.menuParentNodeUL.parentVisible {
+    transform: scaleX(1);
+    overflow: visible;
+}
+
+.menuParentNode.endHorizontal>.menuParentNodeUL {
+    left: -102%;
+}
+
+
+/* Parent Node Utils */
+
+.menuParentNode.activeParentNode {
+    text-decoration: underline;
+}
+
 .menuParentNode>a>img.activeParentNode {
     display: block !important;
 }
+
+
+/*Smaller PC Screens*/
 
 @media only screen and (max-width: 1200px) {
     nav.blue a {
@@ -183,14 +203,5 @@ nav.blue>ul {
         font-size: 11px !important;
         text-decoration: none;
         padding: 5px;
-    }
-}
-
-@media only screen and (min-width: 320px) and (max-width: 1000px) {
-    #hamBurger {
-        display: block !important;
-    }
-    nav.blue {
-        display: flex;
     }
 }

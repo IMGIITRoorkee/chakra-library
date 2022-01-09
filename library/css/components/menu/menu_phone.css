@@ -1,0 +1,177 @@
+@import url(./index.css);
+* {
+    box-sizing: border-box;
+}
+
+
+/* Core Containers */
+
+.menuContainer {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menuWrapper {
+    display: flex;
+    height: 95%;
+    border-top: 2px solid #80B3D9;
+}
+
+
+/* Hamburger (First-Child) */
+
+#hamBurger {
+    display: block;
+    margin-right: auto;
+    height: 5%;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+
+/* Navbar (as Sidebar) Second-Child */
+
+
+/* Refactor Built-In Styles  */
+
+nav.blue ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+nav.blue a {
+    color: #232323;
+    text-decoration: none;
+    display: block;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-position: 0px 0px;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0.02em;
+    text-align: left;
+}
+
+
+/* Nav Utils */
+
+nav.blue {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    z-index: 1000;
+    transform: transLateX(-150%);
+    transition: transform 0.3s ease-in;
+}
+
+nav.blue.navbarVisible {
+    transform: transLateX(0%);
+}
+
+
+/* Individual Node Containers */
+
+.menuInnerContainer {
+    z-index: 10000;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    background-color: #5183B826;
+    position: absolute;
+}
+
+.menuInnerContainer li {
+    min-width: 200px;
+}
+
+.menuInnerContainer li a {
+    z-index: 1000;
+    display: block;
+    padding-left: 9px;
+    margin-left: 5px;
+}
+
+
+/* Transitions */
+
+.menuInnerContainer.visible {
+    width: 100%;
+    height: 100%;
+    left: 100%;
+    top: 0%;
+    min-width: max-content;
+    min-height: max-content;
+    display: flex;
+}
+
+
+/* Special Node */
+
+div.menuSpecialNode a img {
+    display: none;
+}
+
+div.menuSpecialNode a {
+    padding: 10px;
+    text-transform: uppercase !important;
+}
+
+
+/* SpecialNode Utils */
+
+.menuSpecialNode.activeParentNode {
+    background-color: #5183B826;
+}
+
+
+/* Parent Node */
+
+.menuParentNodeUL {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    transform: translateY(0);
+    transition: transform 0.3s ease-in;
+    z-index: 1000;
+}
+
+.menuParentNode>a>img {
+    display: none;
+}
+
+
+/* ParentNode Utils */
+
+.menuParentNodeUL.parentVisible {
+    transform: translateY(1);
+    height: 100%;
+    width: inherit;
+}
+
+.menuParentNodeUL.parentVisible>li {
+    margin-left: 10px;
+}
+
+.menuParentNodeUL.parentVisible>li>a {
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.menuParentNodeUL.parentVisible>li>a::before {
+    content: "\276F";
+    margin-right: 7px;
+}
+
+li.menuParentNode.activeParentNode>a {
+    border-left: 4px solid #0067B3;
+}
