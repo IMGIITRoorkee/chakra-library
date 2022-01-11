@@ -55,7 +55,10 @@ let paths = {
   up_arrow: 'library/assets/images/accordion/up-arrow.svg',
   up_arrow_dark: 'library/assets/images/accordion/up-arrow-dark.svg',
   slider_right_arrow: 'library/assets/icons/accordion/slider-right-arrow.svg',
-  slider_left_arrow: 'library/assets/icons/accordion/slider-left-arrow.svg'
+  slider_left_arrow: 'library/assets/icons/accordion/slider-left-arrow.svg',
+  text_small: 'library/assets/icons/A-.svg',
+  text_medium: 'library/assets/icons/A.svg',
+  text_big: 'library/assets/icons/A+.svg'
 }
 
 /* <div class="ui icon" data-icon=""/> */
@@ -67,7 +70,7 @@ for (let i = 0; i < x; i++) {
   const icon = documentIcons[i]
   let key = icon.getAttribute('data-icon')
   let src = 'https://cmsredesign.channeli.in/'
-  console.log("ICON", icon, key)
+  console.log('ICON', icon, key)
   // icon
   // icon.className += " icon_image"
   // let e = document.createElement('img')

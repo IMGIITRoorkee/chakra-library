@@ -147,7 +147,7 @@
             padding: 5px;
         }
     }
-    .accessibility,
+    .accessibility-hamburger,
     .contact {
         display: none;
     }
@@ -170,16 +170,16 @@
     .menuWrapper {
         display: flex;
         height: 95%;
-        border-top: 2px solid var(--menu-blue);
+        /* border-top: 2px solid var(--menu-blue); */
     }
     /* Hamburger (First-Child) */
-    #hamBurger {
+    /* #hamBurger {
         display: block;
         margin-right: auto;
         height: 5%;
         margin-left: 10px;
         margin-top: 10px;
-    }
+    } */
     /* Navbar (as Sidebar) Second-Child */
     /* Refactor Built-In Styles  */
     nav.blue ul {
@@ -298,7 +298,7 @@
         cursor: pointer;
     }
     /*Accessibility*/
-    ul.accessibility {
+    ul.accessibility-hamburger {
         border-top: 2px solid var(--menu-blue);
         margin-top: 75px !important;
     }
@@ -309,7 +309,7 @@
         display: flex;
         align-items: center;
     }
-    .accessibility>li>a,
+    .accessibility-hamburger>li>a,
     .contact>li>a {
         padding: 10px;
         text-transform: uppercase !important;
@@ -332,7 +332,7 @@
         align-items: center;
         justify-content: center;
     }
-    .accessibility>li>div {
+    .accessibility-hamburger>li>div {
         display: flex;
         align-items: center;
         padding: 10px;
