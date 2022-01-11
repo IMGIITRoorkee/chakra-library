@@ -1,6 +1,6 @@
 .ui.tabs-container {
     width: calc(100% - 60px);
-    padding: 30px;
+    /* padding: 30px; */
 }
 
 .ui.tabs-container.primary>.tabs {
@@ -93,6 +93,7 @@
 .ui.tabs-container>.contents>.content {
     display: none;
     background-color: inherit;
+    padding-top: 2rem;
 }
 
 @media only screen and (max-width: 600px) {
