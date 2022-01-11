@@ -13,7 +13,7 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 1rem;
-    align-items: center;
+    align-items: left;
 }
 
 .ui.image-description-card > .ui.image {
@@ -21,6 +21,7 @@
     overflow: hidden;
     max-height: 30rem;
     max-width: 50rem;
+    width: 100%;
 }
 
 .image-description-card > .info > .ui.section-heading:hover {
