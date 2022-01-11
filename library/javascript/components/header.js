@@ -1,10 +1,24 @@
-// let wrapper = document.querySelector(".menuWrapper");
-// let nav = wrapper.firstElementChild;
-// let ul = nav.firstElementChild;
-// // console.log(ul)
-// let li = ul.children;
-// for (let m of li) {
-//   m.addEventListener("mouseenter", () => {
-//     console.log(m.innerText);
-//   });
-// }
+var html = document.getElementsByTagName('html')[0]
+var small = document.querySelectorAll('.small')
+small.forEach(element => {
+  element.addEventListener('click', () => {
+    console.log('Hi')
+    html.style.fontSize = '14px'
+  })
+})
+
+var medium = document.querySelectorAll('.medium')
+medium.forEach(element => {
+  element.addEventListener('click', () => {
+    console.log('Hi')
+    html.style.fontSize = '16px'
+  })
+})
+
+var big = document.querySelectorAll('.big')
+big.forEach(element => {
+  element.addEventListener('click', () => {
+    console.log('Hi')
+    html.style.fontSize = '18px'
+  })
+})

@@ -1,5 +1,5 @@
 .ui.header {
-  max-width: 1200px;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -8,19 +8,49 @@
   display: flex;
   gap: 1rem;
   font-size: 0.75rem;
+  width:17.5rem;
 }
-.ui.header .accessibility {
+.ui.header .upperleft{
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.ui.header .sizechange {
+  display: flex;
+  align-items: baseline;
   font-size: 0.75rem;
   justify-content: space-between;
+  width: 3.5rem;
 }
-
+.ui.header .accessibility{
+  display: flex;
+  justify-content:space-between;
+  padding-bottom: 0.4rem;
+  align-items: center;
+  width: 17.5rem;
+}
+.ui.header .language{
+  display: flex;
+  flex-direction: row;
+}
+.ui.header .sizechange .small,.ui.header .sizechange .medium,.ui.header .sizechange .big{
+  cursor: pointer;
+}
+.ui.header .sizechange .small{
+  font-size: 14px;
+}
+.ui.header .sizechange .medium{
+  font-size: 16px;
+}
+.ui.header .sizechange .big{
+  font-size: 18px;
+}
 .ui.header .main-head {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .ui.header .header-links {
   display: flex;
   gap: 1rem;
@@ -34,12 +64,23 @@
   text-align: center;
   display: block;
 }
+.ui.header.department .accessibility {
+  width:15rem !important;
+}
+
 
 .ui.header.department .top-nav {
-  display: grid;
-  grid-template-columns: auto auto;
+  display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 0.5rem 0;
+}
+.ui.header.department .page-options-serach {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap:1rem;
 }
 .ui.header.department .logo {
   margin: auto;
@@ -47,32 +88,65 @@
 .ui.header .hamburger-container {
   display: none;
 }
-.ui.header .page-search {
+.ui.header.department .page-search-header {
   display: none;
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1024px) {
   .ui.header {
+    width: unset;
     max-width: 50rem;
   }
-  .ui.header .accessibility,
-  .ui.header .page-options {
+  .ui.header.department .top-nav {
     display: none;
   }
-  .page-search {
-    display: unset;
+  .ui.header.department .page-search-header {
+    display:unset;
+  }
+  .ui.header .sizechange,
+  .ui.header .page-options,.ui.header .language,.ui.header .dark-light-mode{
+    display: none;
+  }
+  .ui.header .accessibility{
+    max-width:1rem;
   }
   .ui.header .hamburger-container {
     display: unset;
-    width: 2rem;
   }
   .ui.header .logo {
-    width: 100%;
+    width: 90%;
     max-width: 15rem;
   }
+  .ui.header .main-head{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .ui.header.department .main-head {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top:1rem;
+  }
+  .ui.header.department .section-heading{
+    font-size: 0.8rem;
+  }
+  .ui.header.department .sub-heading{
+    font-size: 0.7rem;
+  }
+  .ui.header.department .heading-section{
+    display: flex;
+    flex-direction: row;
+    max-width: 75%;
+    align-items: center;
+    justify-content: space-evenly;
+    gap:0.25rem;
+  }
+
 }
+
 @media only screen and (max-width: 500px) {
   .ui.header {
-    max-width: 90%;
+    max-width: 95%;
   }
 }
