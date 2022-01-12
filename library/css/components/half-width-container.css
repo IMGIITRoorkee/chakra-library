@@ -39,21 +39,3 @@
     padding: 32px 0px;
   }
 }
-
-.ui.half-width-container > .white {
-  background-color: var(--white);
-}
-
-.ui.half-width-container > .gradient-blue {
-  background-image: var(--gradient-blue);
-}
-
-.ui.half-width-container > .light-blue {
-  background-color: var(--light-blue);
-}
-.ui.half-width-container > .light-grey {
-  background-color: var(--light-grey);
-}
-.ui.half-width-container > .blue-grey {
-  background-color: var(--blue-grey);
-}

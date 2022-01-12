@@ -90,20 +90,3 @@
 }
 
 
-.white {
-  background-color: var(--white);
-}
-
-.gradient-blue {
-  background-image: var(--gradient-blue);
-}
-
-.light-blue {
-  background-color: var(--light-blue);
-}
-.light-grey {
-  background-color: var(--light-grey);
-}
-.blue-grey {
-  background-color: var(--blue-grey);
-}
