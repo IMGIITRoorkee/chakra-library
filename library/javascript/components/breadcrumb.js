@@ -9,14 +9,14 @@ for (let i = 0; breadcrumbs !== null && i < breadcrumbs.length; i++) {
   const parent = breadcrumbs[i].parentElement
   const parentWidth = parent.getBoundingClientRect().width
 
-  if (breadWidth >= parentWidth) {
+  if (2*breadWidth >= parentWidth) {
     const innerChildren = breadcrumbs[i].children
     if (innerChildren.length > 3) {
       const newInnerChildren = []
       newInnerChildren.push(innerChildren[0], innerChildren[1])
       const newDummyChild = document.createElement('a')
-      newDummyChild.className = 'section'
-      newDummyChild.innerHTML = '...'
+      newDummyChild.className = 'ui one-liner-captions'
+      newDummyChild.innerHTML = '... '
       newInnerChildren.push(newDummyChild)
       newInnerChildren.push(
         innerChildren[innerChildren.length - 2],

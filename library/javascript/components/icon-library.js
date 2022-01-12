@@ -49,6 +49,7 @@ let paths = {
   research: 'library/assets/icons/research.svg',
   right_arrow: 'library/assets/icons/right-arrow.svg',
   right_arrow_inverted: 'library/assets/icons/right-arrow-inverted.svg',
+  right_arrow_breadcrumb: 'library/assets/icons/right-arrow-breadcrumb.svg',
   downward_polygon: 'library/assets/icons/downward_polygon.svg',
   down_arrow: 'library/assets/images/accordion/down-arrow.svg',
   down_arrow_dark: 'library/assets/images/accordion/down-arrow-dark.svg',

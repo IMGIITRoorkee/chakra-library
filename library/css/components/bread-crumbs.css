@@ -1,7 +1,7 @@
 /* @import url(../variables/colors.css); */
 
 .ui.breadcrumb {
-  background-color: var(--black-background);
+  /* background-color: var(--black-background); */
   width: fit-content;
 }
 
@@ -9,14 +9,17 @@
   background-color: inherit;
 }
 
-.ui.breadcrumb > .section {
+.ui.breadcrumb > .ui.link {
   font-size: 1rem;
   font-weight: bold;
   line-height: 1rem;
-  color: var(--white) !important;
-  padding: 0.5rem;
   display: inline;
   text-decoration: none;
+}
+
+.ui.breadcrumb > .ui.link > .link-content {
+  padding-right: 0rem;
+  /* color: var(--white) !important; */
 }
 
 .ui.breadcrumb > .divider {
@@ -28,7 +31,7 @@
 .ui.breadcrumb > .divider.arrow {
 }
 .ui.breadcrumb > .divider.slash {
-  color: var(--white);
+  /* color: var(--white); */
 }
 
 .ui.breadcrumb > .active {
