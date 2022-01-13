@@ -84,6 +84,8 @@ const paths = {
 /* <img class="ui icon" data-icon=""/> */
 
 function hover (element) {
+  const src = 'https://cmsredesign.channeli.in/'
+
   let key = element.getAttribute('data-icon')
   let path = paths[key]
   if (key.endsWith('_dark')) {
@@ -93,13 +95,15 @@ function hover (element) {
   if (path === null || path === undefined) {
     path = paths[key.substring(0, key.length - 6)]
   }
-  const src = '../../'
+  // const src = '../../'
   element.setAttribute('src', src + path)
 }
 
 function unhover (element) {
+  const src = 'https://cmsredesign.channeli.in/'
+
   const key = element.getAttribute('data-icon')
-  const src = '../../'
+  // const src = '../../'
   let path = paths[key]
   if (key.endsWith('_dark')) {
     if (path === null || path === undefined) {
@@ -117,10 +121,11 @@ function unhover (element) {
 const documentIcons = document.getElementsByClassName('icon')
 const x = documentIcons.length
 for (let i = 0; i < x; i++) {
+  const src = 'https://cmsredesign.channeli.in/'
+
   const icon = documentIcons[i]
   const key = icon.getAttribute('data-icon')
-  // const src = 'https://cmsredesign.channeli.in/'
-  const src = '../../'
+  // const src = '../../'
   let path = paths[key]
   if (key.endsWith('_dark')) {
     if (path === null || path === undefined) {
