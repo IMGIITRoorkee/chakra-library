@@ -16,6 +16,7 @@ window.onscroll = function () {
 }
 
 var scrollBtn = document.querySelector('.ui.floating-btn .ui.icon')
+scrollBtn.setAttribute("onclick", 'goToTop()')
 
 function showScroll () {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
