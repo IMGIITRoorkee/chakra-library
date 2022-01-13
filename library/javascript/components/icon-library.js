@@ -1,4 +1,4 @@
-let paths = {
+const paths = {
   search: 'library/assets/icons/search-icon.svg',
   dropdown: 'library/assets/icons/dropdown-icon.svg',
   carouselright: 'library/assets/icons/carouselright-icon.svg',
@@ -55,8 +55,6 @@ let paths = {
   down_arrow_dark: 'library/assets/images/accordion/down-arrow-dark.svg',
   up_arrow: 'library/assets/images/accordion/up-arrow.svg',
   up_arrow_dark: 'library/assets/images/accordion/up-arrow-dark.svg',
-  slider_right_arrow: 'library/assets/icons/accordion/slider-right-arrow.svg',
-  slider_left_arrow: 'library/assets/icons/accordion/slider-left-arrow.svg',
   text_small: 'library/assets/icons/A-.svg',
   text_medium: 'library/assets/icons/A.svg',
   text_big: 'library/assets/icons/A+.svg'
@@ -69,8 +67,8 @@ console.log(documentIcons, documentIcons.length)
 const x = documentIcons.length
 for (let i = 0; i < x; i++) {
   const icon = documentIcons[i]
-  let key = icon.getAttribute('data-icon')
-  let src = 'https://cmsredesign.channeli.in/'
+  const key = icon.getAttribute('data-icon')
+  const src = 'https://cmsredesign.channeli.in/'
   console.log('ICON', icon, key)
   // icon
   // icon.className += " icon_image"
