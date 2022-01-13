@@ -1,7 +1,4 @@
 .ui.stats-card {
-    background-color: var(--formal-blue);
-    padding-top: 3.7rem;
-    padding-bottom: 3.7rem;
     padding-left: 5rem;
     padding-right: 5rem;
     display: flex;
@@ -15,11 +12,3 @@
     height: 100%;
 }
 
-.ui.stats-card > .info > .ui.sub-heading {
-    padding-bottom: 0;
-    color: var(--white);
-}
-.ui.stats-card > .info > .ui.one-liner-captions {
-    padding-top: 0;
-    color: var(--light-blue);
-}

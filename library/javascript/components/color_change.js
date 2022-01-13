@@ -1,4 +1,4 @@
-const whitelist = [
+const whitelist = [ // This is blacklist actually
   'description-card',
   'faculty-card',
   'floating-button',
@@ -11,7 +11,6 @@ const whitelist = [
   'quote-card',
   'image-card',
   'mini-image-card',
-  'stats-card'
 ]
 
 const toInvertClasses = [
