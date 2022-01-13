@@ -31,6 +31,7 @@ const reorderSlides = (sliderHash, numCards, isLeft) => {
   // Reorder
   if (isLeft) {
     // Put last card to the top
+    if (totalNumberOfCards <= numCards) {return}
     if (totalNumberOfCards > numCards) {
       cards[numCards - 1].style.display = 'none'
     }
@@ -42,6 +43,7 @@ const reorderSlides = (sliderHash, numCards, isLeft) => {
     }
     container.insertBefore(lastCard, container.firstChild)
   } else {
+    if (totalNumberOfCards <= numCards) {return}
     // Put first card to the bottom
     const firstChild = cards[0]
     if (totalNumberOfCards > numCards) {
@@ -85,16 +87,11 @@ const numberOfCardsToDisplay = sliderHash => {
 
   const container = sliderElement.getElementsByClassName('container')[0]
   const card = container.firstElementChild
-  console.log(
-    'Slides Element Width',
-    sliderElement.clientWidth - px,
-    card.offsetWidth
-  )
+
   const numberOfCards = Math.floor(
     (sliderElement.clientWidth - px) / card.offsetWidth
   )
   const ret = numberOfCards > 1 ? numberOfCards : 1
-  console.log('RET CARDS', ret)
   return ret
 }
 

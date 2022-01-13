@@ -82,7 +82,6 @@ for (var i = 0; accordions !== null && i < accordions.length; i++) {
               if (description.style.display === 'block') {
                 description.style.display = 'none'
 
-                console.log('Arrow 3', arrow, arrow.getAttribute('data-icon'))
                 if (arrow.getAttribute('data-icon') === 'up_arrow_dark') {
                   arrow.setAttribute('src', downArrowDark)
                 } else {
@@ -91,7 +90,6 @@ for (var i = 0; accordions !== null && i < accordions.length; i++) {
               } else {
                 description.style.display = 'block'
 
-                console.log('Arrow 4', arrow, arrow.getAttribute('data-icon'))
                 if (arrow.getAttribute('data-icon') === 'dropdown_dark') {
                   arrow.setAttribute('src', upArrowDark)
                 } else {
