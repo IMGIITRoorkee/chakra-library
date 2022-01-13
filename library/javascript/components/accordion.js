@@ -1,5 +1,5 @@
 var src = 'https://cmsredesign.channeli.in/'
-// const src = '../../'
+// var src = '../../'
 var downArrow = src + 'library/assets/icons/dropdown.svg'
 var upArrow = src + 'library/assets/icons/up-arrow.svg'
 var downArrowDark = src + 'library/assets/icons/dropdown-dark.svg'
