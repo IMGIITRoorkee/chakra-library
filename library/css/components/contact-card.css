@@ -31,9 +31,3 @@
   justify-content: center;
   align-items: center;
 }
-.ui.contact-card .contact-info .icon_image {
-  background-color: var(--very-gery-blue);
-}
-.ui.contact-card .contact-icon:hover {
-  background-color: var(--hover-black);
-}

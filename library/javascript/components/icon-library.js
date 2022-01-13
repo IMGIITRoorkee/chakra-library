@@ -1,79 +1,136 @@
+// Dark means inverted here, in gradient blue background all icons should be white
 const paths = {
-  search: 'library/assets/icons/search-icon.svg',
-  dropdown: 'library/assets/icons/dropdown-icon.svg',
-  carouselright: 'library/assets/icons/carouselright-icon.svg',
-  carouselleft: 'library/assets/icons/carouselleft-icon.svg',
-  arrow: 'library/assets/icons/arrow-icon.svg',
-  hospital: 'library/assets/icons/hospital-icon.svg',
-  heart: 'library/assets/icons/heart-icon.svg',
-  phone: 'library/assets/icons/phone-icon.svg',
-  email: 'library/assets/icons/email-icon.svg',
-  contact: 'library/assets/icons/contact-icon.svg',
-  compass: 'library/assets/icons/compass-icon.svg',
-  download: 'library/assets/icons/download-icon.svg',
-  microphone: 'library/assets/icons/microphone-icon.svg',
-  sort: 'library/assets/icons/sort-icon.svg',
-  wellness: 'library/assets/icons/wellness-icon.svg',
-  share: 'library/assets/icons/share-icon.svg',
-  homepage_hygiene: 'library/assets/icons/homepage_hygiene-icon.svg',
-  arrow_dark: 'library/assets/icons/arrow_dark-icon.svg',
-  bullet_point_dark: 'library/assets/icons/bullet_point_dark-icon.svg',
-  departments_dark: 'library/assets/icons/departments_dark-icon.svg',
-  stats_students_dark: 'library/assets/icons/stats_students_dark-icon.svg',
-  stats_faculty_dark: 'library/assets/icons/stats_faculty_dark-icon.svg',
-  centres_dark: 'library/assets/icons/centres_dark-icon.svg',
-  contact_dark: 'library/assets/icons/contact_dark-icon.svg',
-  filter_list_dark: 'library/assets/icons/filter_list_dark-icon.svg',
-  schools_dark: 'library/assets/icons/schools_dark-icon.svg',
-  stats_staff_dark: 'library/assets/icons/stats_staff_dark-icon.svg',
-  stats_patents_dark: 'library/assets/icons/stats_patents_dark-icon.svg',
-  for_students: 'library/assets/icons/for_students-icon.svg',
-  for_students_hover: 'library/assets/icons/for_students_hover-icon.svg',
-  for_faculty: 'library/assets/icons/for_faculty-icon.svg',
-  for_faculty_hover: 'library/assets/icons/for_faculty_hover-icon.svg',
-  for_visitors: 'library/assets/icons/for_visitors-icon.svg',
-  for_visitors_hover: 'library/assets/icons/for_visitors_hover-icon.svg',
-  floating_button: 'library/assets/icons/floating_button-icon.svg',
-  floating_button_hover: 'library/assets/icons/floating_button_hover-icon.svg',
-  committee: 'library/assets/icons/committee-icon.svg',
-  google_icon_1: 'library/assets/icons/google_icon_1-icon.svg',
+  blue_arrow: 'library/assets/icons/arrow.svg',
+  blue_arrow_dark: 'library/assets/icons/blue-arrow-dark.svg',
+  bulls_eye: 'library/assets/icons/bulls-eye.svg',
+  bulls_eye_dark: 'library/assets/icons/bulls-eye-dark.svg',
+  carouselleft: 'library/assets/icons/carouselleft.svg', // Dont provide in icon option
+  carouselright: 'library/assets/icons/carouselright.svg', // Do not provide in icon option
+  centres: 'library/assets/icons/centres.svg',
+  centres_dark: 'library/assets/icons/centres-dark.svg',
+  contact: 'library/assets/icons/contact.svg',
+  contact_dark: 'library/assets/icons/contact-dark.svg',
+  convo_hat: 'library/assets/icons/convo-hat.svg',
+  convo_hat_dark: 'library/assets/icons/convo-hat-dark.svg',
+  covid: 'library/assets/icons/covid.svg',
+  covid_dark: 'library/assets/icons/covid-dark.svg',
+  departments: 'library/assets/icons/departments.svg',
+  departments_dark: 'library/assets/icons/departments-dark.svg',
+  download: 'library/assets/icons/download.svg',
+  download_dark: 'library/assets/icons/download-dark.svg',
+  downward_polygon: 'library/assets/icons/downward-polygon.svg', // Dont provide user option in icons
+  dropdown: 'library/assets/icons/dropdown.svg',
+  dropdown_dark: 'library/assets/icons/dropdown-dark.svg',
+  email: 'library/assets/icons/email.svg',
+  email_dark: 'library/assets/icons/email-dark.svg',
+  facebook_logo: 'library/assets/icons/facebook-logo.svg', // Dont provide user option in icons
+  filter_list: 'library/assets/icons/filter-list.svg',
+  filter_list_dark: 'library/assets/icons/filter-list-dark.svg',
+  floating_button: 'library/assets/icons/floating-button.svg', // Remove option from frontend
+  floating_button_hover: 'library/assets/icons/floating-button-hover.svg',
+  faculty: 'library/assets/icons/faculty.svg',
+  faculty_dark: 'library/assets/icons/faculty-dark.svg',
+  faculty_hover: 'library/assets/icons/faculty-hover.svg',
+  heart: 'library/assets/icons/heart.svg',
+  hygiene: 'library/assets/icons/hygiene.svg',
+  hygiene_dark: 'library/assets/icons/hygiene-dark.svg',
+  hospital: 'library/assets/icons/hospital.svg',
+  hospital_dark: 'library/assets/icons/hospital-dark.svg',
+  instagram_logo: 'library/assets/icons/instagram-logo.svg', // Remove option from frontend
+  linkedin_logo: 'library/assets/icons/linkedin-logo.svg', // Remove option from frontend
   location: 'library/assets/icons/location.svg',
-  facebook_logo: 'library/assets/icons/fb_logo_cms.svg',
-  twitter_logo: 'library/assets/icons/twitter_logo_cms.svg',
-  linkedin_logo: 'library/assets/icons/linkedin_logo_cms.svg',
-  youtube_logo: 'library/assets/icons/youtube_logo_cms.svg',
-  instagram_logo: 'library/assets/icons/instagram_logo_cms.svg',
-  web_logo: 'library/assets/icons/web_logo_cms.svg',
-  mail_contact: 'library/assets/icons/mail.svg',
-  phone_contact: 'library/assets/icons/phone.svg',
+  location_dark: 'library/assets/icons/location-dark.svg',
+  microphone: 'library/assets/icons/microphone.svg',
+  microphone_dark: 'library/assets/icons/microphone-dark.svg',
+  phone: 'library/assets/icons/phone.svg',
+  phone_dark: 'library/assets/icons/phone-dark.svg',
   research: 'library/assets/icons/research.svg',
+  research_dark: 'library/assets/icons/research-dark.svg',
   right_arrow: 'library/assets/icons/right-arrow.svg',
-  right_arrow_inverted: 'library/assets/icons/right-arrow-inverted.svg',
-  right_arrow_breadcrumb_dark: 'library/assets/icons/right-arrow-breadcrumb.svg',
-  downward_polygon: 'library/assets/icons/downward_polygon.svg',
-  down_arrow: 'library/assets/images/accordion/down-arrow.svg',
-  down_arrow_dark: 'library/assets/images/accordion/down-arrow-dark.svg',
-  up_arrow: 'library/assets/images/accordion/up-arrow.svg',
-  up_arrow_dark: 'library/assets/images/accordion/up-arrow-dark.svg',
-  text_small: 'library/assets/icons/A-.svg',
-  text_medium: 'library/assets/icons/A.svg',
-  text_big: 'library/assets/icons/A+.svg'
+  right_arrow_dark: 'library/assets/icons/right-arrow-dark.svg',
+  right_arrow_breadcrumb_dark:
+    'library/assets/icons/right-arrow-breadcrumb-dark.svg',
+  schools: 'library/assets/icons/schools.svg',
+  schools_dark: 'library/assets/icons/schools-dark.svg',
+  search: 'library/assets/icons/search.svg',
+  search_dark: 'library/assets/icons/search-dark.svg',
+  share: 'library/assets/icons/share.svg',
+  share_dark: 'library/assets/icons/share-dark.svg',
+  // funnel: 'library/assets/icons/sort-icon.svg',
+  stats_faculty_dark: 'library/assets/icons/stats_faculty_dark-icon.svg',
+  stats_patents_dark: 'library/assets/icons/stats_patents_dark-icon.svg',
+  stats_staff_dark: 'library/assets/icons/stats_staff_dark-icon.svg',
+  students: 'library/assets/icons/students.svg',
+  students_dark: 'library/assets/icons/students-dark.svg',
+  students_hover: 'library/assets/icons/students-hover.svg',
+  text_small: 'library/assets/icons/text-small.svg', // Dont provide user option in icons
+  text_medium: 'library/assets/icons/text-medium.svg', // Dont provide user option in icons
+  text_big: 'library/assets/icons/text-big.svg', // Dont provide user option in icons
+  twitter_logo: 'library/assets/icons/twitter-logo.svg', // Remove option from frontend
+  up_arrow: 'library/assets/icons/up-arrow.svg',
+  up_arrow_dark: 'library/assets/icons/up-arrow-dark.svg',
+  visitors: 'library/assets/icons/visitors.svg',
+  visitors_dark: 'library/assets/icons/visitors-dark.svg',
+  visitors_hover: 'library/assets/icons/visitors-hover.svg',
+  web_logo: 'library/assets/icons/web-logo.svg', // Remove option from frontend
+  wellness: 'library/assets/icons/wellness.svg',
+  wellness_dark: 'library/assets/icons/wellness-dark.svg',
+  youtube_logo: 'library/assets/icons/youtube-logo.svg' // Remove option from frontend
 }
 
-/* <div class="ui icon" data-icon=""/> */
+/* <img class="ui icon" data-icon=""/> */
+
+function hover (element) {
+  let key = element.getAttribute('data-icon')
+  let path = paths[key]
+  if (key.endsWith('_dark')) {
+    key = key.substring(0, key.length - 5)
+  }
+  key = key + '_hover'
+  if (path === null || path === undefined) {
+    path = paths[key.substring(0, key.length - 6)]
+  }
+  const src = '../../'
+  element.setAttribute('src', src + path)
+}
+
+function unhover (element) {
+  const key = element.getAttribute('data-icon')
+  const src = '../../'
+  let path = paths[key]
+  if (key.endsWith('_dark')) {
+    if (path === null || path === undefined) {
+      path = paths[key.substring(0, key.length - 5)]
+    }
+  }
+  if (key.endsWith('_hover')) {
+    if (path === null || path === undefined) {
+      path = paths[key.substring(0, key.length - 6)]
+    }
+  }
+  element.setAttribute('src', src + path)
+}
 
 const documentIcons = document.getElementsByClassName('icon')
-console.log(documentIcons, documentIcons.length)
 const x = documentIcons.length
 for (let i = 0; i < x; i++) {
   const icon = documentIcons[i]
   const key = icon.getAttribute('data-icon')
-  const src = 'https://cmsredesign.channeli.in/'
-  console.log('ICON', icon, key)
-  // icon
-  // icon.className += " icon_image"
-  // let e = document.createElement('img')
-  icon.setAttribute('src', src + paths[key])
+  // const src = 'https://cmsredesign.channeli.in/'
+  const src = '../../'
+  let path = paths[key]
+  if (key.endsWith('_dark')) {
+    if (path === null || path === undefined) {
+      path = paths[key.substring(0, key.length - 5)]
+    }
+  }
+  if (key.endsWith('_hover')) {
+    if (path === null || path === undefined) {
+      path = paths[key.substring(0, key.length - 6)]
+    }
+  }
+  icon.setAttribute('src', src + path)
+  icon.setAttribute('onmouseover', 'hover(this)')
+  icon.setAttribute('onmouseout', 'unhover(this)')
   icon.className += ' icon_image'
-  // icon.parentNode.replaceChild(e, icon)
 }

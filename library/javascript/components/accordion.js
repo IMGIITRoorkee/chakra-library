@@ -1,8 +1,9 @@
-var src = 'https://cmsredesign.channeli.in/'
-var downArrow = src + 'library/assets/images/accordion/down-arrow.svg'
-var upArrow = src + 'library/assets/images/accordion/up-arrow.svg'
-var downArrowDark = src + 'library/assets/images/accordion/down-arrow-dark.svg'
-var upArrowDark = src + 'library/assets/images/accordion/up-arrow-drak.svg'
+// var src = 'https://cmsredesign.channeli.in/'
+const src = '../../'
+var downArrow = src + 'library/assets/icons/dropdown.svg'
+var upArrow = src + 'library/assets/icons/up-arrow.svg'
+var downArrowDark = src + 'library/assets/icons/dropdown-dark.svg'
+var upArrowDark = src + 'library/assets/icons/up-arrow-dark.svg'
 
 var accordions = document.querySelectorAll('.ui.accordion')
 for (var i = 0; accordions !== null && i < accordions.length; i++) {
@@ -19,7 +20,7 @@ for (var i = 0; accordions !== null && i < accordions.length; i++) {
 
       // Add Arrow
       const arrow = document.createElement('img')
-      arrow.setAttribute('data-icon', 'down_arrow')
+      arrow.setAttribute('data-icon', 'dropdown')
       arrow.className = 'ui icon'
       title.appendChild(arrow)
 
@@ -40,12 +41,12 @@ for (var i = 0; accordions !== null && i < accordions.length; i++) {
                 description.style.display = 'none'
                 if (arrow.getAttribute('data-icon') === 'up_arrow_dark') {
                   arrow.setAttribute('src', downArrowDark)
-                  arrow.setAttribute('data-icon', 'down_arrow_dark')
+                  arrow.setAttribute('data-icon', 'dropdown_dark')
                 } else if (arrow.getAttribute('data-icon') === 'up_arrow') {
                   arrow.setAttribute('src', downArrow)
-                  arrow.setAttribute('data-icon', 'down_arrow')
+                  arrow.setAttribute('data-icon', 'dropdown')
                 } else if (
-                  arrow.getAttribute('data-icon') === 'down_arrow_dark'
+                  arrow.getAttribute('data-icon') === 'dropdown_dark'
                 ) {
                   arrow.setAttribute('src', upArrowDark)
                   arrow.setAttribute('data-icon', 'up_arrow_dark')
@@ -58,12 +59,12 @@ for (var i = 0; accordions !== null && i < accordions.length; i++) {
 
                 if (arrow.getAttribute('data-icon') === 'up_arrow_dark') {
                   arrow.setAttribute('src', downArrowDark)
-                  arrow.setAttribute('data-icon', 'down_arrow_dark')
+                  arrow.setAttribute('data-icon', 'dropdown_dark')
                 } else if (arrow.getAttribute('data-icon') === 'up_arrow') {
                   arrow.setAttribute('src', downArrow)
-                  arrow.setAttribute('data-icon', 'down_arrow')
+                  arrow.setAttribute('data-icon', 'dropdown')
                 } else if (
-                  arrow.getAttribute('data-icon') === 'down_arrow_dark'
+                  arrow.getAttribute('data-icon') === 'dropdown_dark'
                 ) {
                   arrow.setAttribute('src', upArrowDark)
                   arrow.setAttribute('data-icon', 'up_arrow_dark')
@@ -91,7 +92,7 @@ for (var i = 0; accordions !== null && i < accordions.length; i++) {
                 description.style.display = 'block'
 
                 console.log('Arrow 4', arrow, arrow.getAttribute('data-icon'))
-                if (arrow.getAttribute('data-icon') === 'down_arrow_dark') {
+                if (arrow.getAttribute('data-icon') === 'dropdown_dark') {
                   arrow.setAttribute('src', upArrowDark)
                 } else {
                   arrow.setAttribute('src', upArrow)

@@ -1,6 +1,6 @@
 const src = 'https://cmsredesign.channeli.in/'
-const rightArrow = src + 'library/assets/icons/carouselright-icon.svg'
-const leftArrow = src + 'library/assets/icons/carouselleft-icon.svg'
+const rightArrow = src + 'library/assets/icons/carouselright.svg'
+const leftArrow = src + 'library/assets/icons/carouselleft.svg'
 
 // Hash function
 // Returns a hash of argument length

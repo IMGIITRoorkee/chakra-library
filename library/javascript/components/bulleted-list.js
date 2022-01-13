@@ -8,7 +8,7 @@ for (let i = 0; bulletedLists !== null && i < bulletedLists.length; i++) {
   // if (bulletedLists[i].classList.contains('inverted')){
   //     icon = "arrow_dark";
   // } else {
-  bulletedLists[i].setAttribute('data-icon', 'arrow')
+  bulletedLists[i].setAttribute('data-icon', 'blue_arrow')
   // icon = 'arrow'
   // }
   //   }F
