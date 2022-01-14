@@ -10,7 +10,7 @@ parentContainer.className = ''
 generateNavigator()
 generateDots(slides.length)
 showSlides(slideIndex)
-generateNumber(slides.length)
+generateNumber(slides)
 
 // This function adds the navigator arrows to the carousel
 function generateNavigator () {
@@ -53,13 +53,13 @@ function generateDots (count) {
   })
 }
 
-function generateNumber (count) {
+function generateNumber (slides) {
   var images = document.querySelectorAll('.carousel-image .image')
-  for (var i = 1; i <= count; i++) {
+  for (var i = 0; i < slides.length; i++) {
     var ele = document.createElement('div')
     ele.classList.add('numbertext')
-    ele.innerHTML = `${i}/${count}`
-    images[i - 1].appendChild(ele)
+    ele.innerHTML = `${i + 1}/${slides.length}`
+    slides[i].appendChild(ele)
   }
 }
 
