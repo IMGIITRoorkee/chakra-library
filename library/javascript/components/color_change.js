@@ -37,6 +37,12 @@ const toInvertClasses = [
   'date'
 ]
 
+function contrast() {
+  let body=document.getElementsByTagName('body')[0]
+  body.className='dark'
+}
+
+
 function flipIcon (iconElement) {
   if (iconElement.hasAttribute('data-icon') === false) {
     return
