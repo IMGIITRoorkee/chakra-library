@@ -13,6 +13,8 @@ const whitelist = [ // This is blacklist actually
   'mini-image-card',
 ]
 
+//JS reload testing comment
+
 const toInvertClasses = [
   'intro-text',
   'sub-heading',
