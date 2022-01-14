@@ -4,7 +4,9 @@ const paths = {
   blue_arrow: 'library/assets/icons/arrow.svg',
   accessibility_blue_arrow_dark: 'library/assets/icons/accessibility-blue-arrow-dark.svg',
   blue_arrow_dark: 'library/assets/icons/blue-arrow-dark.svg',
+  accessibility_bulls_eye: 'library/assets/icons/accessibility-bulls-eye.svg',
   bulls_eye: 'library/assets/icons/bulls-eye.svg',
+  accessibility_bulls_eye_dark: 'library/assets/icons/accessibility-bulls-eye-dark.svg',
   bulls_eye_dark: 'library/assets/icons/bulls-eye-dark.svg',
   accessibility_carouselleft: 'library/assets/icons/accessibility-carouselleft.svg', // Dont provide in icon option
   carouselleft: 'library/assets/icons/carouselleft.svg', // Dont provide in icon option
@@ -142,22 +144,45 @@ const paths = {
   up_arrow: 'library/assets/icons/up-arrow.svg',
   accessibility_up_arrow_dark: 'library/assets/icons/accessibility-up-arrow-dark.svg',
   up_arrow_dark: 'library/assets/icons/up-arrow-dark.svg',
+  accessibility_visitors: 'library/assets/icons/accessibility-visitors.svg',
   visitors: 'library/assets/icons/visitors.svg',
+  accessibility_visitors_dark: 'library/assets/icons/accessibility-visitors-dark.svg',
   visitors_dark: 'library/assets/icons/visitors-dark.svg',
+  accessibility_visitors_hover: 'library/assets/icons/accessibility-visitors-hover.svg',
   visitors_hover: 'library/assets/icons/visitors-hover.svg',
+  accessibility_web_logo: 'library/assets/icons/accessibility-web-logo.svg', // Remove option from frontend
   web_logo: 'library/assets/icons/web-logo.svg', // Remove option from frontend
+  accessibility_wellness: 'library/assets/icons/accessibility_wellness.svg',
   wellness: 'library/assets/icons/wellness.svg',
+  accessibility_wellness_dark: 'library/assets/icons/accessibility-wellness-dark.svg',
   wellness_dark: 'library/assets/icons/wellness-dark.svg',
+  accessibility_youtube_logo: 'library/assets/icons/accessibility-youtube-logo.svg', // Remove option from frontend
   youtube_logo: 'library/assets/icons/youtube-logo.svg' // Remove option from frontend
 }
 
 /* <img class="ui icon" data-icon=""/> */
+
+function getAccessibility (icons) {
+  body = document.getElementsByTagName('body')[0]
+  if (body.classList.contains('dark')){
+    for (let i=0;i<icons.length;++i){
+      let key= icons[i].getAttribute('data-icon')
+      key= 'accessibility_' + key
+      icons[i].setAttribute('data-icon', key)
+    }
+  }
+}
 
 function hover (element) {
   var src = 'https://cmsredesign.channeli.in/'
 
   let key = element.getAttribute('data-icon')
   let path = paths[key]
+
+  if (key.startsWith('accessibility_')) {
+      key= key.substring(key.length - 14, key.length)
+  }
+
   if (key.endsWith('_dark')) {
     key = key.substring(0, key.length - 5)
   }
@@ -175,11 +200,20 @@ function unhover (element) {
   const key = element.getAttribute('data-icon')
   // var src = '../../'
   let path = paths[key]
+
+  if (key.startsWith('accessibility_')) {
+    if (path === null || path === undefined) {
+      path = paths[key.substring(key.length - 14, key.length)]
+    }
+  }
+
   if (key.endsWith('_dark')) {
     if (path === null || path === undefined) {
       path = paths[key.substring(0, key.length - 5)]
     }
   }
+
+
   if (key.endsWith('_hover')) {
     if (path === null || path === undefined) {
       path = paths[key.substring(0, key.length - 6)]
@@ -190,6 +224,9 @@ function unhover (element) {
 
 const documentIcons = document.getElementsByClassName('icon')
 const x = documentIcons.length
+
+getAccessibility(documentIcons);
+
 for (let i = 0; i < x; i++) {
   var src = 'https://cmsredesign.channeli.in/'
 
@@ -197,6 +234,13 @@ for (let i = 0; i < x; i++) {
   const key = icon.getAttribute('data-icon')
   // var src = '../../'
   let path = paths[key]
+  
+  if (key.startsWith('accessibility_')) {
+    if (path === null || path === undefined) {
+      path = paths[key.substring(key.length - 14, key.length)]
+    }
+  }
+
   if (key.endsWith('_dark')) {
     if (path === null || path === undefined) {
       path = paths[key.substring(0, key.length - 5)]
