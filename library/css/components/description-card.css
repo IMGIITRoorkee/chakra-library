@@ -3,7 +3,6 @@
   flex-wrap: wrap;
   justify-content: center;
   flex-direction: row;
-  /* color: var(--grey-blue); */
 }
 
 .ui.description-card {

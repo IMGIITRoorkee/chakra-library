@@ -64,7 +64,7 @@
         transition: max-width 0.3s ease-out;
     }
     div.menuSpecialNode a:hover {
-        background-color: var(--menu-hover);
+        background-color: var(--grey-blue);
     }
     /* Sub-Nodes and Leaf Nodes of Special Node (Vertical Menu) */
     .menuInnerContainer {
@@ -76,7 +76,7 @@
         border-radius: 2px;
     }
     .menuInnerContainer li {
-        background-color: var(--menu-hover);
+        background-color: var(--grey-blue);
         min-width: 200px;
     }
     .menuInnerContainer li a {
@@ -111,7 +111,7 @@
         transform: scaleX(0);
         left: 102%;
         top: 0%;
-        background-color: var(--menu-hover);
+        background-color: var(--grey-blue);
         transition: transform 0.1s ease-in-out 0s, z-index 0s linear 0.01s, left 0s linear 0.01s;
         font-weight: normal !important;
     }
@@ -172,7 +172,7 @@
     .menuWrapper {
         display: flex;
         height: 95%;
-        /* border-top: 2px solid var(--menu-blue); */
+        /* border-top: 2px solid var(--very-gery-blue); */
     }
     /* Hamburger (First-Child) */
     /* #hamBurger {
@@ -228,7 +228,7 @@
         width: 0;
         height: 0;
         overflow: hidden;
-        background-color: var(--menu-hover);
+        background-color: var(--grey-blue);
         position: absolute;
     }
     .menuInnerContainer li {
@@ -260,7 +260,7 @@
     }
     /* SpecialNode Utils */
     .menuSpecialNode.activeParentNode {
-        background-color: var(--menu-hover);
+        background-color: var(--grey-blue);
     }
     /* Parent Node */
     .menuParentNodeUL {
@@ -301,11 +301,11 @@
     }
     /*Accessibility*/
     ul.accessibility-hamburger {
-        border-top: 2px solid var(--menu-blue);
+        border-top: 2px solid var(--very-gery-blue);
         margin-top: 75px !important;
     }
     ul.contact {
-        border-top: 2px solid var(--menu-blue);
+        border-top: 2px solid var(--very-gery-blue);
     }
     li.language {
         display: flex;

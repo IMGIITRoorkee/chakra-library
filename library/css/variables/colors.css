@@ -1,96 +1,60 @@
 .light {
-    --black-background: #12121266;
-    --gradient-blue: linear-gradient( 180deg, rgba(0, 103, 179, 0.8) 1.04%, #5183b8 30.21%, #5183b8 76.56%);
-    --formal-blue: #5183b8;
-    --section-blue: rgba(26, 118, 187, 0.87);
-    --bright-blue: #0067B3;
-    --light-blue: rgba(229, 238, 244, 0.49);
-    --grey-blue: #F0F1F6;
-    --white: #FFFFFF;
-    --black: #232323;
-    --heading-black: #4c4c4c;
-    --grey: #666666;
-    --light-grey: #f7f7f7;
-    --yellow: #FFD53D;
-    --caption-grey: #999999;
-    --hover-black: #181818;
-    --menu-hover: #5183b826;
-    --menu-blue: #80B3D9;
-    /* --caption-grey: #c4c4c480; */
-    /* --caption-grey: #c4c4c480; */
-    /* --hover-black: rgba(134, 134, 134, 0.05); */
-    /* --light-blue: rgba(255, 255, 255, 0.6); */
-    /* --complete-info-card-subtitle-color: #999999; */
-    /* --grey: #666666; */
-    /* --grey-blue: rgba(9, 91, 151, 0.04); */
-    /* --light-blue: solid rgba(4, 47, 120, 0.1) 1px; */
-    /* --light-blue: #eae8e4; */
-    /* --white: #ffffff; */
-    /* --formal-blue: #5183b8; */
-    /* --formal-blue: #5183b8; */
-    /* --bright-blue: #0067b3; */
-    /* --light-grey: #b8c9d9; */
-    /* --grey-blue: #f0f1f6; */
-    /* --light-blue: linear-gradient(
+  --gradient-blue: linear-gradient(
     180deg,
-    rgba(0, 103, 179, 0.8) 2.6%,
-    #5183b8 19.79%,
-    #5183b8 61.98%
-  ); */
-    /* --white: #ffffff; */
-    /* --light-blue: linear-gradient(
-    180deg,
-    rgba(0, 103, 179, 0.8) 11.46%,
-    #5183b8 32.29%,
-    #5183b8 90.1%
-  ); */
-    /* --white: #ffffff; */
-    /* --white: #ffffff99; */
-    /* --grey: #666666; */
-    /* --light-grey: #b8c9d9; */
-    /* --white: #ffffff; */
-    /* --gradient-blue: linear-gradient(
-    180deg,
-    rgba(0, 103, 179, 0.8) 11.46%,
-    #5183b8 32.29%,
-    #5183b8 90.1%
-  ); */
-    /* --white: #ffffff99; */
-    /* --light-grey: #b8c9d9; */
-    /* --formal-blue: #5183b8; */
-    /* --bright-blue: #0067b3; */
-    /* --white: white; */
-    /* --light-grey: #ddd; */
-    /* --heading-black: #4c4c4c; */
-    /* --hover-black: #181818; */
-    --very-gery-blue: #cfdbe6;
-    /* --section-blue: #1a76bb; */
-    /* --link-button-color: #0067b3; */
-    /* --formal-blue: #5183b8; */
-    /* --white: #ffffff99; */
-    /* --caption-grey: #ffffff99; */
-    /* --light-blue: rgba(229, 238, 244, 0.49); */
-    /* --heading-black: #4c4c4c; */
-    /* --section-blue: #1a76bb; */
-    /* --caption-grey: #999999; */
-    /* --grey: #666666; */
-    /* --caption-grey: #ffffff99; */
-    /* --very-gery-blue: #cfdbe6; */
-    --social-icon-facebook-hover-color: #3b5998;
-    --social-icon-twitter-hover-color: #00aced;
-    --social-icon-linkedin-hover-color: #0077b5;
-    --social-icon-instagram-hover-color: #e1306c;
-    --social-icon-youtube-hover-color: #bb0000;
-    /* --hover-black: #181818; */
-    /* --caption-grey: #c4c4c480; */
+    rgba(0, 103, 179, 0.8) 1.04%,
+    #5183b8 30.21%,
+    #5183b8 76.56%
+  );
+  --formal-blue: #5183b8;
+  --section-blue: rgba(26, 118, 187, 0.87);
+  --bright-blue: #0067b3;
+  --light-blue: rgba(229, 238, 244, 0.49);
+  --grey-blue: #f0f1f6;
+  --white: #ffffff;
+  --black: #232323;
+  --heading-black: #4c4c4c;
+  --grey: #666666;
+  --light-grey: #f7f7f7;
+  --yellow: #ffd53d;
+  --caption-grey: #999999;
+  --hover-black: #181818;
+  --very-gery-blue: #cfdbe6;
+  --social-icon-facebook-hover-color: #3b5998;
+  --social-icon-twitter-hover-color: #00aced;
+  --social-icon-linkedin-hover-color: #0077b5;
+  --social-icon-instagram-hover-color: #e1306c;
+  --social-icon-youtube-hover-color: #bb0000;
 }
 
-.dark {}
+.dark {
+  --gradient-blue: #81dbfe;
+  --formal-blue: #E1E1E1;
+  --section-blue: #E1E1E1;
+  --bright-blue:#81dbfe;
+  --light-blue: #111111;
+  --grey-blue: #4c4c4c;
+  --white: #111111;
+  --black: #eeeeee;
+  --heading-black: #E1E1E1;
+  --grey: #EEEEEE;
+  --light-grey: #111111;
+  --yellow: #ffd53d;
+  --caption-grey: #999999;
+  --hover-black: #f7f7f7;
+  --very-gery-blue: #4C4C4C;
+  --social-icon-facebook-hover-color: #3b5998;
+  --social-icon-twitter-hover-color: #00aced;
+  --social-icon-linkedin-hover-color: #0077b5;
+  --social-icon-instagram-hover-color: #e1306c;
+  --social-icon-youtube-hover-color: #bb0000;
+}
 
 @font-face {
-    font-family: "Segoe UI";
-    src: url("./ui/segoeui.eot");
-    src: local("Segoe UI"), local("Segoe"), local("Segoe WP"), url("./ui/segoeui.eot?#iefix") format("embedded-opentype"), url("./ui/segoeui.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Segoe UI';
+  src: url('./ui/segoeui.eot');
+  src: local('Segoe UI'), local('Segoe'), local('Segoe WP'),
+    url('./ui/segoeui.eot?#iefix') format('embedded-opentype'),
+    url('./ui/segoeui.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }

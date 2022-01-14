@@ -5,28 +5,28 @@
   justify-content: space-around;
   flex-flow: wrap;
   width: max-content;
-  color: #4C4C4C;
+  color: var(--heading-black);
   font-size: 16px;
   line-height: 24px;
 }
 
 .ui.link.inverted{
-  color: #FFFFFF;
+  color: var(--white);
 }
 
 
 .ui.link.inverted > .link-content{
-  color: #FFFFFF;
+  color: var(--white);
 }
 
 .link-content {
   padding-right: 1rem;
-  color: #4C4C4C;
+  color: var(--heading-black);
   text-decoration: none;
 }
 
 .ui.link.blue > .link-content {
-  color:#1A76BB;
+  color:var(--section-blue);
 }
 
 .ui.link.blue.inverted > .link-content {
@@ -40,11 +40,11 @@
 }
 
 .ui.button {
-  color: #0067b3;
-  border: 2px solid #0067b3;
+  color: var(--bright-blue);
+  border: 2px solid var(--bright-blue);
   box-sizing: border-box;
   border-radius: 2px;
-  background-color: white;
+  background-color: var(--white);
   box-shadow: none;
   padding: 10px;
   text-decoration: none;
@@ -53,18 +53,18 @@
 }
 
 .ui.button:hover{
-  background-color:#0067b3;
-  color: white;
+  background-color:var(--bright-blue);
+  color: var(--white);
 }
 
 .ui.button.inverted {
-  background-color:#0067b3;
-  color: white;
+  background-color:var(--bright-blue);
+  color: var(--white);
 }
 
 .ui.button.inverted:hover {
-  background-color:white;
-  color: #0067b3;
+  background-color:var(--white);
+  color: var(--bright-blue);
 }
 .group-button {
   display: flex;
@@ -75,20 +75,19 @@
 
 .group-button > .ui.button {
   padding: 12px;
-  border: 2px solid #5183b8;
-  background-color:white;
-  color: #5183b8;
+  border: 2px solid var(--formal-blue);
+  background-color:var(--white);
+  color: var(--formal-blue);
 }
-
 .group-button > .ui.button.inverted:hover {
-  background-color:#0067b3;
-  color: white;
+  background-color:var(--bright-blue);
+  color: var(--white);
 }
 .group-button > .ui.button:hover {
-  color:#0067b3;
-  background-color: white;
+  color:var(--bright-blue);
+  background-color: var(--white);
 }
 .group-button > .ui.button.inverted {
-  color:white;
-  background-color: #5183b8;
+  color:var(--white);
+  background-color: var(--formal-blue);
 }

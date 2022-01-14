@@ -42,12 +42,15 @@
 @import url(./menu_test.css);
 
 /* These are the background colors for all containers*/
-
+body {
+  background-color: var(--white);
+}
 .white {
     background-color: var(--white);
   }
   
   .gradient-blue {
+    background-color: var(--gradient-blue);
     background-image: var(--gradient-blue);
   }
   

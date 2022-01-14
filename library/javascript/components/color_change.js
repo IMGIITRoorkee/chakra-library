@@ -1,4 +1,5 @@
-const whitelist = [ // This is blacklist actually
+const whitelist = [
+  // This is blacklist actually
   'description-card',
   'faculty-card',
   'floating-button',
@@ -13,7 +14,7 @@ const whitelist = [ // This is blacklist actually
   'mini-image-card',
 ]
 
-//JS reload testing comment
+// JS reload testing comment
 
 const toInvertClasses = [
   'intro-text',
@@ -32,7 +33,8 @@ const toInvertClasses = [
   // 'table-value',
   'table',
   'pg-normal',
-  'tabs-container'
+  'tabs-container',
+  'date'
 ]
 
 function flipIcon (iconElement) {
