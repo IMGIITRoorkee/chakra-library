@@ -3,7 +3,38 @@
   margin-left: auto;
   margin-right: auto;
 }
-
+.ui.header .darkmode{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+}
+.ui.header .light-button {
+  color: var(--black);
+  width: 20px;
+  height:20px;
+  border-radius: 2px;
+  font-family: var(--font-lato);
+  font-size: 1rem;
+  text-align: center;
+  line-height: 20px;
+  border: 2px solid var(--bright-blue);
+  cursor: pointer;
+}
+.ui.header .dark-button {
+  color: var(--white);
+  width: 20px;
+  height:20px;
+  border-radius: 2px;
+  font-family: var(--font-lato);
+  font-size: 1rem;
+  line-height: 20px;
+  text-align: center;
+  background-color: var(--bright-blue);
+  border: 2px solid var(--bright-blue);
+  cursor: pointer;
+}
 .ui.header .page-options {
   display: flex;
   gap: 1rem;

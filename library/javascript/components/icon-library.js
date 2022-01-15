@@ -162,25 +162,35 @@ const paths = {
 
 /* <img class="ui icon" data-icon=""/> */
 
-function getAccessibility (icons) {
+function getAccessibility(icons) {
   body = document.getElementsByTagName('body')[0]
-  if (body.classList.contains('dark')){
-    for (let i=0;i<icons.length;++i){
-      let key= icons[i].getAttribute('data-icon')
-      key= 'accessibility_' + key
+  if (body.classList.contains('dark')) {
+    for (let i = 0; i < icons.length; ++i) {
+      let key = icons[i].getAttribute('data-icon')
+      if (!key.startsWith('accessibility_')) {
+        key = 'accessibility_' + key
+      }
+      icons[i].setAttribute('data-icon', key)
+    }
+  } else {
+    for (let i = 0; i < icons.length; ++i) {
+      let key = icons[i].getAttribute('data-icon')
+      if (key.startsWith('accessibility_')) {
+        key = key.substring(14, key.length)
+      }
       icons[i].setAttribute('data-icon', key)
     }
   }
 }
 
-function hover (element) {
+function hover(element) {
   var src = 'https://cmsredesign.channeli.in/'
 
   let key = element.getAttribute('data-icon')
   let path = paths[key]
 
   if (key.startsWith('accessibility_')) {
-      key= key.substring(key.length - 14, key.length)
+    key = key.substring(key.length - 14, key.length)
   }
 
   if (key.endsWith('_dark')) {
@@ -194,7 +204,9 @@ function hover (element) {
   element.setAttribute('src', src + path)
 }
 
-function unhover (element) {
+var loadedIconLibrary = true
+
+function unhover(element) {
   var src = 'https://cmsredesign.channeli.in/'
 
   const key = element.getAttribute('data-icon')
@@ -222,37 +234,41 @@ function unhover (element) {
   element.setAttribute('src', src + path)
 }
 
-const documentIcons = document.getElementsByClassName('icon')
-const x = documentIcons.length
+function loadIcons() {
+  const documentIcons = document.getElementsByClassName('icon')
+  const x = documentIcons.length
 
-getAccessibility(documentIcons);
+  getAccessibility(documentIcons);
 
-for (let i = 0; i < x; i++) {
-  var src = 'https://cmsredesign.channeli.in/'
+  for (let i = 0; i < x; i++) {
+    var src = 'https://cmsredesign.channeli.in/'
 
-  const icon = documentIcons[i]
-  const key = icon.getAttribute('data-icon')
-  // var src = '../../'
-  let path = paths[key]
-  
-  if (key.startsWith('accessibility_')) {
-    if (path === null || path === undefined) {
-      path = paths[key.substring(key.length - 14, key.length)]
+    const icon = documentIcons[i]
+    const key = icon.getAttribute('data-icon')
+    // var src = '../../'
+    let path = paths[key]
+
+    if (key.startsWith('accessibility_')) {
+      if (path === null || path === undefined) {
+        path = paths[key.substring(key.length - 14, key.length)]
+      }
     }
-  }
 
-  if (key.endsWith('_dark')) {
-    if (path === null || path === undefined) {
-      path = paths[key.substring(0, key.length - 5)]
+    if (key.endsWith('_dark')) {
+      if (path === null || path === undefined) {
+        path = paths[key.substring(0, key.length - 5)]
+      }
     }
-  }
-  if (key.endsWith('_hover')) {
-    if (path === null || path === undefined) {
-      path = paths[key.substring(0, key.length - 6)]
+    if (key.endsWith('_hover')) {
+      if (path === null || path === undefined) {
+        path = paths[key.substring(0, key.length - 6)]
+      }
     }
+    icon.setAttribute('src', src + path)
+    icon.setAttribute('onmouseover', 'hover(this)')
+    icon.setAttribute('onmouseout', 'unhover(this)')
+    icon.className += ' icon_image'
   }
-  icon.setAttribute('src', src + path)
-  icon.setAttribute('onmouseover', 'hover(this)')
-  icon.setAttribute('onmouseout', 'unhover(this)')
-  icon.className += ' icon_image'
 }
+
+loadIcons()

@@ -18,19 +18,23 @@ function generateNavigator () {
   var flexbox = document.createElement('div')
   flexbox.classList.add('ui')
   flexbox.classList.add('flexbox')
-  var prevArrow = document.createElement('a')
+  var prevArrow = document.createElement('img')
+  prevArrow.setAttribute('data-icon','carouselleft')
+  prevArrow.className = 'ui icon'
   prevArrow.classList.add('prev')
   prevArrow.onclick = function () {
     plusSlides(-1)
   }
-  prevArrow.innerHTML = '&#10094;'
+  // prevArrow.innerHTML = '&#10094;'
   flexbox.appendChild(prevArrow)
-  var nextArrow = document.createElement('a')
+  var nextArrow = document.createElement('img')
+  nextArrow.className = 'ui icon'
+  nextArrow.setAttribute('data-icon','carouselright')
   nextArrow.classList.add('next')
   nextArrow.onclick = function () {
     plusSlides(1)
   }
-  nextArrow.innerHTML = '&#10095;'
+  // nextArrow.innerHTML = '&#10095;'
   flexbox.appendChild(nextArrow)
   carousel.appendChild(flexbox)
 }
