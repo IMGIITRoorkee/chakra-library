@@ -91,9 +91,9 @@
         width: 100%;
         /* Side-Menu is affected due to this :(*/
     }
-    .menuInnerContainer.endInnerContainer {
+    /* .menuInnerContainer.endInnerContainer {
         position: static;
-    }
+    } */
     /* Parent Nodes inside Special Node (Side-Menu) */
     li.menuParentNode {
         display: flex;
@@ -140,6 +140,20 @@
     .menuParentNode>a>img.activeParentNode {
         display: block !important;
     }
+
+    .menuInnerContainer {
+        display: none;
+        position: absolute;
+    }
+
+    .menuWrapper > nav > ul:hover .menuInnerContainer, .menuWrapper > nav > ul:active .menuInnerContainer {
+        display: block;
+
+    }
+    .menuWrapper > nav > ul {
+        position: relative;
+    }
+
     @media only screen and (min-width:1024px) and (max-width: 1200px) {
         nav.blue a {
             color: var(--black);
