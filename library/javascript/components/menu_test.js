@@ -14,6 +14,9 @@ function performChange (mq) {
   let nav = document.querySelector('nav')
 
   if (mq.matches === false) {
+    let navBar = document.querySelector('nav.blue')
+    navBar.style.display = ''
+
     for (let i = 0; i < special_node_list.length; i++) {
       special_node_list[i].addEventListener('mouseover', () => {
         if (active_sp_index !== null) {
@@ -65,15 +68,17 @@ function performChange (mq) {
     let hamburger = document.getElementById('hamBurger')
     let navBar = document.querySelector('nav.blue')
     let open = false
-
+    navBar.style.display = 'none'
     let active_parent_node = null
     let active_sp_index = null
 
     hamburger.addEventListener('click', e => {
       if (open === false) {
         open = true
+        navBar.style.display = ''
         navBar.classList.add('navbarVisible')
       } else {
+        navBar.style.display = 'none'
         navBar.classList.remove('navbarVisible')
         open = false
       }

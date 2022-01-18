@@ -224,8 +224,11 @@
         flex-direction: column;
         margin-right: auto;
         z-index: 1000;
+        position: absolute;
         transform: transLateX(-150%);
         transition: transform 0.3s ease-in;
+        background-color:  var(--white);
+        padding-left: 0.5rem;
     }
     nav.blue li a:hover,
     nav li.active a {
