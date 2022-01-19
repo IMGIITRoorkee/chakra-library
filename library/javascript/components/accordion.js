@@ -5,6 +5,7 @@ var upArrow = src + 'library/assets/icons/up-arrow.svg'
 var downArrowDark = src + 'library/assets/icons/dropdown-dark.svg'
 var upArrowDark = src + 'library/assets/icons/up-arrow-dark.svg'
 
+
 var accordions = document.querySelectorAll('.ui.accordion')
 for (var i = 0; accordions !== null && i < accordions.length; i++) {
   var items = accordions[i].getElementsByClassName('item')
@@ -31,6 +32,7 @@ for (var i = 0; accordions !== null && i < accordions.length; i++) {
       title.addEventListener('click', function (e) {
         e.stopPropagation()
         e.preventDefault()
+        var accesibility = document.body.classList.contains('dark') ? 'accessibility_': ''
 
         if (e.target) {
           if (e.target === arrow) {
@@ -39,38 +41,43 @@ for (var i = 0; accordions !== null && i < accordions.length; i++) {
             if (description !== null) {
               if (description.style.display === 'block') {
                 description.style.display = 'none'
-                if (arrow.getAttribute('data-icon') === 'up_arrow_dark') {
+                if (arrow.getAttribute('data-icon').includes('up_arrow_dark')) {
                   arrow.setAttribute('src', downArrowDark)
-                  arrow.setAttribute('data-icon', 'dropdown_dark')
-                } else if (arrow.getAttribute('data-icon') === 'up_arrow') {
+                  arrow.setAttribute('data-icon', `${accesibility}dropdown_dark`)
+                } else if (arrow.getAttribute('data-icon').includes('up_arrow')) {
                   arrow.setAttribute('src', downArrow)
-                  arrow.setAttribute('data-icon', 'dropdown')
+                  arrow.setAttribute('data-icon', `${accesibility}dropdown`)
                 } else if (
-                  arrow.getAttribute('data-icon') === 'dropdown_dark'
+                  arrow.getAttribute('data-icon').includes('dropdown_dark')
                 ) {
                   arrow.setAttribute('src', upArrowDark)
-                  arrow.setAttribute('data-icon', 'up_arrow_dark')
+                  arrow.setAttribute('data-icon', `${accesibility}up_arrow_dark`)
                 } else {
                   arrow.setAttribute('src', upArrow)
-                  arrow.setAttribute('data-icon', 'up_arrow')
+                  arrow.setAttribute('data-icon', `${accesibility}up_arrow`)
+                }
+                if (paths !== null && paths !== undefined) {
+                  arrow.setAttribute('src', src +paths[arrow.getAttribute('data-icon')])
                 }
               } else {
                 description.style.display = 'block'
 
-                if (arrow.getAttribute('data-icon') === 'up_arrow_dark') {
+                if (arrow.getAttribute('data-icon').includes('up_arrow_dark')) {
                   arrow.setAttribute('src', downArrowDark)
-                  arrow.setAttribute('data-icon', 'dropdown_dark')
-                } else if (arrow.getAttribute('data-icon') === 'up_arrow') {
+                  arrow.setAttribute('data-icon', `${accesibility}dropdown_dark`)
+                } else if (arrow.getAttribute('data-icon').includes('up_arrow')) {
                   arrow.setAttribute('src', downArrow)
-                  arrow.setAttribute('data-icon', 'dropdown')
+                  arrow.setAttribute('data-icon', `${accesibility}dropdown`)
                 } else if (
-                  arrow.getAttribute('data-icon') === 'dropdown_dark'
-                ) {
+                  arrow.getAttribute('data-icon').includes('dropdown_dark')) {
                   arrow.setAttribute('src', upArrowDark)
-                  arrow.setAttribute('data-icon', 'up_arrow_dark')
+                  arrow.setAttribute('data-icon', `${accesibility}up_arrow_dark`)
                 } else {
                   arrow.setAttribute('src', upArrow)
-                  arrow.setAttribute('data-icon', 'up_arrow')
+                  arrow.setAttribute('data-icon', `${accesibility}up_arrow`)
+                }
+                if (paths !== null && paths !== undefined) {
+                  arrow.setAttribute('src', src +paths[arrow.getAttribute('data-icon')])
                 }
               }
             }
@@ -82,19 +89,28 @@ for (var i = 0; accordions !== null && i < accordions.length; i++) {
               if (description.style.display === 'block') {
                 description.style.display = 'none'
 
-                if (arrow.getAttribute('data-icon') === 'up_arrow_dark') {
+                if (arrow.getAttribute('data-icon').includes('up_arrow_dark')) {
                   arrow.setAttribute('src', downArrowDark)
+                  arrow.setAttribute('data-icon', `${accesibility}dropdown_dark`)
                 } else {
                   arrow.setAttribute('src', downArrow)
+                  arrow.setAttribute('data-icon', `${accesibility}dropdown`)
                 }
               } else {
                 description.style.display = 'block'
 
-                if (arrow.getAttribute('data-icon') === 'dropdown_dark') {
+                if (arrow.getAttribute('data-icon').includes('dropdown_dark')) {
                   arrow.setAttribute('src', upArrowDark)
+                  arrow.setAttribute('data-icon', `${accesibility}up_arrow_dark`)
                 } else {
                   arrow.setAttribute('src', upArrow)
+                  arrow.setAttribute('data-icon', `${accesibility}up_arrow`)
                 }
+              }
+              console
+              if (paths !== null && paths !== undefined) {
+                console.log(arrow.getAttribute('data-icon'))
+                arrow.setAttribute('src', src +paths[arrow.getAttribute('data-icon')])
               }
             }
           }
