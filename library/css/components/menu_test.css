@@ -24,9 +24,9 @@
     }
     nav.blue {
         display: flex;
-        justify-content: center;
-        gap: 10px;
+        justify-content: space-between;
         position: relative;
+        width: 100%;
     }
     nav.blue div {
         max-width: 100% !important;

@@ -126,7 +126,6 @@
 @media only screen and (max-width: 1024px) {
   .ui.header {
     width: unset;
-    max-width: 50rem;
   }
   .ui.header.department .top-nav {
     display: none;
