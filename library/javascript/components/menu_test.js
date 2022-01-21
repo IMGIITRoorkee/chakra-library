@@ -7,6 +7,10 @@ function performChange (mq) {
   let special_node_list = document.querySelectorAll('div.menuSpecialNode')
   let menu_containers_list = document.querySelectorAll('.menuInnerContainer')
   let menu_container_items = document.querySelectorAll('.menuInnerContainer li')
+  let menu_container_items_double = document.querySelectorAll(
+    '.menuParentNode>a'
+  )
+
   let menu_parent_nodes_ul = document.querySelectorAll(
     '.menuParentNode > .menuParentNodeUL'
   )
@@ -32,9 +36,14 @@ function performChange (mq) {
     let active_parent_node = null
     let active_sp_index = null
 
+    menu_container_items_double.forEach((element, index) => {
+      element.addEventListener('dblclick', () => {
+        let loc = element.getAttribute('href')
+        window.location = loc
+      })
+    })
     menu_container_items.forEach((element, index) => {
-      element.addEventListener('mouseover', () => {
-        console.log(element)
+      element.addEventListener('click', event => {
         if (active_parent_node !== null) {
           active_parent_node.childNodes[3].classList.remove('parentVisible')
           active_parent_node.classList.remove('activeParentNode')
@@ -43,6 +52,7 @@ function performChange (mq) {
           )
         }
         if (element.classList[0] === 'menuParentNode') {
+          event.preventDefault()
           element.childNodes[1].childNodes[3].classList.add('activeParentNode')
           active_parent_node = element
           element.childNodes[3].classList.add('parentVisible')
@@ -50,6 +60,11 @@ function performChange (mq) {
         } else {
           active_parent_node = null
         }
+      })
+    })
+    menu_parent_nodes_ul.forEach(element => {
+      element.addEventListener('click', event => {
+        event.stopPropagation()
       })
     })
 
@@ -62,6 +77,10 @@ function performChange (mq) {
       })
       menu_container_items.forEach(ele => {
         ele.classList.remove('activeParentNode')
+        active_parent_node &&
+          active_parent_node.childNodes[1].childNodes[3].classList.remove(
+            'activeParentNode'
+          )
       })
     })
   } else {
@@ -103,7 +122,6 @@ function performChange (mq) {
     })
     menu_container_items.forEach((element, index) => {
       element.addEventListener('mouseover', () => {
-        console.log(element)
         if (active_parent_node !== null) {
           active_parent_node.childNodes[3].classList.remove('parentVisible')
           active_parent_node.classList.remove('activeParentNode')
@@ -111,7 +129,6 @@ function performChange (mq) {
             'activeParentNode'
           )
         }
-        console.log(element)
         if (element.classList[0] === 'menuParentNode') {
           element.childNodes[1].childNodes[3].classList.add('activeParentNode')
           active_parent_node = element
