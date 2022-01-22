@@ -2,6 +2,10 @@
 const paths = {
   accessibility_blue_arrow: 'library/assets/icons/accessibility-arrow.svg',
   blue_arrow: 'library/assets/icons/arrow.svg',
+  accessibility_alumni: 'library/assets/icons/accessibility-alumni.svg',
+  alumni: 'library/assets/icons/alumni.svg',
+  accessibility_alumni_dark: 'library/assets/icons/accessibility-alumni-dark.svg',
+  alumni_dark: 'library/assets/icons/alumni-dark.svg',
   accessibility_blue_arrow_dark: 'library/assets/icons/accessibility-blue-arrow-dark.svg',
   blue_arrow_dark: 'library/assets/icons/blue-arrow-dark.svg',
   accessibility_bulls_eye: 'library/assets/icons/accessibility-bulls-eye.svg',
@@ -98,6 +102,8 @@ const paths = {
   right_arrow_dark: 'library/assets/icons/right-arrow-dark.svg',
   accessibility_right_arrow_breadcrumb_dark:
     'library/assets/icons/accessibility-right-arrow-breadcrumb-dark.svg',
+  accessibility_right_arrow_breadcrumb:'library/assets/icons/accessibility-right-arrow-breadcrumb.svg',
+  right_arrow_breadcrumb:'library/assets/icons/right-arrow-breadcrumb.svg',
   right_arrow_breadcrumb_dark:
     'library/assets/icons/right-arrow-breadcrumb-dark.svg',
   accessibility_schools: 'library/assets/icons/accessibility-schools.svg',
@@ -120,6 +126,10 @@ const paths = {
   ledger: 'library/assets/icons/ledger.svg',
   accessibility_id_card: 'library/assets/icons/accessibility-id-card.svg',
   id_card: 'library/assets/icons/id-card.svg',
+  accessibility_jigsaw: 'library/assets/icons/accessibility-jigsaw.svg',
+  jigsaw: 'library/assets/icons/jigsaw.svg',
+  accessibility_jigsaw_dark: 'library/assets/icons/accessibility-jigsaw-dark.svg',
+  jigsaw_dark: 'library/assets/icons/jigsaw-dark.svg',
   accessibility_lecturer_dark: 'library/assets/icons/accessibility-lecturer-dark.svg',
   lecturer_dark: 'library/assets/icons/lecturer-dark.svg',
   accessibility_ledger_dark: 'library/assets/icons/accessibility-ledger-dark.svg',
