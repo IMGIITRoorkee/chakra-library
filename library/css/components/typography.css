@@ -81,3 +81,9 @@
     /* padding: 1rem 0; */
     line-height: 1.2rem;
 }
+
+.ui.icon-typography {
+    display: flex;
+    gap: 0.625rem;
+    align-items: center;
+}
