@@ -5,9 +5,6 @@
 .ui.description {
   color: var(--black);
   line-height: 1.5em;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
 }
 .ui.description.inverted{
   color: var(--white)
@@ -18,15 +15,12 @@
 .left {
   text-align: left;
 }
-
 .center {
   text-align: center;
 }
-
 .right {
   text-align: right;
 }
-
 .justify {
   text-align: justify;
 }
