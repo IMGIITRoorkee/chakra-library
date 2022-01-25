@@ -86,6 +86,10 @@ const numberOfCardsToDisplay = sliderHash => {
   const px = Math.ceil((vw * 10) / 100)
 
   const container = sliderElement.getElementsByClassName('container')[0]
+  // Handle the case when the slider has no cards
+  if (container.children.length === 0) {
+    return 0;
+  }
   const card = container.firstElementChild
 
   const numberOfCards = Math.floor(
