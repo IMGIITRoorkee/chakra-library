@@ -1,9 +1,13 @@
 .notice-item {
   text-decoration: none;
-  margin: 15px;
   padding: 10px;
+  padding-bottom: 0px;
 }
 
 .notice-item >.one-liner-captions {
   color: var(--black);
+}
+
+.notice-item > .title-bar {
+  padding: 0.3rem 0;
 }
