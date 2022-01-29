@@ -10,6 +10,9 @@
   /* margin-right: 32px; */
   margin: 0px;
   padding: 5vw 2vw 5vw 10vw;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .ui.eighty-twenty-container > .second {
@@ -17,6 +20,9 @@
   margin: 0px;
   /* margin-left: 32px; */
   padding: 5vw 10vw 5vw 2vw;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .ui.twenty-eighty-container {
