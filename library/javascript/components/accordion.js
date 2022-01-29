@@ -17,6 +17,7 @@ for (var i = 0; accordions !== null && i < accordions.length; i++) {
 
     var titles = items[k].getElementsByClassName('ui sub-heading')
     if (titles !== null) {
+      console.log(titles)
       var title = titles[0]
 
       // Add Arrow
@@ -28,19 +29,25 @@ for (var i = 0; accordions !== null && i < accordions.length; i++) {
       for (let j = 1; j < items[k].childElementCount; ++j) {
         items[k].children[j].style.display = 'none'
       }
+
       // Manage click
       title.addEventListener('click', function (e) {
         e.stopPropagation()
         e.preventDefault()
-        var accesibility = document.body.classList.contains('dark') ? 'accessibility_': ''
+        var accesibility = document.body.classList.contains('dark') ? 'accessibility_' : ''
 
         if (e.target) {
           if (e.target === arrow) {
-            const description = e.target.parentNode.nextElementSibling
+            let firstDescription = e.target.parentNode.nextElementSibling
+            let parentItem = e.target.parentNode.parentNode
 
-            if (description !== null) {
-              if (description.style.display === 'block') {
-                description.style.display = 'none'
+            if (firstDescription !== null) {
+              if (firstDescription.style.display === 'block') {
+                let nextDescription = firstDescription
+                for (var j = 1; j < parentItem.childNodes.length && nextDescription !== null; j += 2) {
+                  nextDescription.style.display = 'none'
+                  nextDescription = nextDescription.nextElementSibling
+                }
                 if (arrow.getAttribute('data-icon').includes('up_arrow_dark')) {
                   arrow.setAttribute('src', downArrowDark)
                   arrow.setAttribute('data-icon', `${accesibility}dropdown_dark`)
@@ -57,10 +64,14 @@ for (var i = 0; accordions !== null && i < accordions.length; i++) {
                   arrow.setAttribute('data-icon', `${accesibility}up_arrow`)
                 }
                 if (paths !== null && paths !== undefined) {
-                  arrow.setAttribute('src', src +paths[arrow.getAttribute('data-icon')])
+                  arrow.setAttribute('src', src + paths[arrow.getAttribute('data-icon')])
                 }
               } else {
-                description.style.display = 'block'
+                let nextDescription = firstDescription
+                for (var j = 1; j < parentItem.childNodes.length && nextDescription !== null; j += 2) {
+                  nextDescription.style.display = 'block'
+                  nextDescription = nextDescription.nextElementSibling
+                }
 
                 if (arrow.getAttribute('data-icon').includes('up_arrow_dark')) {
                   arrow.setAttribute('src', downArrowDark)
@@ -77,17 +88,21 @@ for (var i = 0; accordions !== null && i < accordions.length; i++) {
                   arrow.setAttribute('data-icon', `${accesibility}up_arrow`)
                 }
                 if (paths !== null && paths !== undefined) {
-                  arrow.setAttribute('src', src +paths[arrow.getAttribute('data-icon')])
+                  arrow.setAttribute('src', src + paths[arrow.getAttribute('data-icon')])
                 }
               }
             }
           } else {
-            const description = e.target.nextElementSibling
+            const firstDescription = e.target.nextElementSibling
             const arrow = e.target.childNodes[1]
 
-            if (description !== null) {
-              if (description.style.display === 'block') {
-                description.style.display = 'none'
+            if (firstDescription !== null) {
+              if (firstDescription.style.display === 'block') {
+                let nextDescription = firstDescription
+                for (var j = 1; j < parentItem.childNodes.length && nextDescription !== null; j += 2) {
+                  nextDescription.style.display = 'none'
+                  nextDescription = nextDescription.nextElementSibling
+                }
 
                 if (arrow.getAttribute('data-icon').includes('up_arrow_dark')) {
                   arrow.setAttribute('src', downArrowDark)
@@ -97,7 +112,11 @@ for (var i = 0; accordions !== null && i < accordions.length; i++) {
                   arrow.setAttribute('data-icon', `${accesibility}dropdown`)
                 }
               } else {
-                description.style.display = 'block'
+                let nextDescription = firstDescription
+                for (var j = 1; j < parentItem.childNodes.length && nextDescription !== null; j += 2) {
+                  nextDescription.style.display = 'block'
+                  nextDescription = nextDescription.nextElementSibling
+                }
 
                 if (arrow.getAttribute('data-icon').includes('dropdown_dark')) {
                   arrow.setAttribute('src', upArrowDark)
@@ -110,7 +129,7 @@ for (var i = 0; accordions !== null && i < accordions.length; i++) {
               console
               if (paths !== null && paths !== undefined) {
                 console.log(arrow.getAttribute('data-icon'))
-                arrow.setAttribute('src', src +paths[arrow.getAttribute('data-icon')])
+                arrow.setAttribute('src', src + paths[arrow.getAttribute('data-icon')])
               }
             }
           }
