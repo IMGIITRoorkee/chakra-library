@@ -1,38 +1,20 @@
 .ui.gallery {
-    width: 100%;
-    height: 90%;
-}
-
-.ui.gallery > .swiper {
-    text-align: center;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 60px 0;
-    margin: 0 auto;
-    width: 90%;
-}
-
-.ui.ui.gallery > .swiper > .gallery-wrap{
-    display: flex;
     flex-direction: row;
-    width: 100%;
     height: 60vh;
 }
 
-.ui.ui.gallery > .swiper > .gallery-wrap > .gallery-item {
+
+.ui.ui.gallery > .ui.image.fluid {
     flex: 1;
     height: 100%;
-    background-position: center;
-    background-size: cover;
-    background-repeat: none;
     transition: all 0.8s ease;
     overflow: hidden;
 }
 
-.ui.ui.gallery > .swiper > .gallery-wrap > .gallery-item:hover {
-    flex: 7;
-    opacity: 85%;
+.ui.ui.gallery > .ui.image.fluid:hover {
+    flex: 8;
 }
 
 @media only screen and (max-width: 768px) {
