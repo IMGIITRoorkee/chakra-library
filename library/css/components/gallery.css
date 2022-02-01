@@ -1,0 +1,24 @@
+.ui.gallery {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    height: 60vh;
+}
+
+
+.ui.ui.gallery > .ui.image.fluid {
+    flex: 1;
+    height: 100%;
+    transition: all 0.8s ease;
+    overflow: hidden;
+}
+
+.ui.ui.gallery > .ui.image.fluid:hover {
+    flex: 8;
+}
+
+@media only screen and (max-width: 768px) {
+    .ui.gallery{
+        display: none;
+    }
+}
