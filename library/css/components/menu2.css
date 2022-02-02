@@ -6,12 +6,41 @@
     color: var(--black) !important;
     font-family: var(--font-lato);
 }
-
+div.flexbox .menuItem {
+    margin: 0;
+    padding: 0;
+}
+.menuContainer  ul, .menuContainer a{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+.menuContainer div.flexbox>.menuItem>a>div>div{
+    text-transform: uppercase;
+}
 @media only screen and (min-width:1024px){
     .menuContainer {
         display: flex;
+        flex-direction: column;
         width: 100%;
         align-items: center;
+        /* border: 2px solid black; */
+    }
+    
+    #hamBurger {
+        display: none;
+    }
+    .menuContainer div.flexbox{
+        min-width:100%;
+        position: relative;
+    }
+    .menuItem>a{
+        display: block;
+        /* padding: 0 !important; */
+    }
+    .menuItem>a:hover{
+        font-weight: bold;
     }
     .menuContainer div.flexbox a {
         color: var(--black) !important;
@@ -20,16 +49,39 @@
         text-decoration: none;
         padding: 5px;
     }
-    .menuContainer div.flexbox>.menuItem>a>div>div{
-        text-transform: uppercase;
+    
+    div.flexbox>.menuItem>a{
+        display: block;
+        max-width: 200px !important;
     }
-
+    div.flexbox>.menuItem>a:hover{
+        background-color: var(--grey-blue);
+    }
+    .menuContainer div.flexbox>.menuItem{
+        position: relative !important;
+        /* border: 2px solid lightcoral; */
+    }
+    /* menuSpecialNode */
     div.flexbox>.menuItem>ul {
         transform: scaleY(0);
         width: 0;
+        height: 0;
         transition: transform 0.16s ease-in-out;
-        position: relative;
+        position: absolute;
+        overflow: hidden;
         border-radius: 2px;
+        /* border: 2px solid black; */
+    }
+    div.flexbox>.menuItem>ul.visible {
+        height: fit-content;
+        top: 0%;
+        min-width: max-content;
+        min-height: max-content;
+        display: block;
+        transform: scaleY(1);
+        max-width: 100%;
+        top:unset;
+        overflow:visible;
     }
     div.flexbox>.menuItem .menuItem{
         background-color: var(--grey-blue);
@@ -50,13 +102,10 @@
         transition: transform 0.1s ease-in-out 0s, z-index 0s linear 0.01s, left 0s linear 0.01s;
         font-weight: normal !important;
     }
-    .menuItem{
-        border: 2px solid red;
-    }
     /* menuParentNode */
     div.flexbox>.menuItem>ul .menuItem>a {
         height: max-content;
-        display: flex;
+        display: block;
         padding-left: 5px !important;
         padding-bottom: 6px !important;
     }
@@ -65,9 +114,7 @@
         display: flex;
         padding: 0px !important;
     }
-    div.flexbox>.menuItem>ul .menuItem {
-        display: flex;
-    }
+
     div.flexbox>.menuItem>ul .menuItem>a {
         max-width: 100%;
         min-width: 80%;
@@ -90,18 +137,8 @@
     div.flexbox>.menuItem>ul .menuItem>a>div>img.activeParentNode {
         display: block !important;
     }
-    div.flexbox>.menuItem > ul {
-        position: relative;
-    }
     /**/
     /* utils for hover effects */
-    .visible {
-        transform: scaleY(1);
-        overflow: visible;
-        /* max-width: 100%; */
-        width: 100%;
-        /* Side-Menu is affected due to this :(*/
-    }
     div.flexbox>.menuItem>ul .menuItem>ul.parentVisible {
         transform: scaleX(1);
         overflow: visible;
@@ -109,10 +146,6 @@
     }
     div.flexbox>.menuItem:hover div.flexbox>.menuItem>ul, div.flexbox>.menuItem:active div.flexbox>.menuItem>ul{
         display: block;
-    }
-    div.flexbox>.menuItem>ul {
-        display: none;
-        position: absolute;
     }
     div.flexbox>.menuItem:hover div.flexbox>.menuItem>ul, .div.flexbox>.menuItem:active  div.flexbox>.menuItem>ul {
         display: block;
@@ -134,6 +167,12 @@
 
 }
 @media only screen and (max-width: 1024px) {
+    .menuContainer{
+        height: 100vh;
+    }
+    div.flexbox>.menuItem>a>div {
+        padding-left:10px;
+    }
     .menuContainer div.flexbox a {
         color: var(--black);
         text-decoration: none;
@@ -148,6 +187,7 @@
         line-height: 17px;
         letter-spacing: 0.02em;
         text-align: left;
+
     }
     /* Nav Utils */
     .menuContainer div.flexbox {
@@ -159,16 +199,26 @@
         transition: transform 0.3s ease-in;
         background-color:  var(--white);
         padding-left: 0.5rem;
+        height: 100%;
+        width: max-content;
+        justify-content: start;
     }
-
+    .menuContainer div.flexbox>.menuItem>a.activeParentNode {
+        background-color: var(--grey-blue);
+    }
+    .menuContainer div.flexbox.navbarVisible {
+        transform: transLateX(0%);
+    }
     /* Vertical List */
     div.flexbox>.menuItem>ul {
-        z-index: 10000;
+        z-index: 1000;
         width: 0;
         height: 0;
         overflow: hidden;
         background-color: var(--grey-blue);
         position: absolute;
+        display: flex;
+        flex-direction: column;
     }
     div.flexbox>.menuItem>ul div {
         min-width: 200px;
@@ -203,7 +253,7 @@
         margin-right: 7px;
     }
     div.flexbox>.menuItem>ul div>ul.parentVisible>div>a:hover {
-        font-weight: bold;
+        font-weight: bold ;
     }
     /* Utils */
     div.flexbox>.menuItem>ul.visible {
@@ -226,14 +276,19 @@
     }
 
     /* menuParentNode */
-    div.flexbox>.menuItem>ul .menuItem>a>div>img{
+    div.flexbox>.menuItem>ul .menuItem>a>div>img, div.flexbox>.menuItem>a>div>img{
         display: none;
     }
-    div.flexbox>.menuItem>ul .menuItem>a>div>div{
-        padding-left:5px !important;
-    }
+
     div.flexbox>.menuItem>ul .menuItem>a>div{
-        border-left: 2px solid var(--bright-blue);
+        padding-top:0px !important;
+        padding-bottom:0px !important;
+    }
+    .menuContainer div.flexbox>.menuItem>a>div>div{
+        padding-right: 2rem !important;
+    }
+    div.flexbox>.menuItem>ul .menuItem.activeParentNode>a{
+        border-left: 4px solid var(--bright-blue);
         cursor:pointer;
     }
     /*Accessibility*/

@@ -69,11 +69,7 @@
         font-weight: bold;
     }
     /* Special Node */
-    .menuContainer nav ul>a {
-        display: flex;
-        display: flex;
-        max-width: 100%;
-    }
+
     .menuContainer nav ul>a  {
         display: block;
         width: 100% !important;
@@ -169,6 +165,7 @@
     }
     nav.blue > ul {
         position: relative;
+
     }
 
     @media only screen and (min-width:1024px) and (max-width: 1200px) {
@@ -237,6 +234,7 @@
         transition: transform 0.3s ease-in;
         background-color:  var(--white);
         padding-left: 0.5rem;
+        border: 2px solid black;
     }
     nav.blue li a:hover,
     nav li.active a {

@@ -4,23 +4,24 @@ mq.onchange = mq => {
     performChange(mq)
 }
 function performChange(mq) {
-    let special_node_list = document.querySelectorAll('.menuContainer nav ul>a')
-    let menu_containers_list = document.querySelectorAll('.menuInnerContainer')
-    let menu_container_items = document.querySelectorAll('.menuInnerContainer li')
+    let special_node_list = document.querySelectorAll('.menuContainer div.flexbox>.menuItem>a')
+    let menu_containers_list = document.querySelectorAll('div.flexbox>.menuItem>ul')
+    let menu_container_items = document.querySelectorAll('div.flexbox>.menuItem>ul div')
     let menu_parent_nodes_ul = document.querySelectorAll(
-        '.menuContainer nav li>ul'
+        'div.flexbox>.menuItem>ul div>ul'
     )
-
-    let nav = document.querySelector('nav')
+    menu_parent_nodes_ul.forEach(element => {
+        element.parentElement.classList.add("menuParentNode")
+    });
+    let nav = document.querySelector('.menuContainer div.flexbox')
 
     if (mq.matches === false) {
         for (let i = 0; i < special_node_list.length; i++) {
-
             if (i === special_node_list.length - 1 || i === special_node_list.length - 2) {
-                menu_containers_list[i].childNodes[1].childNodes.forEach((ele, ind) => {
-                    if (ele.tagName === "LI") {
-                        if (ele.classList.value === "menuParentNode") {
-                            ele.childNodes[3].style.left = "-102%";
+                menu_containers_list[i].childNodes.forEach((ele, ind) => {
+                    if (ele.tagName === "DIV") {
+                        if (ele.classList.contains("menuParentNode")) {
+                            ele.childNodes[3].style.left = "-101%";
                         }
                     }
                 })
@@ -49,7 +50,7 @@ function performChange(mq) {
                         'activeParentNode'
                     )
                 }
-                if (element.classList[0] === 'menuParentNode') {
+                if (element.classList[1] === 'menuParentNode') {
 
 
                     element.childNodes[1].childNodes[1].childNodes[3].classList.add('activeParentNode')
@@ -75,13 +76,13 @@ function performChange(mq) {
         })
     } else {
         let hamburger = document.getElementById('hamBurger')
-        let navBar = document.querySelector('nav.blue')
+        let navBar = document.querySelector('.menuContainer div.flexbox')
         let open = false
         navBar.style.display = 'none'
         let active_sp_index = null
         let anchors = document.querySelectorAll('a');
         anchors.forEach(el => {
-            if (el.hasChildNodes() && el.firstChild.nodeName == "DIV") {
+            if (el.hasChildNodes() && el.firstElementChild !== null) {
                 let clicked = false;
                 el.onclick = function (e) {
                     if (!clicked) {
@@ -97,6 +98,7 @@ function performChange(mq) {
         hamburger.addEventListener('click', e => {
             if (open === false) {
                 open = true
+                console.log("should be opened!!")
                 navBar.style.display = ''
                 navBar.classList.add('navbarVisible')
             } else {
@@ -104,6 +106,18 @@ function performChange(mq) {
                 navBar.classList.remove('navbarVisible')
                 open = false
             }
+            menu_containers_list.forEach(ele => {
+                ele.classList.remove('visible')
+            })
+            menu_parent_nodes_ul.forEach(ele => {
+                ele.classList.remove('parentVisible')
+            })
+            menu_container_items.forEach(ele => {
+                ele.classList.remove('activeParentNode')
+            })
+            special_node_list.forEach(ele => {
+                ele.classList.remove('activeParentNode')
+            })
         })
         special_node_list.forEach((element, index) => {
 
@@ -128,26 +142,11 @@ function performChange(mq) {
         menu_container_items.forEach((element, index) => {
 
             element.addEventListener('click', () => {
-                if (element.classList[0] === 'menuParentNode') {
+                if (element.classList[1] === 'menuParentNode') {
                     element.childNodes[1].childNodes[1].childNodes[3].classList.toggle('activeParentNode')
                     element.childNodes[3].classList.toggle('parentVisible')
                     element.classList.toggle('activeParentNode')
                 }
-            })
-        })
-
-        nav.addEventListener('mouseleave', () => {
-            menu_containers_list.forEach(ele => {
-                ele.classList.remove('visible')
-            })
-            menu_parent_nodes_ul.forEach(ele => {
-                ele.classList.remove('parentVisible')
-            })
-            menu_container_items.forEach(ele => {
-                ele.classList.remove('activeParentNode')
-            })
-            special_node_list.forEach(ele => {
-                ele.classList.remove('activeParentNode')
             })
         })
     }
