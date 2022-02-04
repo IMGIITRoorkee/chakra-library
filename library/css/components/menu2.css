@@ -2,7 +2,7 @@
 @import url('../variables/colors.css');
 
 
-.menuContainer div.flexbox a>div>div {
+.menuContainer div.flexbox a>div>div, .menuContainer div.flexbox a>div {
     color: var(--black) !important;
     font-family: var(--font-lato);
 }
@@ -170,6 +170,10 @@ div.flexbox .menuItem {
     .menuContainer{
         height: 100vh;
     }
+    .menuContainer div.flexbox{
+        padding-left: 0px !important;
+        margin-top: 10px;
+    }
     div.flexbox>.menuItem>a>div {
         padding-left:10px;
     }
@@ -238,7 +242,7 @@ div.flexbox .menuItem {
     div.flexbox>.menuItem>ul div>ul.parentVisible>div {
         margin-left: 10px;
     }
-    div.flexbox>.menuItem>ul div>ul.parentVisible>div>a {
+    div.flexbox>.menuItem>ul div>ul.parentVisible>div>a{
         font-family: Segoe UI;
         font-style: normal;
         font-weight: normal;
@@ -251,6 +255,9 @@ div.flexbox .menuItem {
     div.flexbox>.menuItem>ul div>ul.parentVisible>div>a::before {
         content: "\276F";
         margin-right: 7px;
+    }
+    .menuContainer div.flexbox a>div{
+        display: inline;
     }
     div.flexbox>.menuItem>ul div>ul.parentVisible>div>a:hover {
         font-weight: bold ;
@@ -283,6 +290,10 @@ div.flexbox .menuItem {
     div.flexbox>.menuItem>ul .menuItem>a>div{
         padding-top:0px !important;
         padding-bottom:0px !important;
+        color: rgba(0, 0, 0, 0.6) !important;
+    }
+    div.flexbox>.menuItem>a>div.icon-typography{
+        padding: 0 !important;
     }
     .menuContainer div.flexbox>.menuItem>a>div>div{
         padding-right: 2rem !important;
