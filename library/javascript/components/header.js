@@ -1,11 +1,11 @@
-var html = document.getElementsByTagName('html')[0]
-var small = document.querySelectorAll('.small')
+const html = document.getElementsByTagName('html')[0]
+const small = document.querySelectorAll('.small')
+
 performHeaderChange(mq)
 
-mq.onchange = mq => {
+mq.addEventListener('change', () => {
   performHeaderChange(mq)
-
-}
+})
 
 function performHeaderChange(mq) {
 
@@ -26,14 +26,14 @@ small.forEach(element => {
   })
 })
 
-var medium = document.querySelectorAll('.medium')
+const medium = document.querySelectorAll('.medium')
 medium.forEach(element => {
   element.addEventListener('click', () => {
     html.style.fontSize = '16px'
   })
 })
 
-var big = document.querySelectorAll('.big')
+const big = document.querySelectorAll('.big')
 big.forEach(element => {
   element.addEventListener('click', () => {
     html.style.fontSize = '18px'

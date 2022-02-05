@@ -35,7 +35,6 @@ div.flexbox .menuItem {
         max-width:max-content;
         position: relative;
         gap: 5px;
-
     }
     .menuItem>a{
         display: block;
@@ -46,7 +45,7 @@ div.flexbox .menuItem {
     .menuContainer div.flexbox a {
         color: var(--black) !important;
         font-family: var(--font-lato) !important;
-        font-size: 0.75rem !important;
+        font-size: 1rem !important;
         text-decoration: none;
         padding: 5px;
     }
@@ -184,7 +183,7 @@ div.flexbox .menuItem {
         padding-top: 10px;
         background-position: 0px 0px;
         font-family: Lato;
-        font-size: 0.75rem;
+        font-size: 1rem;
         font-style: normal;
         font-weight: 400;
         line-height: 17px;

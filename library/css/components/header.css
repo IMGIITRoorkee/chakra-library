@@ -2,6 +2,7 @@
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+  border-bottom: 1px solid var(--black)
 }
 .ui.header .darkmode{
   display:flex;
@@ -80,6 +81,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 }
 
 .ui.header .header-links {
@@ -94,6 +96,7 @@
 .ui.header.department .main-head {
   text-align: center;
   display: block;
+  
 }
 .ui.header.department .accessibility {
   width:15rem !important;
@@ -151,6 +154,8 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    justify-content: start;
+    gap: 30%;
   }
   .ui.header.department .main-head {
   display: flex;
