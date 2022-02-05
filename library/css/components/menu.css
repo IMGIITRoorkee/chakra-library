@@ -32,9 +32,11 @@ div.flexbox .menuItem {
         display: none;
     }
     .menuContainer div.flexbox{
-        max-width:max-content;
+        width: 80%;
+        min-width: max-content;
         position: relative;
         gap: 5px;
+        justify-content: space-between;
     }
     .menuItem>a{
         display: block;
