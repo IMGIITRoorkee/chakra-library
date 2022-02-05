@@ -1,6 +1,5 @@
 var mq = window.matchMedia('(max-width: 1024px)')
 
-
 let special_node_list = document.querySelectorAll('.menuContainer div.flexbox>.menuItem>a')
 let menu_containers_list = document.querySelectorAll('div.flexbox>.menuItem>ul')
 let menu_container_items = document.querySelectorAll('div.flexbox>.menuItem>ul div')
@@ -15,10 +14,10 @@ let active_parent_node = null
 let active_sp_index = null
 
 const controller = new AbortController()
-
 performChange(mq)
 mq.onchange = mq => {
     performChange(mq)
+    performHeaderChange(mq)
 }
 function handleSpClick(element, index) {
     if (active_sp_index !== null) {
@@ -55,7 +54,6 @@ function flushClasses() {
 function performChange(mq) {
 
     flushClasses()
-
     if (mq.matches === false) {
         nav.style.display = ''
         special_node_list.forEach((element, index) => {
@@ -94,7 +92,6 @@ function performChange(mq) {
             flushClasses()
         }, { signal: controller.signal })
     } else {
-
         controller.abort()
         nav.style.display = 'none'
         flushClasses();
@@ -104,7 +101,7 @@ function performChange(mq) {
 
         let anchors = document.querySelectorAll('a');
         anchors.forEach(el => {
-            if (el.hasChildNodes() && el.firstElementChild !== null) {
+            if (el.hasChildNodes() && el.firstElementChild && el.firstElementChild.firstElementChild !== null) {
                 let clicked = false;
                 el.onclick = function (e) {
                     if (!clicked) {

@@ -25,19 +25,20 @@ div.flexbox .menuItem {
         flex-direction: column;
         width: 100%;
         align-items: center;
-        /* border: 2px solid black; */
+        justify-content: center;
     }
     
     #hamBurger {
         display: none;
     }
     .menuContainer div.flexbox{
-        min-width:100%;
+        max-width:max-content;
         position: relative;
+        gap: 5px;
+
     }
     .menuItem>a{
         display: block;
-        /* padding: 0 !important; */
     }
     .menuItem>a:hover{
         font-weight: bold;
@@ -45,7 +46,7 @@ div.flexbox .menuItem {
     .menuContainer div.flexbox a {
         color: var(--black) !important;
         font-family: var(--font-lato) !important;
-        font-size: 13px !important;
+        font-size: 0.75rem !important;
         text-decoration: none;
         padding: 5px;
     }
@@ -59,7 +60,6 @@ div.flexbox .menuItem {
     }
     .menuContainer div.flexbox>.menuItem{
         position: relative !important;
-        /* border: 2px solid lightcoral; */
     }
     /* menuSpecialNode */
     div.flexbox>.menuItem>ul {
@@ -70,7 +70,6 @@ div.flexbox .menuItem {
         position: absolute;
         overflow: hidden;
         border-radius: 2px;
-        /* border: 2px solid black; */
     }
     div.flexbox>.menuItem>ul.visible {
         height: fit-content;
@@ -185,7 +184,7 @@ div.flexbox .menuItem {
         padding-top: 10px;
         background-position: 0px 0px;
         font-family: Lato;
-        font-size: 13px;
+        font-size: 0.75rem;
         font-style: normal;
         font-weight: 400;
         line-height: 17px;
