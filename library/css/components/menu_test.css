@@ -2,17 +2,32 @@
 
 @import url('../globals/fonts.css');
 @import url('../variables/colors.css');
+
+.menuContainer nav ul>a>div>div {
+    color: var(--black) !important;
+    font-family: var(--font-lato);
+}
+.menuParentNode a>div>div{
+    color: var(--black) !important;
+    font-family: var(--font-lato) !important;
+}
+.menuParentNode>a {
+    height: max-content;
+    display: flex;
+    padding-left: 5px !important;
+    padding-bottom: 6px !important;
+}
+.menuParentNode>a>div {
+    height: max-content;
+    display: flex;
+    padding: 0px !important;
+}
 @media only screen and (min-width:1024px) {
-    .menuWrapper {
-        margin: 5px 0 5px 0;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+    
     .menuContainer {
-        justify-content: center;
+        display: flex;
         width: 100%;
+        align-items: center;
     }
     #hamBurger {
         display: none;
@@ -24,16 +39,18 @@
     }
     nav.blue {
         display: flex;
-        justify-content: space-between;
         position: relative;
         width: 100%;
+        justify-content: center;
+        gap: 5px;
+
     }
     nav.blue div {
         max-width: 100% !important;
     }
     nav.blue a {
-        color: var(--black);
-        font-family: var(--font-lato);
+        color: var(--black) !important;
+        font-family: var(--font-lato) !important;
         font-size: 13px !important;
         text-decoration: none;
         padding: 5px;
@@ -52,18 +69,16 @@
         font-weight: bold;
     }
     /* Special Node */
-    div.menuSpecialNode {
-        display: flex;
-        max-width: 100%;
-    }
-    div.menuSpecialNode a {
+
+    .menuContainer nav ul>a  {
         display: block;
         width: 100% !important;
         max-width: 200px;
         text-transform: uppercase !important;
         transition: max-width 0.3s ease-out;
     }
-    div.menuSpecialNode a:hover {
+    
+    .menuContainer nav ul>a:hover {
         background-color: var(--grey-blue);
     }
     /* Sub-Nodes and Leaf Nodes of Special Node (Vertical Menu) */
@@ -104,7 +119,7 @@
         align-items: end;
         position: relative;
     }
-    .menuParentNodeUL {
+    .menuInnerContainer li>ul {
         z-index: 1000;
         position: absolute;
         width: 100%;
@@ -115,7 +130,7 @@
         transition: transform 0.1s ease-in-out 0s, z-index 0s linear 0.01s, left 0s linear 0.01s;
         font-weight: normal !important;
     }
-    li.menuParentNode>a>img {
+    li.menuParentNode>a>div>img {
         display: none;
         transform: rotate(-90deg);
         position: absolute;
@@ -124,20 +139,18 @@
         margin-left: auto;
     }
     /* Side Menu Utils */
-    ul.menuParentNodeUL.parentVisible {
+    .menuInnerContainer li>ul.parentVisible {
         transform: scaleX(1);
         overflow: visible;
         position :absolute;
     }
-    .menuParentNode.endHorizontal>.menuParentNodeUL {
-        left: -102%;
-    }
+
     /* Parent Node Utils */
     .menuParentNode.activeParentNode {
         text-decoration: underline;
         position: relative;
     }
-    .menuParentNode>a>img.activeParentNode {
+    .menuParentNode>a>div>img.activeParentNode {
         display: block !important;
     }
 
@@ -146,12 +159,13 @@
         position: absolute;
     }
 
-    .menuWrapper > nav > ul:hover .menuInnerContainer, .menuWrapper > nav > ul:active .menuInnerContainer {
+     nav.blue > ul:hover .menuInnerContainer, .nav.blue > ul:active .menuInnerContainer {
         display: block;
 
     }
-    .menuWrapper > nav > ul {
+    nav.blue > ul {
         position: relative;
+
     }
 
     @media only screen and (min-width:1024px) and (max-width: 1200px) {
@@ -183,19 +197,11 @@
         flex-direction: column;
         gap: 10px;
     }
-    .menuWrapper {
-        display: flex;
-        height: 95%;
-        /* border-top: 2px solid var(--very-gery-blue); */
+    .menuParentNode >a>div>div{
+        padding-left: 5px !important;
     }
     /* Hamburger (First-Child) */
-    /* #hamBurger {
-        display: block;
-        margin-right: auto;
-        height: 5%;
-        margin-left: 10px;
-        margin-top: 10px;
-    } */
+
     /* Navbar (as Sidebar) Second-Child */
     /* Refactor Built-In Styles  */
     nav.blue ul {
@@ -224,11 +230,11 @@
         flex-direction: column;
         margin-right: auto;
         z-index: 1000;
-        position: absolute;
         transform: transLateX(-150%);
         transition: transform 0.3s ease-in;
         background-color:  var(--white);
         padding-left: 0.5rem;
+        border: 2px solid black;
     }
     nav.blue li a:hover,
     nav li.active a {
@@ -268,19 +274,19 @@
         display: flex;
     }
     /* Special Node */
-    div.menuSpecialNode a img {
+    .menuContainer nav ul>a  img {
         display: none;
     }
-    div.menuSpecialNode a {
+    .menuContainer nav ul>a  {
         padding: 10px;
         text-transform: uppercase !important;
     }
     /* SpecialNode Utils */
-    .menuSpecialNode.activeParentNode {
+    .menuContainer nav ul>a.activeParentNode {
         background-color: var(--grey-blue);
     }
     /* Parent Node */
-    .menuParentNodeUL {
+    .menuInnerContainer li>ul {
         width: 0;
         height: 0;
         overflow: hidden;
@@ -288,19 +294,19 @@
         transition: transform 0.3s ease-in;
         z-index: 1000;
     }
-    .menuParentNode>a>img {
+    .menuParentNode>a>div>img {
         display: none;
     }
     /* ParentNode Utils */
-    .menuParentNodeUL.parentVisible {
+    .menuInnerContainer li>ul.parentVisible {
         transform: translateY(1);
         height: 100%;
         width: inherit;
     }
-    .menuParentNodeUL.parentVisible>li {
+    .menuInnerContainer li>ul.parentVisible>li {
         margin-left: 10px;
     }
-    .menuParentNodeUL.parentVisible>li>a {
+    .menuInnerContainer li>ul.parentVisible>li>a {
         font-family: Segoe UI;
         font-style: normal;
         font-weight: normal;
@@ -308,9 +314,12 @@
         line-height: 19px;
         color: rgba(0, 0, 0, 0.6);
     }
-    .menuParentNodeUL.parentVisible>li>a::before {
+    .menuInnerContainer li>ul.parentVisible>li>a::before {
         content: "\276F";
         margin-right: 7px;
+    }
+    .menuInnerContainer li>ul.parentVisible>li>a:hover {
+        font-weight: bold;
     }
     li.menuParentNode.activeParentNode>a {
         border-left: 4px solid var(--bright-blue);
