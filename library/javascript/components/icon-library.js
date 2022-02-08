@@ -66,6 +66,8 @@ const paths = {
   faculty_dark: 'library/assets/icons/faculty-dark.svg',
   accessibility_faculty_hover: 'library/assets/icons/accessibility-faculty-hover.svg',
   faculty_hover: 'library/assets/icons/faculty-hover.svg',
+  accessibility_hamburger: 'library/assets/icons/accessibility-HamBurger.svg',
+  hamburger: 'library/assets/icons/HamBurger.svg',
   accessibility_heart: 'library/assets/icons/accessibility-heart.svg',
   heart: 'library/assets/icons/heart.svg',
   accessibility_hygiene: 'library/assets/icons/accessibility-hygiene.svg',
