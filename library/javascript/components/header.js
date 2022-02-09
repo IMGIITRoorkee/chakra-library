@@ -9,13 +9,20 @@ mq.addEventListener('change', () => {
 
 function performHeaderChange(mq) {
 
+  let is_main_header = true
   var header_accessibility = document.querySelector('.upperleft')
+
+  // This deals with the two types of headers we have
+  if (header_accessibility === null) {
+    is_main_header = false
+    header_accessibility = document.querySelector('.ui.top-nav')
+  }
 
   if (mq.matches === true) {
     header_accessibility.style.display = 'none'
   }
   else {
-    header_accessibility.style.display = 'block'
+    header_accessibility.style.display = is_main_header? 'block' : 'flex'
 
   }
 }
