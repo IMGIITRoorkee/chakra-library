@@ -168,12 +168,15 @@ div.flexbox .menuItem {
 }
 @media only screen and (max-width: 1024px) {
     .menuContainer{
-        height: 100vh;
+        height: fit-content !important;
         position: absolute;
     }
     .menuContainer div.flexbox{
         padding-left: 0px !important;
         margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        /* flex-flow: nowrap !important; */
     }
     div.flexbox>.menuItem>a>div {
         padding-left:10px;
@@ -310,6 +313,7 @@ div.flexbox .menuItem {
     }
     ul.contact {
         border-top: 2px solid var(--very-gery-blue);
+        padding-bottom: 75px;
     }
     li.language {
         display: flex;
