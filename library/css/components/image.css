@@ -16,7 +16,6 @@
 .ui.fluid.image > img {
   width: 100%;
   object-fit: cover;
-
 }
 
 .ui.image > img {
@@ -25,10 +24,22 @@
   object-fit: cover;
 }
 
+/* For use as a child in containers*/
+
+.ui.full-width-container > .ui.image{
+  width: 100%;
+  height: auto;
+  align-self: center;
+}
+
+.first, .second > .ui.image{
+  width: auto;
+  height: auto;
+  align-self: center;
+}
 
 @media only screen and (max-width: 1024px) {
-
-  .ui.image > img{
+  .ui.image > img {
     max-width: 70vw;
   }
   .ui.fluid.image > img {
