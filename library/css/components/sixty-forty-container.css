@@ -10,7 +10,7 @@
   /* margin-right: 32px; */
   margin: 0px;
   padding: 5vw 2vw 5vw 10vw;
-  max-height: 750px;
+  /* max-height: 750px; */
   display:flex;
   flex-direction: column;
   justify-content: center;
@@ -18,7 +18,7 @@
 
 .ui.sixty-forty-container > .second {
   grid-area: 1 / 2 / 2 / 3;
-  max-height: 750px;
+  /* max-height: 750px; */
   margin: 0px;
   /* margin-left: 32px; */
   padding: 5vw 10vw 5vw 2vw;
@@ -36,7 +36,7 @@
 
 .ui.forty-sixty-container > .first {
   grid-area: 1 / 1 / 2 / 2;
-  max-height: 750px;
+  /* max-height: 750px; */
   /* margin-right: 32px; */
   margin: 0px;
   padding: 5vw 2vw 5vw 10vw;
@@ -44,7 +44,7 @@
 
 .ui.forty-sixty-container > .second {
   grid-area: 1 / 2 / 2 / 3;
-  max-height: 750px;
+  /* max-height: 750px; */
   margin: 0px;
   /* margin-left: 32px; */
   padding: 5vw 10vw 5vw 2vw;
