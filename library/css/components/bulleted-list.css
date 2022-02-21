@@ -11,6 +11,7 @@
     display: flex;
     margin: 1.25rem;
     line-height: 1.3;
+    cursor: pointer;
 }
 
 .ui.bulleted-list > .listItem > .icon_image {

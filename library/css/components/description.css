@@ -5,7 +5,9 @@
 .ui.description {
   color: var(--black);
   line-height: 1.5em;
+  margin: 1.5rem 0rem;
 }
+
 .ui.description.inverted{
   color: var(--white)
 }
