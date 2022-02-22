@@ -2,7 +2,9 @@
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  border-bottom: 1px solid var(--black)
+  border-bottom: 1px solid var(--black);
+  margin-top: 50px;
+  padding-bottom: 15px;
 }
 .ui.header .darkmode{
   display:flex;
@@ -41,6 +43,9 @@
   gap: 1rem;
   font-size: 0.75rem;
   width:17.5rem;
+}
+.ui.header .page-search{
+  display:  none;
 }
 .ui.header .upperleft{
   display: flex;
