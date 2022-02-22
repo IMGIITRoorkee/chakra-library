@@ -159,9 +159,11 @@
   }
   .ui.header.department .main-head {
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  margin-top:1rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  justify-content: start;
+  gap: 15%;
   }
   .ui.header.department .section-heading{
     font-size: 0.8rem;
@@ -174,7 +176,7 @@
     flex-direction: row;
     max-width: 75%;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     gap:0.25rem;
   }
 
