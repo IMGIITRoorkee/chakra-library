@@ -67,6 +67,7 @@
   }
   .ui.faculty-card .ui.image img {
     width: 100%;
+    max-width: 12.125rem;
   }
   /* .ui.faculty-card > .flex > div {
     width: max-content;
