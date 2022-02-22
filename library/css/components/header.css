@@ -6,6 +6,7 @@
   margin-top: 50px;
   padding-bottom: 15px;
 }
+
 .ui.header .darkmode{
   display:flex;
   flex-direction: row;
@@ -173,9 +174,12 @@
   .ui.header.department .section-heading{
     font-size: 0.8rem;
   }
+
   .ui.header.department .sub-heading{
     font-size: 0.7rem;
+    margin-bottom: 1rem;
   }
+  
   .ui.header.department .heading-section{
     display: flex;
     flex-direction: row;

@@ -6,6 +6,11 @@
     color: var(--black) !important;
     font-family: var(--font-lato);
 }
+
+.menuContainer{
+    margin-top:1rem;
+}
+
 div.flexbox .menuItem {
     margin: 0;
     padding: 0;
