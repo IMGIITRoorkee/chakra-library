@@ -97,6 +97,7 @@
 .ui.header .logo {
   width: 100%;
   max-width: 20rem;
+  cursor: pointer;
 }
 
 .ui.header.department .main-head {
