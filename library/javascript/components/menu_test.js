@@ -7,9 +7,6 @@ function performChange(mq) {
   let special_node_list = document.querySelectorAll('.menuContainer nav ul>a')
   let menu_containers_list = document.querySelectorAll('.menuInnerContainer')
   let menu_container_items = document.querySelectorAll('.menuInnerContainer li')
-  let menu_container_items_double = document.querySelectorAll(
-    '.menuParentNode>a'
-  )
   let menu_parent_nodes_ul = document.querySelectorAll(
     '.menuContainer nav li>ul'
   )
@@ -43,15 +40,8 @@ function performChange(mq) {
     let active_parent_node = null
     let active_sp_index = null
 
-    menu_container_items_double.forEach((element, index) => {
-      element.addEventListener('dblclick', () => {
-        let loc = element.getAttribute('href')
-        window.location = loc
-      })
-    })
-
     menu_container_items.forEach((element, index) => {
-      element.addEventListener('click', event => {
+      element.addEventListener('mouseover', () => {
         if (active_parent_node !== null) {
           active_parent_node.childNodes[3].classList.remove('parentVisible')
           active_parent_node.classList.remove('activeParentNode')
@@ -60,7 +50,8 @@ function performChange(mq) {
           )
         }
         if (element.classList[0] === 'menuParentNode') {
-          event.preventDefault()
+
+
           element.childNodes[1].childNodes[1].childNodes[3].classList.add('activeParentNode')
           active_parent_node = element
           element.childNodes[3].classList.add('parentVisible')
@@ -71,13 +62,6 @@ function performChange(mq) {
       })
     })
 
-    menu_parent_nodes_ul.forEach(element => {
-      element.addEventListener('click', event => {
-        event.stopPropagation()
-      })
-    })
-
-
     nav.addEventListener('mouseleave', () => {
       menu_containers_list.forEach(ele => {
         ele.classList.remove('visible')
@@ -87,10 +71,6 @@ function performChange(mq) {
       })
       menu_container_items.forEach(ele => {
         ele.classList.remove('activeParentNode')
-        active_parent_node &&
-        active_parent_node.childNodes[1].childNodes[3].classList.remove(
-          'activeParentNode'
-        )
       })
     })
   } else {
