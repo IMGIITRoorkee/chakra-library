@@ -156,14 +156,15 @@
   .ui.header .logo {
     width: 90%;
     max-width: 15rem;
+    margin: auto;
   }
   .ui.header .main-head{
     display: flex;
-    justify-content: space-around;
-    align-items: center;
     justify-content: start;
-    gap: 30%;
+    align-items: center;
   }
+
+ 
   .ui.header.department .main-head {
   display: flex;
   align-items: center;

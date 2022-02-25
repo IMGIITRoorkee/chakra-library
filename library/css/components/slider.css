@@ -1,9 +1,15 @@
 .ui.slider {
     display: grid;
     grid-template: 1fr / 5vw 1fr 5vw;
+    max-width: 100% !important;
+}
+.ui.slider > div{
     max-width: 100%;
 }
 
+.ui.slider .container{
+    max-width: 100% !important;
+}
 .ui.slider > * > *{
     margin: 10px;
 }
