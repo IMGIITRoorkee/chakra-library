@@ -180,7 +180,12 @@ function changeNumberOfPages (container) {
   let x = table.querySelector('#listDisplayPerPg')
   let pager = tableMap.get(table)
   pager.showPage(1)
-  pager.num_pages = x.value
+  if(x.value === "all"){
+    pager.num_pages = pager.container.querySelector('table').rows.length;
+  }
+  else{
+    pager.num_pages = x.value
+  }
   pager.init()
   pager.showPageNav('pager', 'pageNavPosition')
   pager.showPage(1)
