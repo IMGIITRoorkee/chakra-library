@@ -19,13 +19,18 @@ performChange(mq)
 
 function handleSpClick(element, index) {
     if (active_sp_index !== null) {
-        menu_containers_list[active_sp_index].classList.remove('visible')
-        special_node_list[active_sp_index].classList.remove(
+        const prev_sp_element = special_node_list[active_sp_index]
+        if(prev_sp_element.nextElementSibling){
+            prev_sp_element.nextElementSibling.classList.remove('visible')
+        }
+        prev_sp_element.classList.remove(
             'activeParentNode'
         )
     }
     active_sp_index = index
-    menu_containers_list[index].classList.add('visible')
+    if(element.nextElementSibling){
+        element.nextElementSibling.classList.add('visible')
+    }
     element.classList.add('activeParentNode')
     menu_parent_nodes_ul.forEach(ele => {
         ele.classList.remove('parentVisible')
