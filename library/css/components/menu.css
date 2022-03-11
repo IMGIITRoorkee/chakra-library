@@ -7,9 +7,6 @@
     font-family: var(--font-lato);
 }
 
-.menuContainer{
-    margin-top:1rem;
-}
 
 div.flexbox .menuItem {
     margin: 0;
@@ -34,6 +31,8 @@ div.flexbox .menuItem {
         align-items: center;
         justify-content: center;
         z-index: 1;
+        margin-top:1rem;
+        /* margin-top:1rem; */
     }
     
     #hamBurger {
@@ -159,29 +158,30 @@ div.flexbox .menuItem {
         display: block;
 
     }
-    @media only screen and (min-width:1024px) and (max-width: 1200px) {
-        .menuContainer div.flexbox a {
-            color: var(--black);
-            font-family: var(--font-lato);
-            font-size: 12px !important;
-            text-decoration: none;
-            padding: 5px;
-        }
-    }
     .accessibility-hamburger,
     .contact {
         display: none;
     }
-
 }
+@media only screen and (min-width:1024px) and (max-width: 1200px) {
+    .menuContainer div.flexbox a {
+        color: var(--black);
+        font-family: var(--font-lato);
+        font-size: 12px !important;
+        text-decoration: none;
+        padding: 5px;
+    }
+}
+
 @media only screen and (max-width: 1024px) {
     .menuContainer{
         height: fit-content !important;
         position: absolute;
+        z-index: 10;
     }
     .menuContainer div.flexbox{
         padding-left: 0px !important;
-        margin-top: 10px;
+        /* margin-top: 10px; */
         display: flex;
         flex-direction: column;
         /* flex-flow: nowrap !important; */
@@ -223,6 +223,7 @@ div.flexbox .menuItem {
         background-color: var(--grey-blue);
     }
     .menuContainer div.flexbox.navbarVisible {
+        margin-top: 0px;
         transform: transLateX(0%);
     }
     /* Vertical List */

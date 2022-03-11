@@ -1,6 +1,6 @@
 .image-description-card {
     max-width: 100%;
-    min-width: 600px;
+    /* min-width: 600px; */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
