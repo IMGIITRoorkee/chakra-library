@@ -23,7 +23,7 @@ function Pager (tableName, itemsPerPage, container) {
   this.isInverted = table.classList.contains("inverted")
 
   this.showRecords = function (from, to) {
-    let rows = this.container.querySelector(`#${tableName}`).rows
+    let rows = this.container.querySelector(`.${tableName}`).rows
     for (var i = 1; i < rows.length; i++) {
       if (i < from || i > to) rows[i].style.display = 'none'
       else rows[i].style.display = ''
@@ -47,9 +47,9 @@ function Pager (tableName, itemsPerPage, container) {
     let to = from + Number(this.num_pages) - 1
 
     this.showRecords(from, to)
-    let pgNext = this.container.querySelector(`#${this.pagerName}pgNext`)
+    let pgNext = this.container.querySelector(`.${this.pagerName}pgNext`)
 
-    let pgPrev = this.container.querySelector(`#${this.pagerName}pgPrev`)
+    let pgPrev = this.container.querySelector(`.${this.pagerName}pgPrev`)
 
     if (pgNext != null) {
       if (this.currentPage === this.pages) pgNext.style.display = 'none'
@@ -85,7 +85,7 @@ function Pager (tableName, itemsPerPage, container) {
   }
 
   this.init = function () {
-    let rows = document.querySelector(`#${tableName}`).rows
+    let rows = document.querySelector(`.${tableName}`).rows
 
     let records = rows.length - 1
     this.pages = Math.ceil(records / this.num_pages)
@@ -110,7 +110,7 @@ function Pager (tableName, itemsPerPage, container) {
         this.secretHash +
         `" class="ui pg-normal ${inverted}">...</span> &nbsp;`
     }
-    let element = this.container.querySelector('#pageNavPosition')
+    let element = this.container.querySelector('.pageNavPosition')
     for (var page = startEle; page <= EndEle; page++)
       pagerHtml += `<span id="pg${this.secretHash}${page}" class="ui pg-normal ${inverted}" onclick="call(this,'pressPage', '${page}')">${page}</span>&nbsp;`
 
@@ -132,7 +132,7 @@ function Pager (tableName, itemsPerPage, container) {
       alert('not inited')
       return
     }
-    let element = this.container.querySelector('#' + positionId)
+    let element = this.container.querySelector('.' + positionId)
     let inverted = ''
     if (this.isInverted) {inverted='inverted'} 
     let pagerHtml = `<span id="${pagerName}pgPrev" class="ui pg-normal ${inverted}" onclick="call(this, 'prev')"> &#171 Prev</span>&nbsp;`
@@ -166,8 +166,8 @@ function Pager (tableName, itemsPerPage, container) {
 let tables = document.querySelectorAll('.ui.table-container')
 
 for (let table of tables) {
-  let mango = table.querySelector('#listDisplayPerPg')
-  let reportsPerPage = mango.options[listDisplayPerPg.selectedIndex].value
+  let mango = table.querySelector('.listDisplayPerPg')
+  let reportsPerPage = mango.options[mango.selectedIndex].value
   let pager = new Pager('tadminViewReport', reportsPerPage, table)
   tableMap.set(table, pager)
   pager.init()
@@ -177,7 +177,7 @@ for (let table of tables) {
 
 function changeNumberOfPages (container) {
   let table = container.parentNode.parentNode.parentNode.parentNode
-  let x = table.querySelector('#listDisplayPerPg')
+  let x = table.querySelector('.listDisplayPerPg')
   let pager = tableMap.get(table)
   pager.showPage(1)
   if(x.value === "all"){
