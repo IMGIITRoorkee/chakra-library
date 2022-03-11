@@ -98,11 +98,13 @@ function performChange(mq) {
         controller = new AbortController()
         special_node_list.forEach((element, index) => {
             if (index === special_node_list.length - 1 || index === special_node_list.length - 2) {
-                menu_containers_list[index].childNodes.forEach((ele) => {
-                    if (ele.tagName === "DIV" && ele.classList.contains("menuParentNode")) {
-                        ele.childNodes[3].style.left = "-101%";
-                    }
-                })
+                if(menu_containers_list[index]){
+                    menu_containers_list[index].childNodes.forEach((ele) => {
+                        if (ele.tagName === "DIV" && ele.classList.contains("menuParentNode")) {
+                            ele.childNodes[3].style.left = "-101%";
+                        }
+                    })
+                }
             }
             element.addEventListener('mouseover', handleSpClick.bind(null, element, index), { signal: controller.signal })
         })
