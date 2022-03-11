@@ -19,13 +19,18 @@ performChange(mq)
 
 function handleSpClick(element, index) {
     if (active_sp_index !== null) {
-        menu_containers_list[active_sp_index].classList.remove('visible')
-        special_node_list[active_sp_index].classList.remove(
+        const prev_sp_element = special_node_list[active_sp_index]
+        if(prev_sp_element.nextElementSibling){
+            prev_sp_element.nextElementSibling.classList.remove('visible')
+        }
+        prev_sp_element.classList.remove(
             'activeParentNode'
         )
     }
     active_sp_index = index
-    menu_containers_list[index].classList.add('visible')
+    if(element.nextElementSibling){
+        element.nextElementSibling.classList.add('visible')
+    }
     element.classList.add('activeParentNode')
     menu_parent_nodes_ul.forEach(ele => {
         ele.classList.remove('parentVisible')
@@ -93,11 +98,13 @@ function performChange(mq) {
         controller = new AbortController()
         special_node_list.forEach((element, index) => {
             if (index === special_node_list.length - 1 || index === special_node_list.length - 2) {
-                menu_containers_list[index].childNodes.forEach((ele) => {
-                    if (ele.tagName === "DIV" && ele.classList.contains("menuParentNode")) {
-                        ele.childNodes[3].style.left = "-101%";
-                    }
-                })
+                if(menu_containers_list[index]){
+                    menu_containers_list[index].childNodes.forEach((ele) => {
+                        if (ele.tagName === "DIV" && ele.classList.contains("menuParentNode")) {
+                            ele.childNodes[3].style.left = "-101%";
+                        }
+                    })
+                }
             }
             element.addEventListener('mouseover', handleSpClick.bind(null, element, index), { signal: controller.signal })
         })
