@@ -29,6 +29,9 @@
   padding: 1rem 0;
   padding-right: 0.5rem;
 }
+.ui.table-value .ui.link a{
+  color: var(--bright-blue);
+}
 
 #pageNavPosition {
   margin: 0.5rem;
