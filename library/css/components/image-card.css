@@ -1,6 +1,7 @@
 .ui.image-card {
   width: var(--image-card-width);
-  /* box-shadow: inset 0.125rem 0rem 0.125rem var(--hover-black); */
+  position: relative;
+  height: 33rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
   border: 0.0625rem solid var(--caption-grey);
@@ -9,7 +10,8 @@
 
 .ui.image-card > .ui.image {
   height: 15rem;
-  object-fit: cover;
+  width: 100%;
+  object-fit: contain;
   overflow: hidden;
 }
 
@@ -30,14 +32,22 @@
 .ui.image-card > .content > .ui.intro-text {
   padding-top: 1rem;
   padding-bottom: 0rem;
+  word-wrap: break-word;
+  max-height: 6.1rem;
+  overflow: hidden;
 }
 
 .ui.image-card > .content > .ui.button {
   margin-top: 1.5rem;
+  position: absolute;
+  bottom: 0.9rem;
 }
 
 .ui.image-card > .content > .ui.section-heading {
   padding: 0rem;
+  word-wrap: break-word;
+  max-height: 4.5rem;
+  overflow: hidden;
 }
 
 .ui.mini-image-card {
