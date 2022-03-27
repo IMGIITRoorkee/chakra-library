@@ -15,9 +15,6 @@
   overflow: hidden;
 }
 
-.ui.image-card:hover {
-  cursor: pointer;
-}
 .ui.image-card > .content {
   padding: 1.25rem;
   display: flex;
