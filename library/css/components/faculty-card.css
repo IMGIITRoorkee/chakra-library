@@ -40,8 +40,7 @@
 }
 
 .ui.faculty-card > .body > .description {
-  height: 5.5rem;
-  overflow: scroll;
+  height: 5.5rem;  
 }
 
 .ui.faculty-card > .body > .description {
@@ -50,12 +49,30 @@
   line-height: 1.375rem;
   color: var(--black);
   margin-top: 1.5rem;
+  overflow-x: hidden;
+  max-height: 90px;
+}
+@media only screen and (max-width: 580px){
+  .ui.faculty-card > .flex > div.ui.image {
+    display: none;
+  }
+}
+@media only screen and (max-width: 630px){
+  
+  .ui.faculty-card > .flex > div.ui.image img{
+    height: 120px;
+    width: 100px;
+  }
 }
 
-.ui.faculty-card > .body > .ui.link {
-  align-self: right !important; 
-  margin-top: 1.625rem;
-  margin-left: 24.2rem;
+@media only screen and (min-width: 630px){
+  .ui.faculty-card > .body > .ui.link {
+    display: flex;
+    align-self: right !important; 
+    margin-top: 1.625rem;
+    margin-left: 24.2rem;
+  }
+  
 }
 
 @media only screen and (max-width: 600px) {
@@ -65,18 +82,28 @@
   .ui.faculty-card > .flex {
     gap: 0.5rem;
   }
-  .ui.faculty-card .ui.image img {
-    width: 100%;
-  }
+  
   /* .ui.faculty-card > .flex > div {
     width: max-content;
     margin-left: auto;
     margin-right: auto;
   } */
-  .ui.faculty-card .body {
+  .ui.faculty-card .body > .description {
     display: none;
   }
   /* .ui.faculty-card .info {
     margin-top: 2rem;
   } */
+}
+@media only screen and (max-width: 400px) {
+  .ui.faculty-card .info{
+    max-width: 100%;
+  }
+  .ui.faculty-card .info .ui.intro-text{
+    font-size: 13px;
+  }
+  .ui.faculty-card .info-content {
+    display: flex !important;
+    flex-wrap: wrap !important;
+  }
 }
