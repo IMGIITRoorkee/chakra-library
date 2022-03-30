@@ -13,8 +13,20 @@
 .ui.link.inverted{
   color: var(--white);
 }
+.ui.link.inline{
+  text-decoration: none;
+  display: inline;
+  width: max-content;
+  color: var(--heading-black);
+  font-size: 16px;
+  line-height: 24px;
+}
 
-
+.ui.link.inline> .link-content{
+  padding-right: 0rem;
+  color: var(--heading-black);
+  text-decoration: none;
+}
 .ui.link.inverted > .link-content{
   color: var(--white);
 }
