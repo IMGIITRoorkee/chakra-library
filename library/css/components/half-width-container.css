@@ -11,7 +11,6 @@
   padding: 5vw 2vw 5vw 10vw;
   display:flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .ui.half-width-container > .second {
@@ -21,7 +20,6 @@
   padding: 5vw 10vw 5vw 2vw;
   display:flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 @media only screen and (max-width: 1024px) {
