@@ -60,7 +60,6 @@
 }
 
 .ui.tabs-container>.tabs::-webkit-scrollbar {
-    display: none;
     background: transparent;
 }
 
