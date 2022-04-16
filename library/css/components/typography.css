@@ -74,7 +74,12 @@
     /* padding: 1rem 0; */
     line-height: 1.2rem;
 }
-
+.ui.intro-text[onclick^="window"]:hover{
+    cursor: pointer;
+}
+.ui.intro-text[onclick^="window"]{
+    color: var(--section-blue);
+}
 .ui.inverted.intro-text {
     color: var(--light-grey);
     /* background-image: var(--gradient-blue); */
