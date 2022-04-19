@@ -59,9 +59,12 @@
     color: var(--black);
 }
 
+
 .ui.tabs-container>.tabs::-webkit-scrollbar {
-    background: transparent;
+    
 }
+
+
 
 .ui.tabs-container>.tabs>.tab:hover {
     cursor: pointer;
