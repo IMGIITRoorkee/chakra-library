@@ -45,6 +45,16 @@
   font-size: 0.75rem;
   width:17.5rem;
 }
+.ui.header .page-options a
+{
+  text-decoration: none;
+  color:var(--black);
+}
+.ui.header .page-options a:hover
+{
+  text-decoration: underline;
+  color: var(--hover-black);
+}
 .ui.header .page-search{
   display:  none;
 }
