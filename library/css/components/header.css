@@ -132,7 +132,10 @@
 .ui.header.department .page-search-header {
   display: none;
 }
-
+.ui.header.link{
+   text-decoration: none;
+   color: var(--black);
+}
 @media only screen and (max-width: 1024px) {
   .ui.header {
     width: unset;
