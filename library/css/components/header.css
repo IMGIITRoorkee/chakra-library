@@ -132,7 +132,9 @@
 .ui.header.department .page-search-header {
   display: none;
 }
-
+.menuContainer{
+  margin-left: 2vw;
+}
 @media only screen and (max-width: 1024px) {
   .ui.header {
     width: unset;
