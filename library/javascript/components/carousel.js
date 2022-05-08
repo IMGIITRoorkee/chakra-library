@@ -19,7 +19,7 @@ function generateNavigator () {
   flexbox.classList.add('ui')
   flexbox.classList.add('flexbox')
   var prevArrow = document.createElement('img')
-  prevArrow.setAttribute('data-icon','carouselleft')
+  prevArrow.setAttribute('data-icon', 'carouselleft')
   prevArrow.className = 'ui icon'
   prevArrow.classList.add('prev')
   prevArrow.onclick = function () {
@@ -29,7 +29,7 @@ function generateNavigator () {
   flexbox.appendChild(prevArrow)
   var nextArrow = document.createElement('img')
   nextArrow.className = 'ui icon'
-  nextArrow.setAttribute('data-icon','carouselright')
+  nextArrow.setAttribute('data-icon', 'carouselright')
   nextArrow.classList.add('next')
   nextArrow.onclick = function () {
     plusSlides(1)
@@ -48,6 +48,11 @@ function generateDots (count) {
     var ele = document.createElement('span')
     ele.classList.add('dot')
     dotContainer.append(ele)
+    var bgDiv = document.createElement('div')
+    bgDiv.classList.add('bg-image')
+    bgDiv.style.backgroundImage =
+      'url(' + slides[i - 1].querySelector('img').src + ')'
+    slides[i - 1].appendChild(bgDiv)
   }
   var dots = document.querySelectorAll('.dot')
   dots.forEach((span, index) => {
