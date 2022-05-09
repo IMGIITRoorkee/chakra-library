@@ -169,7 +169,8 @@ const paths = {
   accessibility_wellness_dark: 'library/assets/icons/accessibility-wellness-dark.svg',
   wellness_dark: 'library/assets/icons/wellness-dark.svg',
   accessibility_youtube_logo: 'library/assets/icons/accessibility-youtube-logo.svg', // Remove option from frontend
-  youtube_logo: 'library/assets/icons/youtube-logo.svg' // Remove option from frontend
+  youtube_logo: 'library/assets/icons/youtube-logo.svg', // Remove option from frontend
+  website :'library/assets/icons/website.svg',
 }
 
 /* <img class="ui icon" data-icon=""/> */
