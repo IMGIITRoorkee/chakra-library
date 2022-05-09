@@ -41,7 +41,12 @@
 @import url(./footer.css);
 @import url(./gallery.css);
 @import url(./menu.css);
+<<<<<<< HEAD
 @import url(./nested-vertical-list.css);
+=======
+@import url(./faculty-profile.css);
+
+>>>>>>> b03b0c9 (Add faculty-profile component)
 /* @import url(./menu_test.css); */
 
 /* These are the background colors for all containers*/
