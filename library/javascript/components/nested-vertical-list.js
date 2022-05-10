@@ -1,4 +1,18 @@
-const url = window.location.href;
+const url = window.location.href.split('#')[0]
+
+const elements = document.getElementsByClassName('one-liner-captions')
+
+const elements1 = document.getElementsByClassName('list-sub-heading')
+
+for(let i=0; i<elements.length; i++){
+    var id = elements[i].innerHTML.toLowerCase()
+    elements[i].setAttribute('id', id.replace(/\s/g,'') + 'd')
+}
+
+for(let i=0; i<elements1.length; i++){
+    var id = elements1[i].innerHTML.toLowerCase()
+    elements1[i].setAttribute('id', id.replace(/\s/g,''))
+}
 
 function head_click(id) {
     const element = document.getElementById(id).nextSibling.nextSibling
