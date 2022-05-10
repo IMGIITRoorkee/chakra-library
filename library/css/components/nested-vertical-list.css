@@ -19,11 +19,11 @@
     margin-top: 21px;
 } */
 
-.first-vertical-list {
+.faculty-vertical-list .first {
     width: 15vw !important;
 }
 
-.second-vertical-list {
+.faculty-vertical-list .second {
     width: 60vw !important;
     overflow-y: auto;
     height: 50vh;
