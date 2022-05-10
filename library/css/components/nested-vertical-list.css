@@ -7,18 +7,6 @@
     margin-bottom: 21px;
 }
 
-/* .vertical-list-nest-content {
-    cursor: pointer;
-    margin-bottom: 21px;
-    text-decoration: none;
-} */
-
-/* .vertical-list-line {
-    color: rgba(81, 131, 184, 0.8);
-    margin-bottom: 21px;
-    margin-top: 21px;
-} */
-
 .faculty-vertical-list .first {
     width: 15vw !important;
 }
@@ -40,12 +28,8 @@
     padding-bottom: 4rem;
 }
 
-.list-heading {
-    margin-top: 3rem;
-}
-
-.list-sub-heading {
-    margin-top:3rem;
+.content > .publication-list {
+    margin-bottom:3rem;
 }
 
 .vertical-list > hr {

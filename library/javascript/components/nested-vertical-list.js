@@ -21,5 +21,6 @@ function content_click(id) {
     }
     const element = document.getElementById(id)
     element.classList.add("active-list-item")
-    window.location = url + '#' + id + 'd';
+    var link = url + '#' + id;
+    window.location = link.slice(0, -1)
 }
