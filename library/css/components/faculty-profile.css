@@ -52,7 +52,7 @@
   color: var(--faculty-card-info-color);
   align-items: center;
   display: grid;
-  grid-template-columns: 10% 90%;
+  grid-template-columns: 4% 96%;
 }
 
 @media only screen and (max-width: 630px) {
