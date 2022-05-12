@@ -2,14 +2,15 @@
   border-radius: 0.5rem;
   padding: 1rem;
   margin: 1rem;
+  padding-left: 10%;
+  padding-right: 10%;
   box-shadow: 0px 4px 12px 0px #8686861a;
   border: 1px solid var(--white);
   background-color: var(--white);
 }
 .ui.faculty-profile > .twenty-eighty-container > .first {
   padding: 0rem;
-  padding-left: 9vw;
-  width: 17vw;
+  width: 13vw;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -40,12 +41,13 @@
   color: var(--black);
   margin-top: 1.5rem;
   overflow-x: hidden;
-  max-height: 100px;
+  max-height: 6.25rem;
 }
 
 .ui.faculty-profile .info {
   display: grid;
   grid-template-columns: 50% 50%;
+  margin-bottom: -1.5rem;
 }
 
 .ui.faculty-profile .ui.icon-typography {
@@ -56,17 +58,68 @@
   color: var(--faculty-card-info-color);
   align-items: center;
   display: grid;
-  grid-template-columns: 4% 96%;
+  grid-template-columns: 8% 92%;
 }
 
-.ui.ui.faculty-profile .ui.icon-typography div[onclick]:hover {
+.ui.faculty-profile .ui.icon-typography div[onclick]:hover {
   text-decoration: underline;
   cursor: pointer;
 }
 
 @media only screen and (max-width: 630px) {
+  .ui.faculty-profile {
+    padding: 0.1rem;
+    margin: 1rem;
+  }
   .ui.faculty-profile .info {
     display: grid;
     grid-template-columns: 100%;
+    margin-bottom: -1rem;
+  }
+
+  .ui.faculty-profile > .twenty-eighty-container > .second {
+    padding: 0rem;
+  }
+
+  .ui.faculty-profile .ui.icon-typography {
+    margin-bottom: 0rem;
+  }
+  .ui.faculty-profile > .twenty-eighty-container > .first > .image {
+    width: 40vw;
+  }
+  .ui.faculty-profile > .twenty-eighty-container > .first {
+    width: unset;
+    margin-bottom: 0.5rem;
+  }
+  .ui.faculty-profile > .twenty-eighty-container > .second > .button {
+    align-self: center;
+    /* width: 40%; */
+  }
+  .ui.faculty-profile > .ui.intro-text {
+    margin-bottom: -1rem;
+  }
+  .ui.faculty-profile > .twenty-eighty-container > .second > .description {
+    margin-top: -1rem;
+    padding: 0.5rem;
+  }
+  .ui.faculty-profile > .twenty-eighty-container > .second > .description {
+    overflow-x: unset;
+    max-height: unset;
+  }
+}
+@media only screen and (max-width: 775px) and (min-width: 630px) {
+  .ui.faculty-profile > .twenty-eighty-container > .first > .image {
+    width: 30vw;
+  }
+  .ui.faculty-profile > .twenty-eighty-container > .first {
+    width: unset;
+    margin-bottom: 1rem;
+  }
+  .ui.faculty-profile > .twenty-eighty-container > .second > .button {
+    align-self: center;
+  }
+  .ui.faculty-profile > .twenty-eighty-container > .second > .description {
+    overflow-x: unset;
+    max-height: unset;
   }
 }
