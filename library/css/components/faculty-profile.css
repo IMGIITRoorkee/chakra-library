@@ -7,13 +7,17 @@
   background-color: var(--white);
 }
 .ui.faculty-profile > .twenty-eighty-container > .first {
-  padding: 0.5rem;
+  padding: 0rem;
+  padding-left: 9vw;
+  width: 17vw;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
-
+.ui.faculty-profile .ui.intro-text {
+  color: black !important;
+}
 .ui.faculty-profile > .twenty-eighty-container > .first > .image {
   object-fit: scale-down;
 }
@@ -52,7 +56,12 @@
   color: var(--faculty-card-info-color);
   align-items: center;
   display: grid;
-  grid-template-columns: 10% 90%;
+  grid-template-columns: 4% 96%;
+}
+
+.ui.ui.faculty-profile .ui.icon-typography div[onclick]:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 630px) {
