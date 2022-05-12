@@ -7,18 +7,6 @@
     margin-bottom: 21px;
 }
 
-/* .vertical-list-nest-content {
-    cursor: pointer;
-    margin-bottom: 21px;
-    text-decoration: none;
-} */
-
-/* .vertical-list-line {
-    color: rgba(81, 131, 184, 0.8);
-    margin-bottom: 21px;
-    margin-top: 21px;
-} */
-
 .faculty-vertical-list .first {
     width: 15vw !important;
 }
@@ -26,7 +14,9 @@
 .faculty-vertical-list .second {
     width: 60vw !important;
     overflow-y: auto;
-    height: 50vh;
+    margin-top: 5rem !important;
+    padding-top: 0 !important;
+    position: relative;
 }
 
 .vertical-list-nest > div:hover {
@@ -59,3 +49,32 @@
 .active-list-item {
     color: #0067B3DE !important;
 }
+
+.vertical-list {
+    position: sticky;
+    top: 5rem;
+}
+
+.faculty-vertical-list .table-container {
+    overflow-x: auto;
+}
+
+@media only screen and (max-width: 630px) {
+
+    .faculty-vertical-list .first {
+        width: 85% !important;
+        padding: 5vw 6vw 5vw 6vw !important;
+    }
+
+    .vertical-list {
+        text-align: center;
+    }
+
+    .faculty-vertical-list .second {
+        width: 85% !important;
+    }
+
+    .faculty-vertical-list .second .content {
+        padding-right: 2rem !important;
+    }
+  }
