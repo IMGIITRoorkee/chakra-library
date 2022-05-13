@@ -1,0 +1,81 @@
+.ui.faculty-vertical-list .vertical-list > .vertical-list-nest {
+    display: none;
+}
+
+.ui.faculty-vertical-list .vertical-list > .vertical-list-head {
+    cursor: pointer;
+    margin-bottom: 1.3125rem;
+}
+
+.ui.faculty-vertical-list .first {
+    width: 15vw !important;
+}
+
+.ui.faculty-vertical-list .second {
+    width: 60vw !important;
+    overflow-y: auto;
+    margin-top: 5rem !important;
+    padding-top: 0 !important;
+    position: relative;
+    padding-right: 0 !important;
+}
+
+.ui.faculty-vertical-list .vertical-list-nest > div:hover {
+    color: #0067B3DE;
+}
+
+.ui.faculty-vertical-list {
+    border: 1px solid #EEEEEE;
+    filter: drop-shadow(0px 4px 12px rgba(134, 134, 134, 0.1));
+    border-radius: 4px;
+    padding-bottom: 4rem;
+}
+
+
+.ui.faculty-vertical-list  .publication-list {
+    margin-bottom:3rem;
+}
+
+.ui.faculty-vertical-list .vertical-list > hr {
+    color: rgba(81, 131, 184, 0.8);
+    margin-bottom: 1.3125rem;
+    margin-top: 1.3125rem;    
+}
+
+.ui.faculty-vertical-list .vertical-list-nest > div {
+    cursor: pointer;
+    margin-bottom: 1.3125rem;
+}
+
+.ui.faculty-vertical-list .active-list-item {
+    color: #0067B3DE !important;
+}
+
+.ui.faculty-vertical-list .vertical-list {
+    position: sticky;
+    top: 5rem;
+}
+
+.ui.faculty-vertical-list .table-container {
+    overflow-x: auto;
+}
+
+@media only screen and (max-width: 630px) {
+
+    .ui.faculty-vertical-list .first {
+        width: 85% !important;
+        padding: 5vw 6vw 5vw 6vw !important;
+    }
+
+   .ui.faculty-vertical-list .vertical-list {
+        text-align: center;
+    }
+
+    .ui.faculty-vertical-list .second {
+        width: 85% !important;
+    }
+
+    .ui.faculty-vertical-list .second .content {
+        padding-right: 2rem !important;
+    }
+  }
