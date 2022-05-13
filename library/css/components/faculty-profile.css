@@ -21,6 +21,7 @@
 }
 .ui.faculty-profile > .twenty-eighty-container > .first > .image {
   object-fit: scale-down;
+  width: 100%;
 }
 
 .ui.faculty-profile > .twenty-eighty-container > .second {
