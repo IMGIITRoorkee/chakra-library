@@ -225,6 +225,9 @@ div.flexbox .menuItem {
         margin-top: 0px;
         transform: transLateX(0%);
     }
+    div.flexbox>div.menuItem{
+        margin-left: 1.5vw;
+    }
     /* Vertical List */
     div.flexbox>.menuItem>ul {
         z-index: 1000;
