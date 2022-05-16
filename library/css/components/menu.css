@@ -1,362 +1,362 @@
-@import url('../globals/fonts.css');
-@import url('../variables/colors.css');
+@import url("../globals/fonts.css");
+@import url("../variables/colors.css");
 
-
-.menuContainer div.flexbox a>div>div, .menuContainer div.flexbox a>div {
-    color: var(--black) !important;
-    font-family: var(--font-lato);
+.menuContainer div.flexbox a > div > div,
+.menuContainer div.flexbox a > div {
+  color: var(--black) !important;
+  font-family: var(--font-lato);
 }
-
 
 div.flexbox .menuItem {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 5;
+}
+.menuContainer ul,
+.menuContainer a {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+.menuContainer div.flexbox > .menuItem > a > div > div {
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 1024px) {
+  .menuContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
     z-index: 1;
+    margin-top: 1rem;
+    /* margin-top:1rem; */
+  }
 
-}
-.menuContainer  ul, .menuContainer a{
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  #hamBurger {
+    display: none;
+  }
+  .menuContainer div.flexbox {
+    width: 80%;
+    min-width: max-content;
+    position: relative;
+    gap: 5px;
+    justify-content: space-between;
+  }
+  .menuItem > a {
+    display: block;
+  }
+  .menuItem > a:hover {
+    font-weight: bold;
+  }
+  .menuContainer div.flexbox a {
+    color: var(--black) !important;
+    font-family: var(--font-lato) !important;
+    font-size: 1rem !important;
     text-decoration: none;
-}
-.menuContainer div.flexbox>.menuItem>a>div>div{
-    text-transform: uppercase;
-}
-@media only screen and (min-width:1024px){
-    .menuContainer {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-        justify-content: center;
-        z-index: 1;
-        margin-top:1rem;
-        /* margin-top:1rem; */
-    }
-    
-    #hamBurger {
-        display: none;
-    }
-    .menuContainer div.flexbox{
-        width: 80%;
-        min-width: max-content;
-        position: relative;
-        gap: 5px;
-        justify-content: space-between;
-    }
-    .menuItem>a{
-        display: block;
-    }
-    .menuItem>a:hover{
-        font-weight: bold;
-    }
-    .menuContainer div.flexbox a {
-        color: var(--black) !important;
-        font-family: var(--font-lato) !important;
-        font-size: 1rem !important;
-        text-decoration: none;
-        padding: 5px;
-    }
-    
-    div.flexbox>.menuItem>a{
-        display: block;
-        max-width: 200px !important;
-    }
-    div.flexbox>.menuItem>a:hover{
-        background-color: var(--grey-blue);
-    }
-    .menuContainer div.flexbox>.menuItem{
-        position: relative !important;
-    }
-    /* menuSpecialNode */
-    div.flexbox>.menuItem>ul {
-        transform: scaleY(0);
-        width: 0;
-        height: 0;
-        transition: transform 0.16s ease-in-out;
-        position: absolute;
-        overflow: hidden;
-        border-radius: 2px;
-    }
-    div.flexbox>.menuItem>ul.visible {
-        height: fit-content;
-        top: 0%;
-        min-width: max-content;
-        min-height: max-content;
-        display: block;
-        transform: scaleY(1);
-        max-width: 100%;
-        top:unset;
-        overflow:visible;
-    }
-    div.flexbox>.menuItem .menuItem{
-        background-color: var(--grey-blue);
-        min-width: 200px;
-    }
-    div.flexbox>.menuItem .menuItem a{
-        z-index: 1000;
-        display: block;
-    }
-    div.flexbox>.menuItem>ul .menuItem>ul {
-        z-index: 1000;
-        position: absolute;
-        width: 100%;
-        transform: scaleX(0);
-        left: 102%;
-        top: 0%;
-        background-color: var(--grey-blue);
-        transition: transform 0.1s ease-in-out 0s, z-index 0s linear 0.01s, left 0s linear 0.01s;
-        font-weight: normal !important;
-    }
-    /* menuParentNode */
-    div.flexbox>.menuItem>ul .menuItem>a {
-        height: max-content;
-        display: block;
-        padding-left: 5px !important;
-        padding-bottom: 6px !important;
-    }
-    div.flexbox>.menuItem>ul .menuItem>a>div {
-        height: max-content;
-        display: flex;
-        padding: 0px !important;
-    }
+    padding: 5px;
+  }
 
-    div.flexbox>.menuItem>ul .menuItem>a {
-        max-width: 100%;
-        min-width: 80%;
-        align-items: end;
-        position: relative;
-    }
-    div.flexbox>.menuItem>ul .menuItem.activeParentNode {
-        text-decoration: underline;
-        position: relative;
-    }
-    div.flexbox>.menuItem>ul .menuItem>a>div>img {
-        display: none;
-        transform: rotate(-90deg);
-        position: absolute;
-        top: 40%;
-        right: 0%;
-        margin-left: auto;
-    }
+  div.flexbox > .menuItem > a {
+    display: block;
+    max-width: 200px !important;
+  }
+  div.flexbox > .menuItem > a:hover {
+    background-color: var(--grey-blue);
+  }
+  .menuContainer div.flexbox > .menuItem {
+    position: relative !important;
+  }
+  /* menuSpecialNode */
+  div.flexbox > .menuItem > ul {
+    transform: scaleY(0);
+    width: 0;
+    height: 0;
+    transition: transform 0.16s ease-in-out;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 2px;
+  }
+  div.flexbox > .menuItem > ul.visible {
+    height: fit-content;
+    top: 0%;
+    min-width: max-content;
+    min-height: max-content;
+    display: block;
+    transform: scaleY(1);
+    max-width: 100%;
+    top: unset;
+    overflow: visible;
+  }
+  div.flexbox > .menuItem .menuItem {
+    background-color: var(--grey-blue);
+    min-width: 200px;
+  }
+  div.flexbox > .menuItem .menuItem a {
+    z-index: 1000;
+    display: block;
+  }
+  div.flexbox > .menuItem > ul .menuItem > ul {
+    z-index: 1000;
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    left: 102%;
+    top: 0%;
+    background-color: var(--grey-blue);
+    transition: transform 0.1s ease-in-out 0s, z-index 0s linear 0.01s,
+      left 0s linear 0.01s;
+    font-weight: normal !important;
+  }
+  /* menuParentNode */
+  div.flexbox > .menuItem > ul .menuItem > a {
+    height: max-content;
+    display: block;
+    padding-left: 5px !important;
+    padding-bottom: 6px !important;
+  }
+  div.flexbox > .menuItem > ul .menuItem > a > div {
+    height: max-content;
+    display: flex;
+    padding: 0px !important;
+  }
 
-    div.flexbox>.menuItem>ul .menuItem>a>div>img.activeParentNode {
-        display: block !important;
-    }
-    /**/
-    /* utils for hover effects */
-    div.flexbox>.menuItem>ul .menuItem>ul.parentVisible {
-        transform: scaleX(1);
-        overflow: visible;
-        position :absolute;
-    }
-    div.flexbox>.menuItem:hover div.flexbox>.menuItem>ul, div.flexbox>.menuItem:active div.flexbox>.menuItem>ul{
-        display: block;
-    }
-    div.flexbox>.menuItem:hover div.flexbox>.menuItem>ul, .div.flexbox>.menuItem:active  div.flexbox>.menuItem>ul {
-        display: block;
+  div.flexbox > .menuItem > ul .menuItem > a {
+    max-width: 100%;
+    min-width: 80%;
+    align-items: end;
+    position: relative;
+  }
+  div.flexbox > .menuItem > ul .menuItem.activeParentNode {
+    text-decoration: underline;
+    position: relative;
+  }
+  div.flexbox > .menuItem > ul .menuItem > a > div > img {
+    display: none;
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 40%;
+    right: 0%;
+    margin-left: auto;
+  }
 
-    }
-    .accessibility-hamburger,
-    .contact {
-        display: none;
-    }
+  div.flexbox > .menuItem > ul .menuItem > a > div > img.activeParentNode {
+    display: block !important;
+  }
+  /**/
+  /* utils for hover effects */
+  div.flexbox > .menuItem > ul .menuItem > ul.parentVisible {
+    transform: scaleX(1);
+    overflow: visible;
+    position: absolute;
+  }
+  div.flexbox > .menuItem:hover div.flexbox > .menuItem > ul,
+  div.flexbox > .menuItem:active div.flexbox > .menuItem > ul {
+    display: block;
+  }
+  div.flexbox > .menuItem:hover div.flexbox > .menuItem > ul,
+  .div.flexbox > .menuItem:active div.flexbox > .menuItem > ul {
+    display: block;
+  }
+  .accessibility-hamburger,
+  .contact {
+    display: none;
+  }
 }
-@media only screen and (min-width:1024px) and (max-width: 1200px) {
-    .menuContainer div.flexbox a {
-        color: var(--black);
-        font-family: var(--font-lato);
-        font-size: 12px !important;
-        text-decoration: none;
-        padding: 5px;
-    }
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+  .menuContainer div.flexbox a {
+    color: var(--black);
+    font-family: var(--font-lato);
+    font-size: 12px !important;
+    text-decoration: none;
+    padding: 5px;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
-    .menuContainer{
-        position: absolute;
-        z-index: 10;
-    }
-    .menuContainer div.flexbox{
-        padding-left: 0px !important;
-        /* margin-top: 10px; */
-        display: flex;
-        flex-direction: column;
-        /* flex-flow: nowrap !important; */
-    }
-    div.flexbox>.menuItem>a>div {
-        padding-left:10px;
-    }
-    .menuContainer div.flexbox a {
-        color: var(--black);
-        text-decoration: none;
-        display: block;
-        padding-bottom: 10px;
-        padding-top: 10px;
-        background-position: 0px 0px;
-        font-family: Lato;
-        font-size: 1rem;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 17px;
-        letter-spacing: 0.02em;
-        text-align: left;
-
-    }
-    /* Nav Utils */
-    .menuContainer div.flexbox {
-        display: flex;
-        flex-direction: column;
-        margin-right: auto;
-        z-index: 1000;
-        transform: transLateX(-150%);
-        transition: transform 0.3s ease-in;
-        background-color:  var(--white);
-        padding-left: 0.5rem;
-        height: 100%;
-        width: max-content;
-        justify-content: start;
-    }
-    .menuContainer div.flexbox>.menuItem>a.activeParentNode {
-        background-color: var(--grey-blue);
-    }
-    .menuContainer div.flexbox.navbarVisible {
-        margin-top: 0px;
-        transform: transLateX(0%);
-    }
-    div.flexbox>div.menuItem{
+.menuContainer {
+    position: absolute;
+    z-index: 10;
+  }
+  .menuContainer div.flexbox {
+    padding-left: 0px !important;
+    /* margin-top: 10px; */
+    display: flex;
+    flex-direction: column;
+    /* flex-flow: nowrap !important; */
+  }
+  div.flexbox > .menuItem > a > div {
+    padding-left: 10px;
+  }
+  .menuContainer div.flexbox a {
+    color: var(--black);
+    text-decoration: none;
+    display: block;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-position: 0px 0px;
+    font-family: Lato;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0.02em;
+    text-align: left;
+  }
+  /* Nav Utils */
+  .menuContainer div.flexbox {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    z-index: 1000;
+    transform: transLateX(-150%);
+    transition: transform 0.3s ease-in;
+    background-color: var(--white);
+    padding-left: 0.5rem;
+    height: 100%;
+    width: max-content;
+    justify-content: start;
+  }
+  .menuContainer div.flexbox > .menuItem > a.activeParentNode {
+    background-color: var(--grey-blue);
+  }
+  .menuContainer div.flexbox.navbarVisible {
+    margin-top: 0px;
+    transform: transLateX(0%);
+  }
+  div.flexbox>div.menuItem{
         margin-left: 1.5vw;
     }
-    /* Vertical List */
-    div.flexbox>.menuItem>ul {
-        z-index: 1000;
-        width: 0;
-        height: 0;
-        overflow: hidden;
-        background-color: var(--grey-blue);
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-    }
-    div.flexbox>.menuItem>ul div {
-        min-width: 200px;
-    }
-    div.flexbox>.menuItem>ul div a {
-        z-index: 1000;
-        display: block;
-        padding-left: 9px;
-        margin-left: 5px;
-    }
+  /* Vertical List */
+  div.flexbox > .menuItem > ul {
+    z-index: 1000;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    background-color: var(--grey-blue);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+  }
+  div.flexbox > .menuItem > ul div {
+    min-width: 200px;
+  }
+  div.flexbox > .menuItem > ul div a {
+    z-index: 1000;
+    display: block;
+    padding-left: 9px;
+    margin-left: 5px;
+  }
 
-    div.flexbox>.menuItem>ul div>ul.parentVisible {
-        transform: translateY(1);
-        height: 100%;
-        width: inherit;
-    }
-    div.flexbox>.menuItem>ul div>ul.parentVisible>div {
-        margin-left: 10px;
-    }
-    div.flexbox>.menuItem>ul div>ul.parentVisible>div>a{
-        font-family: Segoe UI;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 13px;
-        line-height: 19px;
-        color: rgba(0, 0, 0, 0.6);
-    }
+  div.flexbox > .menuItem > ul div > ul.parentVisible {
+    transform: translateY(1);
+    height: 100%;
+    width: inherit;
+  }
+  div.flexbox > .menuItem > ul div > ul.parentVisible > div {
+    margin-left: 10px;
+  }
+  div.flexbox > .menuItem > ul div > ul.parentVisible > div > a {
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 19px;
+    color: rgba(0, 0, 0, 0.6);
+  }
 
+  div.flexbox > .menuItem > ul div > ul.parentVisible > div > a::before {
+    content: "\276F";
+    margin-right: 7px;
+  }
+  .menuContainer div.flexbox a > div {
+    display: inline;
+  }
+  div.flexbox > .menuItem > ul div > ul.parentVisible > div > a:hover {
+    font-weight: bold;
+  }
+  /* Utils */
+  div.flexbox > .menuItem > ul.visible {
+    width: 100%;
+    height: 100%;
+    left: 100%;
+    top: 0%;
+    min-width: max-content;
+    min-height: max-content;
+    display: flex;
+  }
+  /* Horizontal List */
+  div.flexbox > .menuItem > ul div > ul {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    transform: translateY(0);
+    transition: transform 0.3s ease-in;
+    z-index: 1000;
+  }
 
-    div.flexbox>.menuItem>ul div>ul.parentVisible>div>a::before {
-        content: "\276F";
-        margin-right: 7px;
-    }
-    .menuContainer div.flexbox a>div{
-        display: inline;
-    }
-    div.flexbox>.menuItem>ul div>ul.parentVisible>div>a:hover {
-        font-weight: bold ;
-    }
-    /* Utils */
-    div.flexbox>.menuItem>ul.visible {
-        width: 100%;
-        height: 100%;
-        left: 100%;
-        top: 0%;
-        min-width: max-content;
-        min-height: max-content;
-        display: flex;
-    }
-    /* Horizontal List */
-    div.flexbox>.menuItem>ul div>ul {
-        width: 0;
-        height: 0;
-        overflow: hidden;
-        transform: translateY(0);
-        transition: transform 0.3s ease-in;
-        z-index: 1000;
-    }
+  /* menuParentNode */
+  div.flexbox > .menuItem > ul .menuItem > a > div > img,
+  div.flexbox > .menuItem > a > div > img {
+    display: none;
+  }
 
-    /* menuParentNode */
-    div.flexbox>.menuItem>ul .menuItem>a>div>img, div.flexbox>.menuItem>a>div>img{
-        display: none;
-    }
-
-    div.flexbox>.menuItem>ul .menuItem>a>div{
-        padding-top:0px !important;
-        padding-bottom:0px !important;
-        color: rgba(0, 0, 0, 0.6) !important;
-    }
-    div.flexbox>.menuItem>a>div.icon-typography{
-        padding: 0 !important;
-    }
-    .menuContainer div.flexbox>.menuItem>a>div>div{
-        padding-right: 2rem !important;
-    }
-    div.flexbox>.menuItem>ul .menuItem.activeParentNode>a{
-        border-left: 4px solid var(--bright-blue);
-        cursor:pointer;
-    }
-    /*Accessibility*/
-    ul.accessibility-hamburger {
-        border-top: 2px solid var(--very-gery-blue);
-        margin-top: 75px !important;
-    }
-    ul.contact {
-        border-top: 2px solid var(--very-gery-blue);
-        padding-bottom: 75px;
-    }
-    li.language {
-        display: flex;
-        align-items: center;
-    }
-    .accessibility-hamburger>li>a,
-    .contact>li>a {
-        padding: 10px;
-        text-transform: uppercase !important;
-    }
-    .ABox {
-        border: 2px solid var(--section-blue);
-        border-radius: 2px;
-        width: 24px;
-        height: 24px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .ABoxFilled {
-        background-color: var(--section-blue);
-        border-radius: 2px;
-        width: 24px;
-        height: 24px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .accessibility-hamburger>li>div {
-        display: flex;
-        align-items: center;
-        padding: 10px;
-        gap: 5px;
-    }
+  div.flexbox > .menuItem > ul .menuItem > a > div {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    color: rgba(0, 0, 0, 0.6) !important;
+  }
+  div.flexbox > .menuItem > a > div.icon-typography {
+    padding: 0 !important;
+  }
+  .menuContainer div.flexbox > .menuItem > a > div > div {
+    padding-right: 2rem !important;
+  }
+  div.flexbox > .menuItem > ul .menuItem.activeParentNode > a {
+    border-left: 4px solid var(--bright-blue);
+    cursor: pointer;
+  }
+  /*Accessibility*/
+  ul.accessibility-hamburger {
+    border-top: 2px solid var(--very-gery-blue);
+    margin-top: 75px !important;
+  }
+  ul.contact {
+    border-top: 2px solid var(--very-gery-blue);
+    padding-bottom: 75px;
+  }
+  li.language {
+    display: flex;
+    align-items: center;
+  }
+  .accessibility-hamburger > li > a,
+  .contact > li > a {
+    padding: 10px;
+    text-transform: uppercase !important;
+  }
+  .ABox {
+    border: 2px solid var(--section-blue);
+    border-radius: 2px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ABoxFilled {
+    background-color: var(--section-blue);
+    border-radius: 2px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .accessibility-hamburger > li > div {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 5px;
+  }
 }

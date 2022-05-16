@@ -15,10 +15,17 @@
 }
 
 .ui.carousel > .image.fluid > img {
-  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%; /* use auto if don't want to scale up image height */
+  width: auto;
   min-height: 10vw;
+  max-width: 100%;
   max-height: 40vw;
   display: block;
+  z-index: 1;
 }
 
 .ui.carousel > .flexbox {
@@ -29,6 +36,7 @@
 
 .ui.carousel > .flexbox > .prev,
 .ui.carousel > .flexbox > .next {
+  z-index: 2;
   position: absolute;
   top: 50%;
   width: auto;
@@ -58,6 +66,7 @@
   justify-content: center;
   position: absolute;
   bottom: 1rem;
+  z-index: 2;
 }
 
 .ui.carousel > .dot-container > .dot {
@@ -83,6 +92,15 @@
   animation-name: fade;
   animation-duration: 1.5s;
 }
+.ui.carousel > .ui.image.fluid > .bg-image {
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  height: 40vw;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 @-webkit-keyframes fade {
   from {
@@ -103,11 +121,16 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .ui.carousel > .ui.image.fluid > .bg-image {
+    display: none;
+  }
+
   .ui.carousel {
     height: 700px;
   }
   .ui.carousel > .image.fluid > img {
     height: 700px;
+    width: 100%;
     display: block;
     max-height: none;
   }
