@@ -31,6 +31,10 @@
     background-color: var(--social-icon-youtube-hover-color);
 }
 
+.ui.social-icon.telegram_icon:hover{
+    background-color: var(--social-icon-telegram-hover-color);
+}
+
 .ui.social-icon.web_icon:hover{
     background-color: var(--hover-black);
 }
