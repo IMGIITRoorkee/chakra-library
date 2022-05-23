@@ -24,6 +24,7 @@
   --social-icon-linkedin-hover-color: #0077b5;
   --social-icon-instagram-hover-color: #e1306c;
   --social-icon-youtube-hover-color: #bb0000;
+  --social-icon-telegram-hover-color:  #229ED9;
 }
 
 .dark {
@@ -47,6 +48,7 @@
   --social-icon-linkedin-hover-color: #0077b5;
   --social-icon-instagram-hover-color: #e1306c;
   --social-icon-youtube-hover-color: #bb0000;
+  --social-icon-telegram-hover-color:  #229ED9;
 }
 
 @font-face {

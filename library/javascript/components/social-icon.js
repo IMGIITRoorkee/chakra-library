@@ -5,6 +5,7 @@ socialIconToNormalIcon.set('instagram_icon', 'instagram_logo');
 socialIconToNormalIcon.set('youtube_icon', 'youtube_logo');
 socialIconToNormalIcon.set('linkedin_icon', 'linkedin_logo');
 socialIconToNormalIcon.set('web_icon', 'web_logo');
+socialIconToNormalIcon.set('telegram_icon', 'telegram_logo');
 
 let links = document.querySelectorAll(".ui.social-icon");
 for (let link of links) {
