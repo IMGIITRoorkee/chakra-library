@@ -46,3 +46,33 @@ big.forEach(element => {
     html.style.fontSize = '18px'
   })
 })
+
+let lang_links = document.querySelectorAll('.language > .link')
+hindi_link = lang_links[0]
+eng_link = lang_links[1]
+
+hindi_link.addEventListener('click', ()=>{
+  const url = new URL(decodeURI(window.location.href));
+  if(url.host === "iitr.ac.in"){
+    let pathArr = url.pathname.split("/")
+    if (pathArr.indexOf('Hindi') == -1) {
+      pathArr.splice(1, 0, 'Hindi')
+      let path = pathArr.join("/")
+      url.pathname = path
+      window.location = url
+    }
+  }
+})
+eng_link.addEventListener('click', ()=>{
+  const url = new URL(decodeURI(window.location.href));
+  if(url.host === "iitr.ac.in"){
+    let pathArr = url.pathname.split("/")
+    let index = pathArr.indexOf('Hindi')
+    if (index != -1) {
+      pathArr.splice(index, 1)
+      let path = pathArr.join("/")
+      url.pathname = path
+      window.location = url
+    }
+  }
+})
