@@ -142,7 +142,6 @@
 .ui.header.department .page-search-header {
   display: none;
 }
-
 @media only screen and (max-width: 1024px) {
   .ui.header {
     width: unset;
