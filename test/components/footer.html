@@ -216,7 +216,7 @@
     </div>
     <div class="footer-copyright">
       <div>
-      Copyright 2021, Institute Computer Centre, IIT Roorkee
+        Copyright <span class="copyright-year"></span>, Institute Computer Centre, IIT Roorkee
       </div>
       <div class="totalviews" style="color: var(--black);">
         Total Pageviews: 12414
@@ -224,7 +224,12 @@
     </div>
   </div>
     </div>
+    <script>
+      var copyrightYear = document.querySelectorAll('.copyright-year')
+      var year = new Date().getFullYear()
+      copyrightYear[0].innerHTML = year
+  </script>
     <script  src="../../library/javascript/components/social-icon.js"></script>
-    <script  src="../../library/javascript/components/icon-library.js"></script>
+<script  src="../../library/javascript/components/icon-library.js"></script>
   </body>
 </html>
