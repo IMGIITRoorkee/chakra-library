@@ -97,3 +97,7 @@ function showSlides (n) {
   slides[slideIndex - 1].style.display = 'contents'
   dots[slideIndex - 1].classList.add('active')
 }
+
+setInterval(() => {
+  plusSlides(1)
+}, 4000)
