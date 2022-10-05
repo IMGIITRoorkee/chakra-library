@@ -13,6 +13,7 @@
   width: 100%;
   object-fit: contain;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .ui.image-card > .content {
