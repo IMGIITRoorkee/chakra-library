@@ -48,6 +48,9 @@ big.forEach(element => {
 })
 
 let lang_links = document.querySelectorAll('.language > .link')
+if (lang_links.length == 0) {
+  lang_links = document.querySelectorAll('.language > a')
+}
 hindi_link = lang_links[0]
 eng_link = lang_links[1]
 
