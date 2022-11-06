@@ -13,7 +13,7 @@ showSlides(slideIndex)
 generateNumber(slides)
 
 // This function adds the navigator arrows to the carousel
-function generateNavigator () {
+function generateNavigator() {
   var carousel = document.querySelector('.ui.carousel')
   var flexbox = document.createElement('div')
   flexbox.classList.add('ui')
@@ -39,7 +39,7 @@ function generateNavigator () {
   carousel.appendChild(flexbox)
 }
 
-function generateDots (count) {
+function generateDots(count) {
   var carousel = document.querySelector('.ui.carousel')
   dotContainer = document.createElement('div')
   dotContainer.classList.add('dot-container')
@@ -62,7 +62,7 @@ function generateDots (count) {
   })
 }
 
-function generateNumber (slides) {
+function generateNumber(slides) {
   var images = document.querySelectorAll('.carousel-image .image')
   for (var i = 0; i < slides.length; i++) {
     var ele = document.createElement('div')
@@ -72,15 +72,15 @@ function generateNumber (slides) {
   }
 }
 
-function plusSlides (n) {
+function plusSlides(n) {
   showSlides((slideIndex += n))
 }
 
-function currentSlide (n) {
+function currentSlide(n) {
   showSlides((slideIndex = n))
 }
 
-function showSlides (n) {
+function showSlides(n) {
   var i
   var dots = document.querySelectorAll('.dot')
   if (n > slides.length) {

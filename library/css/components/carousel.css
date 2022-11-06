@@ -122,15 +122,13 @@
 
 @media only screen and (max-width: 768px) {
   .ui.carousel > .ui.image.fluid > .bg-image {
-    display: none;
+    height: 40vw;
   }
 
   .ui.carousel {
-    height: 700px;
+    height: 40vw;
   }
   .ui.carousel > .image.fluid > img {
-    height: 700px;
-    width: 100%;
     display: block;
     max-height: none;
   }
