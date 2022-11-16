@@ -60,6 +60,10 @@
     overflow-x: auto;
 }
 
+.faculty-vertical-list ol, .faculty-vertical-list ul {
+    list-style: auto;
+}
+
 @media only screen and (max-width: 630px) {
 
     .ui.faculty-vertical-list .first {
