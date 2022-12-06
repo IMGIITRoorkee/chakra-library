@@ -55,8 +55,8 @@
   text-decoration: underline;
   color: var(--hover-black);
 }
-.ui.header .page-search{
-  display:  none;
+.ui.header .page-search:hover {
+  cursor: pointer;
 }
 .ui.header .upperleft{
   display: flex;

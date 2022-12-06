@@ -172,7 +172,8 @@ const paths = {
   youtube_logo: 'library/assets/icons/youtube-logo.svg', // Remove option from frontend
   website :'library/assets/icons/website.svg',
   accessibility_telegram_logo: 'library/assets/icons/accessibility-telegram.svg', // Remove option from frontend
-  telegram_logo: 'library/assets/icons/telegram-logo.svg'
+  telegram_logo: 'library/assets/icons/telegram-logo.svg',
+  leftarrow: 'library/assets/icons/left-arrow.svg'
 }
 
 /* <img class="ui icon" data-icon=""/> */
