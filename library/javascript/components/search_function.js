@@ -22,7 +22,6 @@ if(search_input!=null){
         })
         .then(data=>{return data.json()})
         .then(res=>{
-            console.log(res.pages)
             list_html = ''
             for (let page=0; page < res.pages.length; page++) {
                 list_html += `<div class="publicationListItem">
@@ -37,9 +36,9 @@ if(search_input!=null){
                     <hr>
                     </div>`
             }
-            document.body.innerHTML += `<div class="ui full-width-container">
-                <div class="ui publication-list" id="paginated-list">`+list_html+`</div>
-                </div>
+            var searchResult = document.createElement('div')
+            searchResult.innerHTML += `<div class="ui full-width-container" style="max-height: 75vh; overflow-y: auto;">
+                <div class="ui publication-list" id="paginated-list" style="overflow:auto;">`+list_html+`
                 <nav class="pagination-container">
                     <button class="pagination-button" id="prev-button" aria-label="Previous page" title="Previous page">
                     &lt;
@@ -53,16 +52,25 @@ if(search_input!=null){
                     &gt;
                     </button>
                 </nav>
+                </div>
+                </div>
                 <script  src="http://localhost:5500/library/javascript/components/publication-list.js"></script>`
+
+            searchResult.style.zIndex = '999'
+            searchResult.style.width = '100vw'
+            searchResult.style.height = '100vh'
+            searchResult.style.position = 'absolute'
+            searchResult.style.background = 'white'
+            searchResult.style.top = document.getElementsByClassName('main-head')[0].getBoundingClientRect().bottom+'px'
+            document.body.appendChild(searchResult)
 
             const paginationNumbers = document.getElementById("pagination-numbers");
             var paginatedList = document.getElementById('paginated-list')
             var listItems = document.querySelectorAll('.publicationListItem')
             const nextButton = document.getElementById("next-button");
             const prevButton = document.getElementById("prev-button");
-            const paginationLimit = 1;
+            const paginationLimit = 5;
             const pageCount = Math.ceil(listItems.length / paginationLimit);
-            // console.log(pageCount)
             let currentPage = 1
             const disableButton = (button) => {
                 button.classList.add("paginated-disabled");
@@ -153,7 +161,6 @@ if(search_input!=null){
             };
 
             pager()
-            console.log(pageCount)
         })
     }
 }

@@ -218,7 +218,6 @@
   width: calc(100% - 2rem);
   display: flex;
   align-items: center;
-  position: absolute;
   bottom: 0;
   padding: 1rem 0;
   justify-content: center;
