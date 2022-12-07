@@ -24,6 +24,7 @@ function open_search() {
   input_tag.style.padding = '5px'
   input_tag.style.border = 'none'
   input_tag.setAttribute('placeholder', 'What are you looking for?')
+  input_tag.setAttribute('id', 'search-input')
   var go_back = document.createElement('span')
   go_back.setAttribute('onClick', 'close_search()')
   go_back.innerHTML = '<img class="ui icon" data-icon="leftarrow" />&nbsp;GO BACK'
@@ -48,6 +49,9 @@ function open_search() {
   search_modal.style.paddingTop = '5rem'
   document.body.appendChild(search_modal)
   document.body.style.overflow = 'hidden'
+  var script = document.createElement('script')
+  script.setAttribute('src', "http://localhost:5500/library/javascript/components/search_function.js")
+  document.body.appendChild(script)
   loadIcons()
 }
 

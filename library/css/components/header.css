@@ -214,6 +214,40 @@
 
 }
 
+.pagination-container {
+  width: calc(100% - 2rem);
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  padding: 1rem 0;
+  justify-content: center;
+}
+
+.pagination-number, .pagination-button{
+  font-size: 1.1rem;
+  background-color: transparent;
+  border: none;
+  margin: 0.25rem 0.25rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: .2rem;
+}
+
+.pagination-number:hover, .pagination-button:not(.paginated-disabled):hover {
+  background: var(--white);
+  cursor: pointer;
+}
+
+.pagination-number.paginated-active {
+  color: var(--white);
+  background: var(--gradient-blue);
+}
+
+.paginated-hidden {
+  display: none;
+}
+
 @media only screen and (max-width: 500px) {
   .ui.header {
     max-width: 95%;
