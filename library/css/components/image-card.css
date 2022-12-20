@@ -33,6 +33,7 @@
   word-wrap: break-word;
   max-height: 6.1rem;
   overflow: hidden;
+  text-align: justify;
 }
 
 .ui.image-card > .content > .ui.button {
