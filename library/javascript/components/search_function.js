@@ -80,7 +80,7 @@ if (search_input != null) {
               pages[page].title +
               `</div>
                     <a href=` +
-              pages[page].page_link +
+              `"${pages[page].page_link}"` +
               ` class="ui button" target='_blank'>View</a>
                     </div>
                     <div class="ui intro-text">` +
