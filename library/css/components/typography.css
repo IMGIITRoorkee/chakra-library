@@ -1,3 +1,20 @@
+@media screen and (max-width: 340px){
+
+    .ui.sub-heading {
+    line-height: 1.3rem;
+    color: var(--black);
+    font-size: 1.20rem;
+    /* padding: 1.25rem 0; */
+    }
+
+    .ui.one-liner-captions {
+    color: var(--caption-grey);
+    line-height: 1.2rem;
+    font-size: 13px;
+    /* padding: 1rem 0; */
+}
+}
+
 .ui.section-heading {
     color: var(--heading-black);
     font-weight: 500;
@@ -59,6 +76,7 @@
 .ui.one-liner-captions {
     color: var(--caption-grey);
     line-height: 1.2rem;
+    font-size: 16px;
     /* padding: 1rem 0; */
 }
 
