@@ -76,9 +76,9 @@
   color: #f7f7f7
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 420px) {
   .ui.image-card {
-    width: 19.75rem;
+    width: 17rem;
     /* box-shadow: inset 0.125rem 0rem 0.125rem var(--hover-black); */
     border-radius: 0.25rem;
     box-sizing: border-box;
