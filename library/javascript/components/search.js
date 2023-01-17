@@ -50,7 +50,7 @@ function open_search() {
   document.body.appendChild(search_modal)
   document.body.style.overflow = 'hidden'
   var script = document.createElement('script')
-  script.setAttribute('src', "http://localhost:5500/library/javascript/components/search_function.js")
+  script.setAttribute('src', "https://cmsredesign.channeli.in/library/javascript/components/search_function.js")
   document.body.appendChild(script)
   loadIcons()
 }

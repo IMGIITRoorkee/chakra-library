@@ -2,7 +2,7 @@ var search_input = document.getElementById('search-input')
 if (search_input != null) {
   search_input.addEventListener('keydown', e => {
     if (e.key === 'Enter') {
-      search(e.target.value, 1)
+      search(e.target.value, 0)
     }
   })
 
@@ -11,22 +11,41 @@ if (search_input != null) {
       document.getElementById('search-modal').remove()
     if (document.getElementById('pages-list') != null)
       document.getElementById('pages-list').remove()
-    const Url = `http://localhost:8000/chakra_search/?words=${words}&page=${currentPageID}`
+    const URL = `https://elastic.channeli.in/xmlpages-000001/_search`
+    const paginationLimit = 3
+    let data = {
+      "sort": [
+        {
+          "_score": {
+            "order": "desc"
+          }
+        }
+      ],
+      "size": paginationLimit,
+      "from": currentPageID,
+      "query": {
+        "query_string": {
+          "default_field": "search_keywords",
+          "query": words
+        }
+      }
+    }
     let headers = new Headers()
     headers.append('Content-Type', 'application/json')
     headers.append('Accept', 'application/json')
-    headers.append('Origin', 'localhost:9000')
-    fetch(Url, {
+    headers.append('Origin', 'elastic.channeli.in')
+    fetch(URL, {
       mode: 'cors',
       credentials: 'include',
-      method: 'GET',
-      headers: headers
+      method: 'POST',
+      headers: headers,
+      body: JSON.stringify(data)
     })
       .then(data => {
         return data.json()
       })
       .then(res => {
-        var max_pages = res.max_pages
+        var max_pages = res.hits.total.value
         var searchResult = document.createElement('div')
         searchResult.setAttribute('id', 'pages-list')
 
@@ -49,20 +68,23 @@ if (search_input != null) {
           document.body.appendChild(searchResult)
         } else {
           list_html = ''
-          for (let page = 0; page < res.pages.length; page++) {
-            console.log(res.pages[page].title)
+          const { hits } = res;
+          let { hits: pages } = hits;
+          pages = pages.map(e => e._source)
+          console.log(pages)
+          for (let page = 0; page < pages.length; page++) {
             list_html +=
               `<div class="publicationListItem">
                     <div class="title-bar">
                     <div class="ui intro-text">` +
-              res.pages[page].title +
+              pages[page].title +
               `</div>
                     <a href=` +
-              res.pages[page].link +
+              pages[page].page_link +
               ` class="ui button" target='_blank'>View</a>
                     </div>
                     <div class="ui intro-text">` +
-              res.pages[page].description +
+              pages[page].description +
               `</div>
                     <hr>
                     </div>`
@@ -92,7 +114,7 @@ if (search_input != null) {
                 </nav>
                 </div>
                 </div>
-                <script  src="http://localhost:9000/library/javascript/components/publication-list.js"></script>`
+                <script  src="https://cmsredesign.channeli.in/library/javascript/components/publication-list.js"></script>`
 
           searchResult.style.zIndex = '999'
           searchResult.style.width = '100vw'
@@ -105,16 +127,12 @@ if (search_input != null) {
               .getElementsByClassName('main-head')[0]
               .getBoundingClientRect().bottom + 'px'
           document.body.appendChild(searchResult)
-
-          console.log(searchResult.outerHTML)
-
           const paginationNumbers =
             document.getElementById('pagination-numbers')
           var paginatedList = document.getElementById('paginated-list')
           var listItems = document.querySelectorAll('.publicationListItem')
           const nextButton = document.getElementById('next-button')
           const prevButton = document.getElementById('prev-button')
-          const paginationLimit = 3
           const pageCount = Math.ceil(max_pages / paginationLimit)
 
           let currentPage = currentPageID
