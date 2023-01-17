@@ -61,6 +61,8 @@ hindi_link.addEventListener('click', ()=>{
     if (pathArr.indexOf('Hindi') == -1) {
       pathArr.splice(1, 0, 'Hindi')
       let path = pathArr.join("/")
+      if(path.charAt(path.length()-1)=="/")
+      path = path.substring(0,path.length()-1)
       url.pathname = path
       window.location = url
     }
