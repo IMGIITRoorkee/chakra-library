@@ -8,8 +8,8 @@
   color: var(--white);
 }
 
-@media only screen and (max-width: 420px){
-  .ui.full-width-container {
+@media only screen and (max-width: 430px){
+  .ui.full-width-container > .ui.image-card{
     max-width: 100vw;
     padding: 5vw 0;
   }
