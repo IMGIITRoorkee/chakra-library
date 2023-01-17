@@ -2,7 +2,7 @@ var search_input = document.getElementById('search-input')
 if (search_input != null) {
   search_input.addEventListener('keydown', e => {
     if (e.key === 'Enter') {
-      search(e.target.value, 0)
+      search(e.target.value, 1)
     }
   })
 
@@ -12,7 +12,7 @@ if (search_input != null) {
     if (document.getElementById('pages-list') != null)
       document.getElementById('pages-list').remove()
     const URL = `https://elastic.channeli.in/xmlpages-000001/_search`
-    const paginationLimit = 3
+    const paginationLimit = 10
     let data = {
       "sort": [
         {
@@ -22,7 +22,7 @@ if (search_input != null) {
         }
       ],
       "size": paginationLimit,
-      "from": currentPageID,
+      "from": (currentPageID - 1) * paginationLimit,
       "query": {
         "query_string": {
           "default_field": "search_keywords",
