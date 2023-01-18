@@ -7,6 +7,8 @@ mq.addEventListener('change', () => {
   performHeaderChange(mq)
 })
 
+document.getElementsByClassName("page-search")[0].firstElementChild.setAttribute("onClick", "open_search()")
+
 function performHeaderChange(mq) {
 
   let is_main_header = true
