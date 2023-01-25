@@ -26,6 +26,12 @@
   border: 2px solid var(--bright-blue);
   cursor: pointer;
 }
+.section-heading {
+  text-align: center;
+}
+.sub-heading {
+  text-align: center;
+}
 .ui.header .dark-button {
   color: var(--white);
   width: 20px;
@@ -155,12 +161,14 @@
   margin-right: 1rem;
 }
 .g20-logo-department {
-  width: 8%;
+  width: 130px;
   max-width: 15rem;
   cursor: pointer;
-  /* margin-left: auto; */
-  border-right: 1px solid gray;
-  margin-right: 1rem;
+  display: flex;
+  align-content: center;
+  border-left: 1px solid gray;
+  padding-left: 1rem;
+  margin-left: 1rem;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -218,11 +226,14 @@
 
   .ui.header.department .heading-section {
     display: flex;
-    flex-direction: row;
-    max-width: 75%;
+    flex-direction: column;
+    max-width: 100%;
     align-items: center;
     justify-content: center;
     gap: 0.25rem;
+  }
+  .g20-logo-department {
+    margin-left: 0.5rem;
   }
 }
 
