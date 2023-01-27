@@ -161,7 +161,7 @@
   margin-right: 1rem;
 }
 .g20-logo-department {
-  width: 130px;
+  width: 150px;
   max-width: 15rem;
   cursor: pointer;
   display: flex;
@@ -169,6 +169,9 @@
   border-left: 1px solid gray;
   padding-left: 1rem;
   margin-left: 1rem;
+}
+.logo-link {
+  width: 100px;
 }
 
 @media only screen and (max-width: 1024px) {
