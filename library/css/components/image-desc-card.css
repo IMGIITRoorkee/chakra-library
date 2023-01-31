@@ -32,6 +32,10 @@
     cursor: pointer;
 }
 
+.image-description-card > .info > .ui.section-heading {
+    text-transform: capitalize;
+}
+
 @media only screen and (max-width: 1024px) {
     .image-description-card {
         flex-direction: column;
