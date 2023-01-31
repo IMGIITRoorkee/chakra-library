@@ -6,7 +6,7 @@
 
 .footer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1.5fr 0.5fr 1fr;
   grid-gap: 10px;
   margin-bottom: 50px;
   box-sizing: border-box;
@@ -164,10 +164,16 @@
   height: 24px;
 }
 
-.weather > .madebylabel {
+.madebylabel {
   line-height: 24px;
-  margin-left: 50px;
   color: var(--black);
+}
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
 }
 
 .weather > .ui.link {
@@ -205,12 +211,43 @@
   justify-content: space-evenly;
   gap: 32%;
 }
+.footer-rights {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.footer-rights-right {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+.footer-rights-left {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
 
 @media only screen and (max-width: 768px) {
   .footer {
     display: block;
     font-size: 0.75rem;
   }
+  .footer > .links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-lefts-left {
+    align-content: center;
+    flex-wrap: wrap;
+  }
+  .footer-lefts-right {
+    align-content: center;
+    flex-wrap: wrap;
+  }
+
   .footer .links,
   .weather {
     margin-top: 1.5rem;
@@ -224,6 +261,7 @@
   .footer-favicons {
     gap: 0.5rem;
   }
+
   .footer > .contact-info {
     justify-content: center;
     flex-direction: column;
@@ -238,11 +276,12 @@
     text-align: center;
     line-height: 24px;
   }
-  .weather > .madebylabel {
+  .madebylabel {
+    text-align: center;
     margin-top: 20px;
   }
-  .weather > .ui.link {
-    width: 80%;
+  .footer-right > .ui.link {
+    display: none;
   }
   .footer-bottom-flex {
     justify-content: flex-start;
@@ -261,5 +300,18 @@
   .footer-accessibility-flex > .ui.link {
     margin: 0rem 0rem;
     width: 7rem;
+  }
+  .footer-rights {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-lefts-header {
+    min-width: 11rem;
+  }
+  .footer-rights-right {
+    align-content: center;
+  }
+  .footer-rights-left {
+    align-content: center;
   }
 }
