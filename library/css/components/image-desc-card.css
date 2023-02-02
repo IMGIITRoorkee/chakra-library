@@ -35,6 +35,9 @@
 .image-description-card > .info > .ui.section-heading {
     text-transform: capitalize;
 }
+.image-description-card > .info > .ui.description.left {
+    text-align: justify !important;
+}
 
 @media only screen and (max-width: 1024px) {
     .image-description-card {
