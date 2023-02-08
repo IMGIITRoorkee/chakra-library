@@ -74,7 +74,7 @@
 
 .footer-headers {
   margin-top: 20px;
-  font-weight: 600;
+  font-weight: bold;
   padding-bottom: 20px;
   color: var(--black);
 }
@@ -216,6 +216,9 @@
     display: block;
     font-size: 0.75rem;
   }
+  .footer-headers {
+    font-size: 16px;
+  }
   .footer > .footer-mid {
     justify-content: space-between;
     padding: 0% 17%;
@@ -260,6 +263,12 @@
   .madebylabel {
     text-align: center;
     margin-top: 20px;
+  }
+  .madebylabel > .ui.link {
+    text-align: center;
+    width: auto;
+    font-size: 12px;
+    margin: 0px;
   }
   .footer-right-bottom > .ui.link {
     display: none;
