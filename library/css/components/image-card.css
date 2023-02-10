@@ -1,7 +1,7 @@
 .ui.image-card {
   width: var(--image-card-width);
   position: relative;
-  height: 33rem;
+  height: 32rem;
   border-radius: 0.25rem;
   box-sizing: border-box;
   border: 0.0625rem solid var(--caption-grey);
@@ -37,7 +37,7 @@
 }
 
 .ui.image-card > .content > .ui.button {
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
   position: absolute;
   bottom: 0.9rem;
 }
@@ -73,7 +73,7 @@
   font-weight: 600;
   font-size: 1.25rem;
   padding-right: 1rem;
-  color: #f7f7f7
+  color: #f7f7f7;
 }
 
 @media only screen and (max-width: 520px) {
