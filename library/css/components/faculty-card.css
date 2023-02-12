@@ -36,9 +36,7 @@
   color: var(--faculty-card-info-color);
   align-items: center;
   display: flex;
-  flex-direction: row-reverse;
   gap: 0.5rem;
-  justify-content: flex-end;
 }
 
 .ui.faculty-card > .body > .description {
