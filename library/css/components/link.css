@@ -10,10 +10,10 @@
   line-height: 24px;
 }
 
-.ui.link.inverted {
+.ui.link.inverted{
   color: var(--white);
 }
-.ui.link.inline {
+.ui.link.inline{
   text-decoration: none;
   display: inline;
   width: max-content;
@@ -22,12 +22,12 @@
   line-height: 24px;
 }
 
-.ui.link.inline > .link-content {
+.ui.link.inline> .link-content{
   padding-right: 0rem;
   color: var(--heading-black);
   text-decoration: none;
 }
-.ui.link.inverted > .link-content {
+.ui.link.inverted > .link-content{
   color: var(--white);
 }
 
@@ -38,11 +38,11 @@
 }
 
 .ui.link.blue > .link-content {
-  color: var(--section-blue);
+  color:var(--section-blue);
 }
 
 .ui.link.blue.inverted > .link-content {
-  color: var(--white);
+  color:var(--white);
 }
 
 .ui.link:hover {
@@ -60,22 +60,22 @@
   box-shadow: none;
   padding: 10px;
   text-decoration: none;
-  align-content: center;
-  width: fit-content;
+   align-content: center;
+   width: fit-content;
 }
 
-.ui.button:hover {
-  background-color: var(--bright-blue);
+.ui.button:hover{
+  background-color:var(--bright-blue);
   color: var(--white);
 }
 
 .ui.button.inverted {
-  background-color: var(--bright-blue);
+  background-color:var(--bright-blue);
   color: var(--white);
 }
 
 .ui.button.inverted:hover {
-  background-color: var(--white);
+  background-color:var(--white);
   color: var(--bright-blue);
 }
 .group-button {
@@ -88,18 +88,18 @@
 .group-button > .ui.button {
   padding: 12px;
   border: 2px solid var(--formal-blue);
-  background-color: var(--white);
+  background-color:var(--white);
   color: var(--formal-blue);
 }
 .group-button > .ui.button.inverted:hover {
-  background-color: var(--bright-blue);
+  background-color:var(--bright-blue);
   color: var(--white);
 }
 .group-button > .ui.button:hover {
-  color: var(--bright-blue);
+  color:var(--bright-blue);
   background-color: var(--white);
 }
 .group-button > .ui.button.inverted {
-  color: var(--white);
+  color:var(--white);
   background-color: var(--formal-blue);
 }
