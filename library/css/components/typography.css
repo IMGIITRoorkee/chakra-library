@@ -18,7 +18,7 @@
   line-height: 1.5rem;
 }
 
-.ui.inactive-section-link {
+.ui.inactive-section-link{
   pointer-events: none;
   text-decoration: none;
   text-transform: uppercase;
@@ -72,10 +72,10 @@
   /* padding: 1rem 0; */
   line-height: 1.2rem;
 }
-.ui.intro-text[onclick^="window"]:hover {
+.ui.intro-text[onclick^="window"]:hover{
   cursor: pointer;
 }
-.ui.intro-text[onclick^="window"] {
+.ui.intro-text[onclick^="window"]{
   color: var(--section-blue);
 }
 .ui.inverted.intro-text {

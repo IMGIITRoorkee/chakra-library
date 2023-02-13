@@ -28,12 +28,6 @@
   border: 2px solid var(--bright-blue);
   cursor: pointer;
 }
-.section-heading {
-  text-align: center;
-}
-.sub-heading {
-  text-align: center;
-}
 .ui.header .dark-button {
   color: var(--white);
   width: 20px;
