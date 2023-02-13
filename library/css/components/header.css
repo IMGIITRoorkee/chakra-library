@@ -6,7 +6,9 @@
   margin-top: 50px;
   padding-bottom: 15px;
 }
-
+.dark .ui.main-head > .logo > img {
+  content: url("http://localhost:5500/library/assets/images/iitr logo white.png");
+}
 .ui.header .darkmode {
   display: flex;
   flex-direction: row;
@@ -110,7 +112,7 @@
   gap: 1rem;
 }
 .ui.header .logo {
-  width: 80px;
+  width: 360px;
   max-width: 20rem;
   cursor: pointer;
 }
@@ -196,7 +198,7 @@
     display: unset;
   }
   .ui.header .logo {
-    width: 70px;
+    width: 240px;
     max-width: 15rem;
     margin: auto;
   }
@@ -279,7 +281,7 @@
     max-width: 95%;
   }
   .ui.header .logo {
-    width: 40px;
+    width: 200px;
   }
   .ui.header .g20-logo {
     width: 60px;
