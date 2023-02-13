@@ -41,7 +41,6 @@ div.flexbox .menuItem {
     width: 80%;
     min-width: max-content;
     position: relative;
-    gap: 5px;
     justify-content: space-between;
   }
   .menuItem > a {
@@ -53,7 +52,7 @@ div.flexbox .menuItem {
   .menuContainer div.flexbox a {
     color: var(--black) !important;
     font-family: var(--font-lato) !important;
-    font-size: 1rem !important;
+    font-size: 15px !important;
     text-decoration: none;
     padding: 5px;
   }
@@ -168,7 +167,7 @@ div.flexbox .menuItem {
   .menuContainer div.flexbox a {
     color: var(--black);
     font-family: var(--font-lato);
-    font-size: 12px !important;
+    font-size: 11px !important;
     text-decoration: none;
     padding: 5px;
   }
@@ -179,8 +178,11 @@ div.flexbox .menuItem {
     position: absolute;
     z-index: 10;
   }
+  .hamburger-container {
+    margin-left: 1rem;
+  }
   .menuContainer div.flexbox {
-    padding-left: 0px !important;
+    padding-left: 10px;
     /* margin-top: 10px; */
     display: flex;
     flex-direction: column;
