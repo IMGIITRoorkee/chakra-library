@@ -302,7 +302,7 @@
     display: none;
   }
   .footer-bottom-flex {
-    justify-content: flex-start;
+    justify-content: space-evenly;
     padding-left: 0.5rem;
   }
   .footer-bottom-flex > .totalviews {
@@ -316,8 +316,7 @@
     padding-left: 0.5rem;
   }
   .footer-accessibility-flex > .ui.link {
-    margin: 0rem 0rem;
-    width: 7rem;
+    margin: 0rem 0.5rem;
   }
   .footer-right {
     align-content: flex-start;
@@ -350,5 +349,13 @@
   }
   .footer > .footer-mid {
     padding: 0% 10%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .footer > .footer-mid {
+    flex-direction: column;
+  }
+  .footer-accessibility-flex > .ui.link {
+    font-size: 14px;
   }
 }

@@ -10,1237 +10,776 @@
 </head>
 
 <body class="light">
-    <div class="ui  header">
-        <div class="ui main-head">
-            <div id="hamBurger" class="hamburger-container">
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16px"
-                    height="21px" viewBox="0 0 32 21" version="1.1">
-                    <g id="surface1">
-                        <path style="
-                  stroke: none;
-                  fill-rule: nonzero;
-                  fill: rgb(0%, 0%, 0%);
-                  fill-opacity: 1;
-                " d="M 0 16.960938 L 0 20.191406 L 32 20.191406 L 32 16.960938 Z M 0 8.882812 L 0 12.117188 L 32 12.117188 L 32 8.882812 Z M 0 0.808594 L 0 4.039062 L 32 4.039062 L 32 0.808594 Z M 0 0.808594 ">
-                        </path>
-                    </g>
-                </svg>
-            </div>
-            <div class="logo">
-                <img src="https://cmsredesign.channeli.in/library/assets/images/iitrLogo.png" alt="" width="100%" />
-            </div>
-            <div class="upperleft">
-                <div class="accessibility">
-                    <div class="language">
-                        <a class="ui link">&#x0939;&#x093F;&#x0928;&#x094D;&#x0926;&#x0940;</a>
-                        &#9474;<a class="ui link">Eng</a>
-                    </div>
-                    <div class="sizechange">
-                        <div class="small">
-                            <img class="ui icon" data-icon="text_small" />
-                        </div>
-                        <div class="medium">
-                            <img class="ui icon" data-icon="text_medium" />
-                        </div>
-                        <div class="big">
-                            <img class="ui icon" data-icon="text_big" />
-                        </div>
-                    </div>
-    
-                    <div class="darkmode">
-                        <div class="light-button" onclick="contrast_light()">A</div>
-                        <div class="dark-button" onclick="contrast_dark()">A</div>
-                    </div>
-                    <div class="page-search">
-                        <img class="ui icon" data-icon="search" />
-                    </div>
-                </div>
-                <div class="page-options">
-                    <div>CALENDER</div>
-                    <div>CONTACT US</div>
-                    <div>DIRECTORY</div>
-                </div>
-            </div>
+    <div class="ui header">
+      <div class="ui main-head">
+        <div id="hamBurger" class="hamburger-container">
+          <img class="ui icon" data-icon="hamburger" />
         </div>
+        <div class="logo">
+          <img
+            onclick='window.location="https://iitr.ac.in"'
+            src="http://cmsredesign.channeli.in/library/assets/images/iitrLogo.png"
+            alt=""
+            width="100%"
+          />
+        </div>
+        <div class="g20-logo">
+          <img
+            onclick='window.open("https://www.g20.org/en/", "_blank")'
+            src="http://cmsredesign.channeli.in/library/assets/images/g20-logo.png"
+            alt=""
+            width="100%"
+          />
+        </div>
+        <div class="upperleft">
+          <div class="accessibility">
+            <div class="sizechange">
+              <div class="small">
+                <img class="ui icon" data-icon="text_small" />
+              </div>
+              <div class="medium">
+                <img class="ui icon" data-icon="text_medium" />
+              </div>
+              <div class="big">
+                <img class="ui icon" data-icon="text_big" />
+              </div>
+            </div>
+
+            <div class="darkmode">
+              <div class="light-button" onclick="contrast_light()">A</div>
+              <div class="dark-button" onclick="contrast_dark()">A</div>
+            </div>
+            <div class="webmail">
+              <a href="https://newwebmail.iitr.ac.in/">
+                <img class="ui icon" data-icon="email"
+              /></a>
+            </div>
+            <div class="page-search">
+              <img class="ui icon" data-icon="search" onclick="open_search()" />
+            </div>
+          </div>
+          <div class="page-options">
+            <span class="language">
+              <a>&#x0939;&#x093F;&#x0928;&#x094D;&#x0926;&#x0940;</a>
+              &#9474;<a>Eng</a></span
+            >
+            <a href="https://iitr.ac.in/calendar/">CALENDAR</a>
+            <a href="https://iitr.ac.in/Institute/Contact%20Us.html"
+              >CONTACT US</a
+            >
+            <a href="https://iitr.ac.in/support/td/">DIRECTORY</a>
+          </div>
+        </div>
+      </div>
     </div>
-        
-
     <div class="menuContainer">
-        <div class="ui flexbox">
-            <div class="menuItem">
-                <a href="#">
-                    <div class="ui icon-typography">
-                        <div class="ui intro-text">
-                            Institute
-                        </div>
-                        <img data-icon="dropdown" class="ui icon">
-
-                        </img>
-                    </div>
-                </a>
-
-                <ul>
-                    <div class="menuItem">
-                        <a href="#">
-                            <div class="ui icon-typography">
-                                <div class="ui intro-text">
-                                    About The Institute
-                                </div>
-                                <img data-icon="dropdown" class="ui icon">
-
-                                </img>
-                            </div>
-                        </a>
-                        <ul>
-                            <div class="menuItem">
-                                <a href="/institute/pages/about.html">
-                                    <div class="ui intro-text">About</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Institute_Time_Capsule.html">
-                                    <div class="ui intro-text">Institute Time Capsule</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/IITR_By_Numbers.html">
-                                    <div class="ui intro-text">IITR By Numbers</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Governing_Actshtml">
-                                    Governing Acts
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Luminaries.html">
-                                    Luminaries
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/How+To+Reach+Geography+Weather.html">
-                                    How To Reach and Geography-Weather
-                                </a>
-                            </div>
-                        </ul>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/International_Relations.html">
-                            International Relations
-                        </a>
-                    </div>
-                    <div class="menuItem">
-                        <a href="#">
-                            <div class="ui icon-typography">
-                                <div class="ui intro-text">
-                                    About The Institute
-                                </div>
-                                <img data-icon="dropdown" class="ui icon">
-
-                                </img>
-                            </div>
-                        </a>
-                        <ul>
-                            <div class="menuItem">
-                                <a href="/institute/pages/about.html">
-                                    <div class="ui intro-text">About</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Institute_Time_Capsule.html">
-                                    <div class="ui intro-text">Institute Time Capsule</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/IITR_By_Numbers.html">
-                                    <div class="ui intro-text">IITR By Numbers</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Governing_Actshtml">
-                                    Governing Acts
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Luminaries.html">
-                                    Luminaries
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/How+To+Reach+Geography+Weather.html">
-                                    How To Reach and Geography-Weather
-                                </a>
-                            </div>
-                        </ul>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/newsroom.html">Newsroom</a>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/Alumini_Relations.html">
-                            Alumini Relations
-                        </a>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/Convocation.html"> Convocation </a>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/Gallery.html"> Gallery </a>
-                    </div>
-                </ul>
+      <div class="ui flexbox">
+        <div class="menuItem">
+          <a href="https://iitr.ac.in/Institute/index.html">
+            <div class="ui icon-typography">
+              <div class="ui intro-text">Institute</div>
+              <img
+                data-icon="dropdown"
+                height=""
+                width=""
+                class="ui icon icon_image"
+                src="https://cmsredesign.channeli.in/library/assets/icons/dropdown.svg"
+                onmouseover="hover(this)"
+                onmouseout="unhover(this)"
+              />
+            </div>
+          </a>
+          <ul>
+            <div class="menuItem menuParentNode">
+              <a
+                href="https://iitr.ac.in/Institute/About the Institute/index.html"
+              >
+                <div class="ui icon-typography">
+                  <div class="ui intro-text">About the Institute</div>
+                  <img
+                    data-icon="dropdown"
+                    height=""
+                    width=""
+                    class="ui icon icon_image"
+                    src="https://cmsredesign.channeli.in/library/assets/icons/dropdown.svg"
+                    onmouseover="hover(this)"
+                    onmouseout="unhover(this)"
+                  />
+                </div>
+              </a>
+              <ul>
+                <div class="menuItem">
+                  <a
+                    href="https://iitr.ac.in/Institute/About the Institute/Institute Time Capsule.html"
+                  >
+                    <div class="ui intro-text">Institute Time Capsule</div>
+                  </a>
+                </div>
+                <div class="menuItem">
+                  <a
+                    href="https://iitr.ac.in/Institute/About the Institute/IITR by Numbers.html"
+                  >
+                    <div class="ui intro-text">IITR By Numbers</div>
+                  </a>
+                </div>
+                <div class="menuItem">
+                  <a
+                    href="https://iitr.ac.in/Institute/About the Institute/Luminaries.html"
+                  >
+                    <div class="ui intro-text">Luminaries</div>
+                  </a>
+                </div>
+                <div class="menuItem">
+                  <a
+                    href="https://iitr.ac.in/Institute/About the Institute/Governing Acts.html"
+                  >
+                    <div class="ui intro-text">Governing Acts</div>
+                  </a>
+                </div>
+              </ul>
             </div>
             <div class="menuItem">
-                <a href="#">
-                    <div class="ui icon-typography">
-                        <div class="ui intro-text">
-                            Institute
-                        </div>
-                        <img data-icon="dropdown" class="ui icon">
-
-                        </img>
-                    </div>
-                </a>
-
-                <ul>
-                    <div class="menuItem">
-                        <a href="#">
-                            <div class="ui icon-typography">
-                                <div class="ui intro-text">
-                                    Campus
-                                </div>
-                                <img data-icon="dropdown" class="ui icon">
-
-                                </img>
-                            </div>
-                        </a>
-                        <ul>
-                            <div class="menuItem">
-                                <a href="/institute/pages/about.html">About</a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Institute_Time_Capsule.html">
-                                    Institute Time Capsule
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/IITR_By_Numbers.html">
-                                    IITR By Numbers
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Governing_Actshtml">
-                                    Governing Acts
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Luminaries.html">
-                                    Luminaries
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/How+To+Reach+Geography+Weather.html">
-                                    How To Reach and Geography-Weather
-                                </a>
-                            </div>
-                        </ul>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/newsroom.html">Newsroom</a>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/International_Relations.html">
-                            International Relations
-                        </a>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/Alumini_Relations.html">
-                            Alumini Relations
-                        </a>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/Convocation.html"> Convocation </a>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/Gallery.html"> Gallery </a>
-                    </div>
-                </ul>
+              <a href="https://iitr.ac.in/Institute/Newsroom.html">
+                <div class="ui intro-text">Newsroom</div>
+              </a>
+            </div>
+          </ul>
+        </div>
+        <div class="menuItem">
+          <a href="https://iitr.ac.in/Academics/Admission.html">
+            <div class="ui icon-typography">
+              <div class="ui intro-text">Admissions</div>
+              <img
+                data-icon="dropdown"
+                height=""
+                width=""
+                class="ui icon icon_image"
+                src="https://cmsredesign.channeli.in/library/assets/icons/dropdown.svg"
+                onmouseover="hover(this)"
+                onmouseout="unhover(this)"
+              />
+            </div>
+          </a>
+          <ul>
+            <div class="menuItem">
+              <a
+                href="https://iitr.ac.in/Academics/Admission To Undergraduate Programmes.html"
+              >
+                <div class="ui intro-text">UG Admissions</div>
+              </a>
             </div>
             <div class="menuItem">
-                <a href="#">
-                    <div class="ui icon-typography">
-                        <div class="ui intro-text">
-                            Institute
-                        </div>
-                        <img data-icon="dropdown" class="ui icon">
-
-                        </img>
-                    </div>
-                </a>
-
-                <ul>
-                    <div class="menuItem">
-                        <a href="#">
-                            <div class="ui icon-typography">
-                                <div class="ui intro-text">
-                                    About The Institute
-                                </div>
-                                <img data-icon="dropdown" class="ui icon">
-
-                                </img>
-                            </div>
-                        </a>
-                        <ul>
-                            <div class="menuItem">
-                                <a href="/institute/pages/about.html">About</a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Institute_Time_Capsule.html">
-                                    Institute Time Capsule
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/IITR_By_Numbers.html">
-                                    IITR By Numbers
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Governing_Actshtml">
-                                    Governing Acts
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Luminaries.html">
-                                    Luminaries
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/How+To+Reach+Geography+Weather.html">
-                                    How To Reach and Geography-Weather
-                                </a>
-                            </div>
-                        </ul>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/newsroom.html">Newsroom</a>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/International_Relations.html">
-                            International Relations
-                        </a>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/Alumini_Relations.html">
-                            Alumini Relations
-                        </a>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/Convocation.html"> Convocation </a>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/Gallery.html"> Gallery </a>
-                    </div>
-                </ul>
+              <a
+                href="https://iitr.ac.in/Academics/Admission To Postgraduate Programmes.html"
+              >
+                <div class="ui intro-text">PG Admissions</div>
+              </a>
             </div>
             <div class="menuItem">
-                <a href="#">
-                    <div class="ui icon-typography">
-                        <div class="ui intro-text">
-                            Institute
-                        </div>
-                        <img data-icon="dropdown" class="ui icon">
-
-                        </img>
-                    </div>
-                </a>
-
-                <ul>
-                    <div class="menuItem">
-                        <a href="#">
-                            <div class="ui icon-typography">
-                                <div class="ui intro-text">
-                                    About The Institute
-                                </div>
-                                <img data-icon="dropdown" class="ui icon">
-
-                                </img>
-                            </div>
-                        </a>
-                        <ul>
-                            <div class="menuItem">
-                                <a href="/institute/pages/about.html">
-                                    <div class="ui intro-text">About</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Institute_Time_Capsule.html">
-                                    <div class="ui intro-text">Institute Time Capsule</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/IITR_By_Numbers.html">
-                                    <div class="ui intro-text">IITR By Numbers</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Governing_Actshtml">
-                                    Governing Acts
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Luminaries.html">
-                                    Luminaries
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/How+To+Reach+Geography+Weather.html">
-                                    How To Reach and Geography-Weather
-                                </a>
-                            </div>
-                        </ul>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/International_Relations.html">
-                            International Relations
-                        </a>
-                    </div>
-                    <div class="menuItem">
-                        <a href="#">
-                            <div class="ui icon-typography">
-                                <div class="ui intro-text">
-                                    About The Institute
-                                </div>
-                                <img data-icon="dropdown" class="ui icon">
-
-                                </img>
-                            </div>
-                        </a>
-                        <ul>
-                            <div class="menuItem">
-                                <a href="/institute/pages/about.html">
-                                    <div class="ui intro-text">About</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Institute_Time_Capsule.html">
-                                    <div class="ui intro-text">Institute Time Capsule</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/IITR_By_Numbers.html">
-                                    <div class="ui intro-text">IITR By Numbers</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Governing_Actshtml">
-                                    Governing Acts
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Luminaries.html">
-                                    Luminaries
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/How+To+Reach+Geography+Weather.html">
-                                    How To Reach and Geography-Weather
-                                </a>
-                            </div>
-                        </ul>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/newsroom.html">Newsroom</a>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/Alumini_Relations.html">
-                            Alumini Relations
-                        </a>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/Convocation.html"> Convocation </a>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/Gallery.html"> Gallery </a>
-                    </div>
-                </ul>
+              <a
+                href="https://iitr.ac.in/Academics/Admission To Doctoral Programmes.html"
+              >
+                <div class="ui intro-text">PHD Admissions</div>
+              </a>
+            </div>
+          </ul>
+        </div>
+        <div class="menuItem">
+          <a href="https://iitr.ac.in/Administration/index.html">
+            <div class="ui icon-typography">
+              <div class="ui intro-text">Administration</div>
+              <img
+                data-icon="dropdown"
+                height=""
+                width=""
+                class="ui icon icon_image"
+                src="https://cmsredesign.channeli.in/library/assets/icons/dropdown.svg"
+                onmouseover="hover(this)"
+                onmouseout="unhover(this)"
+              />
+            </div>
+          </a>
+          <ul>
+            <div class="menuItem">
+              <a href="https://iitr.ac.in/Administration/Senate.html">
+                <div class="ui intro-text">Senate</div>
+              </a>
             </div>
             <div class="menuItem">
-                <a href="#">
-                    <div class="ui icon-typography">
-                        <div class="ui intro-text">
-                            Institute
-                        </div>
-                        <img data-icon="dropdown" class="ui icon">
-
-                        </img>
-                    </div>
-                </a>
-
-                <ul>
-                    <div class="menuItem">
-                        <a href="#">
-                            <div class="ui icon-typography">
-                                <div class="ui intro-text">
-                                    About The Institute
-                                </div>
-                                <img data-icon="dropdown" class="ui icon">
-
-                                </img>
-                            </div>
-                        </a>
-                        <ul>
-                            <div class="menuItem">
-                                <a href="/institute/pages/about.html">
-                                    <div class="ui intro-text">About</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Institute_Time_Capsule.html">
-                                    <div class="ui intro-text">Institute Time Capsule</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/IITR_By_Numbers.html">
-                                    <div class="ui intro-text">IITR By Numbers</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Governing_Actshtml">
-                                    Governing Acts
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Luminaries.html">
-                                    Luminaries
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/How+To+Reach+Geography+Weather.html">
-                                    How To Reach and Geography-Weather
-                                </a>
-                            </div>
-                        </ul>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/International_Relations.html">
-                            International Relations
-                        </a>
-                    </div>
-                    <div class="menuItem">
-                        <a href="#">
-                            <div class="ui icon-typography">
-                                <div class="ui intro-text">
-                                    About The Institute
-                                </div>
-                                <img data-icon="dropdown" class="ui icon">
-
-                                </img>
-                            </div>
-                        </a>
-                        <ul>
-                            <div class="menuItem">
-                                <a href="/institute/pages/about.html">
-                                    <div class="ui intro-text">About</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Institute_Time_Capsule.html">
-                                    <div class="ui intro-text">Institute Time Capsule</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/IITR_By_Numbers.html">
-                                    <div class="ui intro-text">IITR By Numbers</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Governing_Actshtml">
-                                    Governing Acts
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Luminaries.html">
-                                    Luminaries
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/How+To+Reach+Geography+Weather.html">
-                                    How To Reach and Geography-Weather
-                                </a>
-                            </div>
-                        </ul>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/newsroom.html">Newsroom</a>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/Alumini_Relations.html">
-                            Alumini Relations
-                        </a>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/Convocation.html"> Convocation </a>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/Gallery.html"> Gallery </a>
-                    </div>
-                </ul>
+              <a
+                href="https://iitr.ac.in/Administration/Student Affairs Council.html"
+              >
+                <div class="ui intro-text">Student Affairs Council</div>
+              </a>
             </div>
             <div class="menuItem">
-                <a href="#">
-                    <div class="ui icon-typography">
-                        <div class="ui intro-text">
-                            Institute
-                        </div>
-                        <img data-icon="dropdown" class="ui icon">
-
-                        </img>
-                    </div>
-                </a>
-
-                <ul>
-                    <div class="menuItem">
-                        <a href="#">
-                            <div class="ui icon-typography">
-                                <div class="ui intro-text">
-                                    About The Institute
-                                </div>
-                                <img data-icon="dropdown" class="ui icon">
-
-                                </img>
-                            </div>
-                        </a>
-                        <ul>
-                            <div class="menuItem">
-                                <a href="/institute/pages/about.html">
-                                    <div class="ui intro-text">About</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Institute_Time_Capsule.html">
-                                    <div class="ui intro-text">Institute Time Capsule</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/IITR_By_Numbers.html">
-                                    <div class="ui intro-text">IITR By Numbers</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Governing_Actshtml">
-                                    Governing Acts
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Luminaries.html">
-                                    Luminaries
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/How+To+Reach+Geography+Weather.html">
-                                    How To Reach and Geography-Weather
-                                </a>
-                            </div>
-                        </ul>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/International_Relations.html">
-                            International Relations
-                        </a>
-                    </div>
-                    <div class="menuItem">
-                        <a href="#">
-                            <div class="ui icon-typography">
-                                <div class="ui intro-text">
-                                    About The Institute
-                                </div>
-                                <img data-icon="dropdown" class="ui icon">
-
-                                </img>
-                            </div>
-                        </a>
-                        <ul>
-                            <div class="menuItem">
-                                <a href="/institute/pages/about.html">
-                                    <div class="ui intro-text">About</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Institute_Time_Capsule.html">
-                                    <div class="ui intro-text">Institute Time Capsule</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/IITR_By_Numbers.html">
-                                    <div class="ui intro-text">IITR By Numbers</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Governing_Actshtml">
-                                    Governing Acts
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Luminaries.html">
-                                    Luminaries
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/How+To+Reach+Geography+Weather.html">
-                                    How To Reach and Geography-Weather
-                                </a>
-                            </div>
-                        </ul>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/newsroom.html">Newsroom</a>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/Alumini_Relations.html">
-                            Alumini Relations
-                        </a>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/Convocation.html"> Convocation </a>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/Gallery.html"> Gallery </a>
-                    </div>
-                </ul>
+              <a
+                href="https://iitr.ac.in/Administration/Deans Structure/index.html"
+              >
+                <div class="ui intro-text">Deans Corner</div>
+              </a>
             </div>
             <div class="menuItem">
-                <a href="#">
-                    <div class="ui icon-typography">
-                        <div class="ui intro-text">
-                            Institute
-                        </div>
-                        <img data-icon="dropdown" class="ui icon">
-
-                        </img>
-                    </div>
-                </a>
-
-                <ul>
-                    <div class="menuItem">
-                        <a href="#">
-                            <div class="ui icon-typography">
-                                <div class="ui intro-text">
-                                    About The Institute
-                                </div>
-                                <img data-icon="dropdown" class="ui icon">
-
-                                </img>
-                            </div>
-                        </a>
-                        <ul>
-                            <div class="menuItem">
-                                <a href="/institute/pages/about.html">
-                                    <div class="ui intro-text">About</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Institute_Time_Capsule.html">
-                                    <div class="ui intro-text">Institute Time Capsule</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/IITR_By_Numbers.html">
-                                    <div class="ui intro-text">IITR By Numbers</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Governing_Actshtml">
-                                    Governing Acts
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Luminaries.html">
-                                    Luminaries
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/How+To+Reach+Geography+Weather.html">
-                                    How To Reach and Geography-Weather
-                                </a>
-                            </div>
-                        </ul>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/International_Relations.html">
-                            International Relations
-                        </a>
-                    </div>
-                    <div class="menuItem">
-                        <a href="#">
-                            <div class="ui icon-typography">
-                                <div class="ui intro-text">
-                                    About The Institute
-                                </div>
-                                <img data-icon="dropdown" class="ui icon">
-
-                                </img>
-                            </div>
-                        </a>
-                        <ul>
-                            <div class="menuItem">
-                                <a href="/institute/pages/about.html">
-                                    <div class="ui intro-text">About</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Institute_Time_Capsule.html">
-                                    <div class="ui intro-text">Institute Time Capsule</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/IITR_By_Numbers.html">
-                                    <div class="ui intro-text">IITR By Numbers</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Governing_Actshtml">
-                                    Governing Acts
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Luminaries.html">
-                                    Luminaries
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/How+To+Reach+Geography+Weather.html">
-                                    How To Reach and Geography-Weather
-                                </a>
-                            </div>
-                        </ul>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/newsroom.html">Newsroom</a>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/Alumini_Relations.html">
-                            Alumini Relations
-                        </a>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/Convocation.html"> Convocation </a>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/Gallery.html"> Gallery </a>
-                    </div>
-                </ul>
+              <a
+                href="https://iitr.ac.in/Administration/Institute Central Administration.html"
+              >
+                <div class="ui intro-text">
+                  Institute Central Administration
+                </div>
+              </a>
             </div>
             <div class="menuItem">
-                <a href="#">
-                    <div class="ui icon-typography">
-                        <div class="ui intro-text">
-                            Institute
-                        </div>
-                        <img data-icon="dropdown" class="ui icon">
-
-                        </img>
-                    </div>
-                </a>
-
-                <ul>
-                    <div class="menuItem">
-                        <a href="#">
-                            <div class="ui icon-typography">
-                                <div class="ui intro-text">
-                                    About The Institute
-                                </div>
-                                <img data-icon="dropdown" class="ui icon">
-
-                                </img>
-                            </div>
-                        </a>
-                        <ul>
-                            <div class="menuItem">
-                                <a href="/institute/pages/about.html">
-                                    <div class="ui intro-text">About</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Institute_Time_Capsule.html">
-                                    <div class="ui intro-text">Institute Time Capsule</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/IITR_By_Numbers.html">
-                                    <div class="ui intro-text">IITR By Numbers</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Governing_Actshtml">
-                                    Governing Acts
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Luminaries.html">
-                                    Luminaries
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/How+To+Reach+Geography+Weather.html">
-                                    How To Reach and Geography-Weather
-                                </a>
-                            </div>
-                        </ul>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/International_Relations.html">
-                            International Relations
-                        </a>
-                    </div>
-                    <div class="menuItem">
-                        <a href="#">
-                            <div class="ui icon-typography">
-                                <div class="ui intro-text">
-                                    About The Institute
-                                </div>
-                                <img data-icon="dropdown" class="ui icon">
-
-                                </img>
-                            </div>
-                        </a>
-                        <ul>
-                            <div class="menuItem">
-                                <a href="/institute/pages/about.html">
-                                    <div class="ui intro-text">About</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Institute_Time_Capsule.html">
-                                    <div class="ui intro-text">Institute Time Capsule</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/IITR_By_Numbers.html">
-                                    <div class="ui intro-text">IITR By Numbers</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Governing_Actshtml">
-                                    Governing Acts
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Luminaries.html">
-                                    Luminaries
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/How+To+Reach+Geography+Weather.html">
-                                    How To Reach and Geography-Weather
-                                </a>
-                            </div>
-                        </ul>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/newsroom.html">Newsroom</a>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/Alumini_Relations.html">
-                            Alumini Relations
-                        </a>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/Convocation.html"> Convocation </a>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/Gallery.html"> Gallery </a>
-                    </div>
-                </ul>
+              <a href="https://iitr.ac.in/Administration/Organisations.html">
+                <div class="ui intro-text">Organisations</div>
+              </a>
+            </div>
+          </ul>
+        </div>
+        <div class="menuItem">
+          <a href="https://iitr.ac.in/Academics/Home.html" class="">
+            <div class="ui icon-typography">
+              <div class="ui intro-text">Academics</div>
+              <img
+                data-icon="dropdown"
+                height=""
+                width=""
+                class="ui icon icon_image"
+                src="https://cmsredesign.channeli.in/library/assets/icons/dropdown.svg"
+                onmouseover="hover(this)"
+                onmouseout="unhover(this)"
+              />
+            </div>
+          </a>
+          <ul class="">
+            <div class="menuItem">
+              <a href="https://iitr.ac.in/Academics/Notifications.html">
+                <div class="ui intro-text">Notifications</div>
+              </a>
             </div>
             <div class="menuItem">
-                <a href="#">
-                    <div class="ui icon-typography">
-                        <div class="ui intro-text">
-                            Institute
-                        </div>
-                        <img data-icon="dropdown" class="ui icon">
-
-                        </img>
-                    </div>
-                </a>
-
-                <ul>
-                    <div class="menuItem">
-                        <a href="#">
-                            <div class="ui icon-typography">
-                                <div class="ui intro-text">
-                                    About The Institute
-                                </div>
-                                <img data-icon="dropdown" class="ui icon">
-
-                                </img>
-                            </div>
-                        </a>
-                        <ul>
-                            <div class="menuItem">
-                                <a href="/institute/pages/about.html">
-                                    <div class="ui intro-text">About</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Institute_Time_Capsule.html">
-                                    <div class="ui intro-text">Institute Time Capsule</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/IITR_By_Numbers.html">
-                                    <div class="ui intro-text">IITR By Numbers</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Governing_Actshtml">
-                                    Governing Acts
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Luminaries.html">
-                                    Luminaries
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/How+To+Reach+Geography+Weather.html">
-                                    How To Reach and Geography-Weather
-                                </a>
-                            </div>
-                        </ul>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/International_Relations.html">
-                            International Relations
-                        </a>
-                    </div>
-                    <div class="menuItem">
-                        <a href="#">
-                            <div class="ui icon-typography">
-                                <div class="ui intro-text">
-                                    About The Institute
-                                </div>
-                                <img data-icon="dropdown" class="ui icon">
-
-                                </img>
-                            </div>
-                        </a>
-                        <ul>
-                            <div class="menuItem">
-                                <a href="/institute/pages/about.html">
-                                    <div class="ui intro-text">About</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Institute_Time_Capsule.html">
-                                    <div class="ui intro-text">Institute Time Capsule</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/IITR_By_Numbers.html">
-                                    <div class="ui intro-text">IITR By Numbers</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Governing_Actshtml">
-                                    Governing Acts
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Luminaries.html">
-                                    Luminaries
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/How+To+Reach+Geography+Weather.html">
-                                    How To Reach and Geography-Weather
-                                </a>
-                            </div>
-                        </ul>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/newsroom.html">Newsroom</a>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/Alumini_Relations.html">
-                            Alumini Relations
-                        </a>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/Convocation.html"> Convocation </a>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/Gallery.html"> Gallery </a>
-                    </div>
-                </ul>
+              <a href="https://iitr.ac.in/Academics/Academic Calendar.html">
+                <div class="ui intro-text">Academic Calendar</div>
+              </a>
             </div>
             <div class="menuItem">
-                <a href="#">
-                    <div class="ui icon-typography">
-                        <div class="ui intro-text">
-                            Institute
-                        </div>
-                        <img data-icon="dropdown" class="ui icon">
-
-                        </img>
-                    </div>
-                </a>
-
-                <ul>
-                    <div class="menuItem">
-                        <a href="#">
-                            <div class="ui icon-typography">
-                                <div class="ui intro-text">
-                                    About The Institute
-                                </div>
-                                <img data-icon="dropdown" class="ui icon">
-
-                                </img>
-                            </div>
-                        </a>
-                        <ul>
-                            <div class="menuItem">
-                                <a href="/institute/pages/about.html">
-                                    <div class="ui intro-text">About</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Institute_Time_Capsule.html">
-                                    <div class="ui intro-text">Institute Time Capsule</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/IITR_By_Numbers.html">
-                                    <div class="ui intro-text">IITR By Numbers</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Governing_Actshtml">
-                                    Governing Acts
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Luminaries.html">
-                                    Luminaries
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/How+To+Reach+Geography+Weather.html">
-                                    How To Reach and Geography-Weather
-                                </a>
-                            </div>
-                        </ul>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/International_Relations.html">
-                            International Relations
-                        </a>
-                    </div>
-                    <div class="menuItem">
-                        <a href="#">
-                            <div class="ui icon-typography">
-                                <div class="ui intro-text">
-                                    About The Institute
-                                </div>
-                                <img data-icon="dropdown" class="ui icon">
-
-                                </img>
-                            </div>
-                        </a>
-                        <ul>
-                            <div class="menuItem">
-                                <a href="/institute/pages/about.html">
-                                    <div class="ui intro-text">About</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Institute_Time_Capsule.html">
-                                    <div class="ui intro-text">Institute Time Capsule</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/IITR_By_Numbers.html">
-                                    <div class="ui intro-text">IITR By Numbers</div>
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Governing_Actshtml">
-                                    Governing Acts
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/Luminaries.html">
-                                    Luminaries
-                                </a>
-                            </div>
-                            <div class="menuItem">
-                                <a href="/institute/pages/How+To+Reach+Geography+Weather.html">
-                                    How To Reach and Geography-Weather
-                                </a>
-                            </div>
-                        </ul>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/newsroom.html">Newsroom</a>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/Alumini_Relations.html">
-                            Alumini Relations
-                        </a>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/Convocation.html"> Convocation </a>
-                    </div>
-                    <div class="menuItem">
-                        <a href="/institute/pages/Gallery.html"> Gallery </a>
-                    </div>
-                </ul>
+              <a href="https://iitr.ac.in/Academics/Institute Fees.html">
+                <div class="ui intro-text">Fee Structure</div>
+              </a>
             </div>
-            <ul class="accessibility-hamburger">
-                <li>
-                    <div>
-                        <div class="ABox" onclick="contrast_light()">
-                            <svg width="10" height="11" viewBox="0 0 10 11" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M6.608 7.276L5.033 3.195C4.98633 3.07367 4.93733 2.93367 4.886 2.775C4.83467 2.61167 4.78567 2.439 4.739 2.257C4.641 2.635 4.54067 2.95 4.438 3.202L2.863 7.276H6.608ZM9.436 11H8.386C8.26467 11 8.16667 10.9697 8.092 10.909C8.01733 10.8483 7.96133 10.7713 7.924 10.678L6.986 8.256H2.485L1.547 10.678C1.519 10.762 1.46533 10.8367 1.386 10.902C1.30667 10.9673 1.20867 11 1.092 11H0.042L4.053 0.968999H5.425L9.436 11Z"
-                                    fill="black" />
-                            </svg>
-                        </div>
-                        <div class="ABoxFilled" onclick="contrast_dark()">
-                            <svg width="10" height="11" viewBox="0 0 10 11" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M6.608 7.276L5.033 3.195C4.98633 3.07367 4.93733 2.93367 4.886 2.775C4.83467 2.61167 4.78567 2.439 4.739 2.257C4.641 2.635 4.54067 2.95 4.438 3.202L2.863 7.276H6.608ZM9.436 11H8.386C8.26467 11 8.16667 10.9697 8.092 10.909C8.01733 10.8483 7.96133 10.7713 7.924 10.678L6.986 8.256H2.485L1.547 10.678C1.519 10.762 1.46533 10.8367 1.386 10.902C1.30667 10.9673 1.20867 11 1.092 11H0.042L4.053 0.968999H5.425L9.436 11Z"
-                                    fill="white" />
-                            </svg>
-                        </div>
+            <div class="menuItem">
+              <a href="https://iitr.ac.in/Academics/Academic Programmes.html">
+                <div class="ui intro-text">Academic Programmes</div>
+              </a>
+            </div>
+            <div class="menuItem">
+              <a href="https://iitr.ac.in/Academics/Downloads.html">
+                <div class="ui intro-text">Downloads</div>
+              </a>
+            </div>
+            <div class="menuItem">
+              <a href="https://iitr.ac.in/Administration/DAPC.html">
+                <div class="ui intro-text">
+                  DAPC/CAPC/ScAPC and DRC/CRC/ScRC
+                </div>
+              </a>
+            </div>
+            <div class="menuItem">
+              <a href="https://acad.iitr.ac.in/">
+                <div class="ui intro-text">Academic login</div>
+              </a>
+            </div>
+          </ul>
+        </div>
+        <div class="menuItem">
+          <a href="https://iitr.ac.in/Campus Life/index.html">
+            <div class="ui icon-typography">
+              <div class="ui intro-text">Campus Life</div>
+              <img
+                data-icon="dropdown"
+                height=""
+                width=""
+                class="ui icon icon_image"
+                src="https://cmsredesign.channeli.in/library/assets/icons/dropdown.svg"
+                onmouseover="hover(this)"
+                onmouseout="unhover(this)"
+              />
+            </div>
+          </a>
+          <ul>
+            <div class="menuItem">
+              <a href="https://iitr.ac.in/Campus Life/Hostels.html">
+                <div class="ui intro-text">Hostel Life</div>
+              </a>
+            </div>
+            <div class="menuItem">
+              <a
+                href="https://iitr.ac.in/Campus Life/Student Groups/index.html"
+              >
+                <div class="ui intro-text">Student Groups</div>
+              </a>
+            </div>
+            <div class="menuItem">
+              <a href="https://iitr.ac.in/Campus Life/Guest House/index.html">
+                <div class="ui intro-text">Guest House</div>
+              </a>
+            </div>
+            <div class="menuItem">
+              <a href="https://iitr.ac.in/Campus Life/Clubs/index.html">
+                <div class="ui intro-text">Clubs</div>
+              </a>
+            </div>
+            <div class="menuItem">
+              <a href="https://iitr.ac.in/Campus%20Life/Sports/index.html">
+                <div class="ui intro-text">Sports</div>
+              </a>
+            </div>
+            <div class="menuItem">
+              <a href="https://iitr.ac.in/Campus Life/Facilities/index.html">
+                <div class="ui intro-text">Facilities</div>
+              </a>
+            </div>
+            <div class="menuItem">
+              <a href="https://iitr.ac.in/Campus Life/Freshers’ FAQ/Home.html">
+                <div class="ui icon-typography">
+                  <div class="ui intro-text">Fresher's FAQ</div>
+                  <img
+                    data-icon="dropdown"
+                    height=""
+                    width=""
+                    class="ui icon icon_image"
+                    src="https://cmsredesign.channeli.in/library/assets/icons/dropdown.svg"
+                    onmouseover="hover(this)"
+                    onmouseout="unhover(this)"
+                  />
+                </div>
+              </a>
+            </div>
+          </ul>
+        </div>
+        <div class="menuItem">
+          <a href="https://iitr.ac.in/Departments/index.html" class="">
+            <div class="ui icon-typography">
+              <div class="ui intro-text">Departments</div>
+              <img
+                data-icon="dropdown"
+                height=""
+                width=""
+                class="ui icon icon_image"
+                src="https://cmsredesign.channeli.in/library/assets/icons/dropdown.svg"
+                onmouseover="hover(this)"
+                onmouseout="unhover(this)"
+              />
+            </div>
+          </a>
+          <ul class="">
+            <div class="menuItem">
+              <a href="https://iitr.ac.in/Departments/index.html">
+                <div class="ui intro-text">Departments</div>
+              </a>
+            </div>
+            <div class="menuItem">
+              <a href="https://iitr.ac.in/Centres/index.html">
+                <div class="ui intro-text">Centres</div>
+              </a>
+            </div>
+            <div class="menuItem">
+              <a href="https://www.iitr.ac.in/mfsdsai/">
+                <div class="ui intro-text">School</div>
+              </a>
+            </div>
+          </ul>
+        </div>
+        <div class="menuItem">
+          <a href="https://www.iitr.ac.in/sric/">
+            <div class="ui icon-typography">
+              <div class="ui intro-text">Research</div>
+              <img
+                data-icon="dropdown"
+                height=""
+                width=""
+                class="ui icon icon_image"
+                src="https://cmsredesign.channeli.in/library/assets/icons/dropdown.svg"
+                onmouseover="hover(this)"
+                onmouseout="unhover(this)"
+              />
+            </div>
+          </a>
+        </div>
+        <div class="menuItem">
+          <a href="https://iitr.ac.in/Careers/index.html">
+            <div class="ui icon-typography">
+              <div class="ui intro-text">Careers</div>
+              <img
+                data-icon="dropdown"
+                height=""
+                width=""
+                class="ui icon icon_image"
+                src="https://cmsredesign.channeli.in/library/assets/icons/dropdown.svg"
+                onmouseover="hover(this)"
+                onmouseout="unhover(this)"
+              />
+            </div>
+          </a>
+          <ul>
+            <div class="menuItem">
+              <a href="https://spark.iitr.ac.in">
+                <div class="ui intro-text">Intern@IITR (SPARK)</div>
+              </a>
+            </div>
+            <div class="menuItem">
+              <a href="https://iitr.ac.in/Careers/Faculty Positions/index.html">
+                <div class="ui intro-text">Faculty Positions</div>
+              </a>
+            </div>
+            <div class="menuItem menuParentNode">
+              <a
+                href="https://iitr.ac.in/Careers/Other job openings/index.html"
+              >
+                <div class="ui icon-typography">
+                  <div class="ui intro-text">Other Job Openings</div>
+                  <img
+                    data-icon="dropdown"
+                    height=""
+                    width=""
+                    class="ui icon icon_image"
+                    src="https://cmsredesign.channeli.in/library/assets/icons/dropdown.svg"
+                    onmouseover="hover(this)"
+                    onmouseout="unhover(this)"
+                  />
+                </div>
+              </a>
+              <ul>
+                <div class="menuItem">
+                  <a
+                    href="https://iitr.ac.in/Careers/Other job openings/Non-Teaching Jobs.html"
+                  >
+                    <div class="ui intro-text">Non Teaching Jobs</div>
+                  </a>
+                </div>
+                <div class="menuItem">
+                  <a
+                    href="https://iitr.ac.in/Careers/Other job openings/Post Doctoral Fellowship Position.html"
+                  >
+                    <div class="ui intro-text">
+                      Post Doctoral Fellowship Position
                     </div>
-                </li>
-
-                <li>
-                    <div class="sizechange">
-                        <div class="small">
-                            <img class="ui icon" data-icon="text_small" />
-                        </div>
-                        <div class="medium">
-                            <img class="ui icon" data-icon="text_medium" />
-                        </div>
-                        <div class="big">
-                            <img class="ui icon" data-icon="text_big" />
-                        </div>
-                    </div>
-                </li>
-                <li class="language">
-                    <a>&#x0939;&#x093F;&#x0928;&#x094D;&#x0926;&#x0940;</a>&#9474;<a>Eng</a>
-                </li>
-            </ul>
-            <ul class="contact">
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Directory</a></li>
-            </ul>
+                  </a>
+                </div>
+                <div class="menuItem">
+                  <a href="https://iitr.ac.in/Careers/Project Jobs.html">
+                    <div class="ui intro-text">Project Jobs</div>
+                  </a>
+                </div>
+              </ul>
+            </div>
+            <div class="menuItem">
+              <a
+                href="https://iitr.ac.in/Careers/Recruitment Exam Archives/index.html"
+              >
+                <div class="ui icon-typography">
+                  <div class="ui intro-text">Recruitment Examination</div>
+                  <img
+                    data-icon="dropdown"
+                    height=""
+                    width=""
+                    class="ui icon icon_image"
+                    src="https://cmsredesign.channeli.in/library/assets/icons/dropdown.svg"
+                    onmouseover="hover(this)"
+                    onmouseout="unhover(this)"
+                  />
+                </div>
+              </a>
+            </div>
+            <div class="menuItem">
+              <a href="https://iitr.ac.in/Careers/index.html">
+                <div class="ui icon-typography">
+                  <div class="ui intro-text">FAQ's</div>
+                  <img
+                    data-icon="dropdown"
+                    height=""
+                    width=""
+                    class="ui icon icon_image"
+                    src="https://cmsredesign.channeli.in/library/assets/icons/dropdown.svg"
+                    onmouseover="hover(this)"
+                    onmouseout="unhover(this)"
+                  />
+                </div>
+              </a>
+            </div>
+          </ul>
+        </div>
+        <div class="menuItem">
+          <a href="https://www.iitr.ac.in/Placements/pages/index.html" class="">
+            <div class="ui icon-typography">
+              <div class="ui intro-text">Placements</div>
+              <img
+                data-icon="dropdown"
+                height=""
+                width=""
+                class="ui icon icon_image"
+                src="https://cmsredesign.channeli.in/library/assets/icons/dropdown.svg"
+                onmouseover="hover(this)"
+                onmouseout="unhover(this)"
+              />
+            </div>
+          </a>
+          <ul class="">
+            <div class="menuItem">
+              <a
+                href="https://www.iitr.ac.in/Placements/pages/index.html#plprocedure"
+              >
+                <div class="ui intro-text">Procedure</div>
+              </a>
+            </div>
+          </ul>
+        </div>
+        <div class="menuItem">
+          <a href="https://iitr.ac.in/Resources/index.html" class="">
+            <div class="ui icon-typography">
+              <div class="ui intro-text">Resources</div>
+              <img
+                data-icon="dropdown"
+                height=""
+                width=""
+                class="ui icon icon_image"
+                src="https://cmsredesign.channeli.in/library/assets/icons/dropdown.svg"
+                onmouseover="hover(this)"
+                onmouseout="unhover(this)"
+              />
+            </div>
+          </a>
+          <ul class="">
+            <div class="menuItem">
+              <a href="https://mgcl.iitr.ac.in/">
+                <div class="ui intro-text">Library</div>
+              </a>
+            </div>
+            <div class="menuItem menuParentNode">
+              <a href="https://alumni.iitr.ac.in/home">
+                <div class="ui icon-typography">
+                  <div class="ui intro-text">For Alumni</div>
+                  <img
+                    data-icon="dropdown"
+                    height=""
+                    width=""
+                    class="ui icon icon_image"
+                    src="https://cmsredesign.channeli.in/library/assets/icons/dropdown.svg"
+                    onmouseover="hover(this)"
+                    onmouseout="unhover(this)"
+                  />
+                </div>
+              </a>
+              <ul style="left: -101%">
+                <div class="menuItem">
+                  <a href="https://www.iit.org/">
+                    <div class="ui intro-text">Pan IIT</div>
+                  </a>
+                </div>
+                <div class="menuItem">
+                  <a href="https://alumni.iitr.ac.in/home">
+                    <div class="ui intro-text">Other Alumni Portals</div>
+                  </a>
+                </div>
+              </ul>
+            </div>
+            <div class="menuItem">
+              <a href="https://iitr.ac.in/Resources/Healthcare/index.html">
+                <div class="ui intro-text">Healthcare</div>
+              </a>
+            </div>
+            <div class="menuItem menuParentNode">
+              <a href="https://iitr.ac.in/Resources/Funds Transfer/index.html">
+                <div class="ui icon-typography">
+                  <div class="ui intro-text">Funds Transfer</div>
+                  <img
+                    data-icon="dropdown"
+                    height=""
+                    width=""
+                    class="ui icon icon_image"
+                    src="https://cmsredesign.channeli.in/library/assets/icons/dropdown.svg"
+                    onmouseover="hover(this)"
+                    onmouseout="unhover(this)"
+                  />
+                </div>
+              </a>
+              <ul style="left: -101%">
+                <div class="menuItem">
+                  <a href="https://payment.iitr.ac.in/">
+                    <div class="ui intro-text">Payment Gateway</div>
+                  </a>
+                </div>
+                <div class="menuItem">
+                  <a
+                    href="https://iitr.ac.in/Resources/Funds Transfer/Online Fee Deposit.html"
+                  >
+                    <div class="ui intro-text">Online Fee Deposit</div>
+                  </a>
+                </div>
+              </ul>
+            </div>
+            <div class="menuItem menuParentNode">
+              <a
+                href="https://iitr.ac.in/Resources/Internal Committees/index.html"
+              >
+                <div class="ui icon-typography">
+                  <div class="ui intro-text">Internal Committees</div>
+                  <img
+                    data-icon="dropdown"
+                    height=""
+                    width=""
+                    class="ui icon icon_image"
+                    src="https://cmsredesign.channeli.in/library/assets/icons/dropdown.svg"
+                    onmouseover="hover(this)"
+                    onmouseout="unhover(this)"
+                  />
+                </div>
+              </a>
+              <ul style="left: -101%">
+                <div class="menuItem">
+                  <a href="https://www.iitr.ac.in/internalaudit/">
+                    <div class="ui intro-text">Internal Audit</div>
+                  </a>
+                </div>
+                <div class="menuItem">
+                  <a href="https://iitr.ac.in/internalcomplaintscommittee/">
+                    <div class="ui intro-text">Internal Complaints Council</div>
+                  </a>
+                </div>
+              </ul>
+            </div>
+            <div class="menuItem">
+              <a href="https://www.iitr.ac.in/support/">
+                <div class="ui intro-text">Services and Support</div>
+              </a>
+            </div>
+            <div class="menuItem">
+              <a href="https://iitr.ac.in/Resources/Administrative/Index.html">
+                <div class="ui intro-text">Administrative</div>
+              </a>
+            </div>
+            <div class="menuItem">
+              <a href="https://iitr.ac.in/Resources/Miscellaneous/index.html">
+                <div class="ui intro-text">Miscellaneous</div>
+              </a>
+            </div>
+            <div class="menuItem menuParentNode">
+              <a
+                href="https://iitr.ac.in/Resources/Initiatives and Foundations/index.html"
+              >
+                <div class="ui icon-typography">
+                  <div class="ui intro-text">Inititative and Foundations</div>
+                  <img
+                    data-icon="dropdown"
+                    height=""
+                    width=""
+                    class="ui icon icon_image"
+                    src="https://cmsredesign.channeli.in/library/assets/icons/dropdown.svg"
+                    onmouseover="hover(this)"
+                    onmouseout="unhover(this)"
+                  />
+                </div>
+              </a>
+              <ul style="left: -101%">
+                <div class="menuItem">
+                  <a href="https://www.iitr.ac.in/anushruti/index.html">
+                    <div class="ui intro-text">Anushruti Academy</div>
+                  </a>
+                </div>
+                <div class="menuItem">
+                  <a href="https://www.iitr-heritagefund.org/">
+                    <div class="ui intro-text">IITR Heritage Foundation</div>
+                  </a>
+                </div>
+                <div class="menuItem">
+                  <a href="https://www.iitrfoundation.org/">
+                    <div class="ui intro-text">IITR Foundation</div>
+                  </a>
+                </div>
+              </ul>
+            </div>
+            <div class="menuItem">
+              <a href="https://scsp.iitr.ac.in/">
+                <div class="ui intro-text">Scholarships</div>
+              </a>
+            </div>
+          </ul>
         </div>
 
+        <ul class="accessibility-hamburger">
+          <li>
+            <div>
+              <div class="ABox" onclick="contrast_light()">
+                <svg
+                  width="10"
+                  height="11"
+                  viewBox="0 0 10 11"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.608 7.276L5.033 3.195C4.98633 3.07367 4.93733 2.93367 4.886 2.775C4.83467 2.61167 4.78567 2.439 4.739 2.257C4.641 2.635 4.54067 2.95 4.438 3.202L2.863 7.276H6.608ZM9.436 11H8.386C8.26467 11 8.16667 10.9697 8.092 10.909C8.01733 10.8483 7.96133 10.7713 7.924 10.678L6.986 8.256H2.485L1.547 10.678C1.519 10.762 1.46533 10.8367 1.386 10.902C1.30667 10.9673 1.20867 11 1.092 11H0.042L4.053 0.968999H5.425L9.436 11Z"
+                    fill="black"
+                  ></path>
+                </svg>
+              </div>
+              <div class="ABoxFilled" onclick="contrast_dark()">
+                <svg
+                  width="10"
+                  height="11"
+                  viewBox="0 0 10 11"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.608 7.276L5.033 3.195C4.98633 3.07367 4.93733 2.93367 4.886 2.775C4.83467 2.61167 4.78567 2.439 4.739 2.257C4.641 2.635 4.54067 2.95 4.438 3.202L2.863 7.276H6.608ZM9.436 11H8.386C8.26467 11 8.16667 10.9697 8.092 10.909C8.01733 10.8483 7.96133 10.7713 7.924 10.678L6.986 8.256H2.485L1.547 10.678C1.519 10.762 1.46533 10.8367 1.386 10.902C1.30667 10.9673 1.20867 11 1.092 11H0.042L4.053 0.968999H5.425L9.436 11Z"
+                    fill="white"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="sizechange">
+              <div class="small">
+                <img
+                  class="ui icon icon_image"
+                  data-icon="text_small"
+                  src="https://cmsredesign.channeli.in/library/assets/icons/text-small.svg"
+                  onmouseover="hover(this)"
+                  onmouseout="unhover(this)"
+                />
+              </div>
+              <div class="medium">
+                <img
+                  class="ui icon icon_image"
+                  data-icon="text_medium"
+                  src="https://cmsredesign.channeli.in/library/assets/icons/text-medium.svg"
+                  onmouseover="hover(this)"
+                  onmouseout="unhover(this)"
+                />
+              </div>
+              <div class="big">
+                <img
+                  class="ui icon icon_image"
+                  data-icon="text_big"
+                  src="https://cmsredesign.channeli.in/library/assets/icons/text-big.svg"
+                  onmouseover="hover(this)"
+                  onmouseout="unhover(this)"
+                />
+              </div>
+            </div>
+          </li>
+          <li class="language"><a>हिन्दी</a>│<a>Eng</a></li>
+        </ul>
+
+        <ul class="contact">
+          <li><a href="#">Calendar</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Directory</a></li>
+          <li><a href="#">Webmail</a></li>
+        </ul>
+      </div>
     </div>
 
     <div class="ui full-width-container gradient-blue">
@@ -1470,156 +1009,188 @@
 
     <div class="footer-container">
         <div class="footer">
-            <div class="contact-info">
-                <div>
-                    <img src="../assets/images/iitrLogo.png" class="info-logo" />
-                </div>
-                <div class="footer-contact-wrapper">
-                    <div class="footer-map">
-                        <iframe width="160" height="120"
-                            src="https://maps.google.com/maps?q=iit%20roorkee&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                    </div>
-                    <div class="footer-contact-link-icons">
-                        <div class="footer-contact-info-detail-element">
-                            <img class="ui icon" data-icon="location" />
-                            <a class="footer-text"
-                                href="https://www.iitr.ac.in/institute/pages/How_to_reach_IIT_Roorkee.html">
-                                How to reach IIT Roorkee
-                            </a>
-                        </div>
-                        <div class="footer-contact-info-detail-element">
-                            <img class="ui icon" data-icon="phone" />
-                            <a class="footer-text" href="tel:+911332285311">
-                                +91-1332-285311
-                            </a>
-                        </div>
-                        <div class="footer-contact-info-detail-element">
-                            <img class="ui icon" data-icon="email" />
-                            <a class="footer-text" href="mailto:registrar@iitr.ac.in">
-                                registrar@iitr.ac.in
-                            </a>
-                        </div>
-                        <div class="footer-favicons">
-                            <a class="ui social-icon facebook_icon" href="https://www.facebook.com/"></a>
-                            <a class="ui social-icon youtube_icon" href="https://www.youtube.com/"></a>
-                            <a class="ui social-icon instagram_icon" href="https://www.instagram.com/"></a>
-                            <a class="ui social-icon linkedin_icon" href="https://www.linkedin.com/"></a>
-                            <a class="ui social-icon twitter_icon" href="https://www.twitter.com/"></a>
-                        </div>
-                    </div>
-                </div>
+          <div class="footer-left">
+            <div>
+              <img
+                onclick='window.location="https://iitr.ac.in"'
+                src="https://cmsredesign.channeli.in/library/assets/images/IITR175.png"
+                class="info-logo"
+              />
             </div>
-
-            <div class="links">
-                <div class="footer-lefts-left">
-                    <div class="footer-lefts-header">EXPLORE</div>
-
-                    <a class="ui link"
-                        href="https://www.iitr.ac.in/Main/pages/establishments+Establishment_Services.html">
-                        Administration
-                    </a>
-                    <a class="ui link" href="http://scsp.iitr.ac.in/">
-                        Awards and Honours
-                    </a>
-                    <a class="ui link" href="https://iitr.ac.in/Main/pages/_en_Departments__en_.html">
-                        Departments
-                    </a>
-                    <a class="ui link" href="https://ir.iitr.ac.in/">
-                        International Students
-                    </a>
-                    <a class="ui link" href="http://mm.iitr.ac.in/mmweb/">
-                        Tenders and Quotations
-                    </a>
-                    <a class="ui link" href="https://www.iitr.ac.in/rti/">
-                        RTI
-                    </a>
-                    <a class="ui link"
-                        href="https://www.iitr.ac.in/research/pages/Research_Summary+Industrial_Consultancy.html">
-                        Industry Consultation
-                    </a>
+            <div class="footer-left-wrapper">
+              <div class="footer-left-link-icons">
+                <div class="footer-left-detail-element">
+                  <img class="ui icon" data-icon="location" />
+                  <a
+                    class="footer-text"
+                    href="https://iitr.ac.in/Institute/How%20To%20Reach%20IIT%20Roorkee.html"
+                  >
+                    How to reach IIT Roorkee
+                  </a>
                 </div>
-
-                <div class="basic footer-lefts-right">
-                    <div class="footer-lefts-header">QUICK ACCESS</div>
-
-                    <a class="ui link" href="https://alumni.iitr.ac.in/donate">
-                        Donate
-                    </a>
-                    <a class="ui link" href="https://channeli.in/">
-                        Intranet Portal
-                    </a>
-                    <a class="ui link" href="https://newwebmail.iitr.ac.in/">
-                        Webmail
-                    </a>
-                    <a class="ui link" href="http://ghbooking.iitr.ac.in/">
-                        Book guest house
-                    </a>
-                    <a class="ui link" href="https://www.iitr.ac.in/support/">
-                        Support @ IITR
-                    </a>
-                    <a class="ui link" href="mailto:img@iitr.ac.in">
-                        Give Feedback
-                    </a>
-                    <a class="ui link" href="http://iitr.ac.in/internalcomplaintscommittee">
-                        ICC
-                    </a>
+                <div class="footer-left-detail-element">
+                  <img class="ui icon" data-icon="phone" />
+                  <a class="footer-text" href="tel:+911332285311">
+                    +91-1332-285311
+                  </a>
                 </div>
+                <div class="footer-left-detail-element">
+                  <img class="ui icon" data-icon="email" />
+                  <a class="footer-text" href="mailto:registrar@iitr.ac.in">
+                    registrar@iitr.ac.in
+                  </a>
+                </div>
+                <div class="footer-favicons">
+                  <a
+                    class="ui social-icon facebook_icon"
+                    href="https://www.facebook.com/IITRoorkee.ICC"
+                  ></a>
+                  <a
+                    class="ui social-icon youtube_icon"
+                    href="https://www.youtube.com/@IITRoorkeeOfficialChannel"
+                  ></a>
+                  <a
+                    class="ui social-icon instagram_icon"
+                    href="https://www.instagram.com/iitroorkee/?hl=en"
+                  ></a>
+                  <a
+                    class="ui social-icon linkedin_icon"
+                    href="https://www.linkedin.com/school/indian-institute-of-technology-roorkee/"
+                  ></a>
+                  <a
+                    class="ui social-icon twitter_icon"
+                    href="https://twitter.com/iitroorkee"
+                  ></a>
+                </div>
+              </div>
             </div>
-
-            <div class="weather">
-                <a class="weatherwidget-io" href="https://forecast7.com/en/29d8577d89/roorkee/" data-label_1="ROORKEE"
-                    data-label_2="WEATHER" data-days="3" data-theme="original" data-basecolor=""
-                    data-textcolor="#000000" data-highcolor="#BB5F1A" data-lowcolor="#1a76bb" data-mooncolor="#000000"
-                    data-cloudcolor="#000000" data-raincolor="#1a76bb">ROORKEE WEATHER</a>
-                <script>
-                    !(function (d, s, id) {
-                        var js,
-                            fjs = d.getElementsByTagName(s)[0];
-                        if (!d.getElementById(id)) {
-                            js = d.createElement(s);
-                            js.id = id;
-                            js.src = "https://weatherwidget.io/js/widget.min.js";
-                            fjs.parentNode.insertBefore(js, fjs);
-                        }
-                    })(document, "script", "weatherwidget-io-js");
-                </script>
-                <div class="madebylabel">
-                    Made with ❤️ by: </br>
-                    Information Management Group, IITR
-                </div>
-                <a href="#" class="ui link">
-                    Meet the team
-                </a>
+          </div>
+      
+          <div class="footer-mid">
+            <div class="footer-mid-left">
+              <div class="footer-headers">EXPLORE</div>
+      
+              <a
+                class="ui link"
+                href="https://iitr.ac.in/Administration/index.html"
+              >
+                Administration
+              </a>
+              <a class="ui link" href="http://scsp.iitr.ac.in/">
+                Awards and Honours
+              </a>
+              <a class="ui link" href="https://iitr.ac.in/Departments/index.html">
+                Departments
+              </a>
+              <a class="ui link" href="https://ir.iitr.ac.in/">
+                International Students
+              </a>
+              <a class="ui link" href="http://mm.iitr.ac.in/mmweb/">
+                Tenders and Quotations
+              </a>
+              <a class="ui link" href="https://www.iitr.ac.in/rti/"> RTI </a>
+              <a class="ui link" href="https://iitr.ac.in/sric/">
+                Industry Consultation
+              </a>
             </div>
+      
+            <div class="basic footer-mid-right">
+              <div class="footer-headers">QUICK ACCESS</div>
+      
+              <a class="ui link" href="https://alumni.iitr.ac.in/donate">
+                Donate
+              </a>
+              <a class="ui link" href="https://channeli.in/"> Intranet Portal </a>
+              <a class="ui link" href="https://newwebmail.iitr.ac.in/">
+                Webmail
+              </a>
+              <a class="ui link" href="http://ghbooking.iitr.ac.in/">
+                Book guest house
+              </a>
+              <a class="ui link" href="https://www.iitr.ac.in/support/">
+                Support @ IITR
+              </a>
+              <a class="ui link" href="mailto:img@iitr.ac.in"> Give Feedback </a>
+              <a
+                class="ui link"
+                href="https://www.iitr.ac.in/internalcomplaintscommittee/"
+              >
+                ICC
+              </a>
+            </div>
+            
+          </div>
+          <div class="basic footer-right">
+           
+          <div class="footer-right-top">
+            <div class="footer-headers">QUICK LINKS</div>
+            <div class="basic footer-right-links">
+             
+              <a
+                href="https://www.iitr.ac.in/safety/index.html"
+                class="ui link"
+              >
+                Safety
+              </a>
+              <a href="https://iitr.ac.in/security/index.html" class="ui link">
+                Security
+              </a>
+      
+              <a
+                href="https://www.iitr.ac.in/hindicell/index.html"
+                class="ui link"
+              >
+                Hindi Cell
+              </a>
+      
+            
+            </div>
+            <div class="footer-headers">RANKINGS</div>
+            <div class="basic footer-right-links">
+              
+              <a href="https://iitr.ac.in/Institute/NIRF.html" class="ui link">
+                NIRF
+              </a>
+              <a href="https://iitr.ac.in/Institute/ARIIA.html" class="ui link">
+                ARIIA
+              </a>
+              <a
+                href="https://www.topuniversities.com/universities/indian-institute-technology-roorkee-iitr"
+                class="ui link"
+              >
+                QS
+              </a>
+            </div>
+            
+          </div>
+            <div class="footer-right-bottom">
+          <div class="madebylabel">
+            Made with Love by: </br>
+            <a href="https://www.iitr.ac.in/team_chakra_ffcb922a/" class="ui link">Information Management Group, IITR</a>
         </div>
+        </div>
+       </div>
+        </div>
+      
         <div>
-            <div class="footer-bottom-flex">
-                <div class="footer-accessibility-flex">
-                    <a href="#" class="ui link">
-                        Sitemap
-                    </a>
-                    <div class="ui link">
-                        Privacy Policy
-                    </div>
-                    <div class="ui link">
-                        Accessibility
-                    </div>
-                </div>
-                <!-- <div class="totalviews">
+          <div class="footer-bottom-flex">
+            <div class="footer-accessibility-flex">
+              <a href="https://iitr.ac.in/sitemap.txt" class="ui link"> Sitemap </a>
+              <div class="ui link">Privacy Policy</div>
+              <div class="ui link">Accessibility</div>
+            </div>
+            <!-- <div class="totalviews">
                     Total Pageviews: 12414
                 </div> -->
-            </div>
-            <div class="footer-copyright">
-                <div>
-                    Copyright 2021, Institute Computer Centre, IIT Roorkee
-                </div>
-                <!-- <div class="totalviews" style="color: var(--black);">
+          </div>
+          <div class="footer-copyright">
+            <div>Copyright 2023, Institute Computer Centre, IIT Roorkee</div>
+            <!-- <div class="totalviews" style="color: var(--black);">
                     Total Pageviews: 12414
                 </div> -->
-            </div>
+          </div>
         </div>
-    </div>
+      </div>
 </body>
 <script src="../../library/javascript/components/menu.js"></script>
 <script src="../../library/javascript/components/icon-library.js"></script>
