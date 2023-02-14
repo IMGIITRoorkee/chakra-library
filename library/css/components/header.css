@@ -166,6 +166,9 @@
 .logo-link {
   width: 100px;
 }
+.dark .ui.main-head > .logo > img {
+  content: url("http://cmsredesign.channeli.in/library/assets/images/IITRLogo.png");
+}
 
 @media only screen and (max-width: 1024px) {
   .ui.header {
@@ -192,7 +195,7 @@
   .ui.header .logo {
     width: 100%;
     max-width: 15rem;
-    margin: auto;
+    margin: 10px;
   }
   .ui.header .main-head {
     display: flex;
@@ -273,7 +276,7 @@
     max-width: 95%;
   }
   .ui.header .logo {
-    width: 40px;
+    width: 80%;
   }
   .ui.header .g20-logo {
     width: 60px;
