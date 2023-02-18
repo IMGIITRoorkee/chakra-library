@@ -63,7 +63,7 @@
 .footer .footer-mid {
   display: flex;
   justify-content: space-around;
-  /* padding: 10px 20px 10px 20px; */
+  padding-top: 25px;
 }
 
 .footer-mid-left {
@@ -223,6 +223,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
+  padding-top: 25px;
 }
 .footer-right-links {
   display: flex;
