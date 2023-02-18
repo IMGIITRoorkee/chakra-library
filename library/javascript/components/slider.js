@@ -123,7 +123,11 @@ document.addEventListener('DOMContentLoaded', function (e) {
 
     const leftArrowElement = document.createElement('img')
     leftArrowElement.className = 'arrow'
-    leftArrowElement.setAttribute('src', leftArrow)
+    leftArrowElement.setAttribute('data-icon', 'carouselleft')
+    leftArrowElement.classList.add('ui')
+    leftArrowElement.classList.add('icon')
+    leftArrowElement.classList.add('prev')
+    leftArrowElement.classList.add('icon_image')
     leftArrowContainer.appendChild(leftArrowElement)
 
     const rightArrowContainer = document.createElement('div')
@@ -131,8 +135,13 @@ document.addEventListener('DOMContentLoaded', function (e) {
 
     const rightArrowElement = document.createElement('img')
     rightArrowElement.className = 'arrow'
-    rightArrowElement.setAttribute('src', rightArrow)
+    rightArrowElement.setAttribute('data-icon', 'carouselright')
+    rightArrowElement.classList.add('ui')
+    rightArrowElement.classList.add('icon')
+    rightArrowElement.classList.add('next')
+    rightArrowElement.classList.add('icon_image')
     rightArrowContainer.appendChild(rightArrowElement)
+    loadIcons()
 
     sliders[i].appendChild(leftArrowContainer)
     sliders[i].appendChild(container)
