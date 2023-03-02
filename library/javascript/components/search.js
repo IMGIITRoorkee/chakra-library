@@ -55,7 +55,7 @@ function open_search() {
   var script = document.createElement('script');
   script.setAttribute(
     'src',
-    'http://localhost:5500/library/javascript/components/search_function.js'
+    'https://cmsredesign.channeli.in/library/javascript/components/search_function.js'
   );
   document.body.appendChild(script);
   loadIcons();
