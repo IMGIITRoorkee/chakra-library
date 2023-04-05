@@ -140,12 +140,12 @@ document.addEventListener('DOMContentLoaded', function (e) {
     rightArrowElement.classList.add('icon')
     rightArrowElement.classList.add('next')
     rightArrowElement.classList.add('icon_image')
-    rightArrowContainer.appendChild(rightArrowElement)
-    loadIcons()
+    rightArrowContainer.appendChild(rightArrowElement)    
 
     sliders[i].appendChild(leftArrowContainer)
     sliders[i].appendChild(container)
     sliders[i].appendChild(rightArrowContainer)
+    loadIcons()
 
     leftArrowElement.addEventListener('click', function (e) {
       e.stopPropagation()
