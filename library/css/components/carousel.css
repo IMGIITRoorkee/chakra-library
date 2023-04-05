@@ -85,6 +85,36 @@
   background-color: var(--white);
 }
 
+.ui.carousel > .ui.image > .carousel-text {
+  color: white;
+  position: absolute;
+  left: 10%;
+  top: 40%;
+  width: 40%;
+  height: 60%;
+  z-index: 5;
+  word-wrap: normal;
+  font-family: serif;
+  overflow: hidden;
+}
+
+.ui.carousel > .ui.image > .carousel-text > .carousel-text-heading {
+  font-size: 40px;
+  animation-name: slide-down;
+  animation-duration: 1s;
+  position: relative;
+  font-weight: 1000;
+  
+}
+
+.ui.carousel > .ui.image > .carousel-text > .carousel-text-body {
+  animation-name: slide-up;
+  animation-duration: 1s;
+  position: relative;
+  text-align: justify;
+  
+}
+
 /* Fading animation */
 .ui.carousel > .ui.image.fluid {
   -webkit-animation-name: fade;
@@ -100,6 +130,24 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@keyframes slide-down {
+  from {
+    top: -5vh;
+  }
+  to {
+    top: 0vh;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    top: 5vh;
+  }
+  to {
+    top: 0vh;
+  }
 }
 
 @-webkit-keyframes fade {
@@ -137,5 +185,13 @@
   .next,
   .text {
     font-size: 11px;
+  }
+
+  .ui.carousel > .ui.image > .carousel-text {
+    height: 30%;
+    top: 35%;
+  }
+  .ui.carousel > .ui.image > .carousel-text > .carousel-text-heading {
+    font-size: 20px;
   }
 }
