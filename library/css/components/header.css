@@ -79,6 +79,10 @@
   display: flex;
   flex-direction: row;
 }
+.language > a:hover {
+  cursor: pointer;
+}
+
 .ui.header .sizechange .small,
 .ui.header .sizechange .medium,
 .ui.header .sizechange .big {
