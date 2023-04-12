@@ -85,6 +85,39 @@
   background-color: var(--white);
 }
 
+.ui.carousel > .ui.image > .ui.section-heading {
+  font-size: 40px;
+  animation-name: slide-down;
+  animation-duration: 1s;
+  position: absolute;
+  padding-top: 5px;
+  left: 20vw;
+  top: 35%;
+  width: 50%;
+  height: 10%;
+  word-wrap: normal;
+  z-index: 5;
+  overflow: hidden;
+  font-weight: 1000;
+  font-family: serif;
+  color: white;
+}
+
+.ui.carousel > .ui.image > .ui.intro-text {
+  animation-name: slide-up;
+  animation-duration: 1s;
+  position: absolute;
+  left: 20vw;
+  top: 50%;
+  width: 40%;
+  height: 40%;
+  word-wrap: normal;
+  z-index: 5;
+  overflow: hidden;  
+  font-family: serif;
+  color: white;
+}
+
 /* Fading animation */
 .ui.carousel > .ui.image.fluid {
   -webkit-animation-name: fade;
@@ -100,6 +133,24 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+@keyframes slide-down {
+  from {
+    top: 30%;
+  }
+  to {
+    top: 35%;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    top: 55%;
+  }
+  to {
+    top: 50%;
+  }
 }
 
 @-webkit-keyframes fade {
@@ -137,5 +188,42 @@
   .next,
   .text {
     font-size: 11px;
+  }
+
+  .ui.carousel > .ui.image > .ui.section-heading {
+    font-size: 20px;
+    top: 25%
+  }
+
+  .ui.carousel > .ui.image > .ui.intro-text {
+    top: 40%;
+    width: 30%;
+    height: 30%;
+    font-size: 12px;
+  }
+
+  @keyframes slide-down {
+    from {
+      top: 20%;
+    }
+    to {
+      top: 25%;
+    }
+  }
+  
+  @keyframes slide-up {
+    from {
+      top: 45%;
+    }
+    to {
+      top: 40%;
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .ui.carousel > .ui.image > .ui.section-heading {
+    font-size: 12px;
+    height: 15%;
   }
 }
