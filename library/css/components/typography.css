@@ -47,6 +47,12 @@
   font-size: 1.25rem;
   /* padding: 1.25rem 0; */
 }
+.ui.sub-heading-blue {
+  line-height: 1.3rem;
+  color: var(--bright-blue);
+  font-size: 1.25rem;
+  /* padding: 1.25rem 0; */
+}
 
 .ui.inverted.sub-heading {
   line-height: 1.3rem;
@@ -55,6 +61,7 @@
   font-size: 1.25rem;
   /* padding: 1.25rem 0; */
 }
+
 
 .ui.one-liner-captions {
   color: var(--caption-grey);
