@@ -106,6 +106,10 @@
   background-color: inherit;
   padding-top: 2rem;
 }
+.content p,span {
+  font-size: 16px !important;
+  font-family: var(--font-nunito-sans) !important;
+}
 
 @media only screen and (max-width: 600px) {
   .ui.tabs-container {
