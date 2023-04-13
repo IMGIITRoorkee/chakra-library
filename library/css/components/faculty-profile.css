@@ -8,6 +8,8 @@
   border: 1px solid var(--white);
   background: var(--gradient-blue);
 }
+
+
 .ui.faculty-profile .ui.twenty-eighty-container .ui.intro-text {
   color: white !important;
 }
@@ -104,13 +106,30 @@
 
 @media only screen and (max-width: 630px) {
   .ui.faculty-profile {
-    padding: 0.1rem;
+    padding: 0.2rem;
     margin: 1rem;
   }
   .ui.faculty-profile .info {
     display: grid;
     grid-template-columns: 100%;
     margin-bottom: -1rem;
+  }
+
+  .ui.faculty-profile .ui.twenty-eighty-container .second > .ui.intro-text {
+    text-align: center !important;
+  }
+
+  .ui.faculty-profile .ui.twenty-eighty-container .second .ui.description {
+    text-align: center !important;
+  }
+  .ui.faculty-profile .ui.twenty-eighty-container .second > .info{
+    padding-left: 4px;
+    padding-right: 1.25rem;
+  }
+
+  .ui.faculty-profile .ui.twenty-eighty-container .second > .info .ui.intro-text{
+    overflow-wrap: break-word;
+    min-width: 0;
   }
 
   .ui.faculty-profile > .twenty-eighty-container > .second {
@@ -151,6 +170,11 @@
     width: unset;
     margin-bottom: 1rem;
   }
+
+  .ui.faculty-profile .ui.twenty-eighty-container .second > .ui.intro-text {
+    text-align: center !important;
+  }
+
   .ui.faculty-profile > .twenty-eighty-container > .second > .button {
     align-self: center;
   }
