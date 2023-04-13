@@ -14,6 +14,9 @@
   gap: 4rem;
   align-items: center;
 }
+.ui.faculty-card .ui.intro-text{
+  min-width: 0;
+}
 
 .ui.faculty-card .name {
   font-size: 1.25rem;
@@ -36,9 +39,11 @@
   color: var(--faculty-card-info-color);
   align-items: center;
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   gap: 0.5rem;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  word-wrap: break-word;
+  width: 100%;
 }
 
 .ui.faculty-card > .body > .description {
@@ -54,11 +59,12 @@
   overflow-x: hidden;
   max-height: 90px;
 }
-@media only screen and (max-width: 630px) {
-  .ui.faculty-card > .flex > div.ui.image img {
-    height: 120px;
-    width: 100px;
-  }
+
+.ui.faculty-card .info {
+  min-width: 0;
+}
+.ui.faculty-card .ui.image{
+  min-width: 7rem;
 }
 
 @media only screen and (min-width: 630px) {
@@ -83,9 +89,6 @@
   }
 }
 @media only screen and (max-width: 400px) {
-  .ui.faculty-card .info {
-    max-width: 100%;
-  }
   .ui.faculty-card .info .ui.intro-text {
     font-size: 13px;
   }
