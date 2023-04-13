@@ -6,7 +6,42 @@
   padding-right: 10%;
   box-shadow: 0px 4px 12px 0px #8686861a;
   border: 1px solid var(--white);
+  background: var(--gradient-blue);
+}
+.ui.faculty-profile .ui.twenty-eighty-container .ui.intro-text {
+  color: white !important;
+}
+.ui.faculty-profile .ui.twenty-eighty-container .second > .ui.intro-text {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+.ui.faculty-profile .ui.twenty-eighty-container .second > .ui.button {
+  background: var(--gradient-blue);
+  color: white;
+  border: 2px solid var(--white);
+  box-sizing: border-box;
+  border-radius: 2px;
   background-color: var(--white);
+  box-shadow: none;
+  padding: 10px;
+  text-decoration: none;
+  align-content: center;
+  width: fit-content;
+}
+
+.ui.faculty-profile .ui.twenty-eighty-container .second > .ui.button:hover{
+  background: var(--white) !important;
+  color: var(--bright-blue);
+}
+
+.ui.faculty-profile .ui.twenty-eighty-container .second .ui.description {
+  color: white !important;
+  font-size: 1.25rem;
+  overflow: hidden;
+}
+
+.ui.faculty-profile .ui.twenty-eighty-container .second .info .ui.icon {
+  filter: brightness(0) invert(1);
 }
 .ui.faculty-profile > .twenty-eighty-container > .first {
   padding: 0rem;
