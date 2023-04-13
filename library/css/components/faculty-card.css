@@ -8,14 +8,10 @@
   max-width: 100%;
   background-color: var(--white);
 }
-
 .ui.faculty-card > .flex {
   display: flex;
   gap: 4rem;
   align-items: center;
-}
-.ui.faculty-card .ui.intro-text{
-  min-width: 0;
 }
 
 .ui.faculty-card .name {
@@ -39,17 +35,14 @@
   color: var(--faculty-card-info-color);
   align-items: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   gap: 0.5rem;
-  justify-content: flex-start;
-  word-wrap: break-word;
-  width: 100%;
+  justify-content: flex-end;
 }
 
 .ui.faculty-card > .body > .description {
   height: 5.5rem;
 }
-
 .ui.faculty-card > .body > .description {
   font-weight: 300;
   font-size: 0.875rem;
@@ -59,12 +52,11 @@
   overflow-x: hidden;
   max-height: 90px;
 }
-
-.ui.faculty-card .info {
-  min-width: 0;
-}
-.ui.faculty-card .ui.image{
-  min-width: 7rem;
+@media only screen and (max-width: 630px) {
+  .ui.faculty-card > .flex > div.ui.image img {
+    height: 120px;
+    width: 100px;
+  }
 }
 
 @media only screen and (min-width: 630px) {
@@ -75,7 +67,6 @@
     margin-left: 24.2rem;
   }
 }
-
 @media only screen and (max-width: 600px) {
   .ui.faculty-card {
     padding: 0.5rem;
@@ -83,12 +74,14 @@
   .ui.faculty-card > .flex {
     gap: 0.5rem;
   }
-
   .ui.faculty-card .body > .description {
     display: none;
   }
 }
 @media only screen and (max-width: 400px) {
+  .ui.faculty-card .info {
+    max-width: 100%;
+  }
   .ui.faculty-card .info .ui.intro-text {
     font-size: 13px;
   }
