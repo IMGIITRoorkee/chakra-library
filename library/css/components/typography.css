@@ -8,6 +8,16 @@
   line-height: 1.5rem;
   font-family: var(--font-lato);
 }
+.ui.section-heading-blue {
+  color: var(--bright-blue);
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  /* padding: 1.25rem 0; */
+  letter-spacing: 0.0625rem;
+  line-height: 1.5rem;
+  font-family: var(--font-lato);
+}
 
 .ui.inverted.section-heading {
   color: var(--white);
