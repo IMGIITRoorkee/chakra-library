@@ -13,6 +13,13 @@
   gap: 4rem;
   align-items: center;
 }
+.ui.faculty-card >.body{
+  display: flex;
+  flex-direction: column;
+}
+.ui.faculty-card >.body>.ui.link{
+  align-self: flex-end;
+}
 
 .ui.faculty-card .name {
   font-size: 1.25rem;
@@ -35,9 +42,12 @@
   color: var(--faculty-card-info-color);
   align-items: center;
   display: flex;
+  flex-wrap: nowrap;
   flex-direction: row-reverse;
   gap: 0.5rem;
   justify-content: flex-end;
+  text-overflow: ellipsis; 
+  word-break: break-all;
 }
 
 .ui.faculty-card > .body > .description {
@@ -52,20 +62,38 @@
   overflow-x: hidden;
   max-height: 90px;
 }
-@media only screen and (max-width: 630px) {
+@media only screen and (max-width:1000px){
+  .ui.faculty-card > .flex > div.ui.image img {
+    min-width: 7rem;
+    max-width: 10rem;
+  }
+}
+@media  screen and (min-width:1000px) {
+  .ui.faculty-card > .flex > div.ui.image img {
+    max-width: 10rem;
+  }
+}
+@media only screen and (max-width: 660px) {
   .ui.faculty-card > .flex > div.ui.image img {
     height: 120px;
     width: 100px;
   }
+  .ui.faculty-card > .flex {
+    flex-direction: column;
+  }
+  .ui.faculty-card >.flex>.info>.name,.designation{
+    text-align: center;
+  }
+
+
 }
 
 @media only screen and (min-width: 630px) {
   .ui.faculty-card > .body > .ui.link {
     display: flex;
-    align-self: right !important;
     margin-top: 1.625rem;
-    margin-left: 24.2rem;
   }
+
 }
 @media only screen and (max-width: 600px) {
   .ui.faculty-card {
@@ -84,9 +112,5 @@
   }
   .ui.faculty-card .info .ui.intro-text {
     font-size: 13px;
-  }
-  .ui.faculty-card .info-content {
-    display: flex !important;
-    flex-wrap: wrap !important;
   }
 }
