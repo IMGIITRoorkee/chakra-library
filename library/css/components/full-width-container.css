@@ -7,6 +7,9 @@
 .inverted {
   color: var(--white);
 }
+.ui.full-width-container.gradient-blue{
+  padding: 3vw 10vw;
+}
 
 @media only screen and (max-width: 430px){
   .ui.full-width-container > .ui.image-card{
