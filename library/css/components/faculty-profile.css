@@ -8,8 +8,12 @@
   border: 1px solid var(--white);
   background: var(--gradient-blue);
 }
-
-
+/* .ui.faculty-profile  .ui.table-row{
+  border-bottom: 0.125rem solid var(--black) !important;
+} */
+.ui.twenty-eighty-container.faculty-vertical-list .ui.table-row{
+  border-bottom: 0.125rem solid var(--caption-grey) ;
+}
 .ui.faculty-profile .ui.twenty-eighty-container .ui.intro-text {
   color: white !important;
 }
