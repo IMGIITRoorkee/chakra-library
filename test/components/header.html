@@ -13,64 +13,71 @@
     <title></title>
   </head>
   <body class="light">
-    <div class="ui header department">
-      <div class="ui top-nav">
-        <div class="accessibility">
-          <div class="language">
-            <a class="ui link">&#x0939;&#x093F;&#x0928;&#x094D;&#x0926;&#x0940;</a>
-            &#9474;<a class="ui link">Eng</a>
-          </div>
-          <div class="sizechange">
-            <div class="small">
-              <img class="ui icon" data-icon="text_small" />
-            </div>
-            <div class="medium">
-              <img class="ui icon" data-icon="text_medium" />
-            </div>
-            <div class="big">
-              <img class="ui icon" data-icon="text_big" />
-            </div>
-          </div>
-          <div class="darkmode">
-            <div class="light-button" onclick="contrast_light()">A</div>
-            <div class="dark-button" onclick="contrast_dark()">A</div>
-          </div>
-        </div>
-        <div class="page-options-serach">
-          <div class="page-options">
-    
-            <a href="https://iitr.ac.in/Hindi/calendar/">CALENDAR</a>
-            <a href="https://iitr.ac.in/Hindi/Main/pages/Contact_Us.html">CONTACT US</a>
-            <a href="https://iitr.ac.in/Hindi/support/td/">DIRECTORY</a>
-          </div>
-          <div class="page-search">
-            <img class="ui icon" data-icon="search" />
-          </div>
-        </div>
-      </div>
-    
+    <div class="ui header">
       <div class="ui main-head">
         <div id="hamBurger" class="hamburger-container">
           <img class="ui icon" data-icon="hamburger" />
         </div>
-        <div class="heading-section">
-          <div class="logo-header">
-            <a href="https://iitr.ac.in/Hindi/" class="link-content">
-              <img
-                src="https://cmsredesign.channeli.in/library/assets/images/Indian_Institute_of_Technology_Roorkee_logo 1.png"
-                alt="IIT Roorkee logo" /></a>
-          </div>
-          <div>
-            <div class="ui section-heading">
-              संस्थान अस्पताल
+        <div class="logo">
+          <img
+            onclick='window.location="https://iitr.ac.in"'
+            src="https://cmsredesign.channeli.in/library/assets/images/iitrLogo.png"
+            alt=""
+            width="100%"
+          />
+        </div>
+        <div class="g20-logo">
+          <img
+            onclick='window.open("https://www.g20.org/en/", "_blank")'
+            src="https://cmsredesign.channeli.in/library/assets/images/g20-logo.png"
+            alt=""
+            width="100%"
+          />
+        </div>
+        <div class="upperleft">
+          <div class="left-container">
+            <div class="accessibility">
+              <div class="sizechange">
+                <div class="small">
+                  <img class="ui icon" data-icon="text_small" />
+                </div>
+                <div class="medium">
+                  <img class="ui icon" data-icon="text_medium" />
+                </div>
+                <div class="big">
+                  <img class="ui icon" data-icon="text_big" />
+                </div>
+              </div>
+      
+              <div class="darkmode">
+                <div class="light-button" onclick="contrast_light()">A</div>
+                <div class="dark-button" onclick="contrast_dark()">A</div>
+              </div>
+
+              <div class = "page-options">
+                <span class="language">
+                  <a>&#x0939;&#x093F;&#x0928;&#x094D;&#x0926;&#x0940;</a>
+                  &#9474;<a>Eng</a></span>
+              </div>                
+
             </div>
-            <div class="ui sub-heading">
-              भारतीय प्रौद्योगिकी संस्थान रुड़की
+            <hr class="divider">
+            <div class="page-options">
+                <a href="https://newwebmail.iitr.ac.in/">WEBMAIL</a>
+              <a href="https://iitr.ac.in/Institute/Contact%20Us.html">CONTACT US</a>
+              <a href="https://iitr.ac.in/support/td/">DIRECTORY</a>
+            </div>
+          </div>
+          <div class="right-container">
+            <div class="page-search">
+              <img class="ui icon" data-icon="search" onclick="open_search()" />
             </div>
           </div>
         </div>
       </div>
-    </div></body>
+    </div>
+    
+    </body>
 
   <script src="http://cmsredesign.channeli.in/library/javascript/components/menu.js?rndstr='22SmQfdqa8'"></script>
   <script src="http://cmsredesign.channeli.in/library/javascript/components/header.js?rndstr='22SmQfdqa8'"></script>

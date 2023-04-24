@@ -39,11 +39,16 @@
   border: 2px solid var(--bright-blue);
   cursor: pointer;
 }
+.ui.header > .ui.main-head > .upperleft {
+  display: flex !important;
+  flex-direction: row;
+  gap: 5%;
+}
 .ui.header .page-options {
   display: flex;
   gap: 1rem;
+  justify-content: space-between;
   font-size: 0.75rem;
-  width: 19.5rem;
 }
 .ui.header .page-options a {
   text-decoration: none;
@@ -56,10 +61,19 @@
 .ui.header .page-search:hover {
   cursor: pointer;
 }
-.ui.header .upperleft {
+.ui.header .left-container {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+.ui.header .upperleft .left-container .divider{
+  width: 100%;
+  position: relative;
+  bottom: 3px;
+}
+.ui.header .right-container {
+  display: flex;
+  align-items: center;
 }
 .ui.header .sizechange {
   display: flex;
@@ -182,6 +196,9 @@
   }
   .ui.header .sizechange,
   .ui.header .page-options,
+  .ui.header .divider,
+  .ui.header .right-container,
+  .ui.header .left-container,
   .ui.header .language,
   .ui.header .dark-light-mode {
     display: none;
