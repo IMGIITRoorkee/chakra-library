@@ -66,6 +66,10 @@
     margin-bottom: 3rem;
 }
 
+.faculty-vertical-list .second .ui.intro-text {
+    color: var(--black);
+}
+
 @media only screen and (max-width: 630px) {
 
     .ui.faculty-vertical-list .first {
