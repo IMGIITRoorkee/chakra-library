@@ -18,6 +18,7 @@
     padding-top: 0 !important;
     position: relative;
     padding-right: 0 !important;
+    line-height: normal;
 }
 
 .ui.faculty-vertical-list .vertical-list-nest > div:hover {
@@ -62,6 +63,7 @@
 
 .faculty-vertical-list ol, .faculty-vertical-list ul {
     list-style: auto;
+    margin-bottom: 3rem;
 }
 
 @media only screen and (max-width: 630px) {
