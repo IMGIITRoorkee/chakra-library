@@ -4,7 +4,7 @@ const leftArrow = src + 'library/assets/icons/carouselleft.svg'
 
 // Hash function
 // Returns a hash of argument length
-function makeHash (length) {
+function makeHash(length) {
   let result = ''
   const characters =
     'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
@@ -31,7 +31,7 @@ const reorderSlides = (sliderHash, numCards, isLeft) => {
   // Reorder
   if (isLeft) {
     // Put last card to the top
-    if (totalNumberOfCards <= numCards) {return}
+    if (totalNumberOfCards <= numCards) { return }
     if (totalNumberOfCards > numCards) {
       cards[numCards - 1].style.display = 'none'
     }
@@ -43,7 +43,7 @@ const reorderSlides = (sliderHash, numCards, isLeft) => {
     }
     container.insertBefore(lastCard, container.firstChild)
   } else {
-    if (totalNumberOfCards <= numCards) {return}
+    if (totalNumberOfCards <= numCards) { return }
     // Put first card to the bottom
     const firstChild = cards[0]
     if (totalNumberOfCards > numCards) {
@@ -91,7 +91,6 @@ const numberOfCardsToDisplay = sliderHash => {
     return 0;
   }
   const card = container.firstElementChild
-
   const numberOfCards = Math.floor(
     (sliderElement.clientWidth - px) / card.offsetWidth
   )
@@ -161,6 +160,26 @@ document.addEventListener('DOMContentLoaded', function (e) {
     renderSlides(hash, sliderMap[hash])
   }
 })
+var observer = new MutationObserver(function (mutations) {
+  mutations.forEach(function (mutationRecord) {
+    const sliders = document.querySelectorAll('.ui.slider')
+    if (sliders === null) {
+      return
+    }
+    for (let i = 0; i < sliders.length; i++) {
+      const hash = sliders[i].id
+      sliderMap[hash] = numberOfCardsToDisplay(hash)
+
+      renderSlides(hash, sliderMap[hash])
+    }
+  });
+});
+
+var elements = document.querySelectorAll('.content');
+
+
+elements.forEach(element => observer.observe(element, { attributes: true, attributeFilter: ['style'] }));
+
 
 window.onresize = () => {
   const sliders = document.querySelectorAll('.ui.slider')
