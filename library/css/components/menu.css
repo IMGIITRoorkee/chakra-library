@@ -332,7 +332,7 @@ div.flexbox .menuItem {
   .accessibility-hamburger > li > a,
   .contact > li > a {
     padding: 10px;
-    text-transform: uppercase !important;
+    /* text-transform: uppercase !important; */
   }
   .ABox {
     border: 2px solid var(--section-blue);
