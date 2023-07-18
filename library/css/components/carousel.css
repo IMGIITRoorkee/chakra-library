@@ -26,6 +26,7 @@
   max-height: 40vw;
   display: block;
   z-index: 1;
+  cursor: pointer !important;
 }
 
 .ui.carousel > .flexbox {

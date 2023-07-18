@@ -102,3 +102,13 @@ function activateCarousel(carousel) {
 }
 var carousels = document.querySelectorAll('.ui.carousel')
 carousels.forEach(carousel => activateCarousel(carousel))
+var fluidImageContainers = document.querySelectorAll('.ui.image.fluid')
+fluidImageContainers.forEach((element) => {
+  let fluidImage = element.querySelector('img[contentlink]')
+  let fluidImageLink = fluidImage.getAttribute('contentlink')
+  if (fluidImageLink != '') {
+    fluidImage.addEventListener('click', (e) => {
+      window.open(fluidImageLink)
+    });
+  }
+});
