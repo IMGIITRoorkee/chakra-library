@@ -12,6 +12,11 @@ div.flexbox .menuItem {
   padding: 0;
   z-index: 5;
 }
+
+div.flexbox>.menuItem:nth-child(11) {
+  display: none
+}
+
 .menuContainer ul,
 .menuContainer a {
   margin: 0;
@@ -190,6 +195,9 @@ div.flexbox .menuItem {
   }
   div.flexbox > .menuItem > a > div {
     padding-left: 10px;
+  }
+  div.flexbox>.menuItem:nth-child(11) {
+    display: block;
   }
   .menuContainer div.flexbox a {
     color: var(--black);
