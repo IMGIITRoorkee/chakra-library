@@ -15,7 +15,13 @@ let active_sp_index = null
 let controller = new AbortController()
 performChange(mq)
 
-
+let menuNodes = document.querySelectorAll('.ui.flexbox>.menuItem')
+menuNodes.forEach(node => {
+    let textLink = node.querySelector('.ui.intro-text');
+    if (textLink && textLink.textContent.includes('More')) {
+      node.classList.add("more");
+    }
+  });
 
 function handleSpClick(element, index) {
     if (active_sp_index !== null) {

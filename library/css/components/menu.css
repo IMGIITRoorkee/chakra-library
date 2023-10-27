@@ -13,8 +13,8 @@ div.flexbox .menuItem {
   z-index: 5;
 }
 
-div.flexbox>.menuItem:nth-child(11) {
-  display: none
+.more {
+  display: none;
 }
 
 .menuContainer ul,
@@ -196,7 +196,7 @@ div.flexbox>.menuItem:nth-child(11) {
   div.flexbox > .menuItem > a > div {
     padding-left: 10px;
   }
-  div.flexbox>.menuItem:nth-child(11) {
+  .more {
     display: block;
   }
   .menuContainer div.flexbox a {
