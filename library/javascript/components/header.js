@@ -31,7 +31,6 @@ document.getElementsByClassName("page-search")[0].firstElementChild.setAttribute
 const small= document.querySelectorAll('.small')
 small.forEach(element => {
   element.addEventListener('click', () => {
-    console.log("size changed to small")
     html.style.fontSize = '14px'
   })
 })
@@ -39,7 +38,6 @@ small.forEach(element => {
 const medium = document.querySelectorAll('.medium')
 medium.forEach(element => {
   element.addEventListener('click', () => {
-    console.log("size changed to medium")
     html.style.fontSize = '16px'
   })
 })
@@ -47,7 +45,6 @@ medium.forEach(element => {
 const big = document.querySelectorAll('.big')
 big.forEach(element => {
   element.addEventListener('click', () => {
-    console.log("size changed to big")
     html.style.fontSize = '18px'
   })
 })
