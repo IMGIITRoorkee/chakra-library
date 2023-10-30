@@ -1,36 +1,37 @@
 const html = document.getElementsByTagName('html')[0]
-const small = document.querySelectorAll('.small')
+// let mq = window.matchMedia('(max-width: 1024px)')
+// performHeaderChange(mq)
 
-performHeaderChange(mq)
-
-mq.addEventListener('change', () => {
-  performHeaderChange(mq)
-})
+// mq.addEventListener('change', () => {
+//   performHeaderChange(mq)
+// })
 
 document.getElementsByClassName("page-search")[0].firstElementChild.setAttribute("onClick", "open_search()")
 
-function performHeaderChange(mq) {
+// function performHeaderChange(mq) {
 
-  let is_main_header = true
-  var header_accessibility = document.querySelector('.upperleft')
+//   let is_main_header = true
+//   var header_accessibility = document.querySelector('.upperleft')
 
-  // This deals with the two types of headers we have
-  if (header_accessibility === null) {
-    is_main_header = false
-    header_accessibility = document.querySelector('.ui.top-nav')
-  }
+//   // This deals with the two types of headers we have
+//   if (header_accessibility === null) {
+//     is_main_header = false
+//     header_accessibility = document.querySelector('.ui.top-nav')
+//   }
 
-  if (mq.matches === true) {
-    header_accessibility.style.display = 'none'
-  }
-  else {
-    header_accessibility.style.display = is_main_header? 'block' : 'flex'
+//   // if (mq.matches === true) {
+//   //   header_accessibility.style.display = 'none'
+//   // }
+//   // else {
+//   //   header_accessibility.style.display = is_main_header? 'block' : 'flex'
 
-  }
-}
+//   // }
+// }
 
+const small= document.querySelectorAll('.small')
 small.forEach(element => {
   element.addEventListener('click', () => {
+    console.log("size changed to small")
     html.style.fontSize = '14px'
   })
 })
@@ -38,6 +39,7 @@ small.forEach(element => {
 const medium = document.querySelectorAll('.medium')
 medium.forEach(element => {
   element.addEventListener('click', () => {
+    console.log("size changed to medium")
     html.style.fontSize = '16px'
   })
 })
@@ -45,6 +47,7 @@ medium.forEach(element => {
 const big = document.querySelectorAll('.big')
 big.forEach(element => {
   element.addEventListener('click', () => {
+    console.log("size changed to big")
     html.style.fontSize = '18px'
   })
 })
