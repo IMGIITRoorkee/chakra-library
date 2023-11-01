@@ -28,7 +28,7 @@ document.getElementsByClassName("page-search")[0].firstElementChild.setAttribute
 //   // }
 // }
 
-const small= document.querySelectorAll('.small')
+const small = document.querySelectorAll('.small')
 small.forEach(element => {
   element.addEventListener('click', () => {
     html.style.fontSize = '14px'
@@ -56,30 +56,28 @@ if (lang_links.length == 0) {
 hindi_link = lang_links[0]
 eng_link = lang_links[1]
 
-hindi_link.addEventListener('click', ()=>{
-  const url = new URL(decodeURI(window.location.href));
-  if(url.host === "iitr.ac.in"){
-    let pathArr = url.pathname.split("/")
+function hindi_navigate() {
+  if (window.location.host === "iitr.ac.in") {
+    let pathArr = window.location.pathname.split("/")
     if (pathArr.indexOf('Hindi') == -1) {
       pathArr.splice(1, 0, 'Hindi')
       let path = pathArr.join("/")
-      if(path.charAt(path.length-1)=="/")
-      path = path.substring(0,path.length-1)
-      url.pathname = path
-      window.location = url
+      if (path.charAt(path.length - 1) == "/")
+        path = path.substring(0, path.length - 1)
+      window.location.replace("https://" + window.location.host + path);
     }
   }
-})
-eng_link.addEventListener('click', ()=>{
-  const url = new URL(decodeURI(window.location.href));
-  if(url.host === "iitr.ac.in"){
-    let pathArr = url.pathname.split("/")
+}
+
+function eng_navigate() {
+  if (window.location.host === "iitr.ac.in") {
+    let pathArr = window.location.pathname.split("/")
     let index = pathArr.indexOf('Hindi')
     if (index != -1) {
       pathArr.splice(index, 1)
       let path = pathArr.join("/")
-      url.pathname = path
-      window.location = url
+      window.location.replace("https://" + window.location.host + path)
     }
   }
-})
+}
+
