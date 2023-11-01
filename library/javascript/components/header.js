@@ -57,27 +57,29 @@ hindi_link = lang_links[0]
 eng_link = lang_links[1]
 
 function hindi_navigate() {
-  if (window.location.host === "iitr.ac.in") {
+  if (window.location.host === "iitr.ac.in" || window.location.host === "www.iitr.ac.in") {
     let pathArr = window.location.pathname.split("/")
     if (pathArr.indexOf('Hindi') == -1) {
       pathArr.splice(1, 0, 'Hindi')
       let path = pathArr.join("/")
       if (path.charAt(path.length - 1) == "/")
         path = path.substring(0, path.length - 1)
-      window.location.replace("https://" + window.location.host + path);
+      window.location.assign("https://" + window.location.host + path);
     }
   }
 }
 
 function eng_navigate() {
-  if (window.location.host === "iitr.ac.in") {
+  if (window.location.host === "iitr.ac.in" || window.location.host === "www.iitr.ac.in") {
     let pathArr = window.location.pathname.split("/")
     let index = pathArr.indexOf('Hindi')
     if (index != -1) {
       pathArr.splice(index, 1)
       let path = pathArr.join("/")
-      window.location.replace("https://" + window.location.host + path)
+      window.location.assign("https://" + window.location.host + path)
     }
   }
 }
 
+hindi_link.addEventListener('click', hindi_navigate)
+eng_link.addEventListener('click', eng_navigate)
