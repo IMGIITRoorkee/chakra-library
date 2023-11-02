@@ -254,10 +254,11 @@
   .ui.header.department .main-head {
     display: flex;
     align-items: center;
-    margin-top: 0.5rem;
-    margin-left: 0.5rem;
-    justify-content: center;
-    gap: 15%;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-bottom: 0;
+    gap: 25%;
+    width: 100%;
   }
   .ui.header.department .section-heading {
     font-size: 0.8rem;
@@ -340,7 +341,7 @@
   .g20-logo-department {
     width: 60px;
   }
-  .logo-link {
-    width: 30px;
+  .ui.header.department .main-head {
+    gap: 5%
   }
 }
