@@ -52,9 +52,11 @@ big.forEach(element => {
 let lang_links = document.querySelectorAll('.language > .link')
 if (lang_links.length == 0) {
   lang_links = document.querySelectorAll('.language > a')
+  console.log(lang_links.length)
 }
 hindi_link = lang_links[0]
 eng_link = lang_links[1]
+
 
 function hindi_navigate() {
   if (window.location.host === "iitr.ac.in" || window.location.host === "www.iitr.ac.in") {
@@ -83,3 +85,10 @@ function eng_navigate() {
 
 hindi_link.addEventListener('click', hindi_navigate)
 eng_link.addEventListener('click', eng_navigate)
+
+if(lang_links.length===4){
+  hindi_menu_link=lang_links[2]
+  eng_menu_link=lang_links[3]
+  hindi_menu_link.addEventListener('click', hindi_navigate)
+  eng_menu_link.addEventListener('click', eng_navigate)
+}
