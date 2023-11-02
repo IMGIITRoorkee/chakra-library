@@ -155,6 +155,10 @@ document.addEventListener('DOMContentLoaded', function (e) {
       }
     })
 
+    setInterval(()=>{
+      reorderSlides(hash, sliderMap[hash], false)
+    }, 6000)
+
     renderSlides(hash, sliderMap[hash])
     sliderMap[hash] = numberOfCardsToDisplay(hash)
     renderSlides(hash, sliderMap[hash])
