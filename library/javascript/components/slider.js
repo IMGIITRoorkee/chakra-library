@@ -99,6 +99,7 @@ const numberOfCardsToDisplay = sliderHash => {
 }
 
 const sliderMap = {}
+let intervalID;
 
 document.addEventListener('DOMContentLoaded', function (e) {
   const sliders = document.querySelectorAll('.ui.slider')
@@ -155,15 +156,22 @@ document.addEventListener('DOMContentLoaded', function (e) {
       }
     })
 
-    setInterval(()=>{
+    intervalID = setInterval(() => {
       reorderSlides(hash, sliderMap[hash], false)
-    }, 6000)
+    }, 4000)
 
     renderSlides(hash, sliderMap[hash])
     sliderMap[hash] = numberOfCardsToDisplay(hash)
     renderSlides(hash, sliderMap[hash])
   }
 })
+
+window.addEventListener('beforeunload', function () {
+  // Clear any intervals here
+  if (intervalID)
+    clearInterval(intervalID);
+})
+
 var observer = new MutationObserver(function (mutations) {
   mutations.forEach(function (mutationRecord) {
     const sliders = document.querySelectorAll('.ui.slider')
