@@ -6,6 +6,10 @@
   background-color: transparent;
 }
 
+.ui.image:hover {
+  cursor: pointer;
+}
+
 .ui.fluid.image {
   display: block;
   width: 100%;
