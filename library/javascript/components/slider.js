@@ -1,13 +1,13 @@
-var src = 'https://cmsredesign.channeli.in/'
-const rightArrow = src + 'library/assets/icons/carouselright.svg'
-const leftArrow = src + 'library/assets/icons/carouselleft.svg'
+var src = "https://cmsredesign.channeli.in/"
+const rightArrow = src + "library/assets/icons/carouselright.svg"
+const leftArrow = src + "library/assets/icons/carouselleft.svg"
 
 // Hash function
 // Returns a hash of argument length
 function makeHash(length) {
-  let result = ''
+  let result = ""
   const characters =
-    'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
   const charactersLength = characters.length
   for (let i = 0; i < length; i++) {
     result += characters.charAt(Math.floor(Math.random() * charactersLength))
@@ -19,7 +19,7 @@ function makeHash(length) {
 // first slide to last
 const reorderSlides = (sliderHash, numCards, isLeft) => {
   const sliderElement = document.getElementById(sliderHash)
-  const container = sliderElement.getElementsByClassName('container')[0]
+  const container = sliderElement.getElementsByClassName("container")[0]
   const cards = container.children
 
   const totalNumberOfCards = cards.length
@@ -31,29 +31,33 @@ const reorderSlides = (sliderHash, numCards, isLeft) => {
   // Reorder
   if (isLeft) {
     // Put last card to the top
-    if (totalNumberOfCards <= numCards) { return }
+    if (totalNumberOfCards <= numCards) {
+      return
+    }
     if (totalNumberOfCards > numCards) {
-      cards[numCards - 1].style.display = 'none'
+      cards[numCards - 1].style.display = "none"
     }
     const lastCard = cards[totalNumberOfCards - 1]
-    if (lastCard.classList.contains('image-description-card')) {
-      lastCard.style.display = 'flex'
+    if (lastCard.classList.contains("image-description-card")) {
+      lastCard.style.display = "flex"
     } else {
-      lastCard.style.display = 'block'
+      lastCard.style.display = "block"
     }
     container.insertBefore(lastCard, container.firstChild)
   } else {
-    if (totalNumberOfCards <= numCards) { return }
+    if (totalNumberOfCards <= numCards) {
+      return
+    }
     // Put first card to the bottom
     const firstChild = cards[0]
     if (totalNumberOfCards > numCards) {
-      firstChild.style.display = 'none'
+      firstChild.style.display = "none"
     }
-    cards[numCards].style.display = 'block'
-    if (cards[numCards].classList.contains('image-description-card')) {
-      cards[numCards].style.display = 'flex'
+    cards[numCards].style.display = "block"
+    if (cards[numCards].classList.contains("image-description-card")) {
+      cards[numCards].style.display = "flex"
     } else {
-      cards[numCards].style.display = 'block'
+      cards[numCards].style.display = "block"
     }
     container.appendChild(firstChild)
   }
@@ -61,22 +65,22 @@ const reorderSlides = (sliderHash, numCards, isLeft) => {
 
 const renderSlides = (hash, numberOfCards) => {
   const sliderElement = document.getElementById(hash)
-  const container = sliderElement.getElementsByClassName('container')[0]
+  const container = sliderElement.getElementsByClassName("container")[0]
   const cards = container.children
   for (let i = 0; i < cards.length; ++i) {
     if (i < numberOfCards) {
-      if (cards[i].classList.contains('image-description-card')) {
-        cards[i].style.display = 'flex'
+      if (cards[i].classList.contains("image-description-card")) {
+        cards[i].style.display = "flex"
       } else {
-        cards[i].style.display = 'block'
+        cards[i].style.display = "block"
       }
-    } else cards[i].style.display = 'none'
+    } else cards[i].style.display = "none"
   }
 }
 
 // FUNCTION TO CALCULATE THE NUMBER OF CARDS
 
-const numberOfCardsToDisplay = sliderHash => {
+const numberOfCardsToDisplay = (sliderHash) => {
   const sliderElement = document.getElementById(sliderHash)
 
   const vw = Math.max(
@@ -85,10 +89,10 @@ const numberOfCardsToDisplay = sliderHash => {
   )
   const px = Math.ceil((vw * 10) / 100)
 
-  const container = sliderElement.getElementsByClassName('container')[0]
+  const container = sliderElement.getElementsByClassName("container")[0]
   // Handle the case when the slider has no cards
   if (container.children.length === 0) {
-    return 0;
+    return 0
   }
   const card = container.firstElementChild
   const numberOfCards = Math.floor(
@@ -99,17 +103,17 @@ const numberOfCardsToDisplay = sliderHash => {
 }
 
 const sliderMap = {}
-let intervalID;
+let intervalID
 
-document.addEventListener('DOMContentLoaded', function (e) {
-  const sliders = document.querySelectorAll('.ui.slider')
+window.addEventListener("load", function (e) {
+  const sliders = document.querySelectorAll(".ui.slider")
   for (let i = 0; i < sliders.length; ++i) {
     const hash = makeHash(10)
     sliders[i].id = hash
     sliderMap[hash] = 1
 
-    const container = document.createElement('div')
-    container.className = 'container'
+    const container = document.createElement("div")
+    container.className = "container"
 
     let card = sliders[i].firstChild
 
@@ -118,27 +122,27 @@ document.addEventListener('DOMContentLoaded', function (e) {
       card = sliders[i].firstChild
     }
 
-    const leftArrowContainer = document.createElement('div')
-    leftArrowContainer.className = 'left-arrow-container'
+    const leftArrowContainer = document.createElement("div")
+    leftArrowContainer.className = "left-arrow-container"
 
-    const leftArrowElement = document.createElement('img')
-    leftArrowElement.className = 'arrow'
-    leftArrowElement.setAttribute('src', leftArrow)
+    const leftArrowElement = document.createElement("img")
+    leftArrowElement.className = "arrow"
+    leftArrowElement.setAttribute("src", leftArrow)
     leftArrowContainer.appendChild(leftArrowElement)
 
-    const rightArrowContainer = document.createElement('div')
-    rightArrowContainer.className = 'right-arrow-container'
+    const rightArrowContainer = document.createElement("div")
+    rightArrowContainer.className = "right-arrow-container"
 
-    const rightArrowElement = document.createElement('img')
-    rightArrowElement.className = 'arrow'
-    rightArrowElement.setAttribute('src', rightArrow)
+    const rightArrowElement = document.createElement("img")
+    rightArrowElement.className = "arrow"
+    rightArrowElement.setAttribute("src", rightArrow)
     rightArrowContainer.appendChild(rightArrowElement)
 
     sliders[i].appendChild(leftArrowContainer)
     sliders[i].appendChild(container)
     sliders[i].appendChild(rightArrowContainer)
 
-    leftArrowElement.addEventListener('click', function (e) {
+    leftArrowElement.addEventListener("click", function (e) {
       e.stopPropagation()
       e.preventDefault()
 
@@ -147,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function (e) {
       }
     })
 
-    rightArrowElement.addEventListener('click', function (e) {
+    rightArrowElement.addEventListener("click", function (e) {
       e.stopPropagation()
       e.preventDefault()
 
@@ -166,15 +170,14 @@ document.addEventListener('DOMContentLoaded', function (e) {
   }
 })
 
-window.addEventListener('beforeunload', function () {
+window.addEventListener("beforeunload", function () {
   // Clear any intervals here
-  if (intervalID)
-    clearInterval(intervalID);
+  if (intervalID) clearInterval(intervalID)
 })
 
 var observer = new MutationObserver(function (mutations) {
   mutations.forEach(function (mutationRecord) {
-    const sliders = document.querySelectorAll('.ui.slider')
+    const sliders = document.querySelectorAll(".ui.slider")
     if (sliders === null) {
       return
     }
@@ -184,17 +187,17 @@ var observer = new MutationObserver(function (mutations) {
 
       renderSlides(hash, sliderMap[hash])
     }
-  });
-});
+  })
+})
 
-var elements = document.querySelectorAll('.content');
+var elements = document.querySelectorAll(".content")
 
-
-elements.forEach(element => observer.observe(element, { attributes: true, attributeFilter: ['style'] }));
-
+elements.forEach((element) =>
+  observer.observe(element, {attributes: true, attributeFilter: ["style"]})
+)
 
 window.onresize = () => {
-  const sliders = document.querySelectorAll('.ui.slider')
+  const sliders = document.querySelectorAll(".ui.slider")
   if (sliders === null) {
     return
   }
