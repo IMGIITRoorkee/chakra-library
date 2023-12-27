@@ -105,7 +105,7 @@ const numberOfCardsToDisplay = (sliderHash) => {
 const sliderMap = {}
 let intervalID
 
-document.addEventListener("DOMContentLoaded", function (e) {
+window.addEventListener("load", function (e) {
   const sliders = document.querySelectorAll(".ui.slider")
   for (let i = 0; i < sliders.length; ++i) {
     const hash = makeHash(10)
@@ -163,18 +163,21 @@ document.addEventListener("DOMContentLoaded", function (e) {
     intervalID = setInterval(() => {
       reorderSlides(hash, sliderMap[hash], false)
     }, 4000)
-    images = container.querySelectorAll("img")
-    loadedImageCounter = 0
-    images.forEach(function (image) {
-      image.addEventListener("load", function (e) {
-        loadedImageCounter++
-        if ((loadedImageCounter = images.length)) {
-          renderSlides(hash, sliderMap[hash])
-          sliderMap[hash] = numberOfCardsToDisplay(hash)
-          renderSlides(hash, sliderMap[hash])
-        }
-      })
-    })
+    // images = container.querySelectorAll("img")
+    // loadedImageCounter = 0
+    // images.forEach(function (image) {
+    //   image.addEventListener("load", function (e) {
+    //     loadedImageCounter++
+    //     if (loadedImageCounter == images.length) {
+    //       renderSlides(hash, sliderMap[hash])
+    //       sliderMap[hash] = numberOfCardsToDisplay(hash)
+    //       renderSlides(hash, sliderMap[hash])
+    //     }
+    //   })
+    // })
+    renderSlides(hash, sliderMap[hash])
+    sliderMap[hash] = numberOfCardsToDisplay(hash)
+    renderSlides(hash, sliderMap[hash])
   }
 })
 
