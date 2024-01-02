@@ -163,18 +163,18 @@ window.addEventListener("load", function (e) {
     intervalID = setInterval(() => {
       reorderSlides(hash, sliderMap[hash], false)
     }, 4000)
-    // images = container.querySelectorAll("img")
-    // loadedImageCounter = 0
-    // images.forEach(function (image) {
-    //   image.addEventListener("load", function (e) {
-    //     loadedImageCounter++
-    //     if (loadedImageCounter == images.length) {
-    //       renderSlides(hash, sliderMap[hash])
-    //       sliderMap[hash] = numberOfCardsToDisplay(hash)
-    //       renderSlides(hash, sliderMap[hash])
-    //     }
-    //   })
-    // })
+    images = container.querySelectorAll("img")
+    loadedImageCounter = 0
+    images.forEach(function (image) {
+      image.addEventListener("load", function (e) {
+        loadedImageCounter++
+        if (loadedImageCounter == images.length) {
+          renderSlides(hash, sliderMap[hash])
+          sliderMap[hash] = numberOfCardsToDisplay(hash)
+          renderSlides(hash, sliderMap[hash])
+        }
+      })
+    })
     renderSlides(hash, sliderMap[hash])
     sliderMap[hash] = numberOfCardsToDisplay(hash)
     renderSlides(hash, sliderMap[hash])
