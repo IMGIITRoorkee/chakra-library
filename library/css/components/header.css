@@ -6,6 +6,8 @@
   /* padding-bottom: 15px; */
   display: flex;
   flex-direction: column;
+  position: relative;
+
 }
 
 
@@ -141,9 +143,16 @@
   gap: 1rem;
 }
 .ui.header .logo {
+  position:relative;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
   max-width: 25rem;
   cursor: pointer;
+  
+  
+  
+  
 }
 
 .ui.header.department .main-head {
@@ -237,9 +246,14 @@
     display: unset;
   }
   .ui.header .logo {
+    position:relative;
+    left: 60%;
+    
+
     width: 100%;
     max-width: 20rem;
     margin: 10px;
+     
   }
   .ui.header .main-head {
     display: flex;
@@ -322,7 +336,11 @@
 
 @media only screen and (max-width:750px){
   .ui.header .logo{
+    position:relative;
+    left: 60%;
     width: 15rem;
+   
+    
   }
   .ui.header .g20-logo{
     width: 4rem;
@@ -333,6 +351,9 @@
     max-width: 95%;
   }
   .ui.header .logo {
+    position:relative;
+    left: 60%;
+    
     width: 10rem;
   }
   .ui.header .g20-logo {
