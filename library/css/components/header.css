@@ -18,6 +18,7 @@
   text-align: center;
   gap: 4px;
 }
+
 .ui.header .light-button {
   color: var(--black);
   width: 20px;
@@ -30,6 +31,7 @@
   border: 2px solid var(--bright-blue);
   cursor: pointer;
 }
+
 .ui.header .dark-button {
   color: var(--white);
   width: 20px;
@@ -43,40 +45,47 @@
   border: 2px solid var(--bright-blue);
   cursor: pointer;
 }
-.ui.header > .ui.main-head > .upperleft {
+
+.ui.header>.ui.main-head>.upperleft {
   display: flex !important;
   flex-direction: row;
   gap: 5%;
 }
+
 .ui.header .page-options {
   display: flex;
   gap: 1rem;
   justify-content: space-between;
   font-size: 0.75rem;
 }
+
 .ui.header .page-options a {
   text-decoration: none;
   color: var(--black);
 }
+
 .ui.header .page-options a:hover {
   text-decoration: underline;
   color: var(--hover-black);
 }
+
 .ui.header .page-search:hover {
   cursor: pointer;
 }
-.ui.header >.upper-head >.left-container {
+
+.ui.header>.upper-head>.left-container {
   display: flex;
-  flex-direction: row ;
+  flex-direction: row;
   justify-content: flex-start;
   align-content: center;
   flex-wrap: wrap;
   column-gap: 2rem;
 }
-.ui.header >.upper-head >.left-container > a{
- color :#232323;
- text-decoration: none;
- 
+
+.ui.header>.upper-head>.left-container>a {
+  color: #232323;
+  text-decoration: none;
+
 }
 
 
@@ -84,6 +93,7 @@
   display: flex;
   align-items: center;
 }
+
 .ui.header .sizechange {
   display: flex;
   align-items: baseline;
@@ -91,6 +101,7 @@
   justify-content: space-between;
   width: 3.5rem;
 }
+
 .ui.header .accessibility {
   display: flex;
   justify-content: space-between;
@@ -98,11 +109,13 @@
   align-items: center;
   column-gap: 2rem;
 }
+
 .ui.header .language {
   display: flex;
   flex-direction: row;
 }
-.language > a:hover {
+
+.language>a:hover {
   cursor: pointer;
 }
 
@@ -111,15 +124,19 @@
 .ui.header .sizechange .big {
   cursor: pointer;
 }
+
 .ui.header .sizechange .small {
   font-size: 14px;
 }
+
 .ui.header .sizechange .medium {
   font-size: 16px;
 }
+
 .ui.header .sizechange .big {
   font-size: 18px;
 }
+
 .ui.header .main-head {
   width: 80%;
   display: flex;
@@ -142,17 +159,18 @@
   display: flex;
   gap: 1rem;
 }
+
 .ui.header .logo {
-  position:relative;
+  position: relative;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
   max-width: 25rem;
   cursor: pointer;
-  
-  
-  
-  
+
+
+
+
 }
 
 .ui.header.department .main-head {
@@ -161,6 +179,7 @@
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
+
 .ui.header.department .top-nav {
   display: flex;
   justify-content: space-between;
@@ -178,6 +197,7 @@
   align-items: center;
   gap: 1rem;
 }
+
 .logo-header {
   display: flex;
   justify-content: center;
@@ -185,21 +205,26 @@
   width: 100%;
   padding: 15px 0px;
 }
+
 .ui.header.department .logo {
   margin: auto;
 }
+
 .ui.header .hamburger-container {
   display: none;
 }
+
 .ui.header.department .page-search-header {
   display: none;
 }
+
 .ui.header .g20-logo {
   width: 6rem;
   cursor: pointer;
   margin-left: auto;
   margin-right: 1rem;
 }
+
 .g20-logo-department {
   width: 120px;
   max-width: 10rem;
@@ -210,10 +235,12 @@
   padding-left: 1rem;
   margin-left: 1rem;
 }
+
 .logo-link {
   width: 70px;
 }
-.dark .ui.main-head > .logo > img {
+
+.dark .ui.main-head>.logo>img {
   content: url("http://cmsredesign.channeli.in/library/assets/images/IITRLogo.png");
 }
 
@@ -221,15 +248,19 @@
   .ui.header {
     width: unset;
   }
-  .ui.header .upper-head{
+
+  .ui.header .upper-head {
     display: none;
   }
+
   .ui.header.department .top-nav {
     display: none;
   }
+
   .ui.header.department .page-search-header {
     display: unset;
   }
+
   .ui.header .sizechange,
   .ui.header .page-options,
   .ui.header .divider,
@@ -239,27 +270,37 @@
   .ui.header .dark-light-mode {
     display: none;
   }
+
   .ui.header .accessibility {
     max-width: 1rem;
   }
+
   .ui.header .hamburger-container {
     display: unset;
-  }
-  .ui.header .logo {
-    position:relative;
-    left: 60%;
     
+  }
+  .ui.header .hamburger-container img {
+    padding-left: 0px; 
+    margin-left: -30px; 
+  }
+  
+  .ui.header .logo {
+    position: relative;
+    left: 60%;
+
 
     width: 100%;
     max-width: 20rem;
     margin: 10px;
-     
+
   }
+
   .ui.header .main-head {
     display: flex;
     justify-content: start;
     align-items: center;
   }
+
   .ui.header .g20-logo {
     border: none;
     width: 5rem;
@@ -274,6 +315,7 @@
     gap: 25%;
     width: 100%;
   }
+
   .ui.header.department .section-heading {
     font-size: 0.8rem;
   }
@@ -294,6 +336,7 @@
   .g20-logo-department {
     width: 80px;
   }
+
   .logo-link {
     width: 40px;
   }
@@ -334,34 +377,40 @@
   display: none;
 }
 
-@media only screen and (max-width:750px){
-  .ui.header .logo{
-    position:relative;
+@media only screen and (max-width:750px) {
+  .ui.header .logo {
+    position: relative;
     left: 60%;
     width: 15rem;
-   
-    
+
+
   }
-  .ui.header .g20-logo{
+
+  .ui.header .g20-logo {
     width: 4rem;
   }
 }
+
 @media only screen and (max-width: 500px) {
   .ui.header {
     max-width: 95%;
   }
+
   .ui.header .logo {
-    position:relative;
+    position: relative;
     left: 60%;
-    
+
     width: 10rem;
   }
+
   .ui.header .g20-logo {
     width: 3rem;
   }
+
   .g20-logo-department {
     width: 60px;
   }
+
   .ui.header.department .main-head {
     gap: 5%
   }
