@@ -218,23 +218,9 @@
   display: none;
 }
 
-.ui.header .g20-logo {
-  width: 6rem;
-  cursor: pointer;
-  margin-left: auto;
-  margin-right: 1rem;
-}
 
-.g20-logo-department {
-  width: 120px;
-  max-width: 10rem;
-  cursor: pointer;
-  display: flex;
-  align-content: center;
-  border-left: 1px solid gray;
-  padding-left: 1rem;
-  margin-left: 1rem;
-}
+
+
 
 .logo-link {
   width: 70px;
@@ -280,13 +266,14 @@
     
   }
   .ui.header .hamburger-container img {
-    padding-left: 0px; 
-    margin-left: -30px; 
+    padding-left: 0px;
+   
+    margin-left: -10px; 
   }
   
   .ui.header .logo {
     position: relative;
-    left: 60%;
+    left: 80%;
 
 
     width: 100%;
@@ -301,10 +288,7 @@
     align-items: center;
   }
 
-  .ui.header .g20-logo {
-    border: none;
-    width: 5rem;
-  }
+  
 
   .ui.header.department .main-head {
     display: flex;
@@ -333,10 +317,7 @@
     gap: 0.25rem;
   }
 
-  .g20-logo-department {
-    width: 80px;
-  }
-
+  
   .logo-link {
     width: 40px;
   }
@@ -380,15 +361,13 @@
 @media only screen and (max-width:750px) {
   .ui.header .logo {
     position: relative;
-    left: 60%;
+    left: 80%;
     width: 15rem;
 
 
   }
 
-  .ui.header .g20-logo {
-    width: 4rem;
-  }
+  
 }
 
 @media only screen and (max-width: 500px) {
@@ -398,19 +377,14 @@
 
   .ui.header .logo {
     position: relative;
-    left: 60%;
+    left: 70%;
 
     width: 10rem;
   }
 
-  .ui.header .g20-logo {
-    width: 3rem;
-  }
+ 
 
-  .g20-logo-department {
-    width: 60px;
-  }
-
+ 
   .ui.header.department .main-head {
     gap: 5%
   }
