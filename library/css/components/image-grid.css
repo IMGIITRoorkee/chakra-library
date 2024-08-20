@@ -13,7 +13,7 @@
 .ui.image-grid {
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(13, 5rem);
+    grid-template-columns: repeat(13, 6vw);
     grid-template-rows: repeat(8, 5.86rem);
 }
 

@@ -69,7 +69,11 @@ div.flexbox .menuItem {
     max-width: 200px !important;
   }
   div.flexbox > .menuItem > a:hover {
-    background-color: var(--grey-blue);
+    background-color: var(--primary);
+  }
+  div.flexbox > .menuItem:has( ul.visible) > a{
+    background-color: var(--primary);
+    color: var(--black);
   }
   .menuContainer div.flexbox > .menuItem {
     position: relative !important;
@@ -96,7 +100,7 @@ div.flexbox .menuItem {
     overflow: visible;
   }
   div.flexbox > .menuItem .menuItem {
-    background-color: var(--grey-blue);
+    background-color: var(--primary);
     min-width: 200px;
   }
   div.flexbox > .menuItem .menuItem a {
@@ -110,7 +114,7 @@ div.flexbox .menuItem {
     transform: scaleX(0);
     left: 102%;
     top: 0%;
-    background-color: var(--grey-blue);
+    background-color: var(--primary);
     transition: transform 0.1s ease-in-out 0s, z-index 0s linear 0.01s,
       left 0s linear 0.01s;
     font-weight: normal !important;
@@ -165,9 +169,27 @@ div.flexbox .menuItem {
   .div.flexbox > .menuItem:active div.flexbox > .menuItem > ul {
     display: block;
   }
+  div.flexbox > .menuItem:hover div.flexbox > .menuItem > ul,
+  .div.flexbox > .menuItem:active div.flexbox > .menuItem > ul {
+    display: block;
+  }
   .accessibility-hamburger,
   .contact {
     display: none;
+  }
+  .menuContainer {
+    /* todo: make variable */
+    background-color: #222222;
+  }
+  div.flexbox > .menuItem > a > div > div.ui.intro-text {
+    color: var(--white);
+  }
+  div.flexbox > .menuItem:hover > a > div > div.ui.intro-text,
+  div.flexbox > .menuItem:active > a > div > div.ui.intro-text {
+    color: var(--black);
+  }
+  .menuItem > a > div > img {
+    filter: invert(100%);
   }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1200px) {
@@ -368,16 +390,4 @@ div.flexbox .menuItem {
     padding: 10px;
     gap: 5px;
   }
-}
-
-.menuContainer {
-  /* todo: make variable */
-  background-color: #222222;
-}
-
-.menuItem > a > div > div {
-  color: var(--white) !important;
-}
-.menuItem > a > div > img {
-  filter: invert(100%) !important;
 }

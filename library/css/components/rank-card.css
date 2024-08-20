@@ -29,7 +29,7 @@
     font-family: var(--font-lato);
     font-size: 70px;
     font-weight: 900;
-    text-shadow: 5px 5px #fbd880;
+    text-shadow: 5px 5px var(--primary);
 }
 
 @media only screen and (max-width: 768px) {

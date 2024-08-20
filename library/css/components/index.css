@@ -72,7 +72,7 @@ body {
     background-color: var(--very-gery-blue);
   }
   .bg-yellow {
-    background-color: var(--bg-yellow);
+    background-color: var(--primary);
   }
   .black { 
     background-color: var(--black);

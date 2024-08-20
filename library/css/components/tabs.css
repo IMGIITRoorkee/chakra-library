@@ -5,7 +5,8 @@
 
 .ui.tabs-container.primary > .tabs {
   width: 100%;
-  border-bottom: 2px solid var(--formal-blue);
+  /* border-bottom: 2px solid var(--formal-blue); */
+  border-bottom: 2px solid var(--primary);
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -37,7 +38,8 @@
   text-transform: uppercase;
   font-family: var(--font-lato);
   margin-right: 10px;
-  border: 2px solid var(--formal-blue);
+  /* border: 2px solid var(--formal-blue); */
+  border: 2px solid var(--primary);
   border-bottom: hidden;
   font-size: var(--tabs-font-size);
   border-top-left-radius: 4px;
@@ -78,8 +80,9 @@
 }
 
 .ui.tabs-container.primary > .tabs > .tab.active {
-  color: var(--white);
-  background-color: var(--formal-blue);
+  /* color: var(--white); */
+  /* background-color: var(--formal-blue); */
+  background-color: var(--primary);
 }
 
 .ui.tabs-container.primary.inverted > .tabs > .tab.active {
@@ -87,7 +90,8 @@
   background-color: var(--white);
 }
 .ui.tabs-container.secondary > .tabs > .tab.active {
-  color: var(--bright-blue);
+  /* color: var(--bright-blue); */
+  color: var(--primary);
   font-weight: var(--tabs-secondary-active-font-weight);
   border-bottom: 2px solid var(--bright-blue);
 }
@@ -144,7 +148,7 @@
 }
 .ui.tabs-container.event > .tabs > .tab.active
 {
-  background-color: var(--bg-yellow);
+  background-color: var(--primary);
   color: var(--black);
 }
 .ui.tabs-container.event > .contents {
@@ -176,7 +180,7 @@
   margin-top: 8px;
 }
 .ui.tabs-container.milestone > .tabs > .tab.active > .ms-dot {
-  background-color: var(--bg-yellow);
+  background-color: var(--primary);
 }
 
 @media only screen and (max-width: 600px) {
