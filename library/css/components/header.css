@@ -2,7 +2,7 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  border-bottom: 1px solid var(--bg-yellow);
+  border-bottom: 1px solid var(--primary);
   /* padding-bottom: 15px; */
   display: flex;
   flex-direction: column;
@@ -49,7 +49,8 @@
   background-color: #222222;
 }
 
-.ui.header > .ui.main-head > .logo > img {
+/* todo: rework dark mode */
+.light .ui.header > .ui.main-head > .logo > img {
   filter: invert(100%);
 }
 
@@ -398,7 +399,13 @@
   /* todo: add variable */
   background-color: #3c3c3c;
 }
-
+/* todo: rework dark mode */
+.dark .ui.header {
+  background-color: var(--menu-black);
+}
+.dark .ui.header > .upper-head {
+  background-color: var(--primary);
+}
 .ui.header > .upper-head > .left-container > a {
   color: var(--white);
 }

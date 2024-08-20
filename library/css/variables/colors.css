@@ -21,6 +21,8 @@
   --caption-grey: #999999;
   --hover-black: #181818;
   --very-gery-blue: #cfdbe6;
+  --dot-grey: rgba(35, 35, 35, 0.6);
+  --menu-black: #222222;
   --social-icon-facebook-hover-color: #3b5998;
   --social-icon-twitter-hover-color: #00aced;
   --social-icon-linkedin-hover-color: #0077b5;
@@ -42,9 +44,12 @@
   --grey: #EEEEEE;
   --light-grey: #111111;
   --yellow: #ffd53d;
+  --primary: #E9FF92;
   --caption-grey: #999999;
   --hover-black: #f7f7f7;
   --very-gery-blue: #4C4C4C;
+  --dot-grey: #ffffff;
+  --menu-black: #031403;
   --social-icon-facebook-hover-color: #3b5998;
   --social-icon-twitter-hover-color: #00aced;
   --social-icon-linkedin-hover-color: #0077b5;

@@ -29,6 +29,10 @@
     font-family: var(--font-lato);
     font-size: 70px;
     font-weight: 900;
+}
+
+/* todo: rework dark mode  */
+.light .ui.rank-card .sub-heading {
     text-shadow: 5px 5px var(--primary);
 }
 

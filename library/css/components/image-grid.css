@@ -13,8 +13,8 @@
 .ui.image-grid {
     display: grid;
     gap: 20px;
-    grid-template-columns: repeat(13, 6vw);
-    grid-template-rows: repeat(8, 5.86rem);
+    grid-template-columns: repeat(13, 5vw);
+    grid-template-rows: repeat(8, 5rem);
 }
 
 .ui.image-grid > .ui.image:nth-child(1) {
@@ -54,7 +54,7 @@
     grid-column: 11 / 13;
 }
 
-@media only screen and (max-width: 800px)
+@media only screen and (max-width: 960px)
 {
     .ui.image-grid {
         display: grid;

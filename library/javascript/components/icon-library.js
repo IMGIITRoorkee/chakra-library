@@ -177,7 +177,11 @@ const paths = {
   architecture: 'library/assets/icons/architecture.svg',
   engineering: 'library/assets/icons/engineering.svg',
   india_gate: 'library/assets/icons/india_gate.svg',
-  globe: 'library/assets/icons/globe.svg'
+  globe: 'library/assets/icons/globe.svg',
+  accessibility_architecture: 'library/assets/icons/accessibility_architecture.svg',
+  accessibility_engineering: 'library/assets/icons/accessibility_engineering.svg',
+  accessibility_india_gate: 'library/assets/icons/accessibility_india_gate.svg',
+  accessibility_globe: 'library/assets/icons/accessibility_globe.svg'
 }
 
 /* <img class="ui icon" data-icon=""/> */

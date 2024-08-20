@@ -4,7 +4,7 @@
 
 .ui.carousel-stats > .ui.flexbox {
     justify-content: center;
-    z-index: 200;
+    z-index: 2;
     position: relative;
     bottom: 2rem;
 }
@@ -25,14 +25,48 @@
     color: var(--white);
 }
 
+/* todo: dark mode rework */
+.dark .ui.carousel-stats .ui.flexbox .ui.stats-card.bg-yellow .ui.one-liner-captions, 
+.dark .ui.carousel-stats .ui.flexbox .ui.stats-card.bg-yellow .ui.sub-heading {
+    color: var(--white);
+}
+
+.dark .ui.carousel-stats .ui.flexbox .ui.stats-card.black .ui.one-liner-captions,
+.dark .ui.carousel-stats .ui.flexbox .ui.stats-card.black .ui.sub-heading   {
+    color: var(--black);
+}
+
+.dark .ui.carousel-stats .ui.flexbox .ui.stats-card.black {
+    background-color: var(--white);
+}
+
 .ui.carousel-stats .ui.flexbox .ui.stats-card img {
     height: 5rem;
     width: 7.625rem;
 }
 
+
 .ui.carousel-stats > .ui.flexbox > .ui.stats-card.black > img {
     filter: invert(100%);
 }
+
+/* todo: dark mode rework  */
+/*rework realy bad fix*/
+.dark .ui.carousel-stats >.ui.flexbox > .ui.stats-card.bg-yellow, 
+.dark .ui.carousel-stats >.ui.flexbox > .ui.stats-card.black 
+{
+    overflow: hidden;
+}
+.dark .ui.carousel-stats >.ui.flexbox > .ui.stats-card.bg-yellow > img {
+    filter: drop-shadow(0px 200px 0 black);
+    transform: translateY(-200px);}
+
+.dark .ui.carousel-stats > .ui.flexbox > .ui.stats-card.black > img {
+    filter: drop-shadow(0px 200px 0 white);
+    transform: translateY(-200px);
+}
+
+
 
 @media only screen and (max-width : 800px) {
     /* bad fix for demo purposes, todo: write js */

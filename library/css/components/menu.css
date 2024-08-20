@@ -132,6 +132,14 @@ div.flexbox .menuItem {
     padding: 0px !important;
   }
 
+  /* todo: dark mode rework */
+  .dark div.flexbox > .menuItem > ul .menuItem > a > div {
+    color: var(--white) !important;
+  }
+  .dark div.flexbox > .menuItem > ul .menuItem > a > div > .ui.intro-text {
+    color: var(--white) !important; 
+  }
+
   div.flexbox > .menuItem > ul .menuItem > a {
     max-width: 100%;
     min-width: 80%;
@@ -179,14 +187,20 @@ div.flexbox .menuItem {
   }
   .menuContainer {
     /* todo: make variable */
-    background-color: #222222;
+    background-color: var(--menu-black);
   }
-  div.flexbox > .menuItem > a > div > div.ui.intro-text {
+
+  /* todo: rework dark mode */
+  .light div.flexbox > .menuItem > a > div > div.ui.intro-text {
     color: var(--white);
   }
   div.flexbox > .menuItem:hover > a > div > div.ui.intro-text,
   div.flexbox > .menuItem:active > a > div > div.ui.intro-text {
     color: var(--black);
+  }
+  .dark div.flexbox > .menuItem:hover > a > div > div.ui.intro-text,
+  .dark div.flexbox > .menuItem:active > a > div > div.ui.intro-text {
+    color: var(--white);
   }
   .menuItem > a > div > img {
     filter: invert(100%);

@@ -13,6 +13,14 @@
     width:auto;
 }
 
+/* todo: revamp dark mode */
+.dark .title-bar > div {
+    color: var(--primary);
+}
+.dark .full-width-container.bg-yellow > .title-bar > div {
+    color: var(--white);
+}
+
 @media only screen and (max-width: 600px) {
     .title-bar > * {
         font-size: 1rem;

@@ -308,10 +308,10 @@ const debounce = (func, delay) => {
 };
 
 
-// const debouncedReload = debounce(() => {
-//   location.reload();
-// }, 500);
+const debouncedReload = debounce(() => {
+  location.reload();
+}, 500);
 
-// window.addEventListener("resize", function() {
-//   debouncedReload();
-// });
+window.addEventListener("resize", function() {
+  debouncedReload();
+});
