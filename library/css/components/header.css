@@ -49,11 +49,6 @@
   background-color: #222222;
 }
 
-.ui.header > .ui.main-head {
-  display: flex;
-  justify-content: center;
-}
-
 .ui.header > .ui.main-head > .logo > img {
   filter: invert(100%);
 }
@@ -228,6 +223,13 @@
 
 .dark .ui.main-head > .logo > img {
   content: url("http://cmsredesign.channeli.in/library/assets/images/IITRLogo.png");
+}
+
+@media only screen and (min-width: 1024px) {
+  .ui.header>.ui.main-head {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
