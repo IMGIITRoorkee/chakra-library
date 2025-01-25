@@ -124,6 +124,13 @@
   line-height: 1.2rem;
   font-size: 18px;
 }
+.ui.intro-text-white{
+  color:white;
+  font-weight: 400;
+  /* padding: 1rem 0; */
+  line-height: 1.2rem;
+  font-size: 18px;
+}
 .ui.intro-text1{
   color: black;
   font-weight: 400;
