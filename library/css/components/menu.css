@@ -352,7 +352,8 @@ div.flexbox .menuItem {
     /* text-transform: uppercase !important; */
   }
   .ABox {
-    border: 2px solid var(--section-blue);
+    background-color: var(--white);
+    border: 2px solid var(--white);
     border-radius: 2px;
     width: 24px;
     height: 24px;
@@ -361,13 +362,21 @@ div.flexbox .menuItem {
     justify-content: center;
   }
   .ABoxFilled {
-    background-color: var(--section-blue);
+    background-color: var(--bg-red);
     border-radius: 2px;
     width: 24px;
     height: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  .sizechange > div{
+    background-color: var(--white);
+    padding: 2px;
+
+  }
+  .language > a{
+    color:white  !important;
   }
   .accessibility-hamburger > li > div {
     display: flex;
