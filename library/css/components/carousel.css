@@ -1,3 +1,4 @@
+
 .ui.carousel {
   position: relative;
 }
@@ -39,19 +40,25 @@
 }
 .ui.carousel > .ui.title-bar {
   font-size: 56px;
-  text-align: start;
+  text-align: center; /* Center align text */
   position: absolute;
   padding-top: 5px;
-  left: 10vw;
+  left: 30%; /* Center horizontally */
   top: 26%;
+  transform: translateX(-50%); /* Perfect horizontal centering */
   width: 50%;
-  height: 50%;
+  height: auto; /* Allow dynamic height */
   z-index: 4;
   overflow: hidden;
   font-family: var(--font-lato);
   font-weight: 800;
   color: white !important;
+  display: flex;
+  flex-direction: column; /* Stack words vertically */
+  align-items: center; /* Center align words */
+  gap: 15px; /* Add spacing between lines */
 }
+
 
 .ui.carousel > .flexbox {
   justify-content: space-between;
@@ -238,6 +245,12 @@
     height: 30%;
     font-size: 12px;
   }
+  .ui.carousel > .ui.title-bar {
+    font-size: 36px;
+ 
+    top: 10%;
+   
+  }
 
   @keyframes slide-down {
     from {
@@ -263,4 +276,11 @@
     font-size: 12px;
     height: 15%;
   }
+  .ui.carousel > .ui.title-bar {
+    font-size: 20px;
+ 
+    top: 10%;
+   
+  }
+
 }

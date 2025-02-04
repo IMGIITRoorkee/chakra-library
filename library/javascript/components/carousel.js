@@ -108,6 +108,25 @@ function activateCarousel(carousel) {
   }, 4000)
 
 }
+var titleBars = document.querySelectorAll('.ui.carousel > .ui.title-bar');
+
+titleBars.forEach(titleBar => {
+  if (titleBar) {
+    let words = titleBar.textContent
+      .trim() // Remove extra spaces
+      .split(" "); // Split words by space
+
+    console.log("Original Text:", titleBar.textContent); // Log original text
+    console.log("Split Words:", words); // Log the array of words
+
+    titleBar.innerHTML = words
+      .map(word => `<div>${word}</div>`) // Wrap each word in a <div>
+      .join("");
+
+    console.log("Modified HTML:", titleBar.innerHTML); // Log modified content
+  }
+});
+
 var carousels = document.querySelectorAll('.ui.carousel')
 carousels.forEach(carousel => activateCarousel(carousel))
 var fluidImageContainers = document.querySelectorAll('.ui.image.fluid')
