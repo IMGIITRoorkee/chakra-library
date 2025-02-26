@@ -10,6 +10,43 @@
     object-fit: fill;
 }
 
+.ui.image-grid > .ui.image > a > img {
+    transition: filter 0.2s ease-in-out;
+}
+
+.ui.image-grid > .ui.image:hover > a > img {
+    filter: brightness(50%);
+}
+
+.ui.image-grid > .ui.image > a > .image-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 0.1rem;
+    height: 100%;
+    width: 100%;
+    color: white;
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: flex;
+    align-items: start;
+    word-wrap: break-word;
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+}
+
+.ui.image-grid > .ui.image:hover > a > .image-title {
+    opacity: 1;
+}
+
+.ui.image-grid > .ui.image > {
+    padding: 0.25rem;
+}
+.ui.image-grid > .ui.image > a {
+    display: block;
+}
 
 @media only screen and (min-width: 600px),
 (max-width: 960px) {
