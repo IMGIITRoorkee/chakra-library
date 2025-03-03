@@ -1,0 +1,83 @@
+.ui.patent-card {
+    position: relative;
+}
+
+.ui.patent-card > .patent-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 1rem;
+}
+
+.ui.patent-card:hover > .patent-overlay {
+    opacity: 0.75;
+    z-index: 10;
+    background-color: black;
+}
+
+.ui.patent-card > .patent-overlay > div {
+    color: var(--white);
+    padding-left: 2rem;
+}
+
+.ui.patent-card > .patent-overlay > .patent-title {
+    font-size: 2.5rem;
+    height: 4%;
+    width: 80%;
+    font-family: var(--font-lato);
+}
+
+.ui.patent-card > .patent-overlay > .patent-description {
+    font-size: 1.5rem;
+    height: 40%;
+    width: 90%;
+    word-wrap: break-word;
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+}
+
+.ui.patent-card > .patent-overlay > button {
+    all: unset;
+    display: inline-block;
+    border: 1px solid var(--white); 
+    color: var(--white);
+    cursor: pointer;
+    margin-top: 4rem;
+    margin-left: 2rem;
+    height: 7%;
+    width: 32%;
+    text-align: center;
+}
+
+.ui.patent-card > .patent-overlay > .footer {
+    height: 10%;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.ui.patent-card > .patent-overlay > .footer > .ui.icon {
+    filter: brightness(0) invert(1);
+}
+
+.expansion-overlay {
+    position : fixed;
+    top : 0;
+    left : 0;
+    width : 100vw;
+    height : 100vh;
+    background : rgba(0, 0, 0, 0.8);
+    display : flex;
+    justify-content : center;
+    align-items : center;
+    z-index : 1000;
+    visibility : hidden;
+}
