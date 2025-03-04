@@ -1,5 +1,8 @@
 .ui.patent-card {
     position: relative;
+    height:80%;
+    width:80%;
+
 }
 
 .ui.patent-card > .patent-overlay {
@@ -37,8 +40,7 @@
     font-size: 1.5rem;
     height: 40%;
     width: 90%;
-    word-wrap: break-word;
-    overflow: hidden;
+    word-wrap: break-word;    overflow: hidden;
     white-space: normal;
     text-overflow: ellipsis;
 }
@@ -81,3 +83,4 @@
     z-index : 1000;
     visibility : hidden;
 }
+
