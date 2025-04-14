@@ -97,7 +97,7 @@
   color: var(--faculty-card-info-color);
   align-items: center;
   display: grid;
-  grid-template-columns: 8% 92%;
+  grid-template-columns: 4% 92%;
 }
 
 .ui.faculty-profile .ui.icon-typography div[onclick]:hover {
