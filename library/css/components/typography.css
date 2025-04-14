@@ -108,6 +108,6 @@
   padding-top: 5px;
   padding-bottom: 5px;
   display: flex;
-  gap: 0.625rem;
+  /* gap: 0.625rem; */
   align-items: center;
 }
