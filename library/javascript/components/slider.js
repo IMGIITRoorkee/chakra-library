@@ -3,7 +3,6 @@ const rightArrow = src + "library/assets/icons/carouselright.svg";
 const leftArrow = src + "library/assets/icons/carouselleft.svg";
 
 // Hash function
-// Returns a hash of argument length
 function makeHash(length) {
   let result = "";
   const characters =
@@ -14,33 +13,90 @@ function makeHash(length) {
   }
   return result;
 }
-let intervalID;
 
-// THIS FUNCTION REORDERS SLIDES by either inserting the last slide to first or
-// first slide to last
+let intervalID;
+const sliderMap = {};
+const sliderHeights = {};
+
+const calculateMaxSliderHeight = (sliderHash) => {
+  const sliderElement = document.getElementById(sliderHash);
+  if (!sliderElement) return 0;
+
+  const container = sliderElement.getElementsByClassName("container")[0];
+  if (!container) return 0;
+
+  const cards = Array.from(container.children);
+  if (cards.length === 0) return 0;
+
+  let maxHeight = 0;
+
+  for (let i = 0; i < cards.length; i++) {
+    const card = cards[i];
+
+    const img = card.querySelector("img");
+    if (img && img.complete && img.naturalWidth) {
+      const cardWidth = card.offsetWidth || card.clientWidth || 300;
+      const aspectRatio = img.naturalHeight / img.naturalWidth;
+      const imgHeight = cardWidth * aspectRatio;
+      maxHeight = Math.max(maxHeight, imgHeight);
+    } else {
+      const cardHeight = card.offsetHeight || card.scrollHeight;
+      maxHeight = Math.max(maxHeight, cardHeight);
+    }
+  }
+
+  return maxHeight || 200;
+};
+
+const setFixedSliderHeight = (sliderHash) => {
+  const sliderElement = document.getElementById(sliderHash);
+  if (!sliderElement) return;
+
+  if (sliderElement.style.getPropertyValue("--slider-height")) return;
+
+  const maxHeight = calculateMaxSliderHeight(sliderHash);
+
+  const finalHeight = Math.ceil(maxHeight + 16);
+
+  const maxAllowed = Math.round(window.innerHeight * 0.8);
+  const appliedHeight = Math.min(finalHeight, maxAllowed);
+
+  const outer = sliderElement.querySelector(".outer-container");
+  if (!outer) return;
+
+  outer.style.transition = "none";
+  outer.style.height = appliedHeight + "px";
+
+  sliderHeights[sliderHash] = appliedHeight;
+
+  const container = sliderElement.getElementsByClassName("container")[0];
+  if (container) {
+    Array.from(container.children).forEach((card) => {
+      card.style.height = appliedHeight + "px";
+      card.style.display = card.style.display || "flex";
+      card.style.alignItems = "center";
+      card.style.justifyContent = "center";
+    });
+  }
+};
+
 const reorderSlides = (sliderHash, numCards, isLeft) => {
   const sliderElement = document.getElementById(sliderHash);
   const container = sliderElement.getElementsByClassName("container")[0];
   const cards = container.children;
-
   const totalNumberOfCards = cards.length;
 
-  if (numCards < 1) {
-    return;
-  }
+  if (numCards < 1) return;
 
-  // Calculate animation step and direction
   const cardWidth = cards[0].offsetWidth;
   const animationStep = isLeft ? cardWidth : -cardWidth;
 
   let currentPosition = 0;
-  let newPosition = currentPosition + animationStep;
-
   const animationDuration = 700;
   const framesPerSecond = 60;
   const totalFrames = Math.ceil(animationDuration / (700 / framesPerSecond));
   const frameStep = animationStep / totalFrames;
-  let animationStopped = false; // Flag to track animation state
+  let animationStopped = false;
 
   const animate = () => {
     if (!animationStopped) {
@@ -49,12 +105,12 @@ const reorderSlides = (sliderHash, numCards, isLeft) => {
 
       if (Math.abs(currentPosition) >= Math.abs(animationStep)) {
         if (isLeft) {
-          if (totalNumberOfCards <= numCards) {
-            return;
-          }
+          if (totalNumberOfCards <= numCards) return;
+
           if (totalNumberOfCards > numCards) {
             cards[numCards - 1].style.display = "none";
           }
+
           const lastCard = cards[totalNumberOfCards - 1];
           if (lastCard.classList.contains("image-description-card")) {
             lastCard.style.display = "flex";
@@ -63,15 +119,13 @@ const reorderSlides = (sliderHash, numCards, isLeft) => {
           }
           container.insertBefore(lastCard, container.firstChild);
         } else {
-          if (totalNumberOfCards <= numCards) {
-            return;
-          }
-          // Put first card to the bottom
+          if (totalNumberOfCards <= numCards) return;
+
           const firstChild = cards[0];
           if (totalNumberOfCards > numCards) {
             firstChild.style.display = "none";
           }
-          cards[numCards].style.display = "block";
+
           if (cards[numCards].classList.contains("image-description-card")) {
             cards[numCards].style.display = "flex";
           } else {
@@ -79,10 +133,10 @@ const reorderSlides = (sliderHash, numCards, isLeft) => {
           }
           container.appendChild(firstChild);
         }
+
         container.style.transform = "translateX(0)";
         currentPosition = 0;
-        animationStopped = true; // Pause animation after completing a cycle
-
+        animationStopped = true;
         return;
       }
     }
@@ -99,6 +153,7 @@ const renderSlides = (hash, numberOfCards) => {
   const sliderElement = document.getElementById(hash);
   const container = sliderElement.getElementsByClassName("container")[0];
   const cards = container.children;
+
   for (let i = 0; i < cards.length; ++i) {
     if (i < numberOfCards) {
       if (cards[i].classList.contains("image-description-card")) {
@@ -106,15 +161,14 @@ const renderSlides = (hash, numberOfCards) => {
       } else {
         cards[i].style.display = "block";
       }
-    } else cards[i].style.display = "none";
+    } else {
+      cards[i].style.display = "none";
+    }
   }
 };
 
-// FUNCTION TO CALCULATE THE NUMBER OF CARDS
-
 const numberOfCardsToDisplay = (sliderHash) => {
   const sliderElement = document.getElementById(sliderHash);
-
   const vw = Math.max(
     document.documentElement.clientWidth || 0,
     window.innerWidth || 0
@@ -122,26 +176,29 @@ const numberOfCardsToDisplay = (sliderHash) => {
   const px = Math.ceil((vw * 10) / 100);
 
   const container = sliderElement.getElementsByClassName("container")[0];
-  // Handle the case when the slider has no cards
-  if (container.children.length === 0) {
-    return 0;
-  }
+  if (container.children.length === 0) return 0;
+
   const card = container.firstElementChild;
   const numberOfCards = Math.floor(
     (sliderElement.clientWidth - px) / card.offsetWidth
   );
-  const ret = numberOfCards > 1 ? numberOfCards : 1;
-  return ret;
+  return numberOfCards > 1 ? numberOfCards : 1;
 };
 
-const sliderMap = {};
+const startAutoSlide = (sliderHash, numCards) => {
+  intervalID = setInterval(() => {
+    reorderSlides(sliderHash, numCards, false);
+  }, 8000);
+};
 
 window.addEventListener("load", function (e) {
   const sliders = document.querySelectorAll(".ui.slider");
+
   for (let i = 0; i < sliders.length; ++i) {
     const hash = makeHash(10);
     sliders[i].id = hash;
     sliderMap[hash] = 1;
+
     const outerContainer = document.createElement("div");
     outerContainer.className = "outer-container";
 
@@ -149,7 +206,6 @@ window.addEventListener("load", function (e) {
     container.className = "container";
 
     let card = sliders[i].firstChild;
-
     while (card) {
       container.appendChild(card);
       card = sliders[i].firstChild;
@@ -157,7 +213,6 @@ window.addEventListener("load", function (e) {
 
     const leftArrowContainer = document.createElement("div");
     leftArrowContainer.className = "left-arrow-container";
-    container.className = "container";
 
     const leftArrowElement = document.createElement("img");
     leftArrowElement.className = "arrow";
@@ -171,17 +226,15 @@ window.addEventListener("load", function (e) {
     rightArrowElement.className = "arrow";
     rightArrowElement.setAttribute("src", rightArrow);
     rightArrowContainer.appendChild(rightArrowElement);
-    outerContainer.appendChild(container);
 
+    outerContainer.appendChild(container);
     sliders[i].appendChild(leftArrowContainer);
-    // sliders[i].appendChild(container)
     sliders[i].appendChild(outerContainer);
     sliders[i].appendChild(rightArrowContainer);
 
     leftArrowElement.addEventListener("click", function (e) {
       e.stopPropagation();
       e.preventDefault();
-
       if (e.target) {
         reorderSlides(hash, sliderMap[hash], false);
         clearInterval(intervalID);
@@ -191,22 +244,23 @@ window.addEventListener("load", function (e) {
     rightArrowElement.addEventListener("click", function (e) {
       e.stopPropagation();
       e.preventDefault();
-
       if (e.target) {
         reorderSlides(hash, sliderMap[hash], true);
         clearInterval(intervalID);
       }
     });
 
-    images = container.querySelectorAll("img");
-    loadedImageCounter = 0;
+    const images = container.querySelectorAll("img");
+    let loadedImageCounter = 0;
+
     images.forEach(function (image) {
       image.addEventListener("load", function (e) {
         loadedImageCounter++;
-        if (loadedImageCounter == images.length) {
+        if (loadedImageCounter === images.length) {
           renderSlides(hash, sliderMap[hash]);
           sliderMap[hash] = numberOfCardsToDisplay(hash);
           renderSlides(hash, sliderMap[hash]);
+          setFixedSliderHeight(hash);
         }
       });
     });
@@ -214,50 +268,46 @@ window.addEventListener("load", function (e) {
     renderSlides(hash, sliderMap[hash]);
     sliderMap[hash] = numberOfCardsToDisplay(hash);
     renderSlides(hash, sliderMap[hash]);
+    setFixedSliderHeight(hash);
     startAutoSlide(hash, sliderMap[hash]);
   }
 });
 
 window.addEventListener("beforeunload", function () {
-  // Clear any intervals here
   if (intervalID) clearInterval(intervalID);
 });
-const startAutoSlide = (sliderHash, numCards) => {
-  intervalID = setInterval(() => {
-    reorderSlides(sliderHash, numCards, false);
-  }, 8000);
-};
 
 var observer = new MutationObserver(function (mutations) {
   mutations.forEach(function (mutationRecord) {
     const sliders = document.querySelectorAll(".ui.slider");
-    if (sliders === null) {
-      return;
-    }
+    if (sliders === null) return;
+
     for (let i = 0; i < sliders.length; i++) {
       const hash = sliders[i].id;
       sliderMap[hash] = numberOfCardsToDisplay(hash);
-
       renderSlides(hash, sliderMap[hash]);
+
+      if (!sliderHeights[hash]) {
+        setFixedSliderHeight(hash);
+      }
     }
   });
 });
 
 var elements = document.querySelectorAll(".content");
-
 elements.forEach((element) =>
   observer.observe(element, { attributes: true, attributeFilter: ["style"] })
 );
 
 window.onresize = () => {
   const sliders = document.querySelectorAll(".ui.slider");
-  if (sliders === null) {
-    return;
-  }
+  if (sliders === null) return;
+
   for (let i = 0; i < sliders.length; i++) {
     const hash = sliders[i].id;
     sliderMap[hash] = numberOfCardsToDisplay(hash);
-
     renderSlides(hash, sliderMap[hash]);
+
+    setFixedSliderHeight(hash);
   }
 };
