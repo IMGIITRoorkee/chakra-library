@@ -32,17 +32,19 @@ const calculateMaxSliderHeight = (sliderHash) => {
 
   for (let i = 0; i < cards.length; i++) {
     const card = cards[i];
+    if (!card) continue;
 
-    const img = card.querySelector("img");
-    if (img && img.complete && img.naturalWidth) {
-      const cardWidth = card.offsetWidth || card.clientWidth || 300;
-      const aspectRatio = img.naturalHeight / img.naturalWidth;
-      const imgHeight = cardWidth * aspectRatio;
-      maxHeight = Math.max(maxHeight, imgHeight);
-    } else {
-      const cardHeight = card.offsetHeight || card.scrollHeight;
-      maxHeight = Math.max(maxHeight, cardHeight);
+    const cardHeight = card.scrollHeight || card.offsetHeight || 0;
+
+    if (cardHeight === 0) {
+      continue;
     }
+
+    const computedStyles = window.getComputedStyle(card);
+    const marginTop = parseFloat(computedStyles.marginTop) || 0;
+    const marginBottom = parseFloat(computedStyles.marginBottom) || 0;
+
+    maxHeight = Math.max(maxHeight, cardHeight + marginTop + marginBottom);
   }
 
   return maxHeight || 200;
@@ -73,9 +75,9 @@ const setFixedSliderHeight = (sliderHash) => {
   if (container) {
     Array.from(container.children).forEach((card) => {
       card.style.height = appliedHeight + "px";
-      card.style.display = card.style.display || "flex";
-      card.style.alignItems = "center";
-      card.style.justifyContent = "center";
+      card.style.minHeight = appliedHeight + "px";
+      card.style.removeProperty("align-items");
+      card.style.removeProperty("justify-content");
     });
   }
 };
