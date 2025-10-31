@@ -7,25 +7,22 @@
 .ui.slider > div{
     max-width: 100%;
 }
+
 .ui.slider .outer-container{
-    
     overflow: hidden;
-    display: flex; /* Add flex display to outer-container */
-    align-items: center; /* Align items horizontally */
+    display: flex;
+    align-items: stretch;
 }
 
 
 .ui.slider .container{
     width: 100%; 
-   
     display: flex;
     justify-content: space-evenly;
-    
-    align-items: center;
+    align-items: stretch;
     flex-wrap: nowrap; 
 }
 .ui.slider > * > *{
-    
     margin: 10px;
 }
 .ui.slider > .left-arrow-container {
