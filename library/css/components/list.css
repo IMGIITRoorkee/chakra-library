@@ -9,6 +9,8 @@
 .ui.list > .listItem {
     margin-bottom:0.625rem;
     line-height: 1.3;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .ui.list > .listItem > .ui.sub-heading {
