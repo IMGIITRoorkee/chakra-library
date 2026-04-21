@@ -14,6 +14,12 @@
     cursor: pointer;
 }
 
+@media (max-width: 1024px) {
+    .ui.bulleted-list > .listItem {
+        margin: 0.75rem 0.5rem;
+    }
+}
+
 .ui.bulleted-list > .listItem > .icon_image {
     width: 1rem;
     height: 1rem;
