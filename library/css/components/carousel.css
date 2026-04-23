@@ -175,10 +175,12 @@
 @media only screen and (max-width: 768px) {
   .ui.carousel > .ui.image.fluid > .bg-image {
     height: 40vw;
+    min-height: 200px;
   }
 
   .ui.carousel {
     height: 40vw;
+    min-height: 200px;
   }
   .ui.carousel > .image.fluid > img {
     display: block;
@@ -193,14 +195,25 @@
 
   .ui.carousel > .ui.image > .ui.section-heading {
     font-size: 20px;
-    top: 25%
+    left: 10%;
+    top: 25%;
+    width: 80%;
+    height: auto;
+    max-height: 3.2em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 
   .ui.carousel > .ui.image > .ui.intro-text {
     top: 40%;
-    width: 30%;
-    height: 30%;
+    left: 10%;
+    width: 80%;
+    height: auto;
     font-size: 12px;
+    max-height: 4.5em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
   }
 
   @keyframes slide-down {
@@ -222,9 +235,27 @@
   }
 }
 
+@media only screen and (max-width: 480px) {
+  .ui.carousel,
+  .ui.carousel > .ui.image.fluid > .bg-image {
+    min-height: 200px;
+  }
+
+  .ui.carousel > .ui.image > .ui.section-heading {
+    top: 18%;
+    font-size: 16px;
+    left: 10%;
+    width: 80%;
+  }
+
+  .ui.carousel > .ui.image > .ui.intro-text {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 425px) {
   .ui.carousel > .ui.image > .ui.section-heading {
-    font-size: 12px;
-    height: 15%;
+    font-size: 14px;
+    top: 16%;
   }
 }
