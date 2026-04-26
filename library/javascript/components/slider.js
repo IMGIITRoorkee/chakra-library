@@ -34,7 +34,13 @@ const calculateMaxSliderHeight = (sliderHash) => {
     const card = cards[i];
     if (!card) continue;
 
+    // Release flex stretch constraint to measure real intrinsic height
+    const originalAlign = card.style.alignSelf;
+    card.style.alignSelf = "flex-start";
+
     const cardHeight = card.scrollHeight || card.offsetHeight || 0;
+
+    card.style.alignSelf = originalAlign;
 
     if (cardHeight === 0) {
       continue;
@@ -54,14 +60,22 @@ const setFixedSliderHeight = (sliderHash) => {
   const sliderElement = document.getElementById(sliderHash);
   if (!sliderElement) return;
 
+  const outer = sliderElement.querySelector(".outer-container");
+  const container = sliderElement.getElementsByClassName("container")[0];
+
+  // 1. Temporarily clear previously forced inline heights to allow exact CSS measurement
+  if (outer) outer.style.height = "";
+  if (container) {
+    Array.from(container.children).forEach((card) => {
+      card.style.height = "";
+      card.style.minHeight = "";
+    });
+  }
+
   const maxHeight = calculateMaxSliderHeight(sliderHash);
 
-  const finalHeight = Math.ceil(maxHeight + 16);
+  const appliedHeight = Math.ceil(maxHeight + 16);
 
-  const maxAllowed = Math.round(window.innerHeight * 0.8);
-  const appliedHeight = Math.min(finalHeight, maxAllowed);
-
-  const outer = sliderElement.querySelector(".outer-container");
   if (!outer) return;
 
   outer.style.transition = "none";
@@ -69,7 +83,6 @@ const setFixedSliderHeight = (sliderHash) => {
 
   sliderHeights[sliderHash] = appliedHeight;
 
-  const container = sliderElement.getElementsByClassName("container")[0];
   if (container) {
     Array.from(container.children).forEach((card) => {
       card.style.height = appliedHeight + "px";
@@ -80,73 +93,63 @@ const setFixedSliderHeight = (sliderHash) => {
   }
 };
 
+const sliderAnimatingMap = {};
+
 const reorderSlides = (sliderHash, numCards, isLeft) => {
+  if (sliderAnimatingMap[sliderHash]) return;
+
   const sliderElement = document.getElementById(sliderHash);
   const container = sliderElement.getElementsByClassName("container")[0];
   const cards = container.children;
   const totalNumberOfCards = cards.length;
 
-  if (numCards < 1) return;
+  if (numCards < 1 || totalNumberOfCards <= numCards) return;
 
-  const cardWidth = cards[0].offsetWidth;
+  sliderAnimatingMap[sliderHash] = true;
+
+  const computedStyles = window.getComputedStyle(cards[0]);
+  const marginX = (parseFloat(computedStyles.marginLeft) || 0) + (parseFloat(computedStyles.marginRight) || 0);
+  const cardWidth = cards[0].offsetWidth + marginX;
   const animationStep = isLeft ? cardWidth : -cardWidth;
 
-  let currentPosition = 0;
-  const animationDuration = 700;
-  const framesPerSecond = 60;
-  const totalFrames = Math.ceil(animationDuration / (700 / framesPerSecond));
-  const frameStep = animationStep / totalFrames;
-  let animationStopped = false;
+  const animationDuration = 500; // 500ms for modern, snappy feel
 
-  const animate = () => {
-    if (!animationStopped) {
-      currentPosition += frameStep;
-      container.style.transform = `translateX(${currentPosition}px)`;
+  container.style.transition = `transform ${animationDuration}ms cubic-bezier(0.25, 1, 0.5, 1)`;
+  void container.offsetHeight; 
+  container.style.transform = `translateX(${animationStep}px)`;
 
-      if (Math.abs(currentPosition) >= Math.abs(animationStep)) {
-        if (isLeft) {
-          if (totalNumberOfCards <= numCards) return;
-
-          if (totalNumberOfCards > numCards) {
-            cards[numCards - 1].style.display = "none";
-          }
-
-          const lastCard = cards[totalNumberOfCards - 1];
-          if (lastCard.classList.contains("image-description-card")) {
-            lastCard.style.display = "flex";
-          } else {
-            lastCard.style.display = "block";
-          }
-          container.insertBefore(lastCard, container.firstChild);
-        } else {
-          if (totalNumberOfCards <= numCards) return;
-
-          const firstChild = cards[0];
-          if (totalNumberOfCards > numCards) {
-            firstChild.style.display = "none";
-          }
-
-          if (cards[numCards].classList.contains("image-description-card")) {
-            cards[numCards].style.display = "flex";
-          } else {
-            cards[numCards].style.display = "block";
-          }
-          container.appendChild(firstChild);
-        }
-
-        container.style.transform = "translateX(0)";
-        currentPosition = 0;
-        animationStopped = true;
-        return;
+  setTimeout(() => {
+    if (isLeft) {
+      if (totalNumberOfCards > numCards) {
+        cards[numCards - 1].style.display = "none";
       }
+
+      const lastCard = cards[totalNumberOfCards - 1];
+      if (lastCard.classList.contains("image-description-card")) {
+        lastCard.style.display = "flex";
+      } else {
+        lastCard.style.display = "block";
+      }
+      container.insertBefore(lastCard, container.firstChild);
+    } else {
+      const firstChild = cards[0];
+      if (totalNumberOfCards > numCards) {
+        firstChild.style.display = "none";
+      }
+
+      if (cards[numCards].classList.contains("image-description-card")) {
+        cards[numCards].style.display = "flex";
+      } else {
+        cards[numCards].style.display = "block";
+      }
+      container.appendChild(firstChild);
     }
 
-    if (Math.abs(currentPosition) < Math.abs(animationStep)) {
-      requestAnimationFrame(animate);
-    }
-  };
+    container.style.transition = "none";
+    container.style.transform = "translateX(0)";
 
-  animate();
+    sliderAnimatingMap[sliderHash] = false;
+  }, animationDuration);
 };
 
 const renderSlides = (hash, numberOfCards) => {
@@ -169,19 +172,38 @@ const renderSlides = (hash, numberOfCards) => {
 
 const numberOfCardsToDisplay = (sliderHash) => {
   const sliderElement = document.getElementById(sliderHash);
-  const vw = Math.max(
-    document.documentElement.clientWidth || 0,
-    window.innerWidth || 0
-  );
-  const px = Math.ceil((vw * 10) / 100);
-
   const container = sliderElement.getElementsByClassName("container")[0];
   if (container.children.length === 0) return 0;
 
   const card = container.firstElementChild;
-  const numberOfCards = Math.floor(
-    (sliderElement.clientWidth - px) / card.offsetWidth
-  );
+  
+  // Break flex-squish trap by measuring an unconstrained clone
+  const clone = card.cloneNode(true);
+  clone.style.visibility = 'hidden';
+  clone.style.display = card.classList.contains("image-description-card") ? "flex" : "block";
+  clone.style.flexShrink = '0';
+  
+  container.appendChild(clone);
+  
+  const pristineWidth = clone.offsetWidth;
+  const computedStyles = window.getComputedStyle(clone);
+  const marginX = (parseFloat(computedStyles.marginLeft) || 0) + (parseFloat(computedStyles.marginRight) || 0);
+  const totalCardWidth = pristineWidth + marginX;
+  
+  container.removeChild(clone);
+
+  const leftArrow = sliderElement.querySelector('.left-arrow-container');
+  const rightArrow = sliderElement.querySelector('.right-arrow-container');
+  let px = (leftArrow ? leftArrow.offsetWidth : 0) + (rightArrow ? rightArrow.offsetWidth : 0);
+  
+  if (px === 0) {
+    const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+    px = Math.max(88, Math.ceil((vw * 10) / 100));
+  }
+  
+  const availableWidth = sliderElement.clientWidth - px;
+
+  const numberOfCards = totalCardWidth > 0 ? Math.floor(availableWidth / totalCardWidth) : 1;
   return numberOfCards > 1 ? numberOfCards : 1;
 };
 
@@ -236,7 +258,7 @@ window.addEventListener("load", function (e) {
       e.stopPropagation();
       e.preventDefault();
       if (e.target) {
-        reorderSlides(hash, sliderMap[hash], false);
+        reorderSlides(hash, sliderMap[hash], true);
         clearInterval(intervalIDs[hash]);
         startAutoSlide(hash, sliderMap[hash]);
       }
@@ -246,7 +268,7 @@ window.addEventListener("load", function (e) {
       e.stopPropagation();
       e.preventDefault();
       if (e.target) {
-        reorderSlides(hash, sliderMap[hash], true);
+        reorderSlides(hash, sliderMap[hash], false);
         clearInterval(intervalIDs[hash]);
         startAutoSlide(hash, sliderMap[hash]);
       }
