@@ -1,6 +1,6 @@
 .ui.slider {
     display: grid;
-    grid-template: 1fr / 5vw 1fr 5vw;
+    grid-template: 1fr / minmax(44px, 5vw) 1fr minmax(44px, 5vw);
     max-width: 100% !important;
     overflow: hidden;
 }
@@ -39,7 +39,13 @@
     align-items: center;
 }
 .ui.slider .container > * {
-    margin-right: 40px
+    margin-right: 40px;
+}
+
+@media (max-width: 768px) {
+    .ui.slider .container > * {
+        margin-right: 16px;
+    }
 }
 
 .ui.slider > .right-arrow-container {
