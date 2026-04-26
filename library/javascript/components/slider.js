@@ -14,7 +14,7 @@ function makeHash(length) {
   return result;
 }
 
-let intervalID;
+const intervalIDs = {};
 const sliderMap = {};
 const sliderHeights = {};
 
@@ -53,8 +53,6 @@ const calculateMaxSliderHeight = (sliderHash) => {
 const setFixedSliderHeight = (sliderHash) => {
   const sliderElement = document.getElementById(sliderHash);
   if (!sliderElement) return;
-
-  if (sliderElement.style.getPropertyValue("--slider-height")) return;
 
   const maxHeight = calculateMaxSliderHeight(sliderHash);
 
@@ -188,7 +186,7 @@ const numberOfCardsToDisplay = (sliderHash) => {
 };
 
 const startAutoSlide = (sliderHash, numCards) => {
-  intervalID = setInterval(() => {
+  intervalIDs[sliderHash] = setInterval(() => {
     reorderSlides(sliderHash, numCards, false);
   }, 8000);
 };
@@ -239,7 +237,8 @@ window.addEventListener("load", function (e) {
       e.preventDefault();
       if (e.target) {
         reorderSlides(hash, sliderMap[hash], false);
-        clearInterval(intervalID);
+        clearInterval(intervalIDs[hash]);
+        startAutoSlide(hash, sliderMap[hash]);
       }
     });
 
@@ -248,7 +247,8 @@ window.addEventListener("load", function (e) {
       e.preventDefault();
       if (e.target) {
         reorderSlides(hash, sliderMap[hash], true);
-        clearInterval(intervalID);
+        clearInterval(intervalIDs[hash]);
+        startAutoSlide(hash, sliderMap[hash]);
       }
     });
 
@@ -276,7 +276,7 @@ window.addEventListener("load", function (e) {
 });
 
 window.addEventListener("beforeunload", function () {
-  if (intervalID) clearInterval(intervalID);
+  Object.values(intervalIDs).forEach((id) => clearInterval(id));
 });
 
 var observer = new MutationObserver(function (mutations) {
@@ -301,7 +301,7 @@ elements.forEach((element) =>
   observer.observe(element, { attributes: true, attributeFilter: ["style"] })
 );
 
-window.onresize = () => {
+window.addEventListener("resize", () => {
   const sliders = document.querySelectorAll(".ui.slider");
   if (sliders === null) return;
 
@@ -312,4 +312,4 @@ window.onresize = () => {
 
     setFixedSliderHeight(hash);
   }
-};
+});
