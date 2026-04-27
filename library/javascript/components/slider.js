@@ -95,11 +95,16 @@ const setFixedSliderHeight = (sliderHash) => {
 
 const sliderAnimatingMap = {};
 
+const ANIMATION_DURATION_MS = 550;
+const ANIMATION_EASING = "cubic-bezier(0.22, 0.61, 0.36, 1)";
+
 const reorderSlides = (sliderHash, numCards, isLeft) => {
   if (sliderAnimatingMap[sliderHash]) return;
 
   const sliderElement = document.getElementById(sliderHash);
+  if (!sliderElement) return;
   const container = sliderElement.getElementsByClassName("container")[0];
+  if (!container) return;
   const cards = container.children;
   const totalNumberOfCards = cards.length;
 
@@ -127,13 +132,13 @@ const reorderSlides = (sliderHash, numCards, isLeft) => {
     paddingLeft: container.style.paddingLeft
   };
 
-  // Convert to fixed linear strip
+  // Convert to fixed linear strip so reorder doesn't trigger flex redistribution
   container.style.justifyContent = "flex-start";
   container.style.gap = pxGap + "px";
   container.style.paddingLeft = leftOffset + "px";
 
-  const uniformWidth = cards[0].offsetWidth; // Use visible width to prevent hiding-induced 0px traps
-  
+  const uniformWidth = cards[0].offsetWidth;
+
   const cardStates = new Map();
   for (let i = 0; i < cards.length; i++) {
     cardStates.set(cards[i], {
@@ -142,7 +147,6 @@ const reorderSlides = (sliderHash, numCards, isLeft) => {
       flexShrink: cards[i].style.flexShrink,
       width: cards[i].style.width
     });
-    // Lock explicitly to avoid squish flex-traps
     cards[i].style.marginLeft = "0px";
     cards[i].style.marginRight = "0px";
     cards[i].style.flexShrink = "0";
@@ -155,7 +159,7 @@ const reorderSlides = (sliderHash, numCards, isLeft) => {
     const lastCard = cards[totalNumberOfCards - 1];
     lastCard.style.display = lastCard.classList.contains("image-description-card") ? "flex" : "block";
     container.insertBefore(lastCard, container.firstChild);
-    
+
     container.style.transition = "none";
     container.style.transform = `translateX(-${shiftDistance}px)`;
   } else {
@@ -166,30 +170,33 @@ const reorderSlides = (sliderHash, numCards, isLeft) => {
     container.style.transform = "translateX(0px)";
   }
 
-  void container.offsetHeight; 
+  void container.offsetHeight;
 
-  const animationDuration = 800; // Sleek easing
+  container.style.transition = `transform ${ANIMATION_DURATION_MS}ms ${ANIMATION_EASING}`;
+  container.style.transform = isLeft
+    ? "translateX(0px)"
+    : `translateX(-${shiftDistance}px)`;
 
-  container.style.transition = `transform ${animationDuration}ms cubic-bezier(0.25, 1, 0.5, 1)`;
-  if (isLeft) {
-    container.style.transform = `translateX(0px)`;
-  } else {
-    container.style.transform = `translateX(-${shiftDistance}px)`;
-  }
+  let cleanedUp = false;
+  const cleanup = () => {
+    if (cleanedUp) return;
+    cleanedUp = true;
+    container.removeEventListener("transitionend", onTransitionEnd);
+    clearTimeout(safetyTimer);
 
-  setTimeout(() => {
+    container.style.transition = "none";
+
     container.style.justifyContent = originalLayout.justifyContent;
     container.style.gap = originalLayout.gap;
     container.style.paddingLeft = originalLayout.paddingLeft;
 
     for (let i = 0; i < cards.length; i++) {
       const state = cardStates.get(cards[i]);
-      if (state) {
-        cards[i].style.marginLeft = state.marginLeft;
-        cards[i].style.marginRight = state.marginRight;
-        cards[i].style.flexShrink = state.flexShrink;
-        cards[i].style.width = state.width;
-      }
+      if (!state) continue;
+      cards[i].style.marginLeft = state.marginLeft;
+      cards[i].style.marginRight = state.marginRight;
+      cards[i].style.flexShrink = state.flexShrink;
+      cards[i].style.width = state.width;
     }
 
     if (isLeft) {
@@ -204,11 +211,17 @@ const reorderSlides = (sliderHash, numCards, isLeft) => {
       container.appendChild(firstChild);
     }
 
-    container.style.transition = "none";
     container.style.transform = "translateX(0px)";
-
     sliderAnimatingMap[sliderHash] = false;
-  }, animationDuration);
+  };
+
+  const onTransitionEnd = (e) => {
+    if (e.target !== container || e.propertyName !== "transform") return;
+    cleanup();
+  };
+  container.addEventListener("transitionend", onTransitionEnd);
+  // Safety net in case transitionend doesn't fire (tab backgrounded, transform interrupted, etc.)
+  const safetyTimer = setTimeout(cleanup, ANIMATION_DURATION_MS + 80);
 };
 
 const renderSlides = (hash, numberOfCards) => {
@@ -266,10 +279,18 @@ const numberOfCardsToDisplay = (sliderHash) => {
   return numberOfCards > 1 ? numberOfCards : 1;
 };
 
+const AUTO_SLIDE_INTERVAL_MS = 5000;
+
 const startAutoSlide = (sliderHash, numCards) => {
+  clearInterval(intervalIDs[sliderHash]);
   intervalIDs[sliderHash] = setInterval(() => {
     reorderSlides(sliderHash, numCards, false);
-  }, 8000);
+  }, AUTO_SLIDE_INTERVAL_MS);
+};
+
+const stopAutoSlide = (sliderHash) => {
+  clearInterval(intervalIDs[sliderHash]);
+  intervalIDs[sliderHash] = null;
 };
 
 window.addEventListener("load", function (e) {
@@ -316,22 +337,19 @@ window.addEventListener("load", function (e) {
     leftArrowElement.addEventListener("click", function (e) {
       e.stopPropagation();
       e.preventDefault();
-      if (e.target) {
-        reorderSlides(hash, sliderMap[hash], true);
-        clearInterval(intervalIDs[hash]);
-        startAutoSlide(hash, sliderMap[hash]);
-      }
+      reorderSlides(hash, sliderMap[hash], true);
+      startAutoSlide(hash, sliderMap[hash]);
     });
 
     rightArrowElement.addEventListener("click", function (e) {
       e.stopPropagation();
       e.preventDefault();
-      if (e.target) {
-        reorderSlides(hash, sliderMap[hash], false);
-        clearInterval(intervalIDs[hash]);
-        startAutoSlide(hash, sliderMap[hash]);
-      }
+      reorderSlides(hash, sliderMap[hash], false);
+      startAutoSlide(hash, sliderMap[hash]);
     });
+
+    sliders[i].addEventListener("mouseenter", () => stopAutoSlide(hash));
+    sliders[i].addEventListener("mouseleave", () => startAutoSlide(hash, sliderMap[hash]));
 
     const images = container.querySelectorAll("img");
     let loadedImageCounter = 0;
