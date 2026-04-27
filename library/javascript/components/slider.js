@@ -107,46 +107,105 @@ const reorderSlides = (sliderHash, numCards, isLeft) => {
 
   sliderAnimatingMap[sliderHash] = true;
 
+  const parentRect = container.getBoundingClientRect();
+  const firstCardRect = cards[0].getBoundingClientRect();
+  const leftOffset = firstCardRect.left - parentRect.left;
+
   const computedStyles = window.getComputedStyle(cards[0]);
   const marginX = (parseFloat(computedStyles.marginLeft) || 0) + (parseFloat(computedStyles.marginRight) || 0);
-  const cardWidth = cards[0].offsetWidth + marginX;
-  const animationStep = isLeft ? cardWidth : -cardWidth;
 
-  const animationDuration = 500; // 500ms for modern, snappy feel
+  let pxGap = 0;
+  if (numCards > 1 && cards[1]) {
+    pxGap = cards[1].getBoundingClientRect().left - firstCardRect.right;
+  } else {
+    pxGap = marginX > 0 ? marginX : 40;
+  }
+
+  const originalLayout = {
+    justifyContent: container.style.justifyContent,
+    gap: container.style.gap,
+    paddingLeft: container.style.paddingLeft
+  };
+
+  // Convert to fixed linear strip
+  container.style.justifyContent = "flex-start";
+  container.style.gap = pxGap + "px";
+  container.style.paddingLeft = leftOffset + "px";
+
+  const uniformWidth = cards[0].offsetWidth; // Use visible width to prevent hiding-induced 0px traps
+  
+  const cardStates = new Map();
+  for (let i = 0; i < cards.length; i++) {
+    cardStates.set(cards[i], {
+      marginLeft: cards[i].style.marginLeft,
+      marginRight: cards[i].style.marginRight,
+      flexShrink: cards[i].style.flexShrink,
+      width: cards[i].style.width
+    });
+    // Lock explicitly to avoid squish flex-traps
+    cards[i].style.marginLeft = "0px";
+    cards[i].style.marginRight = "0px";
+    cards[i].style.flexShrink = "0";
+    cards[i].style.width = uniformWidth + "px";
+  }
+
+  const shiftDistance = uniformWidth + pxGap;
+
+  if (isLeft) {
+    const lastCard = cards[totalNumberOfCards - 1];
+    lastCard.style.display = lastCard.classList.contains("image-description-card") ? "flex" : "block";
+    container.insertBefore(lastCard, container.firstChild);
+    
+    container.style.transition = "none";
+    container.style.transform = `translateX(-${shiftDistance}px)`;
+  } else {
+    if (cards[numCards]) {
+      cards[numCards].style.display = cards[numCards].classList.contains("image-description-card") ? "flex" : "block";
+    }
+    container.style.transition = "none";
+    container.style.transform = "translateX(0px)";
+  }
+
+  void container.offsetHeight; 
+
+  const animationDuration = 800; // Sleek easing
 
   container.style.transition = `transform ${animationDuration}ms cubic-bezier(0.25, 1, 0.5, 1)`;
-  void container.offsetHeight; 
-  container.style.transform = `translateX(${animationStep}px)`;
+  if (isLeft) {
+    container.style.transform = `translateX(0px)`;
+  } else {
+    container.style.transform = `translateX(-${shiftDistance}px)`;
+  }
 
   setTimeout(() => {
+    container.style.justifyContent = originalLayout.justifyContent;
+    container.style.gap = originalLayout.gap;
+    container.style.paddingLeft = originalLayout.paddingLeft;
+
+    for (let i = 0; i < cards.length; i++) {
+      const state = cardStates.get(cards[i]);
+      if (state) {
+        cards[i].style.marginLeft = state.marginLeft;
+        cards[i].style.marginRight = state.marginRight;
+        cards[i].style.flexShrink = state.flexShrink;
+        cards[i].style.width = state.width;
+      }
+    }
+
     if (isLeft) {
       if (totalNumberOfCards > numCards) {
-        cards[numCards - 1].style.display = "none";
+        cards[numCards].style.display = "none";
       }
-
-      const lastCard = cards[totalNumberOfCards - 1];
-      if (lastCard.classList.contains("image-description-card")) {
-        lastCard.style.display = "flex";
-      } else {
-        lastCard.style.display = "block";
-      }
-      container.insertBefore(lastCard, container.firstChild);
     } else {
       const firstChild = cards[0];
       if (totalNumberOfCards > numCards) {
         firstChild.style.display = "none";
       }
-
-      if (cards[numCards].classList.contains("image-description-card")) {
-        cards[numCards].style.display = "flex";
-      } else {
-        cards[numCards].style.display = "block";
-      }
       container.appendChild(firstChild);
     }
 
     container.style.transition = "none";
-    container.style.transform = "translateX(0)";
+    container.style.transform = "translateX(0px)";
 
     sliderAnimatingMap[sliderHash] = false;
   }, animationDuration);
