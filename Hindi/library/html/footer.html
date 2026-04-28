@@ -144,7 +144,7 @@
         </div>
         <div class="footer-copyright">
             <div>
-                Copyright 2024, Institute Computer Centre, IIT Roorkee
+                Copyright <span id="footer-year"></span>, Institute Computer Centre, IIT Roorkee
             </div>
             <!-- <div class="totalviews" style="color: var(--black);">
                 Total Pageviews: 12414
@@ -152,3 +152,6 @@
         </div>
     </div>
 </div>
+<script>
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+</script>
