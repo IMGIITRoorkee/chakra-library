@@ -68,6 +68,12 @@ function hindi_navigate() {
         path = path.substring(0, path.length - 1)
       window.location.assign("https://" + window.location.host + path);
     }
+  } else {
+    // Short-url subdomain (e.g. ece.iitr.ac.in): use meta tag injected at publish time
+    const meta = document.querySelector('meta[name="hindi-url"]')
+    if (meta && meta.content) {
+      window.location.assign("https://iitr.ac.in" + meta.content)
+    }
   }
 }
 
