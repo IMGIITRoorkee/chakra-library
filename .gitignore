@@ -6,3 +6,8 @@ env/
 *.pyc
 
 *.DS_Store
+# Secrets: match any .env anywhere. The negation guards committed stencil
+# templates if this pattern is ever widened to *.env.
+.env
+.env.*
+!*stencil*
