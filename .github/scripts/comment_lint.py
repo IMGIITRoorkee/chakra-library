@@ -22,11 +22,17 @@ PRAGMA = re.compile(
 TICKET = re.compile(r'\(#\d+\)|\b(PR|ISSUE|TICKET|JIRA)[-\s]?\d+\b|\bPhase\s+\d+\.\d+')
 ATTRIBUTION = re.compile(r'ponytail:|generated with|co-authored-by|claude|copilot|chatgpt', re.I)
 
+# Prose markers and bare URLs also match the key-value shape below, so they are
+# checked first and never counted as code.
+PROSE = re.compile(r'^(TODO|NOTE|FIXME|XXX|HACK|WARNING|BUG|See|E\.g\.)\b|https?://', re.I)
+
 CODE_SHAPE = (
     re.compile(r'[{};]\s*$'),
     re.compile(r'=>|===|!==|&&|\|\||\+='),
-    re.compile(r'^\s*(const|let|var|function|import|export|return|if|else|elif|for|while|'
+    re.compile(r'^\s*(const|let|var|function|import|export|return|'
                r'def|class|try|except|catch|switch|case|print|console\.|await|async)\b'),
+    re.compile(r'^\s*(if|for|while|else\s+if|switch)\s*\('),
+    re.compile(r'^\s*(if|elif|else|for|while|try|except|def|class)\b.*:\s*$'),
     re.compile(r'^\s*[\w.\'"\[\]]+\s*[:=]\s*\S'),
     re.compile(r'^\s*[\w.]+\([^)]*\)\s*[,;]?\s*$'),
 )
@@ -44,7 +50,10 @@ def strip_marker(line, ext):
 def looks_like_code(lines):
     if len(lines) < 2:
         return False
-    hits = sum(any(p.search(text) for p in CODE_SHAPE) for _, text in lines)
+    hits = sum(
+        not PROSE.search(text) and any(p.search(text) for p in CODE_SHAPE)
+        for _, text in lines
+    )
     return hits * 2 >= len(lines)
 
 
