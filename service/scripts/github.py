@@ -1,12 +1,15 @@
 from flask import Flask, request
 import io
+import os
 import yaml
 import hmac
 import hashlib
 import json
 import subprocess
 
-with io.open('../config/config.yml', 'r') as stream:
+CONFIG_PATH = os.environ.get('CHAKRA_LIBRARY_CONFIG', '../config/config.yml')
+
+with io.open(CONFIG_PATH, 'r') as stream:
     try:
         CONFIG = yaml.safe_load(stream)
     except yaml.YAMLError as exc:
@@ -20,12 +23,21 @@ ssh_url = CONFIG['GITHUB']['SSH_URL']
 
 app = Flask(__name__)
 
+
+def signature_matches(shared_secret, body, headers):
+    """Compare the webhook signature in constant time, preferring SHA-256 over the deprecated SHA-1 header."""
+    sent = headers.get('X-Hub-Signature-256')
+    if sent:
+        expected = 'sha256=' + hmac.new(shared_secret.encode(), body, hashlib.sha256).hexdigest()
+    else:
+        sent = headers.get('X-Hub-Signature') or ''
+        expected = 'sha1=' + hmac.new(shared_secret.encode(), body, hashlib.sha1).hexdigest()
+    return hmac.compare_digest(expected, sent)
+
+
 @app.route('/', methods=['POST'])
 def server():
-    encoded_secret = secret.encode()
-    signature = 'sha1=' + hmac.new(encoded_secret, request.get_data(), hashlib.sha1).hexdigest()
-
-    if signature == request.headers.get('X-Hub-Signature'):
+    if signature_matches(secret, request.get_data(), request.headers):
         payload = request.form.get("payload")
         payload = json.loads(payload)
         

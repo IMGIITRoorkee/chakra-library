@@ -1,0 +1,33 @@
+name: Service Quality Gate
+
+on:
+  pull_request:
+    branches: [staging]
+    paths:
+      - 'service/**'
+      - '.github/workflows/service-quality.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  python:
+    name: python
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # service/requirements.txt pins PyYAML 5.4.1, which does not build on
+      # current Python; the signature check is stdlib-only, so install unpinned.
+      - name: Install runtime imports
+        run: pip install flask pyyaml
+
+      - name: Webhook signature checks
+        run: python3 service/scripts/test_github.py
