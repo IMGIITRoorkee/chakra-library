@@ -65,3 +65,22 @@ jobs:
             fi
           done
           exit $fail
+
+  duplication:
+    name: duplication
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      # Ratchet: the threshold sits just above today's level, so duplication
+      # cannot grow. Lower it as clones are removed.
+      - name: Copy-paste detection
+        run: >
+          npx --yes jscpd@4 .
+          --pattern "**/*.{js,html,css}"
+          --ignore "**/node_modules/**"
+          --min-lines 10 --min-tokens 70
+          --threshold 47
+          --reporters console
