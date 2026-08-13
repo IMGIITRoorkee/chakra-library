@@ -85,6 +85,17 @@ jobs:
             exit 1
           fi
 
+      # A case-insensitive checkout materialises only one of a colliding pair.
+      - name: No case-only filename collisions
+        run: |
+          dupes=$(git ls-files | tr 'A-Z' 'a-z' | sort | uniq -d)
+          if [ -n "$dupes" ]; then
+            echo "$dupes" | while read -r p; do
+              echo "::error::paths differ only by case: $p"
+            done
+            exit 1
+          fi
+
   duplication:
     name: duplication
     runs-on: ubuntu-latest
