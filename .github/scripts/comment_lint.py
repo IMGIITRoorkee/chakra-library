@@ -33,7 +33,10 @@ CODE_SHAPE = (
                r'def|class|try|except|catch|switch|case|print|console\.|await|async)\b'),
     re.compile(r'^\s*(if|for|while|else\s+if|switch)\s*\('),
     re.compile(r'^\s*(if|elif|else|for|while|try|except|def|class)\b.*:\s*$'),
-    re.compile(r'^\s*[\w.\'"\[\]]+\s*[:=]\s*\S'),
+    # key: value only counts as code when the value is a single token, so prose
+    # such as "Note: several words here" is not mistaken for config.
+    re.compile(r'^\s*[\w.\'"\[\]-]+\s*[:=]\s*\S+\s*[,;{\[]?\s*$'),
+    re.compile(r'^\s*[\w.-]+:\s*[,{\[]?\s*$'),
     re.compile(r'^\s*[\w.]+\([^)]*\)\s*[,;]?\s*$'),
 )
 
