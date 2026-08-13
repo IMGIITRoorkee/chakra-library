@@ -1,0 +1,86 @@
+name: Library quality
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  comments:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Comment style
+        run: git ls-files -z '*.js' '*.sh' '*.py' | xargs -0 python3 .github/scripts/comment_lint.py
+
+  javascript:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Syntax check
+        run: |
+          fail=0
+          for f in $(git ls-files 'library/javascript/*.js'); do
+            node --check "$f" || fail=1
+          done
+          exit $fail
+
+  fragments:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      # Fragments are spliced verbatim into generated pages, so unbalanced divs
+      # corrupt every page that includes them.
+      - name: Div balance
+        run: |
+          fail=0
+          for f in $(git ls-files 'library/html/*.html' 'Hindi/library/html/*.html'); do
+            open=$(grep -o '<div' "$f" | wc -l | tr -d ' ')
+            close=$(grep -o '</div>' "$f" | wc -l | tr -d ' ')
+            if [ "$open" -ne "$close" ]; then
+              echo "::error file=$f::unbalanced: $open '<div' vs $close '</div>'"
+              fail=1
+            fi
+          done
+          exit $fail
+
+  assets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Referenced icons exist
+        run: |
+          fail=0
+          for p in $(grep -oE "library/assets/[^']+" library/javascript/components/icon-library.js | sort -u); do
+            if [ ! -f "$p" ]; then
+              echo "::error file=library/javascript/components/icon-library.js::missing asset: $p"
+              fail=1
+            fi
+          done
+          exit $fail
+
+  duplication:
+    name: duplication
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      # Ratchet: the threshold sits just above today's level, so duplication
+      # cannot grow. Lower it as clones are removed.
+      - name: Copy-paste detection
+        run: >
+          npx --yes jscpd@4 .
+          --pattern "**/*.{js,html,css}"
+          --ignore "**/node_modules/**"
+          --min-lines 10 --min-tokens 70
+          --threshold 47
+          --reporters console

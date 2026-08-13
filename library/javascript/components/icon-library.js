@@ -119,9 +119,7 @@ const paths = {
   accessibility_share: 'library/assets/icons/accessibility-share.svg',
   share: 'library/assets/icons/share.svg',
   accessibility_share_dark: 'library/assets/icons/accessibility-share-dark.svg',
-  // funnel: 'library/assets/icons/sort-icon.svg',
   share_dark: 'library/assets/icons/share-dark.svg',
-  // funnel: 'library/assets/icons/sort-icon.svg',
   accessibility_lecturer: 'library/assets/icons/accessibility-lecturer.svg',
   lecturer: 'library/assets/icons/lecturer.svg',
   accessibility_ledger: 'library/assets/icons/accessibility-ledger.svg',
@@ -164,7 +162,7 @@ const paths = {
   visitors_hover: 'library/assets/icons/visitors-hover.svg',
   accessibility_web_logo: 'library/assets/icons/accessibility-web-logo.svg', // Remove option from frontend
   web_logo: 'library/assets/icons/web-logo.svg', // Remove option from frontend
-  accessibility_wellness: 'library/assets/icons/accessibility_wellness.svg',
+  accessibility_wellness: 'library/assets/icons/accessibility-wellness.svg',
   wellness: 'library/assets/icons/wellness.svg',
   accessibility_wellness_dark: 'library/assets/icons/accessibility-wellness-dark.svg',
   wellness_dark: 'library/assets/icons/wellness-dark.svg',
