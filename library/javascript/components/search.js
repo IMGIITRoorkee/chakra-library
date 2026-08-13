@@ -35,10 +35,6 @@ function open_search() {
   go_back.style.cursor = 'pointer';
   go_back.style.marginLeft = '15rem';
   search_modal.appendChild(go_back);
-  input_tag.addEventListener('focus', function () {
-    this.style.border = 'none';
-    this.style.outline = 'none';
-  });
   search_div.appendChild(input_tag);
   input_parent.appendChild(search_div);
   search_modal.appendChild(input_parent);
