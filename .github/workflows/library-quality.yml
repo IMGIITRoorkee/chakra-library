@@ -66,6 +66,25 @@ jobs:
           done
           exit $fail
 
+  hygiene:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      # Pages are served over HTTPS, so an http:// resource is blocked or
+      # upgraded. xmlns values name a namespace and are never fetched.
+      - name: No http:// resources
+        run: |
+          hits=$(git grep -n -I 'http://' -- library Hindi | grep -vE 'xmlns|w3\.org' || true)
+          if [ -n "$hits" ]; then
+            echo "$hits" | while IFS=: read -r f l _; do
+              echo "::error file=$f,line=$l::insecure http:// URL, use https://"
+            done
+            exit 1
+          fi
+
   duplication:
     name: duplication
     runs-on: ubuntu-latest
