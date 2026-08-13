@@ -108,7 +108,7 @@ fluidImageContainers.forEach((element) => {
   let fluidImageLink = fluidImage.getAttribute('contentlink')
   if (fluidImageLink != '') {
     fluidImage.addEventListener('click', (e) => {
-      window.open(fluidImageLink)
+      openContentLink(fluidImageLink)
     });
   }
 });
