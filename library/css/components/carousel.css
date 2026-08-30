@@ -90,10 +90,8 @@
   font-size: 40px;
   animation-name: slide-down;
   animation-duration: 1s;
-  position: absolute;
   padding-top: 5px;
-  left: 20vw;
-  top: 35%;
+  top: 35%;  
   width: 50%;
   height: 10%;
   word-wrap: normal;
@@ -104,11 +102,9 @@
   color: white;
 }
 
-.ui.carousel > .ui.image > .ui.intro-text {
+.ui.carousel > .ui.image > .ui.intro-text{
   animation-name: slide-up;
   animation-duration: 1s;
-  position: absolute;
-  left: 20vw;
   top: 50%;
   width: 40%;
   height: 40%;
@@ -119,6 +115,24 @@
   color: white;
 }
 
+.ui.carousel > .ui.image > .ui.section-heading.left,.ui.intro-text.left {
+  position: absolute;
+  left: 20vw;
+  text-align: left !important;
+}
+
+.ui.carousel > .ui.image > .ui.section-heading.right,.ui.intro-text.right {
+  position: absolute;
+  right: 20vw;
+  text-align: right !important;
+}
+
+.ui.carousel > .ui.image > .ui.section-heading.center,.ui.intro-text.center {
+  position: absolute;
+  left: 50vw;
+  transform: translate(-50%);
+  text-align: center !important;
+}
 /* Fading animation */
 .ui.carousel > .ui.image.fluid {
   -webkit-animation-name: fade;
