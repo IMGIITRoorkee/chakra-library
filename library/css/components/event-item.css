@@ -15,6 +15,7 @@
     align-items: center;
     height: 72px;
     width: 72px;
+    flex-shrink: 0;
     border: 2px solid var(--grey-blue);
     justify-content: center;
 }

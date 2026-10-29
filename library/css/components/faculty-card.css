@@ -10,7 +10,7 @@
 }
 .ui.faculty-card > .flex {
   display: flex;
-  gap: 4rem;
+  gap: 2rem;
   align-items: center;
 }
 .ui.faculty-card >.body{
@@ -43,11 +43,13 @@
   align-items: center;
   display: flex;
   flex-wrap: nowrap;
-  flex-direction: row-reverse;
   gap: 0.5rem;
-  justify-content: flex-end;
   text-overflow: ellipsis; 
-  word-break: break-all;
+  overflow-wrap: anywhere;
+}
+/* Faculty List emits the icon after its text and manual Faculty Cards before it. */
+.ui.faculty-card .info-content > .ui.icon {
+  order: -1;
 }
 
 .ui.faculty-card > .body > .description {
