@@ -22,9 +22,23 @@
     align-items: stretch;
     flex-wrap: nowrap; 
 }
-.ui.slider > * > *{
+.ui.slider > :where(.left-arrow-container, .outer-container, .right-arrow-container) > * {
     margin: 10px;
 }
+
+/* Until slider.js wraps the cards, keep them in one clipped row between the arrow columns;
+   inline-size containment stops the row from widening the slider's parent grid column. */
+.ui.slider:not(:has(> .outer-container)) {
+    contain: inline-size;
+    display: flex;
+    gap: 40px;
+    padding: 10px calc(max(44px, 5vw) + 10px);
+}
+
+.ui.slider:not(:has(> .outer-container)) > * {
+    flex: none;
+}
+
 .ui.slider > .left-arrow-container {
     grid-area: 1 / 1 / 2 / 2;
     display: flex;
@@ -45,6 +59,10 @@
 @media (max-width: 768px) {
     .ui.slider .container > * {
         margin-right: 16px;
+    }
+
+    .ui.slider:not(:has(> .outer-container)) {
+        gap: 16px;
     }
 }
 
