@@ -20,6 +20,12 @@
     }
 }
 
+@media only screen and (max-width: 600px) {
+    .ui.bulleted-list > .listItem {
+        margin: 0.75rem 0;
+    }
+}
+
 .ui.bulleted-list > .listItem > .icon_image {
     width: 1rem;
     height: 1rem;

@@ -43,3 +43,26 @@
     padding: 32px 16px;
   }
 }
+
+/* Two stacked gradient halves read as one panel, so paint the gradient once */
+@media only screen and (max-width: 1024px) {
+  .ui.half-width-container:has(> .first.gradient-blue + .second.gradient-blue) {
+    background-color: var(--gradient-blue);
+    background-image: var(--gradient-blue);
+  }
+
+  .ui.half-width-container > .first.gradient-blue:has(+ .second.gradient-blue) {
+    background: none;
+    padding-bottom: 0;
+  }
+
+  .ui.half-width-container > .first.gradient-blue + .second.gradient-blue {
+    background: none;
+    padding-top: 0;
+  }
+
+  /* The continuation's title bar is usually empty but still padded */
+  .ui.half-width-container > .first.gradient-blue + .second.gradient-blue > .title-bar:first-child {
+    padding: 0;
+  }
+}
