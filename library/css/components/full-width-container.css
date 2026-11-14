@@ -17,3 +17,16 @@
     padding: 5vw 0;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .ui.full-width-container,
+  .ui.full-width-container.gradient-blue {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* A container holding only empty flexboxes renders as a blank band */
+  .ui.full-width-container:has(> .ui.flexbox):not(:has(> :not(.ui.flexbox), > .ui.flexbox > *)) {
+    display: none;
+  }
+}
