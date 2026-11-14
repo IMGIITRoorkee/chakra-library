@@ -45,3 +45,19 @@
     }
 
 }
+
+@media only screen and (max-width: 600px) {
+    .image-description-card {
+        gap: 1rem;
+    }
+
+    .ui.image-description-card > .ui.image > img {
+        max-width: 100%;
+    }
+
+    /* The info column already spaces its items, and justified narrow text leaves wide word gaps. */
+    .image-description-card > .info > .ui.description:is(.left, .justify) {
+        margin: 0;
+        text-align: left !important;
+    }
+}
