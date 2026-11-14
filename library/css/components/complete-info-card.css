@@ -55,3 +55,36 @@
         display: none;
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .ui.flexbox > .ui.complete-info-card {
+        margin: 0.75rem 0;
+    }
+    .ui.complete-info-card {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: none;
+        padding: 0;
+    }
+    .ui.complete-info-card .flex {
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0.75rem;
+        padding-bottom: 0.5rem;
+    }
+    .ui.complete-info-card > .flex > .ui.icon {
+        flex: 0 0 48px;
+        width: 48px;
+        height: 48px;
+        object-fit: contain;
+    }
+    .ui.complete-info-card > .flex > .info {
+        padding-top: 0;
+    }
+    .ui.complete-info-card > .ui.intro-text {
+        width: auto;
+        max-width: none;
+        text-align: left;
+    }
+}
