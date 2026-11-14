@@ -357,3 +357,27 @@
     font-size: 14px;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .footer > .footer-mid {
+    gap: 1rem;
+    padding: 0 16px;
+  }
+  .footer-mid > div {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+  .footer-mid .footer-headers {
+    text-align: left;
+  }
+  .footer-headers {
+    padding-bottom: 0.5rem;
+  }
+  .footer-right-top {
+    padding: 0 16px;
+  }
+  .footer-right-links {
+    justify-content: flex-start;
+    column-gap: 1.5rem;
+  }
+}
