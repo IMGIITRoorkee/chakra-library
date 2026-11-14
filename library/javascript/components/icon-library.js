@@ -285,4 +285,22 @@ function loadIcons() {
   }
 }
 
+// Opens an editor-supplied link, rejecting non-web schemes such as javascript:.
+function openContentLink(link) {
+  const href = (link || '').trim()
+  if (!href) {
+    return
+  }
+  let target
+  try {
+    target = new URL(href, window.location.href)
+  } catch (error) {
+    return
+  }
+  if (target.protocol !== 'http:' && target.protocol !== 'https:') {
+    return
+  }
+  window.open(target.href, '_blank', 'noopener')
+}
+
 loadIcons()

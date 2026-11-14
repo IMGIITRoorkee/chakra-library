@@ -37,6 +37,6 @@ imageCardContentLinks.forEach(imageCardImage => {
     const content = imageCardImage.nextElementSibling
     const button = content.querySelector('.ui.button')
     const link = button.getAttribute('href')
-    window.open(link)
+    openContentLink(link)
   })
 })

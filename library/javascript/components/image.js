@@ -4,7 +4,7 @@ imageComponent.forEach((element) => {
     let imageLink = image.getAttribute('contentlink')
     if (imageLink != '') {
         image.addEventListener('click', (e) => {
-            window.open(imageLink)
+            openContentLink(imageLink)
         });
     }
 });
