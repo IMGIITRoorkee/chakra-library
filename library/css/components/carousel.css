@@ -264,6 +264,37 @@
   }
 }
 
+/* Phones: the dots move under the image so they never cover it, and the arrows get a 44px target. */
+@media only screen and (max-width: 600px) {
+  .ui.carousel {
+    margin-bottom: 1.75rem;
+  }
+
+  .ui.carousel > .dot-container {
+    top: 100%;
+    bottom: auto;
+    flex-wrap: wrap;
+    padding-top: 0.5rem;
+  }
+
+  .ui.carousel > .dot-container > .dot {
+    flex: none;
+    height: 8px;
+    width: 8px;
+    margin: 0 4px;
+  }
+
+  .ui.carousel > .dot-container > .active {
+    background-color: var(--bright-blue);
+  }
+
+  .ui.carousel > .flexbox > .prev,
+  .ui.carousel > .flexbox > .next {
+    padding: 16px 14px;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+}
+
 @media only screen and (max-width: 425px) {
   .ui.carousel > .ui.image > .ui.section-heading {
     font-size: 14px;
