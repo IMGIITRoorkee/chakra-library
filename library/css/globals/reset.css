@@ -121,3 +121,8 @@ table {
 select {
   font-family: var(--font-nunito-sans);
 }
+/* Keyboard focus ring, contrasts against both light and dark variable sets */
+:focus-visible {
+  outline: 2px solid #e8590c;
+  outline-offset: 2px;
+}
