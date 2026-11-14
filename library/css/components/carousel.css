@@ -1,9 +1,21 @@
 .ui.carousel {
   position: relative;
+  height: 40vw;
 }
 
 .ui.carousel > .ui.image {
   display: none;
+}
+
+/* carousel.js runs at the end of the page; until then show the first slide in the final box. */
+.ui.carousel > .ui.image:first-child {
+  display: contents;
+}
+
+/* carousel.js strips the parent's classes, so drop their padding and background up front. */
+.ui.full-width-container:has(> .ui.carousel) {
+  padding: 0;
+  background: none;
 }
 
 .ui.carousel > .ui.image > .numbertext {
@@ -179,7 +191,6 @@
   }
 
   .ui.carousel {
-    height: 40vw;
     min-height: 200px;
   }
   .ui.carousel > .image.fluid > img {
