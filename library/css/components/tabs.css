@@ -114,8 +114,23 @@
 
 @media only screen and (max-width: 600px) {
   .ui.tabs-container {
-    padding: 10px;
-    width: calc(100% - 20px);
+    padding: 10px 0;
+    width: 100%;
+  }
+  /* Fade the trailing edge so a clipped tab reads as scrollable */
+  .ui.tabs-container > .tabs {
+    align-items: flex-end;
+    padding-right: 1.5rem;
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 1.5rem), transparent);
+    mask-image: linear-gradient(to right, #000 calc(100% - 1.5rem), transparent);
+  }
+  .ui.tabs-container > .tabs > .tab {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 44px;
+    white-space: nowrap;
   }
   .ui.tabs-container.primary > .tabs > .tab {
     padding: 0.5rem 1rem 0.5rem 1rem;
