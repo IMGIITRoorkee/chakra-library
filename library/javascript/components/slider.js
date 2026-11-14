@@ -293,7 +293,24 @@ const stopAutoSlide = (sliderHash) => {
   intervalIDs[sliderHash] = null;
 };
 
-window.addEventListener("load", function (e) {
+const layoutSlider = (hash) => {
+  renderSlides(hash, sliderMap[hash]);
+  sliderMap[hash] = numberOfCardsToDisplay(hash);
+  renderSlides(hash, sliderMap[hash]);
+  setFixedSliderHeight(hash);
+};
+
+// Late images and web fonts resize cards; wait out a running slide so its inline widths are restored.
+const relayoutSlider = (hash) => {
+  if (sliderAnimatingMap[hash]) {
+    setTimeout(() => relayoutSlider(hash), ANIMATION_DURATION_MS);
+    return;
+  }
+  layoutSlider(hash);
+  if (intervalIDs[hash]) startAutoSlide(hash, sliderMap[hash]);
+};
+
+const initSliders = () => {
   const sliders = document.querySelectorAll(".ui.slider");
 
   for (let i = 0; i < sliders.length; ++i) {
@@ -351,28 +368,23 @@ window.addEventListener("load", function (e) {
     sliders[i].addEventListener("mouseenter", () => stopAutoSlide(hash));
     sliders[i].addEventListener("mouseleave", () => startAutoSlide(hash, sliderMap[hash]));
 
-    const images = container.querySelectorAll("img");
-    let loadedImageCounter = 0;
-
-    images.forEach(function (image) {
-      image.addEventListener("load", function (e) {
-        loadedImageCounter++;
-        if (loadedImageCounter === images.length) {
-          renderSlides(hash, sliderMap[hash]);
-          sliderMap[hash] = numberOfCardsToDisplay(hash);
-          renderSlides(hash, sliderMap[hash]);
-          setFixedSliderHeight(hash);
-        }
-      });
+    container.querySelectorAll("img").forEach((image) => {
+      if (!image.complete) image.addEventListener("load", () => relayoutSlider(hash));
     });
 
-    renderSlides(hash, sliderMap[hash]);
-    sliderMap[hash] = numberOfCardsToDisplay(hash);
-    renderSlides(hash, sliderMap[hash]);
-    setFixedSliderHeight(hash);
+    layoutSlider(hash);
     startAutoSlide(hash, sliderMap[hash]);
   }
-});
+
+  document.fonts.ready.then(() => Object.keys(sliderMap).forEach(relayoutSlider));
+};
+
+// Waiting for window load leaves the cards unlaid until every image on the page has downloaded.
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initSliders);
+} else {
+  initSliders();
+}
 
 window.addEventListener("beforeunload", function () {
   Object.values(intervalIDs).forEach((id) => clearInterval(id));
