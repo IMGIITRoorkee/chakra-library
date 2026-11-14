@@ -14,3 +14,24 @@
 .ui.profile-placeholder:hover {
     cursor: pointer;
 }
+
+@media only screen and (max-width: 600px) {
+    .ui.profile-placeholder {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: none;
+        padding: 1rem 1.25rem;
+        justify-content: flex-start;
+    }
+
+    .ui.flexbox > .ui.profile-placeholder {
+        margin: 0.5rem 0;
+    }
+
+    .ui.profile-placeholder > .ui.icon {
+        flex: 0 0 48px;
+        width: 48px;
+        height: 48px;
+        object-fit: contain;
+    }
+}
