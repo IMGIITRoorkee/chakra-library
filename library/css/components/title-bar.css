@@ -17,4 +17,25 @@
     .title-bar > * {
         font-size: 1rem;
     }
+
+    /* The link drops under the heading only when both do not fit on one line. */
+    .title-bar {
+        flex-wrap: wrap;
+        gap: 0.75rem 1rem;
+    }
+
+    /* Leaves room for the gap, so an empty link still fits beside a long heading instead of wrapping. */
+    .title-bar > .ui.section-heading {
+        max-width: calc(100% - 1rem);
+    }
+
+    .title-bar > .ui.link {
+        max-width: 100%;
+    }
+
+    /* 44px tap target without changing the bar's height. */
+    .title-bar > .ui.link > .link-content {
+        padding: 10px 0;
+        margin: -10px 0;
+    }
 }
